@@ -1,0 +1,18 @@
+{
+  "2039": [
+    { "rank": 1, "schoolId": "meiseikan", "g1": 5000, "g2": 1200, "g3": 0, "total": 6200 },
+    { "rank": 2, "schoolId": "yokohama-shonan", "g1": 2500, "g2": 800, "g3": 200, "total": 3500 },
+    { "rank": 3, "schoolId": "koma-tomakomai", "g1": 1200, "g2": 600, "g3": 1000, "total": 2800 },
+    { "rank": 4, "schoolId": "sendai-ikuei", "g1": 1800, "g2": 700, "g3": 250, "total": 2750 },
+    { "rank": 5, "schoolId": "morioka-fu", "g1": 0, "g2": 2200, "g3": 300, "total": 2500 },
+    { "rank": 6, "schoolId": "pl-gakuen", "g1": 1800, "g2": 400, "g3": 100, "total": 2300 },
+    { "rank": 7, "schoolId": "hotoku", "g1": 900, "g2": 1100, "g3": 150, "total": 2150 },
+    { "rank": 8, "schoolId": "kounan", "g1": 600, "g2": 900, "g3": 400, "total": 1900 }
+  ],
+  "2038": [
+    { "rank": 1, "schoolId": "koma-tomakomai", "g1": 5000, "g2": 800, "g3": 700, "total": 6500 },
+    { "rank": 2, "schoolId": "meiseikan", "g1": 2500, "g2": 1500, "g3": 0, "total": 4000 },
+    { "rank": 3, "schoolId": "pl-gakuen", "g1": 1500, "g2": 1100, "g3": 200, "total": 2800 },
+    { "rank": 4, "schoolId": "sendai-ikuei", "g1": 1800, "g2": 400, "g3": 300, "total": 2500 }
+  ]
+}

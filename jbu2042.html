@@ -1,0 +1,1186 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>JBU 2042 — Japan Baseball Union 公式データベース</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+<style>
+/* ============================================================
+   JBU 2042 — Design Tokens（ダークモード × ネオングリーン / ゴールド）
+   ============================================================ */
+:root {
+  --bg:#070a09; --bg-2:#0c1110; --surface:#111816; --surface-2:#182220;
+  --border:#243230; --text:#e8efec; --muted:#8a9a95;
+  --accent:#2fff9a; --accent-dim:#1fae6a; --gold:#f5c542; --gold-dim:#b88a1f;
+  --al:#38bdf8; --nl:#f472b6;
+  --radius:12px; --shadow:0 10px 30px rgba(0,0,0,.45);
+}
+* { box-sizing: border-box; }
+html, body { margin:0; padding:0; }
+body {
+  background:
+    radial-gradient(1200px 600px at 80% -10%, rgba(47,255,154,.07), transparent 60%),
+    radial-gradient(900px 500px at 0% 0%, rgba(245,197,66,.05), transparent 55%),
+    var(--bg);
+  color: var(--text);
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', 'Hiragino Kaku Gothic ProN', 'Meiryo', sans-serif;
+  -webkit-font-smoothing: antialiased; letter-spacing:.01em;
+}
+a { color: inherit; text-decoration: none; }
+.mono { font-variant-numeric: tabular-nums; }
+.display { font-family: 'Oswald', 'Inter', sans-serif; letter-spacing:.04em; }
+
+.shell { max-width:1200px; margin:0 auto; padding:0 20px 80px; }
+.kicker { font-family:'Oswald',sans-serif; font-weight:600; font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:var(--accent); }
+.section-title { font-family:'Oswald',sans-serif; font-weight:700; font-size:22px; letter-spacing:.02em; margin:2px 0 0; }
+.section-head { margin:38px 0 16px; }
+.muted { color: var(--muted); }
+.grid { display:grid; gap:16px; }
+@media (min-width:880px){ .g2 { grid-template-columns:1fr 1fr; } }
+@media (min-width:980px){ .g3 { grid-template-columns:repeat(3,1fr); } }
+
+/* ---- ヘッダー / ナビ ---- */
+.topbar { position:sticky; top:0; z-index:50; background:rgba(7,10,9,.82); backdrop-filter:blur(12px); border-bottom:1px solid var(--border); }
+.topbar-inner { max-width:1200px; margin:0 auto; padding:0 20px; display:flex; align-items:center; gap:26px; height:64px; }
+.brand { display:flex; align-items:center; gap:12px; cursor:pointer; }
+.brand-mark { width:36px; height:36px; border-radius:9px; background:linear-gradient(135deg,var(--accent),var(--accent-dim)); display:grid; place-items:center; font-family:'Oswald'; font-weight:700; color:#04130b; font-size:18px; box-shadow:0 0 18px rgba(47,255,154,.35); }
+.brand-name { font-family:'Oswald'; font-weight:700; font-size:18px; letter-spacing:.06em; }
+.brand-sub { font-size:10px; letter-spacing:.25em; color:var(--muted); }
+.nav { display:flex; gap:4px; margin-left:auto; flex-wrap:wrap; }
+.nav button { background:none; border:none; color:var(--muted); cursor:pointer; font-family:'Oswald'; font-weight:600; font-size:13px; letter-spacing:.14em; text-transform:uppercase; padding:10px 14px; border-radius:8px; transition:color .15s,background .15s; position:relative; }
+.nav button:hover { color:var(--text); }
+.nav button.active { color:var(--accent); }
+.nav button.active::after { content:""; position:absolute; left:14px; right:14px; bottom:2px; height:2px; background:var(--accent); border-radius:2px; box-shadow:0 0 10px var(--accent); }
+.season-pill { font-family:'Oswald'; font-size:12px; letter-spacing:.12em; color:var(--gold); border:1px solid var(--gold-dim); padding:5px 10px; border-radius:999px; white-space:nowrap; }
+
+/* ---- カード ---- */
+.card { background:linear-gradient(180deg,var(--surface),var(--bg-2)); border:1px solid var(--border); border-radius:var(--radius); overflow:hidden; }
+.card-head { padding:12px 16px; border-bottom:1px solid var(--border); display:flex; align-items:center; justify-content:space-between; gap:10px; }
+.card-body { padding:14px 16px; }
+
+/* ---- バッジ ---- */
+.badge { display:inline-flex; align-items:center; justify-content:center; min-width:36px; height:22px; padding:0 6px; border-radius:6px; font-family:'Oswald'; font-weight:700; font-size:11px; letter-spacing:.04em; color:#fff; box-shadow:inset 0 0 0 1px rgba(255,255,255,.14); }
+
+/* ---- ニューススライダー ---- */
+.hero { position:relative; border-radius:var(--radius); overflow:hidden; min-height:380px; border:1px solid var(--border); display:flex; align-items:flex-end; }
+.hero-bg { position:absolute; inset:0; }
+.hero-grad { position:absolute; inset:0; background:linear-gradient(180deg,transparent 25%,rgba(0,0,0,.85) 95%); }
+.hero-content { position:relative; padding:28px; max-width:720px; }
+.hero-cat { display:inline-block; font-family:'Oswald'; font-size:11px; letter-spacing:.2em; text-transform:uppercase; background:var(--accent); color:#04130b; padding:4px 10px; border-radius:6px; margin-bottom:12px; font-weight:700; }
+.hero-title { font-family:'Oswald'; font-weight:700; font-size:30px; line-height:1.15; margin:0 0 8px; }
+.hero-excerpt { color:#cdd8d4; font-size:14px; max-width:600px; }
+.hero-dots { position:absolute; right:22px; bottom:22px; display:flex; gap:8px; z-index:3; }
+.hero-dot { width:9px; height:9px; border-radius:50%; background:rgba(255,255,255,.3); border:none; cursor:pointer; transition:all .2s; }
+.hero-dot.active { background:var(--accent); width:22px; border-radius:5px; }
+.hero-arrows button { position:absolute; top:50%; transform:translateY(-50%); z-index:3; width:40px; height:40px; border-radius:50%; cursor:pointer; background:rgba(0,0,0,.5); border:1px solid var(--border); color:#fff; font-size:18px; }
+.hero-arrows .prev { left:16px; } .hero-arrows .next { right:16px; }
+
+/* ---- サブ記事 ---- */
+.sub-item { display:flex; gap:12px; padding:12px 0; border-bottom:1px solid var(--border); cursor:pointer; transition:background .15s; }
+.sub-item:last-child { border-bottom:none; }
+.sub-item:hover { background:rgba(255,255,255,.02); }
+.sub-thumb { width:64px; height:48px; border-radius:8px; flex:none; }
+.sub-cat { font-family:'Oswald'; font-size:10px; letter-spacing:.16em; color:var(--gold); text-transform:uppercase; }
+.sub-title { font-size:13px; font-weight:600; margin:2px 0; line-height:1.4; }
+.sub-date { font-size:11px; color:var(--muted); }
+
+/* ---- テーブル ---- */
+table { width:100%; border-collapse:collapse; font-size:13px; }
+thead th { text-align:left; font-family:'Oswald'; font-weight:600; font-size:10px; letter-spacing:.16em; text-transform:uppercase; color:var(--muted); padding:8px 10px; background:var(--surface-2); }
+tbody td { padding:9px 10px; border-top:1px solid var(--border); }
+tbody tr:hover { background:rgba(255,255,255,.02); }
+.num { text-align:right; font-variant-numeric:tabular-nums; }
+.rank-cell { font-family:'Oswald'; color:var(--muted); width:26px; }
+.clinch { color:var(--accent); font-weight:700; }
+
+/* ---- 投票系アワード ---- */
+.award-block { margin-bottom:26px; }
+.award-name { font-family:'Oswald'; font-weight:700; font-size:18px; letter-spacing:.04em; }
+.podium { display:grid; gap:12px; }
+@media (min-width:760px){ .podium { grid-template-columns:repeat(3,1fr); align-items:stretch; } }
+.finalist { border:1px solid var(--border); border-radius:var(--radius); background:var(--surface); padding:16px; position:relative; overflow:hidden; }
+.finalist.first { border-color:var(--gold-dim); background:linear-gradient(180deg,rgba(245,197,66,.10),var(--surface)); }
+.finalist .place { font-family:'Oswald'; font-weight:700; font-size:12px; letter-spacing:.16em; color:var(--muted); display:flex; align-items:center; gap:8px; margin-bottom:10px; }
+.finalist.first .place { color:var(--gold); }
+.medal { font-size:16px; }
+.finalist .player { font-family:'Oswald'; font-weight:700; font-size:19px; margin:4px 0; }
+.finalist .stats { font-size:12px; color:var(--muted); line-height:1.6; }
+.points-row { display:flex; align-items:baseline; gap:8px; margin-top:12px; padding-top:12px; border-top:1px dashed var(--border); }
+.points-val { font-family:'Oswald'; font-weight:700; font-size:22px; color:var(--accent); }
+.finalist.first .points-val { color:var(--gold); }
+.points-label { font-size:10px; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); }
+
+/* ---- トグル / サブタブ ---- */
+.toggle { display:inline-flex; background:var(--surface-2); border:1px solid var(--border); border-radius:8px; padding:3px; }
+.toggle button { border:none; background:none; cursor:pointer; color:var(--muted); font-family:'Oswald'; font-weight:600; font-size:12px; letter-spacing:.1em; padding:6px 14px; border-radius:6px; transition:all .15s; }
+.toggle button.on.al { background:var(--al); color:#04212e; }
+.toggle button.on.nl { background:var(--nl); color:#2e0418; }
+.toggle button.on.acc { background:var(--accent); color:#04130b; }
+.subtabs { display:flex; gap:4px; border-bottom:1px solid var(--border); margin:14px 0 18px; overflow-x:auto; }
+.subtabs button { border:none; background:none; cursor:pointer; color:var(--muted); white-space:nowrap; font-family:'Oswald'; font-weight:600; font-size:13px; letter-spacing:.08em; padding:10px 14px; position:relative; }
+.subtabs button.active { color:var(--accent); }
+.subtabs button.active::after { content:""; position:absolute; left:14px; right:14px; bottom:-1px; height:2px; background:var(--accent); }
+
+/* ---- フィールド図 ---- */
+.field-wrap { position:relative; width:100%; max-width:620px; margin:0 auto; aspect-ratio:1/1; }
+.field-pos { position:absolute; transform:translate(-50%,-50%); }
+.field-card { display:flex; flex-direction:column; align-items:center; gap:3px; }
+.field-card .pos-tag { font-family:'Oswald'; font-weight:700; font-size:10px; letter-spacing:.08em; padding:1px 6px; border-radius:4px; color:#04130b; }
+.field-card .pos-body { background:rgba(7,10,9,.82); border:1px solid var(--border); border-radius:8px; padding:4px 7px; display:flex; align-items:center; gap:6px; backdrop-filter:blur(3px); box-shadow:0 4px 12px rgba(0,0,0,.4); }
+.field-card .pos-name { font-size:11px; font-weight:700; white-space:nowrap; }
+.field-card .pos-team { font-size:9px; color:var(--muted); white-space:nowrap; }
+
+/* ---- ブラケット ---- */
+.bracket { display:flex; gap:26px; overflow-x:auto; padding:6px 2px 16px; }
+.round { display:flex; flex-direction:column; gap:16px; min-width:212px; justify-content:space-around; }
+.round-label { font-family:'Oswald'; font-size:11px; letter-spacing:.18em; text-transform:uppercase; color:var(--muted); margin-bottom:2px; }
+.matchup { background:var(--surface); border:1px solid var(--border); border-radius:10px; overflow:hidden; }
+.mu-team { display:flex; align-items:center; gap:8px; padding:8px 10px; }
+.mu-team + .mu-team { border-top:1px solid var(--border); }
+.mu-team.win { background:rgba(47,255,154,.06); }
+.mu-team .mu-seed { font-family:'Oswald'; font-size:10px; color:var(--muted); width:16px; }
+.mu-team .mu-name { font-size:13px; font-weight:600; flex:1; }
+.mu-team.win .mu-name { color:var(--accent); }
+.mu-score { font-family:'Oswald'; font-weight:700; font-size:16px; }
+
+/* ---- ワールドシリーズ（派手） ---- */
+@keyframes wsGlow { 0%,100% { box-shadow:0 0 40px rgba(245,197,66,.25), inset 0 0 60px rgba(245,197,66,.06);} 50% { box-shadow:0 0 70px rgba(245,197,66,.45), inset 0 0 80px rgba(245,197,66,.10);} }
+@keyframes shine { 0% { background-position:-200% center;} 100% { background-position:200% center;} }
+.ws-champion {
+  position:relative; border-radius:18px; overflow:hidden; text-align:center; padding:40px 24px 34px;
+  border:1px solid var(--gold-dim);
+  background:
+    radial-gradient(700px 300px at 50% -10%, rgba(245,197,66,.22), transparent 70%),
+    radial-gradient(500px 260px at 50% 120%, rgba(47,255,154,.10), transparent 70%),
+    linear-gradient(180deg,#15110a,#0a0d0c);
+  animation: wsGlow 4.5s ease-in-out infinite;
+}
+.ws-champion::before { content:""; position:absolute; inset:0; background:repeating-linear-gradient(115deg, transparent 0 22px, rgba(245,197,66,.03) 22px 23px); pointer-events:none; }
+.ws-tag { font-family:'Oswald'; font-size:12px; letter-spacing:.42em; text-transform:uppercase; color:var(--gold); }
+.ws-trophy { font-size:62px; line-height:1; margin:8px 0 4px; filter:drop-shadow(0 0 18px rgba(245,197,66,.5)); }
+.ws-headline { font-family:'Oswald'; font-weight:700; font-size:18px; letter-spacing:.34em; text-transform:uppercase;
+  background:linear-gradient(90deg,#b88a1f,#f5c542,#fff3c4,#f5c542,#b88a1f); background-size:200% auto; -webkit-background-clip:text; background-clip:text; color:transparent; animation:shine 4s linear infinite; }
+.ws-champ-name { font-family:'Oswald'; font-weight:700; font-size:clamp(30px,6vw,52px); margin:6px 0 4px; color:#fff; text-shadow:0 0 26px rgba(245,197,66,.4); }
+.ws-result { display:inline-flex; align-items:center; gap:16px; margin-top:10px; font-family:'Oswald'; }
+.ws-result .vs-score { font-size:30px; font-weight:700; }
+.ws-mvp { display:inline-flex; align-items:center; gap:10px; margin-top:18px; padding:8px 16px; border:1px solid var(--gold-dim); border-radius:999px; background:rgba(245,197,66,.08); }
+.ws-mvp .lbl { font-family:'Oswald'; font-size:11px; letter-spacing:.2em; color:var(--gold); }
+.ws-path { display:flex; flex-wrap:wrap; justify-content:center; gap:8px; margin-top:20px; }
+.ws-path .step { font-size:11px; color:var(--muted); border:1px solid var(--border); border-radius:999px; padding:5px 12px; background:rgba(255,255,255,.02); }
+.ws-path .step b { color:var(--text); }
+
+/* ---- シリーズ詳細 ---- */
+.series-card { border:1px solid var(--border); border-radius:var(--radius); background:var(--surface); overflow:hidden; margin-bottom:14px; }
+.series-card.major { border-color:var(--gold-dim); }
+.series-head { padding:12px 16px; border-bottom:1px solid var(--border); display:flex; align-items:center; justify-content:space-between; gap:10px; flex-wrap:wrap; }
+.series-round { font-family:'Oswald'; font-weight:700; font-size:13px; letter-spacing:.14em; text-transform:uppercase; }
+.series-format { font-size:10px; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); border:1px solid var(--border); border-radius:999px; padding:2px 9px; }
+.series-line { display:flex; align-items:center; gap:14px; padding:12px 16px; flex-wrap:wrap; }
+.series-team { display:flex; align-items:center; gap:8px; }
+.series-team .nm { font-weight:700; }
+.series-team.winner .nm { color:var(--accent); }
+.series-vs { font-family:'Oswald'; font-weight:700; font-size:22px; }
+.gamelog { display:flex; flex-wrap:wrap; gap:6px; padding:0 16px 12px; }
+.game-pill { display:flex; flex-direction:column; align-items:center; min-width:62px; border:1px solid var(--border); border-radius:8px; padding:5px 8px; background:var(--bg-2); }
+.game-pill .gnum { font-size:9px; letter-spacing:.1em; color:var(--muted); }
+.game-pill .gsc { font-family:'Oswald'; font-weight:700; font-size:14px; }
+.series-note { padding:0 16px 14px; font-size:12.5px; color:#c4d0cc; line-height:1.7; }
+.series-meta { padding:0 16px 14px; display:flex; gap:10px; flex-wrap:wrap; }
+.meta-chip { font-size:11px; border:1px solid var(--border); border-radius:8px; padding:5px 10px; }
+.meta-chip b { color:var(--accent); }
+.meta-chip.mvp b { color:var(--gold); }
+
+/* ---- 総括 ---- */
+.recap { border:1px solid var(--border); border-radius:var(--radius); background:linear-gradient(180deg,var(--surface),var(--bg-2)); padding:22px; }
+.recap h3 { font-family:'Oswald'; font-size:20px; margin:0 0 12px; }
+.recap p { font-size:13.5px; line-height:1.85; color:#cdd8d4; margin:0 0 12px; }
+.moment { display:flex; gap:12px; padding:12px 0; border-top:1px solid var(--border); }
+.moment .mk { font-family:'Oswald'; color:var(--accent); font-weight:700; font-size:13px; white-space:nowrap; }
+.moment .mt { font-weight:700; font-size:13px; margin-bottom:2px; }
+.moment .mb { font-size:12.5px; color:var(--muted); line-height:1.7; }
+
+/* ---- プロスペクト ---- */
+.prospect { display:flex; align-items:center; gap:14px; padding:12px 14px; border:1px solid var(--border); border-radius:10px; background:var(--surface); margin-bottom:10px; }
+.prospect .pr-rank { font-family:'Oswald'; font-weight:700; font-size:26px; color:var(--accent); width:42px; text-align:center; }
+.pr-grade { font-family:'Oswald'; font-weight:700; font-size:15px; color:var(--gold); border:1px solid var(--gold-dim); border-radius:8px; padding:4px 8px; }
+.tag { font-size:10px; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); border:1px solid var(--border); padding:2px 7px; border-radius:999px; }
+
+/* ---- 大型MVP ---- */
+.mvp-hero { border:1px solid var(--border); border-radius:var(--radius); padding:22px; background:linear-gradient(135deg,rgba(47,255,154,.08),var(--surface)); position:relative; overflow:hidden; }
+.mvp-hero .label { font-family:'Oswald'; font-size:12px; letter-spacing:.2em; color:var(--accent); }
+.mvp-hero .player { font-family:'Oswald'; font-weight:700; font-size:30px; margin:6px 0; }
+.mvp-hero .line { color:var(--muted); font-size:13px; }
+
+/* ---- フォトギャラリー（最大10枠） ---- */
+.gallery-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:12px; }
+@media (min-width:680px){ .gallery-grid { grid-template-columns:repeat(3,1fr); } }
+@media (min-width:980px){ .gallery-grid { grid-template-columns:repeat(5,1fr); } }
+.photo-slot { position:relative; aspect-ratio:4/3; border-radius:10px; overflow:hidden; border:1px solid var(--border); background:var(--surface); display:block; }
+.photo-slot.empty { border-style:dashed; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:6px; color:var(--muted); }
+.photo-slot.empty:hover { border-color:var(--accent); color:var(--accent); }
+.photo-slot img { width:100%; height:100%; object-fit:cover; display:block; }
+.photo-num { font-family:'Oswald'; font-weight:700; font-size:22px; opacity:.45; }
+.photo-cap { position:absolute; left:0; right:0; bottom:0; padding:7px 9px; font-size:11px; line-height:1.4; background:linear-gradient(transparent,rgba(0,0,0,.85)); }
+
+.footer { text-align:center; color:var(--muted); font-size:12px; margin-top:60px; padding-top:24px; border-top:1px solid var(--border); }
+</style>
+</head>
+<body>
+<div id="root"></div>
+
+<!-- React + Babel（プロトタイプ用 CDN。オフライン環境では動作しません） -->
+<script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+<script type="text/babel" data-presets="react">
+const { useState } = React;
+
+/* ============================================================================
+ *  DATA — モックデータ（ここを書き換えるだけでサイト全体が更新されます）
+ *  JBU 2042 新レギュレーション: AL / NL 各3地区・全30チーム + ワールドシリーズ
+ * ==========================================================================*/
+const DATA = {
+  season: 2042,
+  regulationNote: "2042シーズンより JBU は AL / NL 各3地区・全30球団制へ移行。王者はワールドシリーズで決定します。",
+
+  /* --- 全30球団（バッジ色・略称・地区の参照元） --- */
+  teams: {
+    // American League — East
+    SAI:{ name:"埼玉サンダース",            abbr:"SAI", league:"AL", div:"East",    color:"#f59e0b" },
+    EHM:{ name:"愛媛オレンジカウンティ",    abbr:"EHM", league:"AL", div:"East",    color:"#ea580c" },
+    HIR:{ name:"広島セントラルレイカーズ",  abbr:"HIR", league:"AL", div:"East",    color:"#7c3aed" },
+    MCD:{ name:"町田アイアンテイルズ",      abbr:"MCD", league:"AL", div:"East",    color:"#64748b" },
+    TKB:{ name:"筑波ギャラクシー",          abbr:"TKB", league:"AL", div:"East",    color:"#4338ca" },
+    // American League — Central
+    TOK:{ name:"東京ロイヤルファミリー",    abbr:"TOK", league:"AL", div:"Central", color:"#dc2626" },
+    NII:{ name:"新潟イプシロンズ",          abbr:"NII", league:"AL", div:"Central", color:"#0891b2" },
+    CHB:{ name:"千葉ロックスターズ",        abbr:"CHB", league:"AL", div:"Central", color:"#db2777" },
+    FUK:{ name:"福岡ロマンチックウォリアーズ",abbr:"FUK",league:"AL", div:"Central", color:"#e11d48" },
+    KUM:{ name:"熊本ヴォルケーノ",          abbr:"KUM", league:"AL", div:"Central", color:"#b45309" },
+    // American League — West
+    AIC:{ name:"愛知プロミネンス",          abbr:"AIC", league:"AL", div:"West",    color:"#0d9488" },
+    HOK:{ name:"北海道ノーザンダンサーズ",  abbr:"HOK", league:"AL", div:"West",    color:"#0284c7" },
+    NAR:{ name:"奈良クラウンバックス",      abbr:"NAR", league:"AL", div:"West",    color:"#a16207" },
+    NGR:{ name:"流山シーマリナーズ",        abbr:"NGR", league:"AL", div:"West",    color:"#0369a1" },
+    TYM:{ name:"富山ブラックス",            abbr:"TYM", league:"AL", div:"West",    color:"#475569" },
+    // National League — East
+    KYO:{ name:"京都ミリオンアッシュ",      abbr:"KYO", league:"NL", div:"East",    color:"#9333ea" },
+    YOK:{ name:"横浜ベイサンズ",            abbr:"YOK", league:"NL", div:"East",    color:"#0ea5e9" },
+    KOB:{ name:"神戸エッジランナーズ",      abbr:"KOB", league:"NL", div:"East",    color:"#059669" },
+    NGS:{ name:"長崎マリンフォース",        abbr:"NGS", league:"NL", div:"East",    color:"#075985" },
+    SHN:{ name:"湘南マリーンズ",            abbr:"SHN", league:"NL", div:"East",    color:"#2563eb" },
+    // National League — Central
+    KYS:{ name:"清澄ブルーストリーム",      abbr:"KYS", league:"NL", div:"Central", color:"#1d4ed8" },
+    NGN:{ name:"長野ゴールドシップ",        abbr:"NGN", league:"NL", div:"Central", color:"#ca8a04" },
+    OKY:{ name:"岡山クロノジェネシス",      abbr:"OKY", league:"NL", div:"Central", color:"#7e22ce" },
+    SZK:{ name:"静岡イクイノックス",        abbr:"SZK", league:"NL", div:"Central", color:"#0f766e" },
+    KNS:{ name:"関西スラッガーズ",          abbr:"KNS", league:"NL", div:"Central", color:"#b91c1c" },
+    // National League — West
+    SBY:{ name:"渋谷アーバンスターズ",      abbr:"SBY", league:"NL", div:"West",    color:"#eab308" },
+    FCY:{ name:"福知山ガナーズ",            abbr:"FCY", league:"NL", div:"West",    color:"#15803d" },
+    NMB:{ name:"難波ボルテッカーズ",        abbr:"NMB", league:"NL", div:"West",    color:"#facc15" },
+    KWS:{ name:"川崎ブレイカーズ",          abbr:"KWS", league:"NL", div:"West",    color:"#2dd4bf" },
+    SEN:{ name:"仙台JoJoゴールデンウィンドウ",abbr:"SEN",league:"NL", div:"West",    color:"#fbbf24" },
+  },
+
+  /* --- メインニューススライダー（5記事） --- */
+  news: [
+    { id:"n1", cat:"World Series", title:"東京ロイヤルファミリー、2042ワールドシリーズ制覇 — 球団史上初の世界一", excerpt:"第6戦をサヨナラで制し、4勝2敗でシリーズ決着。リーグ再編初年度の頂点に立った。", grad:0 },
+    { id:"n2", cat:"MVP", title:"リーグMVP発表 — ALは佐倉怜、NLはダニー・コルテスが受賞", excerpt:"得票ポイントで他を圧倒。両リーグの最優秀選手が決定した。", grad:1 },
+    { id:"n3", cat:"Cy Young", title:"サイ・ヤング賞、剛腕アレックス・ウォンが満票で初受賞", excerpt:"防御率1.94・奪三振261の圧巻シーズン。NLでは桐生颯太が栄冠に。", grad:2 },
+    { id:"n4", cat:"Prospects", title:"若手有望株ランキング更新 — No.1は18歳の遊撃手リアム・ナカ", excerpt:"オール70評価の超新星。来季メジャー昇格が確実視される逸材たちを一挙紹介。", grad:3 },
+    { id:"n5", cat:"Postseason", title:"激闘の秋 — 全シリーズの軌跡とポストシーズン総括", excerpt:"再編初年度のポストシーズンは名勝負の連続。各カードの詳細を振り返る。", grad:4 },
+  ],
+  subNews: [
+    { id:"s1", cat:"Standings", title:"AL東地区、最終週まで首位争いがもつれる", date:"2042.10.02", grad:1 },
+    { id:"s2", cat:"Reliever",  title:"最優秀救援投手賞、47セーブのマルコ・リーが受賞", date:"2042.11.10", grad:2 },
+    { id:"s3", cat:"Gold Glove",title:"ゴールドグラブ賞、中堅手で3年連続受賞の快挙", date:"2042.11.12", grad:0 },
+    { id:"s4", cat:"Manager",   title:"最優秀監督賞は再建を成し遂げた福岡の指揮官に", date:"2042.11.08", grad:3 },
+    { id:"s5", cat:"Rookie",    title:"新人王争い、投打の二刀流ルーキーが話題をさらう", date:"2042.11.06", grad:4 },
+  ],
+
+  /* --- 順位表（AL/NL × 東・中・西の各5球団） --- */
+  standings: {
+    AL: {
+      East: [
+        { team:"SAI", w:96, l:66, gb:"—",    strk:"W2", clinch:"y" },
+        { team:"HIR", w:91, l:71, gb:"5.0",  strk:"W3", clinch:"w" },
+        { team:"EHM", w:83, l:79, gb:"13.0", strk:"L1" },
+        { team:"MCD", w:74, l:88, gb:"22.0", strk:"L2" },
+        { team:"TKB", w:69, l:93, gb:"27.0", strk:"W1" },
+      ],
+      Central: [
+        { team:"TOK", w:99, l:63, gb:"—",    strk:"W4", clinch:"z" },
+        { team:"FUK", w:92, l:70, gb:"7.0",  strk:"W1", clinch:"w" },
+        { team:"CHB", w:81, l:81, gb:"18.0", strk:"L1" },
+        { team:"NII", w:76, l:86, gb:"23.0", strk:"L3" },
+        { team:"KUM", w:70, l:92, gb:"29.0", strk:"W1" },
+      ],
+      West: [
+        { team:"AIC", w:94, l:68, gb:"—",    strk:"W2", clinch:"y" },
+        { team:"HOK", w:90, l:72, gb:"4.0",  strk:"W2", clinch:"w" },
+        { team:"NAR", w:82, l:80, gb:"12.0", strk:"L1" },
+        { team:"NGR", w:75, l:87, gb:"19.0", strk:"W1" },
+        { team:"TYM", w:68, l:94, gb:"26.0", strk:"L4" },
+      ],
+    },
+    NL: {
+      East: [
+        { team:"KYO", w:97, l:65, gb:"—",    strk:"W1", clinch:"z" },
+        { team:"YOK", w:88, l:74, gb:"9.0",  strk:"W3", clinch:"w" },
+        { team:"KOB", w:86, l:76, gb:"11.0", strk:"W2", clinch:"w" },
+        { team:"NGS", w:78, l:84, gb:"19.0", strk:"L1" },
+        { team:"SHN", w:70, l:92, gb:"27.0", strk:"L2" },
+      ],
+      Central: [
+        { team:"NGN", w:91, l:71, gb:"—",    strk:"W2", clinch:"y" },
+        { team:"SZK", w:82, l:80, gb:"9.0",  strk:"L1" },
+        { team:"OKY", w:80, l:82, gb:"11.0", strk:"W1" },
+        { team:"KNS", w:77, l:85, gb:"14.0", strk:"L2" },
+        { team:"KYS", w:71, l:91, gb:"20.0", strk:"W1" },
+      ],
+      West: [
+        { team:"SBY", w:95, l:67, gb:"—",    strk:"W2", clinch:"y" },
+        { team:"NMB", w:87, l:75, gb:"8.0",  strk:"W1", clinch:"w" },
+        { team:"FCY", w:81, l:81, gb:"14.0", strk:"L1" },
+        { team:"KWS", w:74, l:88, gb:"21.0", strk:"W2" },
+        { team:"SEN", w:69, l:93, gb:"26.0", strk:"L1" },
+      ],
+    },
+  },
+
+  /* --- ポストシーズン（ブラケット + 各カード詳細 + 総括） ---
+       seed: 全体シード ／ games: [a側得点, b側得点] を1試合ごと            */
+  postseason: {
+    AL: {
+      wildCard: [
+        { a:"AIC", b:"HOK", sa:3, sb:6, as:2, bs:1, format:"3戦2勝制 (WC)",
+          games:[[4,2],[3,5],[6,1]], standout:{p:"大門 剛",t:"AIC"},
+          note:"西地区王者AICが第3戦で打線爆発。終盤の集中打でHOKを退けた。" },
+        { a:"FUK", b:"HIR", sa:4, sb:5, as:2, bs:0, format:"3戦2勝制 (WC)",
+          games:[[3,1],[5,4]], standout:{p:"アレックス・ウォン",t:"FUK"},
+          note:"ウォンが初戦を完投。第2戦も僅差を守り抜き、危なげなくスイープ。" },
+      ],
+      division: [
+        { a:"TOK", b:"FUK", sa:1, sb:4, as:3, bs:1, format:"5戦3勝制 (DS)",
+          games:[[6,2],[3,4],[5,1],[7,3]], standout:{p:"佐倉 怜",t:"TOK"},
+          note:"リーグ最高勝率のTOKが地力を発揮。佐倉が4試合で3本塁打と打ちまくった。" },
+        { a:"SAI", b:"AIC", sa:2, sb:3, as:3, bs:2, format:"5戦3勝制 (DS)",
+          games:[[3,2],[1,5],[4,3],[2,6],[2,1]], standout:{p:"ジェイク・ロウ",t:"SAI"},
+          note:"フルゲームの死闘。最終戦は1点を守り切りSAIが激闘を制した。" },
+      ],
+      lcs: { a:"TOK", b:"SAI", sa:1, sb:2, as:4, bs:2, format:"7戦4勝制 (ALCS)",
+          games:[[5,3],[2,4],[6,4],[1,3],[7,2],[4,3]], mvp:{p:"佐倉 怜",t:"TOK"},
+          note:"東京勢対決を制したのはTOK。第6戦の終盤逆転でリーグ優勝を決めた。" },
+    },
+    NL: {
+      wildCard: [
+        { a:"NGN", b:"KOB", sa:3, sb:5, as:2, bs:1, format:"3戦2勝制 (WC)",
+          games:[[5,2],[1,3],[4,3]], standout:{p:"ルカ・ベネット",t:"NGN"},
+          note:"中地区王者NGNが第3戦の接戦をモノに。投打ともに一歩上回った。" },
+        { a:"YOK", b:"NMB", sa:4, sb:6, as:2, bs:1, format:"3戦2勝制 (WC)",
+          games:[[6,3],[2,4],[5,4]], standout:{p:"白鳥 颯",t:"YOK"},
+          note:"ルーキー白鳥が躍動。最終戦のサヨナラ劇でYOKが突破した。" },
+      ],
+      division: [
+        { a:"KYO", b:"YOK", sa:1, sb:4, as:3, bs:0, format:"5戦3勝制 (DS)",
+          games:[[4,1],[6,3],[2,0]], standout:{p:"桐生 颯太",t:"KYO"},
+          note:"エース桐生を擁するKYOが圧巻のスイープ。隙のない戦いぶりだった。" },
+        { a:"SBY", b:"NGN", sa:2, sb:3, as:3, bs:2, format:"5戦3勝制 (DS)",
+          games:[[5,4],[2,3],[6,2],[1,4],[3,2]], standout:{p:"宮坂 隼人",t:"SBY"},
+          note:"一進一退の好シリーズ。第5戦を競り勝ちSBYがLCSへ駒を進めた。" },
+      ],
+      lcs: { a:"KYO", b:"SBY", sa:1, sb:2, as:4, bs:3, format:"7戦4勝制 (NLCS)",
+          games:[[3,2],[3,5],[4,1],[4,6],[5,2],[1,3],[4,3]], mvp:{p:"ダニー・コルテス",t:"KYO"},
+          note:"第7戦までもつれた死闘をKYOが制覇。コルテスが全試合で出塁し牽引した。" },
+    },
+    worldSeries: {
+      a:"TOK", b:"KYO", as:4, bs:2, champ:"TOK", format:"7戦4勝制 (World Series)",
+      games:[[5,2],[3,4],[6,1],[2,3],[7,4],[5,4]],
+      mvp:{p:"佐倉 怜",t:"TOK"},
+      clinchNote:"第6戦9回裏、佐倉怜のサヨナラ2点本塁打で世界一が決定。",
+      path:[ {r:"ALDS",op:"FUK",res:"3-1"}, {r:"ALCS",op:"SAI",res:"4-2"}, {r:"WS",op:"KYO",res:"4-2"} ],
+    },
+    /* フォトギャラリー（計10枠をセクションごとに分散）。各グループに
+       { url:"画像URL", caption:"説明" } を追加すると、その位置の枠が埋まります。
+         hero   … ファーストビュー（2枠）
+         series … 対戦カード詳細の直下（5枠）
+         recap  … 総括セクション付近（3枠）                                  */
+    gallery: {
+      hero: [
+        // { url:"https://example.com/champ-celebration.jpg", caption:"胴上げの瞬間" },
+        // { url:"https://example.com/trophy.jpg", caption:"ワールドシリーズ・トロフィー" },
+      ],
+      series: [
+        // { url:"...", caption:"ALCS第6戦・逆転弾" },
+      ],
+      recap: [
+        // { url:"...", caption:"優勝パレード" },
+      ],
+    },
+
+    recap: {
+      headline:"再編初年度の秋 — 東京ロイヤルファミリーが頂点へ",
+      body:[
+        "AL/NL各3地区制へと生まれ変わった2042シーズン。ワイルドカードを含む12球団がポストシーズンに進出し、初年度から記憶に残る名勝負が連続した。",
+        "ALではリーグ最高勝率の東京ロイヤルファミリーが安定した戦いを見せる一方、埼玉サンダースと愛知プロミネンスがフルゲームの死闘を演じた。ナショナル・リーグは京都ミリオンアッシュと渋谷アーバンスターズが第7戦までもつれる激闘を展開した。",
+        "ワールドシリーズは東京と京都の頂上決戦。第6戦、9回裏に佐倉怜が放ったサヨナラ2点本塁打で東京が球団史上初の世界一に輝いた。",
+      ],
+      moments:[
+        { k:"ALDS", t:"埼玉、フルゲームの激闘を制す", b:"SAI対AICは第5戦までもつれ、1点差を守り抜いた埼玉がリーグ優勝へ望みをつないだ。" },
+        { k:"NLCS", t:"京都、第7戦の死闘を制覇", b:"渋谷との7戦目、コルテスの先制打を皮切りに京都が逃げ切りリーグ王者に。" },
+        { k:"WS Game 6", t:"佐倉、伝説のサヨナラ弾", b:"2点を追う9回裏、佐倉怜が逆転サヨナラ2ランを叩き込み世界一を決定づけた。" },
+      ],
+    },
+  },
+
+  /* --- 若手有望株ランキング --- */
+  prospects: [
+    { rank:1,  name:"リアム・ナカ",     team:"TOK", pos:"SS", age:18, eta:"2043", grade:"70", note:"オール70評価。打撃・守備・走塁すべて最高クラスの超大型遊撃手。" },
+    { rank:2,  name:"花井 春馬",         team:"KYO", pos:"SP", age:20, eta:"2043", grade:"65", note:"最速164km/h。3球種すべてプラス評価の本格派右腕。" },
+    { rank:3,  name:"イーサン・ボーン",  team:"FUK", pos:"OF", age:19, eta:"2044", grade:"65", note:"パワーとスピードを兼備。中堅守備も平均以上。" },
+    { rank:4,  name:"高村 蓮",           team:"SBY", pos:"3B", age:21, eta:"2043", grade:"60", note:"逆方向への長打力が魅力。出塁率も高い。" },
+    { rank:5,  name:"ノア・キム",         team:"NGN", pos:"C",  age:20, eta:"2044", grade:"60", note:"強肩堅守。投手陣のリードに定評。" },
+    { rank:6,  name:"水沢 大地",         team:"HIR", pos:"SP", age:19, eta:"2044", grade:"60", note:"制球抜群の技巧派左腕。完成度が高い。" },
+    { rank:7,  name:"レオ・サントス",    team:"YOK", pos:"2B", age:20, eta:"2043", grade:"55", note:"巧打のスイッチヒッター。二遊間の守備も安定。" },
+    { rank:8,  name:"志村 怜央",         team:"SEN", pos:"OF", age:18, eta:"2045", grade:"55", note:"俊足巧打のリードオフタイプ。" },
+    { rank:9,  name:"カイ・モリス",       team:"KOB", pos:"RP", age:22, eta:"2043", grade:"55", note:"即戦力クローザー候補。100mph超の速球。" },
+    { rank:10, name:"東山 蒼",           team:"SZK", pos:"1B", age:21, eta:"2043", grade:"50", note:"右の長距離砲。選球眼に課題も将来性十分。" },
+  ],
+
+  /* --- アワード --- */
+  awards: {
+    voting: [
+      { key:"MVP", label:"最優秀選手 (MVP)", AL:[
+          { p:"佐倉 怜",       t:"TOK", line:".334 / 48本 / 131打点 / OPS 1.041", pts:382, first:28 },
+          { p:"ジェイク・ロウ", t:"SAI", line:".311 / 41本 / 118打点 / OPS .978", pts:301, first:2 },
+          { p:"大門 剛",       t:"AIC", line:".298 / 39本 / 109打点 / OPS .944", pts:214, first:0 },
+        ], NL:[
+          { p:"ダニー・コルテス", t:"KYO", line:".329 / 44本 / 126打点 / OPS 1.012", pts:374, first:26 },
+          { p:"宮坂 隼人",       t:"SBY", line:".305 / 37本 / 112打点 / OPS .961", pts:288, first:4 },
+          { p:"ルカ・ベネット",   t:"NGN", line:".321 / 31本 / 98打点 / OPS .955", pts:233, first:0 },
+        ]},
+      { key:"CY", label:"サイ・ヤング賞", AL:[
+          { p:"アレックス・ウォン", t:"FUK", line:"19勝5敗 / 防御率1.94 / 261奪三振", pts:210, first:30 },
+          { p:"園田 直樹",         t:"TOK", line:"17勝7敗 / 防御率2.41 / 224奪三振", pts:158, first:0 },
+          { p:"マイカ・リード",     t:"HIR", line:"15勝6敗 / 防御率2.55 / 198奪三振", pts:112, first:0 },
+        ], NL:[
+          { p:"桐生 颯太",         t:"KYO", line:"18勝6敗 / 防御率2.12 / 248奪三振", pts:188, first:18 },
+          { p:"オリバー・グラント", t:"SBY", line:"16勝8敗 / 防御率2.33 / 233奪三振", pts:171, first:12 },
+          { p:"南雲 蓮司",         t:"YOK", line:"14勝7敗 / 防御率2.61 / 201奪三振", pts:99, first:0 },
+        ]},
+      { key:"ROTY", label:"新人王 (ROTY)", AL:[
+          { p:"テオ・ハント",   t:"HOK", line:".289 / 24本 / 71打点 / 19盗塁", pts:142, first:24 },
+          { p:"瀬戸 陽人",     t:"SAI", line:"12勝6敗 / 防御率3.02 / 156奪三振", pts:101, first:6 },
+          { p:"アンソニー・ボー", t:"EHM", line:".276 / 18本 / 64打点", pts:58, first:0 },
+        ], NL:[
+          { p:"白鳥 颯",       t:"YOK", line:".301 / 21本 / 68打点 / 15盗塁", pts:138, first:22 },
+          { p:"マテオ・リオス", t:"NGN", line:".284 / 19本 / 62打点", pts:96, first:8 },
+          { p:"九鬼 龍之介",   t:"KWS", line:"11勝7敗 / 防御率3.18 / 148奪三振", pts:61, first:0 },
+        ]},
+      { key:"MOY", label:"最優秀監督賞 (MOY)", AL:[
+          { p:"ブライアン・コール", t:"FUK", line:"前年比 +18勝 / WC進出へ導く", pts:118, first:20 },
+          { p:"立花 監督",         t:"TOK", line:"リーグ最多99勝 / WS制覇", pts:96, first:10 },
+          { p:"R. デルガド",       t:"AIC", line:"西地区優勝へ再建を成功", pts:42, first:0 },
+        ], NL:[
+          { p:"ハビエル・ソート", t:"NMB", line:"WC獲得 / 前年比 +15勝", pts:124, first:22 },
+          { p:"梶原 監督",         t:"KYO", line:"リーグ最多97勝", pts:88, first:8 },
+          { p:"D. フォーリー",     t:"YOK", line:"接戦をものにしWC圏内", pts:39, first:0 },
+        ]},
+      { key:"RELIEVER", label:"最優秀救援投手賞", AL:[
+          { p:"マルコ・リー",   t:"TOK", line:"47セーブ / 防御率1.62 / WHIP 0.84", pts:166, first:28 },
+          { p:"鵜飼 大和",     t:"HIR", line:"39セーブ / 防御率2.04", pts:108, first:2 },
+          { p:"ザック・ペイン", t:"SAI", line:"33セーブ / 防御率2.21", pts:54, first:0 },
+        ], NL:[
+          { p:"イヴァン・ロサ", t:"SBY", line:"44セーブ / 防御率1.71 / WHIP 0.91", pts:159, first:26 },
+          { p:"黒崎 漣",       t:"KYO", line:"41セーブ / 防御率1.98", pts:114, first:4 },
+          { p:"トビー・ヘイル", t:"NGN", line:"30セーブ / 防御率2.33", pts:48, first:0 },
+        ]},
+    ],
+
+    goldGlove: {
+      AL: { P:{p:"園田 直樹",t:"TOK"}, C:{p:"森岡 健",t:"FUK"}, "1B":{p:"J. ロウ",t:"SAI"}, "2B":{p:"立石 颯",t:"TOK"}, "3B":{p:"大門 剛",t:"AIC"}, SS:{p:"R. ナカ",t:"TOK"}, LF:{p:"風間 諒",t:"HIR"}, CF:{p:"カイル・ベル",t:"FUK"}, RF:{p:"宮田 蓮",t:"HOK"}, DH:{p:"—",t:""} },
+      NL: { P:{p:"桐生 颯太",t:"KYO"}, C:{p:"ノア・キム",t:"NGN"}, "1B":{p:"東山 蒼",t:"SZK"}, "2B":{p:"L. サントス",t:"YOK"}, "3B":{p:"高村 蓮",t:"SBY"}, SS:{p:"宮坂 隼人",t:"SBY"}, LF:{p:"ルカ・ベネット",t:"NGN"}, CF:{p:"白鳥 颯",t:"YOK"}, RF:{p:"D. コルテス",t:"KYO"}, DH:{p:"—",t:""} },
+    },
+    silverSlugger: {
+      AL: { P:{p:"—",t:""}, C:{p:"森岡 健",t:"FUK"}, "1B":{p:"J. ロウ",t:"SAI"}, "2B":{p:"立石 颯",t:"TOK"}, "3B":{p:"大門 剛",t:"AIC"}, SS:{p:"佐倉 怜",t:"TOK"}, LF:{p:"風間 諒",t:"HIR"}, CF:{p:"カイル・ベル",t:"FUK"}, RF:{p:"宮田 蓮",t:"HOK"}, DH:{p:"テオ・ハント",t:"HOK"} },
+      NL: { P:{p:"—",t:""}, C:{p:"ノア・キム",t:"NGN"}, "1B":{p:"東山 蒼",t:"SZK"}, "2B":{p:"宮坂 隼人",t:"SBY"}, "3B":{p:"高村 蓮",t:"SBY"}, SS:{p:"D. コルテス",t:"KYO"}, LF:{p:"ルカ・ベネット",t:"NGN"}, CF:{p:"白鳥 颯",t:"YOK"}, RF:{p:"宮坂 翔",t:"KOB"}, DH:{p:"森永 大樹",t:"KNS"} },
+    },
+
+    leaders: {
+      AL: {
+        batting: {
+          "打率":   [["佐倉 怜","TOK",".334"],["カイル・ベル","FUK",".321"],["大門 剛","AIC",".298"],["立石 颯","TOK",".295"],["宮田 蓮","HOK",".291"]],
+          "本塁打": [["佐倉 怜","TOK","48"],["J. ロウ","SAI","41"],["大門 剛","AIC","39"],["風間 諒","HIR","34"],["森岡 健","FUK","31"]],
+          "打点":   [["佐倉 怜","TOK","131"],["J. ロウ","SAI","118"],["大門 剛","AIC","109"],["森岡 健","FUK","97"],["風間 諒","HIR","94"]],
+          "盗塁":   [["テオ・ハント","HOK","41"],["宮田 蓮","HOK","33"],["立石 颯","TOK","28"],["風間 諒","HIR","22"],["カイル・ベル","FUK","20"]],
+        },
+        pitching: {
+          "勝利":   [["アレックス・ウォン","FUK","19"],["園田 直樹","TOK","17"],["マイカ・リード","HIR","15"],["瀬戸 陽人","SAI","12"],["R. ベイカー","MCD","12"]],
+          "防御率": [["アレックス・ウォン","FUK","1.94"],["園田 直樹","TOK","2.41"],["マイカ・リード","HIR","2.55"],["瀬戸 陽人","SAI","3.02"],["D. フィン","NII","3.21"]],
+          "奪三振": [["アレックス・ウォン","FUK","261"],["園田 直樹","TOK","224"],["マイカ・リード","HIR","198"],["瀬戸 陽人","SAI","156"],["R. ベイカー","MCD","149"]],
+          "セーブ": [["マルコ・リー","TOK","47"],["鵜飼 大和","HIR","39"],["ザック・ペイン","SAI","33"],["G. ムーア","HOK","28"],["平岡 駿","EHM","21"]],
+        },
+      },
+      NL: {
+        batting: {
+          "打率":   [["ダニー・コルテス","KYO",".329"],["ルカ・ベネット","NGN",".321"],["宮坂 隼人","SBY",".305"],["白鳥 颯","YOK",".301"],["森永 大樹","KNS",".294"]],
+          "本塁打": [["ダニー・コルテス","KYO","44"],["宮坂 隼人","SBY","37"],["東山 蒼","SZK","33"],["ルカ・ベネット","NGN","31"],["森永 大樹","KNS","28"]],
+          "打点":   [["ダニー・コルテス","KYO","126"],["宮坂 隼人","SBY","112"],["ルカ・ベネット","NGN","98"],["東山 蒼","SZK","95"],["ノア・キム","NGN","88"]],
+          "盗塁":   [["白鳥 颯","YOK","38"],["L. サントス","YOK","29"],["宮坂 翔","KOB","24"],["ルカ・ベネット","NGN","19"],["志村 怜央","SEN","17"]],
+        },
+        pitching: {
+          "勝利":   [["桐生 颯太","KYO","18"],["オリバー・グラント","SBY","16"],["南雲 蓮司","YOK","14"],["九鬼 龍之介","KWS","11"],["P. ウェッブ","KOB","11"]],
+          "防御率": [["桐生 颯太","KYO","2.12"],["オリバー・グラント","SBY","2.33"],["南雲 蓮司","YOK","2.61"],["九鬼 龍之介","KWS","3.18"],["C. ダイアー","FCY","3.29"]],
+          "奪三振": [["桐生 颯太","KYO","248"],["オリバー・グラント","SBY","233"],["南雲 蓮司","YOK","201"],["九鬼 龍之介","KWS","148"],["P. ウェッブ","KOB","141"]],
+          "セーブ": [["イヴァン・ロサ","SBY","44"],["黒崎 漣","KYO","41"],["トビー・ヘイル","NGN","30"],["真田 操","NMB","25"],["L. ヘイズ","KNS","18"]],
+        },
+      },
+    },
+
+    postseasonMvp: [
+      { key:"ALCS", label:"ALCS MVP", p:"佐倉 怜",       t:"TOK", line:"6試合 .421 / 3本 / 9打点" },
+      { key:"NLCS", label:"NLCS MVP", p:"ダニー・コルテス", t:"KYO", line:"7試合 .393 / 4本 / 11打点" },
+      { key:"WS",   label:"World Series MVP", p:"佐倉 怜",  t:"TOK", line:"6試合 .455 / 4本 / 10打点 / 決勝サヨナラ弾", big:true },
+    ],
+  },
+};
+
+const GRADS = [
+  "linear-gradient(135deg,#0d3b2e,#062018)",
+  "linear-gradient(135deg,#1a2f4a,#0a1422)",
+  "linear-gradient(135deg,#3a1f0d,#1a0e05)",
+  "linear-gradient(135deg,#2a0d3a,#120618)",
+  "linear-gradient(135deg,#0d2a3a,#05141c)",
+];
+const DIVS = ["East", "Central", "West"];
+const DIV_JP = { East:"東地区", Central:"中地区", West:"西地区" };
+
+/* ============================================================================
+ *  共通コンポーネント
+ * ==========================================================================*/
+const team = (abbr) => DATA.teams[abbr] || { name: abbr, abbr, color:"#555" };
+
+function Badge({ abbr }) {
+  if (!abbr) return null;
+  const t = team(abbr);
+  return <span className="badge" style={{ background: t.color }}>{t.abbr}</span>;
+}
+function TeamCell({ abbr, full }) {
+  if (!abbr) return <span className="muted">—</span>;
+  const t = team(abbr);
+  return (
+    <span style={{ display:"inline-flex", alignItems:"center", gap:8 }}>
+      <Badge abbr={abbr} /><span style={{ fontWeight:600 }}>{full ? t.name : t.abbr}</span>
+    </span>
+  );
+}
+function Player({ name, t }) {
+  if (!name || name === "—") return <span className="muted">—</span>;
+  return (
+    <span style={{ display:"inline-flex", alignItems:"center", gap:7, flexWrap:"wrap" }}>
+      {t ? <Badge abbr={t} /> : null}
+      <span style={{ fontWeight:600 }}>{name}</span>
+      {t ? <span className="muted" style={{ fontSize:11 }}>{team(t).abbr}</span> : null}
+    </span>
+  );
+}
+function SectionHead({ kicker, title, right }) {
+  return (
+    <div className="section-head" style={{ display:"flex", alignItems:"flex-end", justifyContent:"space-between", gap:12, flexWrap:"wrap" }}>
+      <div><div className="kicker">{kicker}</div><h2 className="section-title">{title}</h2></div>
+      {right}
+    </div>
+  );
+}
+function LeagueToggle({ value, onChange }) {
+  return (
+    <div className="toggle">
+      <button className={value === "AL" ? "on al" : ""} onClick={() => onChange("AL")}>American</button>
+      <button className={value === "NL" ? "on nl" : ""} onClick={() => onChange("NL")}>National</button>
+    </div>
+  );
+}
+
+/* ============================================================================
+ *  HOME
+ * ==========================================================================*/
+function NewsSlider() {
+  const [i, setI] = useState(0);
+  const items = DATA.news;
+  const go = (d) => setI((p) => (p + d + items.length) % items.length);
+  const a = items[i];
+  return (
+    <div className="hero">
+      <div className="hero-bg" style={{ background: GRADS[a.grad % GRADS.length] }} />
+      <div className="hero-grad" />
+      <div className="hero-arrows"><button className="prev" onClick={() => go(-1)}>‹</button><button className="next" onClick={() => go(1)}>›</button></div>
+      <div className="hero-content">
+        <span className="hero-cat">{a.cat}</span>
+        <h1 className="hero-title">{a.title}</h1>
+        <p className="hero-excerpt">{a.excerpt}</p>
+      </div>
+      <div className="hero-dots">{items.map((_, k) => <button key={k} className={"hero-dot" + (k === i ? " active" : "")} onClick={() => setI(k)} />)}</div>
+    </div>
+  );
+}
+function SubNews() {
+  return (
+    <div className="card">
+      <div className="card-head"><span className="kicker">Latest</span><span className="muted" style={{fontSize:11}}>NEWS</span></div>
+      <div className="card-body" style={{ paddingTop:4, paddingBottom:4 }}>
+        {DATA.subNews.map((s) => (
+          <div className="sub-item" key={s.id}>
+            <div className="sub-thumb" style={{ background: GRADS[s.grad % GRADS.length] }} />
+            <div style={{ minWidth:0 }}>
+              <div className="sub-cat">{s.cat}</div>
+              <div className="sub-title">{s.title}</div>
+              <div className="sub-date mono">{s.date}</div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+function MiniStandingsBlock({ lg, div }) {
+  const rows = DATA.standings[lg][div];
+  return (
+    <div className="card">
+      <div className="card-head"><span className="kicker" style={{ color: lg === "AL" ? "var(--al)" : "var(--nl)" }}>{lg} {div}</span></div>
+      <table>
+        <thead><tr><th>Team</th><th className="num">W</th><th className="num">L</th><th className="num">GB</th></tr></thead>
+        <tbody>
+          {rows.map((r) => (
+            <tr key={r.team}>
+              <td><TeamCell abbr={r.team} /> {r.clinch === "z" || r.clinch === "y" ? <span className="clinch">◆</span> : null}</td>
+              <td className="num mono">{r.w}</td><td className="num mono">{r.l}</td><td className="num mono muted">{r.gb}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+}
+function HomePage({ go }) {
+  return (
+    <div>
+      <SectionHead kicker={`Season ${DATA.season}`} title="トップニュース"
+        right={<span className="muted" style={{ fontSize:12, maxWidth:380, textAlign:"right" }}>{DATA.regulationNote}</span>} />
+      <div className="grid" style={{ gridTemplateColumns:"minmax(0,2fr) minmax(0,1fr)" }}>
+        <NewsSlider /><SubNews />
+      </div>
+
+      <SectionHead kicker="Standings" title="順位表" right={<button className="season-pill" onClick={() => go("standings")}>すべて見る →</button>} />
+      <div className="kicker" style={{ color:"var(--al)", margin:"4px 0 10px" }}>American League</div>
+      <div className="grid g3" style={{ marginBottom:18 }}>{DIVS.map((d) => <MiniStandingsBlock key={d} lg="AL" div={d} />)}</div>
+      <div className="kicker" style={{ color:"var(--nl)", margin:"4px 0 10px" }}>National League</div>
+      <div className="grid g3">{DIVS.map((d) => <MiniStandingsBlock key={d} lg="NL" div={d} />)}</div>
+
+      <SectionHead kicker="Postseason" title="トーナメント表" right={<button className="season-pill" onClick={() => go("postseason")}>詳細・総括 →</button>} />
+      <WorldSeriesHero />
+      <div style={{ height:18 }} />
+      <div className="grid g2"><LeagueBracket lg="AL" /><LeagueBracket lg="NL" /></div>
+    </div>
+  );
+}
+
+/* ============================================================================
+ *  STANDINGS
+ * ==========================================================================*/
+function pct(w, l) { const d = w + l; return d ? (w / d).toFixed(3).replace(/^0/, "") : ".000"; }
+function StandingsTable({ lg, div }) {
+  const rows = DATA.standings[lg][div];
+  return (
+    <div className="card">
+      <div className="card-head">
+        <span className="kicker" style={{ color: lg === "AL" ? "var(--al)" : "var(--nl)" }}>{lg} · {div}</span>
+        <span className="muted" style={{ fontSize:11 }}>{DIV_JP[div]}</span>
+      </div>
+      <table>
+        <thead><tr><th>#</th><th>Team</th><th className="num">W</th><th className="num">L</th><th className="num">PCT</th><th className="num">GB</th><th className="num">STRK</th></tr></thead>
+        <tbody>
+          {rows.map((r, idx) => (
+            <tr key={r.team}>
+              <td className="rank-cell">{idx + 1}</td>
+              <td>
+                <TeamCell abbr={r.team} full />
+                {r.clinch === "z" ? <span className="clinch" title="リーグ全体首位"> ◆z</span> :
+                 r.clinch === "y" ? <span className="clinch" title="地区優勝"> ◆y</span> :
+                 r.clinch === "w" ? <span style={{color:"var(--gold)"}} title="ワイルドカード"> ◇w</span> : null}
+              </td>
+              <td className="num mono">{r.w}</td><td className="num mono">{r.l}</td>
+              <td className="num mono">{pct(r.w, r.l)}</td><td className="num mono muted">{r.gb}</td>
+              <td className="num mono" style={{ color: r.strk[0] === "W" ? "var(--accent)" : "var(--muted)" }}>{r.strk}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+}
+function StandingsPage() {
+  return (
+    <div>
+      <SectionHead kicker="Standings" title="順位表" right={<span className="muted" style={{fontSize:11}}>◆ 地区優勝 ／ ◇ ワイルドカード</span>} />
+      <div className="kicker" style={{ color:"var(--al)", margin:"6px 0 10px" }}>American League</div>
+      <div className="grid g3" style={{ marginBottom:22 }}>{DIVS.map((d) => <StandingsTable key={d} lg="AL" div={d} />)}</div>
+      <div className="kicker" style={{ color:"var(--nl)", margin:"6px 0 10px" }}>National League</div>
+      <div className="grid g3">{DIVS.map((d) => <StandingsTable key={d} lg="NL" div={d} />)}</div>
+    </div>
+  );
+}
+
+/* ============================================================================
+ *  POSTSEASON
+ * ==========================================================================*/
+function Matchup({ s }) {
+  const aw = s.as > s.bs, bw = s.bs > s.as;
+  return (
+    <div className="matchup">
+      <div className={"mu-team" + (aw ? " win" : "")}>
+        {s.sa ? <span className="mu-seed">#{s.sa}</span> : null}
+        <Badge abbr={s.a} /><span className="mu-name">{team(s.a).name}</span><span className="mu-score mono">{s.as}</span>
+      </div>
+      <div className={"mu-team" + (bw ? " win" : "")}>
+        {s.sb ? <span className="mu-seed">#{s.sb}</span> : null}
+        <Badge abbr={s.b} /><span className="mu-name">{team(s.b).name}</span><span className="mu-score mono">{s.bs}</span>
+      </div>
+    </div>
+  );
+}
+function LeagueBracket({ lg }) {
+  const ps = DATA.postseason[lg];
+  const accent = lg === "AL" ? "var(--al)" : "var(--nl)";
+  return (
+    <div className="card">
+      <div className="card-head"><span className="kicker" style={{ color: accent }}>{lg === "AL" ? "American League" : "National League"}</span></div>
+      <div className="card-body">
+        <div className="bracket">
+          <div className="round"><div className="round-label">Wild Card</div>{ps.wildCard.map((m, i) => <Matchup key={i} s={m} />)}</div>
+          <div className="round"><div className="round-label">Division Series</div>{ps.division.map((m, i) => <Matchup key={i} s={m} />)}</div>
+          <div className="round"><div className="round-label">{lg} Championship</div><Matchup s={ps.lcs} /></div>
+        </div>
+      </div>
+    </div>
+  );
+}
+function WorldSeriesHero() {
+  const ws = DATA.postseason.worldSeries;
+  const champ = team(ws.champ);
+  return (
+    <div className="ws-champion" style={{ borderColor: champ.color }}>
+      <div className="ws-tag">2042 World Series</div>
+      <div className="ws-trophy">🏆</div>
+      <div className="ws-headline">World Champions</div>
+      <div className="ws-champ-name">{champ.name}</div>
+      <div className="ws-result">
+        <TeamCell abbr={ws.a} /><span className="vs-score" style={{ color:"var(--gold)" }}>{ws.as} — {ws.bs}</span><TeamCell abbr={ws.b} />
+      </div>
+      <div className="ws-mvp"><span className="lbl">WS MVP</span><Badge abbr={ws.mvp.t} /><b>{ws.mvp.p}</b></div>
+      <div className="ws-path">
+        {ws.path.map((p, i) => <span key={i} className="step">{p.r} <b>vs {team(p.op).abbr}</b> {p.res}</span>)}
+      </div>
+    </div>
+  );
+}
+function GameLog({ s }) {
+  return (
+    <div className="gamelog">
+      {s.games.map((g, i) => {
+        const aw = g[0] > g[1];
+        return (
+          <div key={i} className="game-pill">
+            <span className="gnum">GAME {i + 1}</span>
+            <span className="gsc">
+              <span style={{ color: aw ? "var(--accent)" : "var(--muted)" }}>{g[0]}</span>
+              <span className="muted"> – </span>
+              <span style={{ color: !aw ? "var(--accent)" : "var(--muted)" }}>{g[1]}</span>
+            </span>
+          </div>
+        );
+      })}
+    </div>
+  );
+}
+function SeriesCard({ s, round, major }) {
+  const aw = s.as > s.bs;
+  return (
+    <div className={"series-card" + (major ? " major" : "")}>
+      <div className="series-head">
+        <span className="series-round" style={{ color: major ? "var(--gold)" : "var(--accent)" }}>{round}</span>
+        <span className="series-format">{s.format}</span>
+      </div>
+      <div className="series-line">
+        <span className={"series-team" + (aw ? " winner" : "")}><Badge abbr={s.a} /><span className="nm">{team(s.a).name}</span></span>
+        <span className="series-vs">{s.as} <span className="muted">–</span> {s.bs}</span>
+        <span className={"series-team" + (!aw ? " winner" : "")}><Badge abbr={s.b} /><span className="nm">{team(s.b).name}</span></span>
+      </div>
+      <GameLog s={s} />
+      <div className="series-meta">
+        {s.mvp ? <span className="meta-chip mvp">シリーズMVP <Badge abbr={s.mvp.t} /> <b>{s.mvp.p}</b></span>
+               : s.standout ? <span className="meta-chip">注目選手 <Badge abbr={s.standout.t} /> <b>{s.standout.p}</b></span> : null}
+        <span className="meta-chip">勝者 <Badge abbr={aw ? s.a : s.b} /></span>
+      </div>
+      {s.note ? <div className="series-note">{s.note}</div> : null}
+    </div>
+  );
+}
+function LeagueSeriesDetail({ lg }) {
+  const ps = DATA.postseason[lg];
+  const lcsLabel = lg === "AL" ? "ALCS" : "NLCS";
+  const accent = lg === "AL" ? "var(--al)" : "var(--nl)";
+  return (
+    <div>
+      <div className="kicker" style={{ color: accent, margin:"8px 0 12px" }}>{lg === "AL" ? "American League" : "National League"}</div>
+      <SeriesCard s={ps.lcs} round={lcsLabel} major />
+      <div className="grid g2">
+        {ps.division.map((m, i) => <SeriesCard key={"d" + i} s={m} round="Division Series" />)}
+      </div>
+      <div className="grid g2">
+        {ps.wildCard.map((m, i) => <SeriesCard key={"w" + i} s={m} round="Wild Card" />)}
+      </div>
+    </div>
+  );
+}
+function PostseasonRecap() {
+  const r = DATA.postseason.recap;
+  return (
+    <div className="recap">
+      <h3>{r.headline}</h3>
+      {r.body.map((p, i) => <p key={i}>{p}</p>)}
+      <div style={{ marginTop:8 }}>
+        <div className="kicker" style={{ marginBottom:4 }}>Key Moments</div>
+        {r.moments.map((m, i) => (
+          <div className="moment" key={i}>
+            <span className="mk">{m.k}</span>
+            <div><div className="mt">{m.t}</div><div className="mb">{m.b}</div></div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+/* セクション別の写真枠数（合計10枠） */
+const PHOTO_GROUPS = { hero: 2, series: 5, recap: 3 };
+
+function PhotoStrip({ group, min = 180, ratio = "4/3" }) {
+  const count = PHOTO_GROUPS[group] || 0;
+  const photos = (DATA.postseason.gallery && DATA.postseason.gallery[group]) || [];
+  const slots = Array.from({ length: count }, (_, i) => photos[i] || null);
+  return (
+    <div className="gallery-grid" style={{ gridTemplateColumns: `repeat(auto-fit, minmax(${min}px, 1fr))` }}>
+      {slots.map((p, i) =>
+        p && p.url ? (
+          <a key={i} className="photo-slot" style={{ aspectRatio: ratio }} href={p.url} target="_blank" rel="noreferrer">
+            <img src={p.url} alt={p.caption || `${group} photo ${i + 1}`} loading="lazy" />
+            {p.caption ? <div className="photo-cap">{p.caption}</div> : null}
+          </a>
+        ) : (
+          <div key={i} className="photo-slot empty" style={{ aspectRatio: ratio }}>
+            <span className="photo-num">{i + 1}</span>
+            <span style={{ fontSize:10, letterSpacing:".12em" }}>📷 写真を追加</span>
+          </div>
+        )
+      )}
+    </div>
+  );
+}
+
+function PostseasonPage() {
+  const ws = DATA.postseason.worldSeries;
+  return (
+    <div>
+      <SectionHead kicker="Postseason" title="ポストシーズン" />
+
+      {/* 1) 派手なワールドシリーズ・チャンピオン */}
+      <WorldSeriesHero />
+
+      {/* ファーストビュー写真（2枠） */}
+      <div className="kicker" style={{ margin:"18px 0 10px" }}>Highlights</div>
+      <PhotoStrip group="hero" min={300} ratio="16/9" />
+
+      {/* 2) ブラケット */}
+      <SectionHead kicker="Bracket" title="トーナメント表" />
+      <div className="grid g2"><LeagueBracket lg="AL" /><LeagueBracket lg="NL" /></div>
+
+      {/* 3) ワールドシリーズ詳細 + 各カード詳細 */}
+      <SectionHead kicker="Series Detail" title="対戦カード詳細" />
+      <div className="kicker" style={{ color:"var(--gold)", margin:"4px 0 12px" }}>World Series</div>
+      <SeriesCard s={{ ...ws, mvp: ws.mvp }} round="World Series" major />
+      {ws.clinchNote ? <div className="series-note" style={{ marginTop:-6, marginBottom:18, paddingLeft:0 }}>🏆 {ws.clinchNote}</div> : null}
+      <LeagueSeriesDetail lg="AL" />
+      <LeagueSeriesDetail lg="NL" />
+
+      {/* 対戦カード直下の写真（5枠） */}
+      <div className="kicker" style={{ margin:"6px 0 10px" }}>Series Photos</div>
+      <PhotoStrip group="series" min={170} ratio="4/3" />
+
+      {/* 4) 総括 */}
+      <SectionHead kicker="Recap" title="ポストシーズン総括" />
+      <PostseasonRecap />
+
+      {/* 総括付近の写真（3枠） */}
+      <div className="kicker" style={{ margin:"18px 0 10px" }}>Scene Gallery</div>
+      <PhotoStrip group="recap" min={220} ratio="4/3" />
+    </div>
+  );
+}
+
+/* ============================================================================
+ *  PROSPECTS
+ * ==========================================================================*/
+function ProspectsPage() {
+  return (
+    <div>
+      <SectionHead kicker="Prospects" title="若手有望株ランキング" right={<span className="muted" style={{fontSize:11}}>FV = Future Value 評価</span>} />
+      {DATA.prospects.map((p) => (
+        <div className="prospect" key={p.rank}>
+          <div className="pr-rank">{p.rank}</div>
+          <div style={{ flex:1, minWidth:0 }}>
+            <div style={{ display:"flex", alignItems:"center", gap:10, flexWrap:"wrap" }}>
+              <span className="display" style={{ fontSize:17, fontWeight:700 }}>{p.name}</span>
+              <Badge abbr={p.team} /><span className="tag">{p.pos}</span><span className="tag">{p.age}歳</span><span className="tag">ETA {p.eta}</span>
+            </div>
+            <div className="muted" style={{ fontSize:12.5, marginTop:6 }}>{p.note}</div>
+          </div>
+          <div className="pr-grade">{p.grade} FV</div>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+/* ============================================================================
+ *  AWARDS
+ * ==========================================================================*/
+const MEDALS = ["🥇", "🥈", "🥉"];
+function VotingAward({ award, lg }) {
+  return (
+    <div className="award-block">
+      <div style={{ display:"flex", alignItems:"baseline", gap:10, marginBottom:10 }}>
+        <span className="award-name">{award.label}</span><span className="muted" style={{ fontSize:11, letterSpacing:".12em" }}>{lg}</span>
+      </div>
+      <div className="podium">
+        {award[lg].map((f, i) => (
+          <div key={i} className={"finalist" + (i === 0 ? " first" : "")}>
+            <div className="place"><span className="medal">{MEDALS[i]}</span>{i + 1}位</div>
+            <div className="player">{f.p}</div>
+            <div style={{ marginBottom:6 }}><Badge abbr={f.t} /> <span className="muted" style={{ fontSize:12 }}>{team(f.t).name}</span></div>
+            <div className="stats">{f.line}</div>
+            <div className="points-row">
+              <span className="points-val mono">{f.pts}</span><span className="points-label">得票ポイント</span>
+              {f.first ? <span className="points-label" style={{ marginLeft:"auto" }}>1位票 {f.first}</span> : null}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+function VotingTab() {
+  const [lg, setLg] = useState("AL");
+  return (
+    <div>
+      <div style={{ display:"flex", justifyContent:"flex-end", marginBottom:16 }}><LeagueToggle value={lg} onChange={setLg} /></div>
+      {DATA.awards.voting.map((a) => <VotingAward key={a.key} award={a} lg={lg} />)}
+    </div>
+  );
+}
+const FIELD_POS = [
+  { key:"P",  x:50, y:58, c:"#2fff9a" }, { key:"C",  x:50, y:90, c:"#2fff9a" },
+  { key:"1B", x:74, y:64, c:"#f5c542" }, { key:"2B", x:62, y:42, c:"#f5c542" },
+  { key:"3B", x:26, y:64, c:"#f5c542" }, { key:"SS", x:38, y:42, c:"#f5c542" },
+  { key:"LF", x:16, y:22, c:"#38bdf8" }, { key:"CF", x:50, y:12, c:"#38bdf8" },
+  { key:"RF", x:84, y:22, c:"#38bdf8" }, { key:"DH", x:90, y:92, c:"#f472b6" },
+];
+function FieldSvg() {
+  const base = (x, y, k) => <rect key={k} x={x-1.4} y={y-1.4} width="2.8" height="2.8" fill="#fff" fillOpacity="0.85" transform={`rotate(45 ${x} ${y})`} />;
+  return (
+    <svg viewBox="0 0 100 100" style={{ position:"absolute", inset:0, width:"100%", height:"100%" }} aria-hidden>
+      <defs><radialGradient id="grass" cx="50%" cy="60%" r="70%"><stop offset="0%" stopColor="#1f4a2e"/><stop offset="100%" stopColor="#0d2a18"/></radialGradient></defs>
+      <rect width="100" height="100" fill="#0a1410" />
+      <path d="M 50 82 L 8 38 A 60 60 0 0 1 92 38 Z" fill="url(#grass)" />
+      <path d="M 50 82 L 72 60 L 50 38 L 28 60 Z" fill="#73553a" />
+      <path d="M 50 76 L 66 60 L 50 44 L 34 60 Z" fill="#1f4a2e" />
+      <line x1="50" y1="82" x2="8" y2="40" stroke="#fff" strokeOpacity="0.5" strokeWidth="0.3" />
+      <line x1="50" y1="82" x2="92" y2="40" stroke="#fff" strokeOpacity="0.5" strokeWidth="0.3" />
+      {base(50,82,"h")}{base(72,60,"1")}{base(50,38,"2")}{base(28,60,"3")}
+      <circle cx="50" cy="60" r="3.2" fill="#8a6845" /><circle cx="50" cy="60" r="0.8" fill="#fff" fillOpacity="0.7" />
+    </svg>
+  );
+}
+function FieldDiagram() {
+  const [lg, setLg] = useState("AL");
+  const [award, setAward] = useState("gg");
+  const map = (award === "gg" ? DATA.awards.goldGlove : DATA.awards.silverSlugger)[lg];
+  const other = (award === "gg" ? DATA.awards.silverSlugger : DATA.awards.goldGlove)[lg];
+  return (
+    <div className="card">
+      <div className="card-head" style={{ flexWrap:"wrap" }}>
+        <div>
+          <div className="kicker" style={{ color: lg === "AL" ? "var(--al)" : "var(--nl)" }}>{lg} · Field View</div>
+          <div className="display" style={{ fontWeight:700, fontSize:15 }}>{award === "gg" ? "ゴールドグラブ賞" : "シルバースラッガー賞"}</div>
+        </div>
+        <div style={{ display:"flex", gap:8, flexWrap:"wrap" }}>
+          <LeagueToggle value={lg} onChange={setLg} />
+          <div className="toggle">
+            <button className={award === "gg" ? "on acc" : ""} onClick={() => setAward("gg")}>Gold Glove</button>
+            <button className={award === "ss" ? "on acc" : ""} onClick={() => setAward("ss")}>Silver Slugger</button>
+          </div>
+        </div>
+      </div>
+      <div className="card-body">
+        <div className="field-wrap">
+          <FieldSvg />
+          {FIELD_POS.map((pos) => {
+            const row = map[pos.key];
+            if (!row || row.p === "—") return null;
+            const t = team(row.t);
+            const dbl = other[pos.key] && other[pos.key].p === row.p && row.p !== "—";
+            return (
+              <div key={pos.key} className="field-pos" style={{ left: pos.x + "%", top: pos.y + "%" }}>
+                <div className="field-card">
+                  <span className="pos-tag" style={{ background: pos.c }}>{pos.key}</span>
+                  <div className="pos-body" style={{ borderColor: t.color }}>
+                    <Badge abbr={row.t} />
+                    <div style={{ display:"flex", flexDirection:"column", lineHeight:1.1 }}>
+                      <span className="pos-name">{row.p}</span><span className="pos-team">{t.abbr}</span>
+                    </div>
+                    {dbl ? <span style={{ color:"var(--gold)", fontSize:9, fontWeight:700 }} title="攻守両賞">★W</span> : null}
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+        <p className="muted" style={{ fontSize:11, textAlign:"center", marginTop:10 }}>
+          <span style={{ color:"var(--gold)", fontWeight:700 }}>★W</span> は同年に攻守（ゴールドグラブ＋シルバースラッガー）両賞を獲得した選手を示します。
+        </p>
+      </div>
+    </div>
+  );
+}
+function FieldingTab() { return <div><FieldDiagram /></div>; }
+function LeaderCard({ title, rows }) {
+  return (
+    <div className="card">
+      <div className="card-head"><span className="kicker">{title}</span></div>
+      <table>
+        <tbody>
+          {rows.map((r, i) => (
+            <tr key={i}>
+              <td className="rank-cell">{i + 1}</td>
+              <td><Player name={r[0]} t={r[1]} /></td>
+              <td className="num mono" style={{ fontWeight:700, color: i === 0 ? "var(--accent)" : "var(--text)" }}>{r[2]}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+}
+function LeadersTab() {
+  const [lg, setLg] = useState("AL");
+  const d = DATA.awards.leaders[lg];
+  return (
+    <div>
+      <div style={{ display:"flex", justifyContent:"flex-end", marginBottom:14 }}><LeagueToggle value={lg} onChange={setLg} /></div>
+      <div className="kicker" style={{ marginBottom:10 }}>Batting · 打撃</div>
+      <div className="grid g2" style={{ marginBottom:24 }}>{Object.entries(d.batting).map(([k, rows]) => <LeaderCard key={k} title={k} rows={rows} />)}</div>
+      <div className="kicker" style={{ marginBottom:10 }}>Pitching · 投手</div>
+      <div className="grid g2">{Object.entries(d.pitching).map(([k, rows]) => <LeaderCard key={k} title={k} rows={rows} />)}</div>
+    </div>
+  );
+}
+function PostseasonMvpTab() {
+  const list = DATA.awards.postseasonMvp;
+  return (
+    <div>
+      <div className="grid g2" style={{ marginBottom:16 }}>
+        {list.filter((m) => !m.big).map((m) => (
+          <div key={m.key} className="mvp-hero">
+            <div className="label">{m.label}</div>
+            <div className="player">{m.p}</div>
+            <div style={{ marginBottom:6 }}><Badge abbr={m.t} /> <span className="muted" style={{ fontSize:12 }}>{team(m.t).name}</span></div>
+            <div className="line">{m.line}</div>
+          </div>
+        ))}
+      </div>
+      {list.filter((m) => m.big).map((m) => (
+        <div key={m.key} className="mvp-hero" style={{ background:"linear-gradient(135deg, rgba(245,197,66,.16), var(--surface))", borderColor:"var(--gold-dim)" }}>
+          <div className="label" style={{ color:"var(--gold)" }}>🏆 {m.label}</div>
+          <div className="player" style={{ fontSize:38 }}>{m.p}</div>
+          <div style={{ marginBottom:8 }}><Badge abbr={m.t} /> <span className="muted">{team(m.t).name}</span></div>
+          <div className="line" style={{ fontSize:14 }}>{m.line}</div>
+        </div>
+      ))}
+    </div>
+  );
+}
+const AWARD_TABS = [
+  { id:"voting",   label:"投票系アワード" },
+  { id:"fielding", label:"ゴールドグラブ / シルバースラッガー" },
+  { id:"leaders",  label:"リーグリーダー" },
+  { id:"psmvp",    label:"ポストシーズンMVP" },
+];
+function AwardsPage() {
+  const [tab, setTab] = useState("voting");
+  return (
+    <div>
+      <SectionHead kicker="Awards" title="タイトル・表彰一覧"
+        right={<span className="muted" style={{ fontSize:12, maxWidth:320, textAlign:"right" }}>MLB The Show フランチャイズ準拠の表彰データ</span>} />
+      <div className="subtabs">{AWARD_TABS.map((t) => <button key={t.id} className={tab === t.id ? "active" : ""} onClick={() => setTab(t.id)}>{t.label}</button>)}</div>
+      {tab === "voting" && <VotingTab />}
+      {tab === "fielding" && <FieldingTab />}
+      {tab === "leaders" && <LeadersTab />}
+      {tab === "psmvp" && <PostseasonMvpTab />}
+    </div>
+  );
+}
+
+/* ============================================================================
+ *  APP SHELL
+ * ==========================================================================*/
+const NAV = [
+  { id:"home",       label:"Home" },
+  { id:"standings",  label:"Standings" },
+  { id:"postseason", label:"Postseason" },
+  { id:"prospects",  label:"Prospects" },
+  { id:"awards",     label:"Awards" },
+];
+function App() {
+  const [page, setPage] = useState("home");
+  return (
+    <div>
+      <header className="topbar">
+        <div className="topbar-inner">
+          <div className="brand" onClick={() => setPage("home")}>
+            <div className="brand-mark">J</div>
+            <div><div className="brand-name">JBU</div><div className="brand-sub">JAPAN BASEBALL UNION</div></div>
+          </div>
+          <nav className="nav">{NAV.map((n) => <button key={n.id} className={page === n.id ? "active" : ""} onClick={() => setPage(n.id)}>{n.label}</button>)}</nav>
+          <span className="season-pill">{DATA.season} SEASON</span>
+        </div>
+      </header>
+      <main className="shell">
+        {page === "home" && <HomePage go={setPage} />}
+        {page === "standings" && <StandingsPage />}
+        {page === "postseason" && <PostseasonPage />}
+        {page === "prospects" && <ProspectsPage />}
+        {page === "awards" && <AwardsPage />}
+        <div className="footer">JBU 総合データベース · {DATA.season} シーズン（2042新レギュレーション）<br/>© Japan Baseball Union — プロトタイプ / モックデータ</div>
+      </main>
+    </div>
+  );
+}
+ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+</script>
+</body>
+</html>

@@ -1,0 +1,279 @@
+@import url("https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap");
+
+/* ============================================================
+   JBU 2042 (MLB era) — すべて .jbu2042 配下にスコープ。
+   既存アプリ(index.css / Tailwind)へ干渉しないこと。
+   ============================================================ */
+.jbu2042 {
+  --bg:#0a0b0f; --bg-2:#0f1119; --surface:#14161f; --surface-2:#1c1f2a;
+  --border:#2a2e3b; --text:#eaecf2; --muted:#98a1b2;
+  --accent:#ff5c33; --accent-dim:#c2431f; --gold:#ffcf4d; --gold-dim:#b8901f;
+  --al:#3b82f6; --nl:#ef4444;
+  --radius:12px;
+
+  color: var(--text);
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', 'Hiragino Kaku Gothic ProN', 'Meiryo', sans-serif;
+  letter-spacing:.01em;
+  background:
+    radial-gradient(1200px 600px at 80% -10%, rgba(255,92,51,.08), transparent 60%),
+    radial-gradient(900px 500px at 0% 0%, rgba(91,156,255,.06), transparent 55%),
+    var(--bg);
+  border:1px solid var(--border);
+  border-radius:16px;
+  padding:18px;
+}
+@media (min-width:768px){ .jbu2042 { padding:26px; } }
+
+.jbu2042 a { color: inherit; text-decoration: none; }
+.jbu2042 .mono { font-variant-numeric: tabular-nums; }
+.jbu2042 .display { font-family: 'Saira Condensed', 'Inter', sans-serif; letter-spacing:.04em; }
+.jbu2042 .kicker { font-family:'Saira Condensed',sans-serif; font-weight:600; font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:var(--accent); }
+.jbu2042 .section-title { font-family:'Saira Condensed',sans-serif; font-weight:700; font-size:22px; letter-spacing:.02em; margin:2px 0 0; }
+.jbu2042 .section-head { margin:34px 0 16px; }
+.jbu2042 .muted { color: var(--muted); }
+.jbu2042 .grid { display:grid; gap:16px; }
+@media (min-width:880px){ .jbu2042 .g2 { grid-template-columns:1fr 1fr; } }
+@media (min-width:980px){ .jbu2042 .g3 { grid-template-columns:repeat(3,1fr); } }
+
+/* ---- 内部タブナビ ---- */
+.jbu2042 .nav { display:flex; gap:4px; flex-wrap:wrap; border-bottom:1px solid var(--border); margin-bottom:22px; }
+.jbu2042 .nav button { background:none; border:none; color:var(--muted); cursor:pointer; font-family:'Saira Condensed'; font-weight:600; font-size:13px; letter-spacing:.14em; text-transform:uppercase; padding:10px 14px; border-radius:8px 8px 0 0; transition:color .15s; position:relative; }
+.jbu2042 .nav button:hover { color:var(--text); }
+.jbu2042 .nav button.active { color:var(--accent); }
+.jbu2042 .nav button.active::after { content:""; position:absolute; left:14px; right:14px; bottom:-1px; height:2px; background:var(--accent); border-radius:2px; box-shadow:0 0 10px var(--accent); }
+.jbu2042 .season-pill { font-family:'Saira Condensed'; font-size:12px; letter-spacing:.12em; color:var(--gold); border:1px solid var(--gold-dim); padding:5px 10px; border-radius:999px; white-space:nowrap; }
+
+/* ---- カード ---- */
+.jbu2042 .card { background:linear-gradient(180deg,var(--surface),var(--bg-2)); border:1px solid var(--border); border-radius:var(--radius); overflow:hidden; }
+.jbu2042 .card-head { padding:12px 16px; border-bottom:1px solid var(--border); display:flex; align-items:center; justify-content:space-between; gap:10px; }
+.jbu2042 .card-body { padding:14px 16px; }
+
+/* ---- バッジ ---- */
+.jbu2042 .badge { display:inline-flex; align-items:center; justify-content:center; min-width:36px; height:22px; padding:0 6px; border-radius:6px; font-family:'Saira Condensed'; font-weight:700; font-size:11px; letter-spacing:.04em; color:#fff; box-shadow:inset 0 0 0 1px rgba(255,255,255,.14); }
+
+/* ---- ニューススライダー ---- */
+.jbu2042 .hero { position:relative; border-radius:var(--radius); overflow:hidden; min-height:380px; border:1px solid var(--border); display:flex; align-items:flex-end; }
+.jbu2042 .hero-bg { position:absolute; inset:0; }
+.jbu2042 .hero-grad { position:absolute; inset:0; background:linear-gradient(180deg,transparent 25%,rgba(0,0,0,.85) 95%); }
+.jbu2042 .hero-content { position:relative; padding:28px; max-width:720px; }
+.jbu2042 .hero-cat { display:inline-block; font-family:'Saira Condensed'; font-size:11px; letter-spacing:.2em; text-transform:uppercase; background:var(--accent); color:#160a04; padding:4px 10px; border-radius:6px; margin-bottom:12px; font-weight:700; }
+.jbu2042 .hero-title { font-family:'Saira Condensed'; font-weight:700; font-size:30px; line-height:1.15; margin:0 0 8px; }
+.jbu2042 .hero-excerpt { color:#cdd8d4; font-size:14px; max-width:600px; }
+.jbu2042 .hero-dots { position:absolute; right:22px; bottom:22px; display:flex; gap:8px; z-index:3; }
+.jbu2042 .hero-dot { width:9px; height:9px; border-radius:50%; background:rgba(255,255,255,.3); border:none; cursor:pointer; transition:all .2s; }
+.jbu2042 .hero-dot.active { background:var(--accent); width:22px; border-radius:5px; }
+.jbu2042 .hero-arrows button { position:absolute; top:50%; transform:translateY(-50%); z-index:3; width:40px; height:40px; border-radius:50%; cursor:pointer; background:rgba(0,0,0,.5); border:1px solid var(--border); color:#fff; font-size:18px; }
+.jbu2042 .hero-arrows .prev { left:16px; } .jbu2042 .hero-arrows .next { right:16px; }
+
+/* ---- サブ記事 ---- */
+.jbu2042 .sub-item { display:flex; gap:12px; padding:12px 0; border-bottom:1px solid var(--border); cursor:pointer; transition:background .15s; }
+.jbu2042 .sub-item:last-child { border-bottom:none; }
+.jbu2042 .sub-item:hover { background:rgba(255,255,255,.02); }
+.jbu2042 .sub-thumb { width:64px; height:48px; border-radius:8px; flex:none; }
+.jbu2042 .sub-cat { font-family:'Saira Condensed'; font-size:10px; letter-spacing:.16em; color:var(--gold); text-transform:uppercase; }
+.jbu2042 .sub-title { font-size:13px; font-weight:600; margin:2px 0; line-height:1.4; }
+.jbu2042 .sub-date { font-size:11px; color:var(--muted); }
+
+/* ---- テーブル ---- */
+.jbu2042 table { width:100%; border-collapse:collapse; font-size:13px; }
+.jbu2042 thead th { text-align:left; font-family:'Saira Condensed'; font-weight:600; font-size:10px; letter-spacing:.16em; text-transform:uppercase; color:var(--muted); padding:8px 10px; background:var(--surface-2); }
+.jbu2042 tbody td { padding:9px 10px; border-top:1px solid var(--border); }
+.jbu2042 tbody tr:hover { background:rgba(255,255,255,.02); }
+.jbu2042 .num { text-align:right; font-variant-numeric:tabular-nums; }
+.jbu2042 .rank-cell { font-family:'Saira Condensed'; color:var(--muted); width:26px; }
+.jbu2042 .clinch { color:var(--accent); font-weight:700; }
+
+/* ---- 投票系アワード ---- */
+.jbu2042 .award-block { margin-bottom:26px; }
+.jbu2042 .award-name { font-family:'Saira Condensed'; font-weight:700; font-size:18px; letter-spacing:.04em; }
+.jbu2042 .podium { display:grid; gap:12px; }
+@media (min-width:760px){ .jbu2042 .podium { grid-template-columns:repeat(3,1fr); align-items:stretch; } }
+.jbu2042 .finalist { border:1px solid var(--border); border-radius:var(--radius); background:var(--surface); padding:16px; position:relative; overflow:hidden; }
+.jbu2042 .finalist.first { border-color:var(--gold-dim); background:linear-gradient(180deg,rgba(245,197,66,.10),var(--surface)); }
+.jbu2042 .finalist .place { font-family:'Saira Condensed'; font-weight:700; font-size:12px; letter-spacing:.16em; color:var(--muted); display:flex; align-items:center; gap:8px; margin-bottom:10px; }
+.jbu2042 .finalist.first .place { color:var(--gold); }
+.jbu2042 .medal { font-size:16px; }
+.jbu2042 .finalist .player { font-family:'Saira Condensed'; font-weight:700; font-size:19px; margin:4px 0; }
+.jbu2042 .finalist .stats { font-size:12px; color:var(--muted); line-height:1.6; }
+.jbu2042 .points-row { display:flex; align-items:baseline; gap:8px; margin-top:12px; padding-top:12px; border-top:1px dashed var(--border); }
+.jbu2042 .points-val { font-family:'Saira Condensed'; font-weight:700; font-size:22px; color:var(--accent); }
+.jbu2042 .finalist.first .points-val { color:var(--gold); }
+.jbu2042 .points-label { font-size:10px; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); }
+
+/* ---- トグル / サブタブ ---- */
+.jbu2042 .toggle { display:inline-flex; background:var(--surface-2); border:1px solid var(--border); border-radius:8px; padding:3px; }
+.jbu2042 .toggle button { border:none; background:none; cursor:pointer; color:var(--muted); font-family:'Saira Condensed'; font-weight:600; font-size:12px; letter-spacing:.1em; padding:6px 14px; border-radius:6px; transition:all .15s; }
+.jbu2042 .toggle button.on.al { background:var(--al); color:#04212e; }
+.jbu2042 .toggle button.on.nl { background:var(--nl); color:#2e0418; }
+.jbu2042 .toggle button.on.acc { background:var(--accent); color:#160a04; }
+.jbu2042 .subtabs { display:flex; gap:4px; border-bottom:1px solid var(--border); margin:14px 0 18px; overflow-x:auto; }
+.jbu2042 .subtabs button { border:none; background:none; cursor:pointer; color:var(--muted); white-space:nowrap; font-family:'Saira Condensed'; font-weight:600; font-size:13px; letter-spacing:.08em; padding:10px 14px; position:relative; }
+.jbu2042 .subtabs button.active { color:var(--accent); }
+.jbu2042 .subtabs button.active::after { content:""; position:absolute; left:14px; right:14px; bottom:-1px; height:2px; background:var(--accent); }
+
+/* ---- フィールド図 ---- */
+.jbu2042 .field-wrap { position:relative; width:100%; max-width:620px; margin:0 auto; aspect-ratio:1/1; }
+.jbu2042 .field-pos { position:absolute; transform:translate(-50%,-50%); }
+.jbu2042 .field-card { display:flex; flex-direction:column; align-items:center; gap:3px; }
+.jbu2042 .field-card .pos-tag { font-family:'Saira Condensed'; font-weight:700; font-size:10px; letter-spacing:.08em; padding:1px 6px; border-radius:4px; color:#160a04; }
+.jbu2042 .field-card .pos-body { background:rgba(7,10,9,.82); border:1px solid var(--border); border-radius:8px; padding:4px 7px; display:flex; align-items:center; gap:6px; backdrop-filter:blur(3px); box-shadow:0 4px 12px rgba(0,0,0,.4); }
+.jbu2042 .field-card .pos-name { font-size:11px; font-weight:700; white-space:nowrap; }
+.jbu2042 .field-card .pos-team { font-size:9px; color:var(--muted); white-space:nowrap; }
+
+/* ---- ブラケット ---- */
+.jbu2042 .bracket { display:flex; gap:26px; overflow-x:auto; padding:6px 2px 16px; }
+.jbu2042 .round { display:flex; flex-direction:column; gap:16px; min-width:212px; justify-content:space-around; }
+.jbu2042 .round-label { font-family:'Saira Condensed'; font-size:11px; letter-spacing:.18em; text-transform:uppercase; color:var(--muted); margin-bottom:2px; }
+.jbu2042 .matchup { background:var(--surface); border:1px solid var(--border); border-radius:10px; overflow:hidden; }
+.jbu2042 .mu-team { display:flex; align-items:center; gap:8px; padding:8px 10px; }
+.jbu2042 .mu-team + .mu-team { border-top:1px solid var(--border); }
+.jbu2042 .mu-team.win { background:rgba(255,92,51,.06); }
+.jbu2042 .mu-team .mu-seed { font-family:'Saira Condensed'; font-size:10px; color:var(--muted); width:16px; }
+.jbu2042 .mu-team .mu-name { font-size:13px; font-weight:600; flex:1; }
+.jbu2042 .mu-team.win .mu-name { color:var(--accent); }
+.jbu2042 .mu-score { font-family:'Saira Condensed'; font-weight:700; font-size:16px; }
+
+/* ---- ワールドシリーズ（派手） ---- */
+@keyframes jbu2042-wsGlow { 0%,100% { box-shadow:0 0 40px rgba(245,197,66,.25), inset 0 0 60px rgba(245,197,66,.06);} 50% { box-shadow:0 0 70px rgba(245,197,66,.45), inset 0 0 80px rgba(245,197,66,.10);} }
+@keyframes jbu2042-shine { 0% { background-position:-200% center;} 100% { background-position:200% center;} }
+.jbu2042 .ws-champion {
+  position:relative; border-radius:18px; overflow:hidden; text-align:center; padding:40px 24px 34px;
+  border:1px solid var(--gold-dim);
+  background:
+    radial-gradient(700px 300px at 50% -10%, rgba(245,197,66,.22), transparent 70%),
+    radial-gradient(500px 260px at 50% 120%, rgba(255,92,51,.10), transparent 70%),
+    linear-gradient(180deg,#15110a,#0a0d0c);
+  animation: jbu2042-wsGlow 4.5s ease-in-out infinite;
+}
+.jbu2042 .ws-champion::before { content:""; position:absolute; inset:0; background:repeating-linear-gradient(115deg, transparent 0 22px, rgba(245,197,66,.03) 22px 23px); pointer-events:none; }
+.jbu2042 .ws-tag { font-family:'Saira Condensed'; font-size:12px; letter-spacing:.42em; text-transform:uppercase; color:var(--gold); }
+.jbu2042 .ws-trophy { font-size:62px; line-height:1; margin:8px 0 4px; filter:drop-shadow(0 0 18px rgba(245,197,66,.5)); }
+.jbu2042 .ws-headline { font-family:'Saira Condensed'; font-weight:700; font-size:18px; letter-spacing:.34em; text-transform:uppercase;
+  background:linear-gradient(90deg,#b88a1f,#f5c542,#fff3c4,#f5c542,#b88a1f); background-size:200% auto; -webkit-background-clip:text; background-clip:text; color:transparent; animation:jbu2042-shine 4s linear infinite; }
+.jbu2042 .ws-champ-name { font-family:'Saira Condensed'; font-weight:700; font-size:clamp(30px,6vw,52px); margin:6px 0 4px; color:#fff; text-shadow:0 0 26px rgba(245,197,66,.4); }
+.jbu2042 .ws-result { display:inline-flex; align-items:center; gap:16px; margin-top:10px; font-family:'Saira Condensed'; }
+.jbu2042 .ws-result .vs-score { font-size:30px; font-weight:700; }
+.jbu2042 .ws-mvp { display:inline-flex; align-items:center; gap:10px; margin-top:18px; padding:8px 16px; border:1px solid var(--gold-dim); border-radius:999px; background:rgba(245,197,66,.08); }
+.jbu2042 .ws-mvp .lbl { font-family:'Saira Condensed'; font-size:11px; letter-spacing:.2em; color:var(--gold); }
+.jbu2042 .ws-path { display:flex; flex-wrap:wrap; justify-content:center; gap:8px; margin-top:20px; }
+.jbu2042 .ws-path .step { font-size:11px; color:var(--muted); border:1px solid var(--border); border-radius:999px; padding:5px 12px; background:rgba(255,255,255,.02); }
+.jbu2042 .ws-path .step b { color:var(--text); }
+
+/* ---- シリーズ詳細 ---- */
+.jbu2042 .series-card { border:1px solid var(--border); border-radius:var(--radius); background:var(--surface); overflow:hidden; margin-bottom:14px; }
+.jbu2042 .series-card.major { border-color:var(--gold-dim); }
+.jbu2042 .series-head { padding:12px 16px; border-bottom:1px solid var(--border); display:flex; align-items:center; justify-content:space-between; gap:10px; flex-wrap:wrap; }
+.jbu2042 .series-round { font-family:'Saira Condensed'; font-weight:700; font-size:13px; letter-spacing:.14em; text-transform:uppercase; }
+.jbu2042 .series-format { font-size:10px; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); border:1px solid var(--border); border-radius:999px; padding:2px 9px; }
+.jbu2042 .series-line { display:flex; align-items:center; gap:14px; padding:12px 16px; flex-wrap:wrap; }
+.jbu2042 .series-team { display:flex; align-items:center; gap:8px; }
+.jbu2042 .series-team .nm { font-weight:700; }
+.jbu2042 .series-team.winner .nm { color:var(--accent); }
+.jbu2042 .series-vs { font-family:'Saira Condensed'; font-weight:700; font-size:22px; }
+.jbu2042 .gamelog { display:flex; flex-wrap:wrap; gap:6px; padding:0 16px 12px; }
+.jbu2042 .game-pill { display:flex; flex-direction:column; align-items:center; min-width:62px; border:1px solid var(--border); border-radius:8px; padding:5px 8px; background:var(--bg-2); }
+.jbu2042 .game-pill .gnum { font-size:9px; letter-spacing:.1em; color:var(--muted); }
+.jbu2042 .game-pill .gsc { font-family:'Saira Condensed'; font-weight:700; font-size:14px; }
+.jbu2042 .series-note { padding:0 16px 14px; font-size:12.5px; color:#c4d0cc; line-height:1.7; }
+.jbu2042 .series-meta { padding:0 16px 14px; display:flex; gap:10px; flex-wrap:wrap; }
+.jbu2042 .meta-chip { font-size:11px; border:1px solid var(--border); border-radius:8px; padding:5px 10px; }
+.jbu2042 .meta-chip b { color:var(--accent); }
+.jbu2042 .meta-chip.mvp b { color:var(--gold); }
+
+/* ---- 総括 ---- */
+.jbu2042 .recap { border:1px solid var(--border); border-radius:var(--radius); background:linear-gradient(180deg,var(--surface),var(--bg-2)); padding:22px; }
+.jbu2042 .recap h3 { font-family:'Saira Condensed'; font-size:20px; margin:0 0 12px; }
+.jbu2042 .recap p { font-size:13.5px; line-height:1.85; color:#cdd8d4; margin:0 0 12px; }
+.jbu2042 .moment { display:flex; gap:12px; padding:12px 0; border-top:1px solid var(--border); }
+.jbu2042 .moment .mk { font-family:'Saira Condensed'; color:var(--accent); font-weight:700; font-size:13px; white-space:nowrap; }
+.jbu2042 .moment .mt { font-weight:700; font-size:13px; margin-bottom:2px; }
+.jbu2042 .moment .mb { font-size:12.5px; color:var(--muted); line-height:1.7; }
+
+/* ---- フォトギャラリー ---- */
+.jbu2042 .gallery-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:12px; }
+@media (min-width:680px){ .jbu2042 .gallery-grid { grid-template-columns:repeat(3,1fr); } }
+@media (min-width:980px){ .jbu2042 .gallery-grid { grid-template-columns:repeat(5,1fr); } }
+.jbu2042 .photo-slot { position:relative; aspect-ratio:4/3; border-radius:10px; overflow:hidden; border:1px solid var(--border); background:var(--surface); display:block; }
+.jbu2042 .photo-slot.empty { border-style:dashed; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:6px; color:var(--muted); }
+.jbu2042 .photo-slot.empty:hover { border-color:var(--accent); color:var(--accent); }
+.jbu2042 .photo-slot img { width:100%; height:100%; object-fit:cover; display:block; }
+.jbu2042 .photo-num { font-family:'Saira Condensed'; font-weight:700; font-size:22px; opacity:.45; }
+.jbu2042 .photo-cap { position:absolute; left:0; right:0; bottom:0; padding:7px 9px; font-size:11px; line-height:1.4; background:linear-gradient(transparent,rgba(0,0,0,.85)); }
+
+/* ---- プロスペクト ---- */
+.jbu2042 .prospect { display:flex; align-items:center; gap:14px; padding:12px 14px; border:1px solid var(--border); border-radius:10px; background:var(--surface); margin-bottom:10px; }
+.jbu2042 .prospect .pr-rank { font-family:'Saira Condensed'; font-weight:700; font-size:26px; color:var(--accent); width:42px; text-align:center; }
+.jbu2042 .pr-grade { font-family:'Saira Condensed'; font-weight:700; font-size:15px; color:var(--gold); border:1px solid var(--gold-dim); border-radius:8px; padding:4px 8px; }
+.jbu2042 .tag { font-size:10px; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); border:1px solid var(--border); padding:2px 7px; border-radius:999px; }
+
+/* ---- 記事一覧 / 記事詳細 ---- */
+.jbu2042 .article-grid { display:grid; gap:14px; grid-template-columns:repeat(auto-fill, minmax(280px,1fr)); }
+.jbu2042 .article-card { border:1px solid var(--border); border-radius:var(--radius); background:var(--surface); overflow:hidden; cursor:pointer; display:flex; flex-direction:column; transition:border-color .15s, transform .15s; }
+.jbu2042 .article-card:hover { border-color:var(--accent); transform:translateY(-2px); }
+.jbu2042 .article-card .thumb { height:150px; }
+.jbu2042 .article-card .body { padding:14px; }
+.jbu2042 .article-card .title { font-family:'Saira Condensed'; font-weight:700; font-size:16px; line-height:1.3; margin:8px 0 6px; }
+.jbu2042 .article-card .excerpt { font-size:12.5px; color:var(--muted); line-height:1.6; }
+.jbu2042 .article-meta { display:flex; gap:10px; align-items:center; font-size:11px; }
+.jbu2042 .back-btn { background:var(--surface-2); border:1px solid var(--border); color:var(--muted); cursor:pointer; font-family:'Saira Condensed'; font-size:12px; letter-spacing:.1em; padding:7px 14px; border-radius:8px; transition:color .15s, border-color .15s; }
+.jbu2042 .back-btn:hover { color:var(--accent); border-color:var(--accent); }
+.jbu2042 .article-detail-hero { position:relative; overflow:hidden; min-height:230px; border-radius:var(--radius); border:1px solid var(--border); display:flex; align-items:flex-end; }
+.jbu2042 .article-head { margin-top:12px; }
+.jbu2042 .article-headline { font-family:'Saira Condensed'; font-weight:700; font-size:26px; line-height:1.3; margin:8px 0 6px; }
+/* 記事ヒーロー画像：トリミングせず全体を表示（縦横比はそのまま） */
+.jbu2042 .article-hero-img { display:block; width:100%; height:auto; max-height:72vh; object-fit:contain; margin-top:14px; border-radius:var(--radius); border:1px solid var(--border); background:#000; }
+.jbu2042 .article-detail-body p { font-size:14px; line-height:1.95; color:#cdd8d4; margin:0 0 14px; max-width:760px; }
+.jbu2042 .article-detail-body .article-h { font-family:'Saira Condensed'; font-weight:700; font-size:18px; margin:26px 0 10px; color:var(--text); border-left:3px solid var(--accent); padding-left:10px; }
+.jbu2042 .article-detail-body .article-quote { margin:16px 0; padding:12px 16px; border-left:3px solid var(--gold); background:rgba(245,197,66,.07); border-radius:0 8px 8px 0; color:#fff; font-size:14.5px; font-weight:600; line-height:1.8; max-width:760px; }
+.jbu2042 .article-photos { display:grid; gap:12px; grid-template-columns:repeat(auto-fit, minmax(280px,1fr)); margin:20px 0; max-width:760px; }
+.jbu2042 .article-photos img { width:100%; border-radius:var(--radius); border:1px solid var(--border); display:block; }
+
+/* ---- 大型MVP ---- */
+.jbu2042 .mvp-hero { border:1px solid var(--border); border-radius:var(--radius); padding:22px; background:linear-gradient(135deg,rgba(255,92,51,.08),var(--surface)); position:relative; overflow:hidden; }
+.jbu2042 .mvp-hero .label { font-family:'Saira Condensed'; font-size:12px; letter-spacing:.2em; color:var(--accent); }
+.jbu2042 .mvp-hero .player { font-family:'Saira Condensed'; font-weight:700; font-size:30px; margin:6px 0; }
+.jbu2042 .mvp-hero .line { color:var(--muted); font-size:13px; }
+
+/* ============================================================
+   レスポンシブ（スマホ最適化）
+   ============================================================ */
+/* トップの「カルーセル＋LATEST」: モバイルは縦積み、PCで2カラム */
+.jbu2042 .home-grid { display:grid; gap:16px; grid-template-columns:1fr; }
+@media (min-width:880px){ .jbu2042 .home-grid { grid-template-columns:minmax(0,2fr) minmax(0,1fr); } }
+/* 横に長い表は枠内で横スクロール（はみ出し防止） */
+.jbu2042 .table-scroll { overflow-x:auto; -webkit-overflow-scrolling:touch; }
+
+@media (max-width:640px){
+  .jbu2042 { padding:12px; border-radius:12px; }
+  .jbu2042 .nav { gap:2px; margin-bottom:16px; }
+  .jbu2042 .nav button { font-size:12px; padding:8px 9px; letter-spacing:.06em; }
+  .jbu2042 .section-head { margin:22px 0 12px; }
+  .jbu2042 .section-title { font-size:18px; }
+  .jbu2042 .card-head { padding:10px 12px; }
+  .jbu2042 .card-body { padding:12px; }
+
+  /* ヒーロー（カルーセル） */
+  .jbu2042 .hero { min-height:240px; }
+  .jbu2042 .hero-content { padding:16px; }
+  .jbu2042 .hero-title { font-size:20px; line-height:1.22; }
+  .jbu2042 .hero-excerpt { font-size:12.5px; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; }
+  .jbu2042 .hero-arrows button { width:32px; height:32px; font-size:16px; }
+  .jbu2042 .hero-arrows .prev { left:8px; } .jbu2042 .hero-arrows .next { right:8px; }
+  .jbu2042 .hero-dots { right:12px; bottom:12px; }
+
+  /* テーブル：文字と余白を詰めて収める */
+  .jbu2042 table { font-size:12px; }
+  .jbu2042 thead th { padding:7px 7px; letter-spacing:.06em; }
+  .jbu2042 tbody td { padding:8px 7px; }
+  .jbu2042 .rank-cell { width:20px; }
+
+  /* 記事詳細 */
+  .jbu2042 .article-headline { font-size:21px; }
+  .jbu2042 .article-detail-body p { font-size:13.5px; }
+  .jbu2042 .article-card .thumb { height:170px; }
+
+  /* ワールドシリーズ */
+  .jbu2042 .ws-champion { padding:28px 14px 24px; }
+  .jbu2042 .ws-trophy { font-size:48px; }
+  .jbu2042 .ws-headline { font-size:15px; letter-spacing:.22em; }
+}

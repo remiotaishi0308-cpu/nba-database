@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(npm install *)",
+      "PowerShell(Get-Job *)",
+      "PowerShell(npm run *)",
+      "PowerShell(Get-Process *)",
+      "PowerShell(npx vite build 2>&1 | Select-Object -Last 80)",
+      "PowerShell(npx vite)",
+      "PowerShell(node scripts/cleanup-titles.mjs)",
+      "PowerShell(node scripts/probe-2032.mjs)",
+      "PowerShell(npx vite build 2>&1 | Select-Object -Last 10)",
+      "PowerShell(node scripts/extend-year-media.mjs)",
+      "PowerShell(node scripts/extend-year-subcopy.mjs)",
+      "PowerShell(npx vite build 2>&1 | Select-Object -Last 6)",
+      "PowerShell(Stop-Process -Force -ErrorAction SilentlyContinue)",
+      "PowerShell(\"cleared\")",
+      "PowerShell(Get-ChildItem -Path \"c:\\\\Users\\\\remio\\\\Desktop\\\\jbu-database\" -File -Force | Where-Object {$_.Name -match \"netlify|vercel|firebase|CNAME|\\\\.nojekyll\" -or $_.Extension -match \"toml|json\"} | Select-Object Name)"
+    ]
+  }
+}

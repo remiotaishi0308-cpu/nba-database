@@ -1,0 +1,3181 @@
+[
+  {
+    "year": 2025,
+    "leagues": {
+      "セ・リーグ": [
+        {
+          "title": "MVP",
+          "player": "菅井",
+          "team": "広島セントラルレイカーズ"
+        },
+        {
+          "title": "沢村賞",
+          "player": "菅井",
+          "team": "広島セントラルレイカーズ"
+        },
+        {
+          "title": "首位打者",
+          "player": "早乙女",
+          "team": "京都ミリオンアッシュ",
+          "value": ".300"
+        },
+        {
+          "title": "本塁打王",
+          "player": "飯島",
+          "team": "愛知プロミネンス",
+          "value": "31本"
+        },
+        {
+          "title": "打点王",
+          "player": "平松",
+          "team": "渋谷アーバンスターズ",
+          "value": "91打点"
+        },
+        {
+          "title": "盗塁王",
+          "player": "末田",
+          "team": "北海道レイブンクロウズ",
+          "value": "26個"
+        },
+        {
+          "title": "最多安打",
+          "player": "二葉",
+          "team": "広島セントラルレイカーズ",
+          "value": "163本"
+        },
+        {
+          "title": "最高出塁率",
+          "player": "早乙女",
+          "team": "京都ミリオンアッシュ",
+          "value": ".368"
+        },
+        {
+          "title": "最優秀防御率",
+          "player": "菅井",
+          "team": "広島セントラルレイカーズ",
+          "value": "0.82"
+        },
+        {
+          "title": "最多勝",
+          "player": "菅井",
+          "team": "広島セントラルレイカーズ",
+          "value": "23勝"
+        },
+        {
+          "title": "最多奪三振",
+          "player": "高橋",
+          "team": "北海道レイブンクロウズ",
+          "value": "270個"
+        },
+        {
+          "title": "勝率第1位",
+          "player": "菅井",
+          "team": "広島セントラルレイカーズ",
+          "value": ".852"
+        },
+        {
+          "title": "最多セーブ",
+          "player": "幕張",
+          "team": "難波ボルテッカーズ",
+          "value": "33セーブ"
+        },
+        {
+          "title": "最優秀中継ぎ",
+          "player": "太田",
+          "team": "京都ミリオンアッシュ",
+          "value": "33HP"
+        }
+      ],
+      "パ・リーグ": [
+        {
+          "title": "MVP",
+          "player": "佐藤 英",
+          "team": "流山シーマリナーズ"
+        },
+        {
+          "title": "首位打者",
+          "player": "仲村",
+          "team": "流山シーマリナーズ",
+          "value": ".311"
+        },
+        {
+          "title": "本塁打王",
+          "player": "小林",
+          "team": "長崎マリンフォース",
+          "value": "37本"
+        },
+        {
+          "title": "打点王",
+          "player": "仲村",
+          "team": "流山シーマリナーズ",
+          "value": "90打点"
+        },
+        {
+          "title": "盗塁王",
+          "player": "赤星",
+          "team": "川崎ウインドブレイカーズ",
+          "value": "29個"
+        },
+        {
+          "title": "最多安打",
+          "player": "仲村",
+          "team": "流山シーマリナーズ",
+          "value": "177本"
+        },
+        {
+          "title": "最高出塁率",
+          "player": "笠松",
+          "team": "長崎マリンフォース",
+          "value": ".388"
+        },
+        {
+          "title": "最優秀防御率",
+          "player": "赤月",
+          "team": "長崎マリンフォース",
+          "value": "1.21"
+        },
+        {
+          "title": "最多勝",
+          "player": "佐藤 英",
+          "team": "流山シーマリナーズ",
+          "value": "20勝"
+        },
+        {
+          "title": "最多奪三振",
+          "player": "佐藤 英",
+          "team": "流山シーマリナーズ",
+          "value": "250個"
+        },
+        {
+          "title": "勝率第1位",
+          "player": "里中",
+          "team": "長崎マリンフォース",
+          "value": ".882"
+        },
+        {
+          "title": "最多セーブ",
+          "player": "平良",
+          "team": "長崎マリンフォース",
+          "value": "29セーブ"
+        },
+        {
+          "title": "最多セーブ",
+          "player": "松井",
+          "team": "新潟イプシロンズ",
+          "value": "29セーブ"
+        },
+        {
+          "title": "最優秀中継ぎ",
+          "player": "飯沼",
+          "team": "長崎マリンフォース",
+          "value": "41HP"
+        }
+      ]
+    }
+  },
+  {
+    "year": 2026,
+    "leagues": {
+      "セ・リーグ": [
+        {
+          "title": "MVP",
+          "player": "辻",
+          "team": "渋谷"
+        },
+        {
+          "title": "新人王",
+          "player": "竹中",
+          "team": "杜王"
+        },
+        {
+          "title": "最優秀防御率",
+          "player": "辻",
+          "team": "渋谷",
+          "value": "1.39"
+        },
+        {
+          "title": "最多勝",
+          "player": "瓜生",
+          "team": "渋谷",
+          "value": "17勝"
+        },
+        {
+          "title": "最多勝",
+          "player": "辻",
+          "team": "渋谷",
+          "value": "17勝"
+        },
+        {
+          "title": "最多奪三振",
+          "player": "有吉",
+          "team": "北海道",
+          "value": "233個"
+        },
+        {
+          "title": "勝率第1位",
+          "player": "辻",
+          "team": "渋谷",
+          "value": ".850"
+        },
+        {
+          "title": "勝率第1位",
+          "player": "瓜生",
+          "team": "渋谷",
+          "value": ".850"
+        },
+        {
+          "title": "最多セーブ",
+          "player": "岡崎",
+          "team": "広島",
+          "value": "34セーブ"
+        },
+        {
+          "title": "最優秀中継ぎ",
+          "player": "亀梨",
+          "team": "渋谷",
+          "value": "40HP"
+        },
+        {
+          "title": "首位打者",
+          "player": "杉本 亨",
+          "team": "難波",
+          "value": ".306"
+        },
+        {
+          "title": "本塁打王",
+          "player": "杉本 亨",
+          "team": "難波",
+          "value": "30本"
+        },
+        {
+          "title": "本塁打王",
+          "player": "染谷",
+          "team": "広島",
+          "value": "30本"
+        },
+        {
+          "title": "本塁打王",
+          "player": "竹中",
+          "team": "杜王",
+          "value": "30本"
+        },
+        {
+          "title": "打点王",
+          "player": "杉本 亨",
+          "team": "難波",
+          "value": "86打点"
+        },
+        {
+          "title": "打点王",
+          "player": "西場",
+          "team": "広島",
+          "value": "86打点"
+        },
+        {
+          "title": "盗塁王",
+          "player": "小山",
+          "team": "広島",
+          "value": "30盗塁"
+        },
+        {
+          "title": "最多安打",
+          "player": "杉本 亨",
+          "team": "難波",
+          "value": "160安打"
+        },
+        {
+          "title": "最多安打",
+          "player": "二葉",
+          "team": "広島",
+          "value": "160安打"
+        },
+        {
+          "title": "最高出塁率",
+          "player": "二葉",
+          "team": "広島",
+          "value": ".368"
+        }
+      ],
+      "パ・リーグ": [
+        {
+          "title": "MVP",
+          "player": "達本 亜人",
+          "team": "福知山"
+        },
+        {
+          "title": "新人王",
+          "player": "達本 亜人",
+          "team": "福知山"
+        },
+        {
+          "title": "沢村賞",
+          "player": "達本 亜人",
+          "team": "福知山"
+        },
+        {
+          "title": "最優秀防御率",
+          "player": "佐伯",
+          "team": "梅田",
+          "value": "1.35"
+        },
+        {
+          "title": "最多勝",
+          "player": "達本 亜人",
+          "team": "福知山",
+          "value": "24勝"
+        },
+        {
+          "title": "最多奪三振",
+          "player": "達本 亜人",
+          "team": "福知山",
+          "value": "292個"
+        },
+        {
+          "title": "勝率第1位",
+          "player": "達本 亜人",
+          "team": "福知山",
+          "value": ".889"
+        },
+        {
+          "title": "最多セーブ",
+          "player": "佐々木 麟太郎",
+          "team": "横浜",
+          "value": "34S"
+        },
+        {
+          "title": "最優秀中継ぎ",
+          "player": "津島",
+          "team": "川崎",
+          "value": "33HP"
+        },
+        {
+          "title": "首位打者",
+          "player": "仲村",
+          "team": "流山",
+          "value": ".312"
+        },
+        {
+          "title": "本塁打王",
+          "player": "田仲",
+          "team": "博多",
+          "value": "39本"
+        },
+        {
+          "title": "打点王",
+          "player": "久保",
+          "team": "新潟",
+          "value": "98打点"
+        },
+        {
+          "title": "盗塁王",
+          "player": "千石",
+          "team": "博多",
+          "value": "30盗塁"
+        },
+        {
+          "title": "最多安打",
+          "player": "仲村",
+          "team": "流山",
+          "value": "188本"
+        },
+        {
+          "title": "最高出塁率",
+          "player": "仲村",
+          "team": "流山",
+          "value": ".380"
+        }
+      ]
+    }
+  },
+  {
+    "year": 2027,
+    "leagues": {
+      "セ・リーグ": [
+        {
+          "title": "MVP",
+          "player": "田之上 晃紀",
+          "team": "京都",
+          "comment": "リーグ優勝に最も貢献した選手。安定した打撃と守備で京都に勝利をもたらした。"
+        },
+        {
+          "title": "新人王",
+          "player": "司馬",
+          "team": "渋谷",
+          "comment": "ルーキーながら正捕手として攻守で貢献。"
+        },
+        {
+          "title": "首位打者",
+          "player": "早乙女",
+          "team": "京都",
+          "value": ".290",
+          "comment": "1年ぶり2回目"
+        },
+        {
+          "title": "本塁打王",
+          "player": "田之上 晃紀",
+          "team": "京都",
+          "value": "33本"
+        },
+        {
+          "title": "打点王",
+          "player": "三根",
+          "team": "京都",
+          "value": "73打点",
+          "comment": "早乙女と同率"
+        },
+        {
+          "title": "打点王",
+          "player": "早乙女",
+          "team": "京都",
+          "value": "73打点",
+          "comment": "三根と同率"
+        },
+        {
+          "title": "盗塁王",
+          "player": "小山雄一",
+          "team": "広島",
+          "value": "30個",
+          "comment": "3年連続"
+        },
+        {
+          "title": "最多安打",
+          "player": "司馬",
+          "team": "渋谷",
+          "value": "149本",
+          "comment": "ルーキーながら最多安打"
+        },
+        {
+          "title": "最高出塁率",
+          "player": "早乙女",
+          "team": "京都",
+          "value": ".374"
+        },
+        {
+          "title": "最多勝",
+          "player": "菅井誠",
+          "team": "広島",
+          "value": "20勝"
+        },
+        {
+          "title": "最優秀防御率",
+          "player": "菅井誠",
+          "team": "広島",
+          "value": "0.55",
+          "comment": "JBU歴代最高数値"
+        },
+        {
+          "title": "最多奪三振",
+          "player": "眉村健",
+          "team": "京都",
+          "value": "296個",
+          "comment": "300奪三振まで迫った。"
+        },
+        {
+          "title": "勝率第1位",
+          "player": "菅井誠",
+          "team": "広島",
+          "value": ".833"
+        },
+        {
+          "title": "最多セーブ",
+          "player": "R.マルティネス",
+          "team": "渋谷",
+          "value": "37セーブ",
+          "comment": "JBU歴代最多セーブ"
+        },
+        {
+          "title": "最優秀中継ぎ",
+          "player": "亀梨和也",
+          "team": "渋谷",
+          "value": "38HP",
+          "comment": "歴代最多ホールドポイント"
+        }
+      ],
+      "パ・リーグ": [
+        {
+          "title": "MVP",
+          "player": "重松龍人",
+          "team": "流山",
+          "comment": "長打と本塁打を組み合わせ見事な活躍。チームの優勝に大きく貢献し、ゲームキャプテンとして指揮も取った。"
+        },
+        {
+          "title": "沢村賞",
+          "player": "佐藤英智",
+          "team": "流山",
+          "comment": "圧巻の成績で日本一まで上り詰めた。"
+        },
+        {
+          "title": "新人王",
+          "player": "忍野",
+          "team": "川崎",
+          "comment": "下位の川崎を引っ張る存在。"
+        },
+        {
+          "title": "首位打者",
+          "player": "仲村",
+          "team": "流山",
+          "value": ".300",
+          "comment": "3年連続の首位打者を獲得。"
+        },
+        {
+          "title": "首位打者",
+          "player": "桧野",
+          "team": "博多",
+          "value": ".300"
+        },
+        {
+          "title": "本塁打王",
+          "player": "重松龍人",
+          "team": "流山",
+          "value": "41本"
+        },
+        {
+          "title": "打点王",
+          "player": "落合博満",
+          "team": "川崎",
+          "value": "85打点",
+          "comment": "生きる伝説は令和でも大暴れ。"
+        },
+        {
+          "title": "盗塁王",
+          "player": "千石真人",
+          "team": "博多",
+          "value": "26盗塁",
+          "comment": "2年連続の盗塁王"
+        },
+        {
+          "title": "最多安打",
+          "player": "御手洗",
+          "team": "新潟",
+          "value": "150本"
+        },
+        {
+          "title": "最高出塁率",
+          "player": "仲村",
+          "team": "流山",
+          "value": ".375"
+        },
+        {
+          "title": "最多勝",
+          "player": "佐藤英智",
+          "team": "流山",
+          "value": "20勝"
+        },
+        {
+          "title": "最優秀防御率",
+          "player": "佐藤英智",
+          "team": "流山",
+          "value": "1.19"
+        },
+        {
+          "title": "最多奪三振",
+          "player": "達本亜人",
+          "team": "福知山",
+          "value": "323奪三振",
+          "comment": "現時点のJBUシーズン記録"
+        },
+        {
+          "title": "勝率第1位",
+          "player": "佐藤英智",
+          "team": "流山",
+          "value": ".870"
+        },
+        {
+          "title": "最多セーブ",
+          "player": "松井",
+          "team": "新潟",
+          "value": "29セーブ"
+        },
+        {
+          "title": "最優秀中継ぎ",
+          "player": "堀米",
+          "team": "長崎",
+          "value": "38HP"
+        }
+      ]
+    }
+  },
+  {
+    "year": 2028,
+    "leagues": {
+      "セ・リーグ": [
+        {
+          "title": "MVP",
+          "player": "梶谷",
+          "team": "難波"
+        },
+        {
+          "title": "新人王",
+          "player": "嵯峨",
+          "team": "北海道"
+        },
+        {
+          "title": "首位打者",
+          "player": "石田",
+          "team": "京都",
+          "value": ".285"
+        },
+        {
+          "title": "本塁打王",
+          "player": "杉本",
+          "team": "難波",
+          "value": "28本"
+        },
+        {
+          "title": "打点王",
+          "player": "梶谷",
+          "team": "難波",
+          "value": "85打点"
+        },
+        {
+          "title": "最多安打",
+          "player": "嵯峨",
+          "team": "北海道",
+          "value": "153本"
+        },
+        {
+          "title": "盗塁王",
+          "player": "塙・小山",
+          "team": "北海道・広島",
+          "value": "30個"
+        },
+        {
+          "title": "最高出塁率",
+          "player": "三橋",
+          "team": "広島",
+          "value": ".354"
+        },
+        {
+          "title": "最優秀防御率",
+          "player": "三津",
+          "team": "杜王",
+          "value": "1.35"
+        },
+        {
+          "title": "最多勝",
+          "player": "掛川",
+          "team": "京都",
+          "value": "17勝"
+        },
+        {
+          "title": "最多奪三振",
+          "player": "眉村",
+          "team": "京都",
+          "value": "279個"
+        },
+        {
+          "title": "最高勝率",
+          "player": "掛川",
+          "team": "京都",
+          "value": ".810"
+        },
+        {
+          "title": "最多セーブ",
+          "player": "岡崎",
+          "team": "広島",
+          "value": "31セーブ"
+        },
+        {
+          "title": "最優秀中継ぎ",
+          "player": "亀梨",
+          "team": "渋谷",
+          "value": "40HP"
+        }
+      ],
+      "パ・リーグ": [
+        {
+          "title": "MVP",
+          "player": "夏木",
+          "team": "博多"
+        },
+        {
+          "title": "新人王",
+          "player": "夏木",
+          "team": "博多"
+        },
+        {
+          "title": "首位打者",
+          "player": "青柳",
+          "team": "横浜",
+          "value": ".326"
+        },
+        {
+          "title": "本塁打王",
+          "player": "夏木",
+          "team": "博多",
+          "value": "37本"
+        },
+        {
+          "title": "打点王",
+          "player": "夏木",
+          "team": "博多",
+          "value": "102打点"
+        },
+        {
+          "title": "最多安打",
+          "player": "青柳",
+          "team": "横浜",
+          "value": "172本"
+        },
+        {
+          "title": "盗塁王",
+          "player": "田中",
+          "team": "博多",
+          "value": "31個"
+        },
+        {
+          "title": "最高出塁率",
+          "player": "夏木",
+          "team": "博多",
+          "value": ".401"
+        },
+        {
+          "title": "最優秀防御率",
+          "player": "赤月",
+          "team": "長崎",
+          "value": "0.96"
+        },
+        {
+          "title": "最多奪三振",
+          "player": "達本",
+          "team": "福知山",
+          "value": "317個"
+        },
+        {
+          "title": "最多セーブ",
+          "player": "佐々木麟",
+          "team": "横浜",
+          "value": "30セーブ"
+        },
+        {
+          "title": "最優秀中継ぎ",
+          "player": "一場",
+          "team": "新潟",
+          "value": "33HP"
+        }
+      ]
+    }
+  },
+  {
+    "year": 2029,
+    "leagues": {
+      "セ・リーグ": [
+        {
+          "title": "MVP",
+          "player": "崎本",
+          "team": "渋谷"
+        },
+        {
+          "title": "新人王",
+          "player": "志野",
+          "team": "広島"
+        },
+        {
+          "title": "首位打者",
+          "player": "古門",
+          "team": "清澄",
+          "value": ".291"
+        },
+        {
+          "title": "本塁打王",
+          "player": "崎本",
+          "team": "渋谷",
+          "value": "30本"
+        },
+        {
+          "title": "打点王",
+          "player": "杉本享",
+          "team": "難波",
+          "value": "81打点"
+        },
+        {
+          "title": "最多安打",
+          "player": "辰己",
+          "team": "愛知",
+          "value": "166本"
+        },
+        {
+          "title": "盗塁王",
+          "player": "手越・田部・末光",
+          "team": "北海道・杜王・愛知",
+          "value": "24個"
+        },
+        {
+          "title": "最高出塁率",
+          "player": "二葉",
+          "team": "広島",
+          "value": ".371"
+        },
+        {
+          "title": "最優秀防御率",
+          "player": "大森一輝",
+          "team": "清澄",
+          "value": "0.85"
+        },
+        {
+          "title": "最多勝",
+          "player": "菅井誠",
+          "team": "広島",
+          "value": "19勝"
+        },
+        {
+          "title": "最多奪三振",
+          "player": "大森一輝",
+          "team": "清澄",
+          "value": "247個"
+        },
+        {
+          "title": "最高勝率",
+          "player": "菅井誠",
+          "team": "広島",
+          "value": ".826"
+        },
+        {
+          "title": "最多セーブ",
+          "player": "R.マルティネス",
+          "team": "渋谷",
+          "value": "37S"
+        },
+        {
+          "title": "最優秀中継ぎ",
+          "player": "乾",
+          "team": "広島",
+          "value": "39HP"
+        }
+      ],
+      "パ・リーグ": [
+        {
+          "title": "MVP",
+          "player": "霜田",
+          "team": "新潟"
+        },
+        {
+          "title": "新人王",
+          "player": "黒川",
+          "team": "新潟"
+        },
+        {
+          "title": "首位打者",
+          "player": "夏木",
+          "team": "博多",
+          "value": ".288"
+        },
+        {
+          "title": "本塁打王",
+          "player": "加藤・重松",
+          "team": "新潟・流山",
+          "value": "32本"
+        },
+        {
+          "title": "打点王",
+          "player": "重松",
+          "team": "流山",
+          "value": "78打点"
+        },
+        {
+          "title": "最多安打",
+          "player": "重松",
+          "team": "流山",
+          "value": "145本"
+        },
+        {
+          "title": "盗塁王",
+          "player": "田仲龍二",
+          "team": "博多",
+          "value": "25個"
+        },
+        {
+          "title": "最高出塁率",
+          "player": "夏木",
+          "team": "博多",
+          "value": ".370"
+        },
+        {
+          "title": "最優秀防御率",
+          "player": "赤月",
+          "team": "長崎",
+          "value": "0.82"
+        },
+        {
+          "title": "最多勝",
+          "player": "霜田",
+          "team": "新潟",
+          "value": "21勝"
+        },
+        {
+          "title": "最多奪三振",
+          "player": "達本",
+          "team": "福知山",
+          "value": "314個"
+        },
+        {
+          "title": "勝率第1位投手賞",
+          "player": "霜田",
+          "team": "新潟",
+          "value": ".840"
+        },
+        {
+          "title": "最多セーブ",
+          "player": "松井裕",
+          "team": "新潟",
+          "value": "29S"
+        },
+        {
+          "title": "最優秀中継ぎ",
+          "player": "武田正信",
+          "team": "梅田",
+          "value": "36HP"
+        }
+      ]
+    }
+  },
+  {
+    "year": 2030,
+    "leagues": {
+      "セ・リーグ": [
+        {
+          "title": "MVP",
+          "player": "梶谷",
+          "team": "難波"
+        },
+        {
+          "title": "新人王",
+          "player": "佃",
+          "team": "愛知"
+        },
+        {
+          "title": "最多勝",
+          "player": "有吉",
+          "team": "北海道",
+          "value": "15勝"
+        },
+        {
+          "title": "最多勝",
+          "player": "滝川",
+          "team": "難波",
+          "value": "15勝"
+        },
+        {
+          "title": "最多勝",
+          "player": "大森",
+          "team": "清澄",
+          "value": "15勝"
+        },
+        {
+          "title": "最優秀防御率",
+          "player": "大森",
+          "team": "清澄",
+          "value": "1.37"
+        },
+        {
+          "title": "最多奪三振",
+          "player": "眉村",
+          "team": "京都",
+          "value": "257個"
+        },
+        {
+          "title": "勝率第1位",
+          "player": "滝川",
+          "team": "難波",
+          "value": ".714"
+        },
+        {
+          "title": "勝率第1位",
+          "player": "大森",
+          "team": "清澄",
+          "value": ".714"
+        },
+        {
+          "title": "最多セーブ",
+          "player": "藤嶋",
+          "team": "杜王",
+          "value": "35セーブ"
+        },
+        {
+          "title": "最優秀中継ぎ",
+          "player": "呉",
+          "team": "広島",
+          "value": "39HP"
+        },
+        {
+          "title": "首位打者",
+          "player": "古賀",
+          "team": "愛知",
+          "value": ".282"
+        },
+        {
+          "title": "本塁打王",
+          "player": "崎本",
+          "team": "渋谷",
+          "value": "28本"
+        },
+        {
+          "title": "打点王",
+          "player": "元木",
+          "team": "広島",
+          "value": "81打点"
+        },
+        {
+          "title": "盗塁王",
+          "player": "末光",
+          "team": "愛知",
+          "value": "23盗塁"
+        },
+        {
+          "title": "盗塁王",
+          "player": "塙",
+          "team": "北海道",
+          "value": "23盗塁"
+        },
+        {
+          "title": "盗塁王",
+          "player": "平塚",
+          "team": "北海道",
+          "value": "23盗塁"
+        },
+        {
+          "title": "最多安打",
+          "player": "二葉",
+          "team": "広島",
+          "value": "147本"
+        },
+        {
+          "title": "最高出塁率",
+          "player": "古賀",
+          "team": "愛知",
+          "value": ".371"
+        }
+      ],
+      "パ・リーグ": [
+        {
+          "title": "MVP",
+          "player": "赤月",
+          "team": "長崎"
+        },
+        {
+          "title": "沢村賞",
+          "player": "赤月",
+          "team": "長崎"
+        },
+        {
+          "title": "新人王",
+          "player": "神宮司",
+          "team": "長崎"
+        },
+        {
+          "title": "最多勝",
+          "player": "赤月",
+          "team": "長崎",
+          "value": "25勝"
+        },
+        {
+          "title": "最優秀防御率",
+          "player": "忍野",
+          "team": "川崎",
+          "value": "0.78"
+        },
+        {
+          "title": "最多奪三振",
+          "player": "赤月",
+          "team": "長崎",
+          "value": "335個"
+        },
+        {
+          "title": "勝率第1位",
+          "player": "忍野",
+          "team": "川崎",
+          "value": ".864"
+        },
+        {
+          "title": "最多セーブ",
+          "player": "朝野",
+          "team": "博多",
+          "value": "26セーブ"
+        },
+        {
+          "title": "最優秀中継ぎ",
+          "player": "尾道",
+          "team": "博多",
+          "value": "40HP"
+        },
+        {
+          "title": "首位打者",
+          "player": "仲村",
+          "team": "流山",
+          "value": ".282"
+        },
+        {
+          "title": "本塁打王",
+          "player": "仲村",
+          "team": "流山",
+          "value": "35本"
+        },
+        {
+          "title": "打点王",
+          "player": "重松",
+          "team": "流山",
+          "value": "88打点"
+        },
+        {
+          "title": "盗塁王",
+          "player": "小林",
+          "team": "長崎",
+          "value": "21個"
+        },
+        {
+          "title": "最多安打",
+          "player": "仲村",
+          "team": "流山",
+          "value": "170本"
+        },
+        {
+          "title": "最高出塁率",
+          "player": "深川",
+          "team": "福知山",
+          "value": ".350"
+        },
+        {
+          "title": "最高出塁率",
+          "player": "権田",
+          "team": "横浜",
+          "value": ".350"
+        }
+      ]
+    }
+  },
+  {
+    "year": 2034,
+    "leagues": {
+      "セ・リーグ": [
+        {
+          "title": "MVP",
+          "player": "早乙女",
+          "team": "京都"
+        },
+        {
+          "title": "新人王",
+          "player": "甲斐",
+          "team": "杜王"
+        },
+        {
+          "title": "首位打者",
+          "player": "早乙女",
+          "team": "京都",
+          "value": ".271"
+        },
+        {
+          "title": "本塁打王",
+          "player": "早乙女",
+          "team": "京都",
+          "value": "28本"
+        },
+        {
+          "title": "打点王",
+          "player": "元木",
+          "team": "広島",
+          "value": "77打点"
+        },
+        {
+          "title": "最多安打",
+          "player": "満丸",
+          "team": "難波",
+          "value": "139本"
+        },
+        {
+          "title": "盗塁王",
+          "player": "福島",
+          "team": "北海道",
+          "value": "27個"
+        },
+        {
+          "title": "最高出塁率",
+          "player": "早乙女",
+          "team": "京都",
+          "value": ".367"
+        },
+        {
+          "title": "最優秀防御率",
+          "player": "菅井",
+          "team": "渋谷",
+          "value": "1.16"
+        },
+        {
+          "title": "最多勝",
+          "player": "有吉",
+          "team": "北海道",
+          "value": "16勝"
+        },
+        {
+          "title": "最多奪三振",
+          "player": "赤星",
+          "team": "難波",
+          "value": "251個"
+        },
+        {
+          "title": "勝率第1位投手賞",
+          "player": "三津",
+          "team": "杜王",
+          "value": ".682"
+        },
+        {
+          "title": "最多セーブ",
+          "player": "田村",
+          "team": "清澄",
+          "value": "29セーブ"
+        },
+        {
+          "title": "最優秀中継ぎ",
+          "player": "比嘉",
+          "team": "清澄",
+          "value": "41HP"
+        }
+      ],
+      "パ・リーグ": [
+        {
+          "title": "MVP",
+          "player": "重松",
+          "team": "流山"
+        },
+        {
+          "title": "沢村賞",
+          "player": "眉村",
+          "team": "流山"
+        },
+        {
+          "title": "新人王",
+          "player": "凪",
+          "team": "流山"
+        },
+        {
+          "title": "首位打者",
+          "player": "仲村",
+          "team": "流山",
+          "value": ".319"
+        },
+        {
+          "title": "本塁打王",
+          "player": "重松",
+          "team": "流山",
+          "value": "61本"
+        },
+        {
+          "title": "打点王",
+          "player": "重松",
+          "team": "流山",
+          "value": "127打点"
+        },
+        {
+          "title": "最多安打",
+          "player": "田中",
+          "team": "博多",
+          "value": "160本"
+        },
+        {
+          "title": "盗塁王",
+          "player": "田中",
+          "team": "博多",
+          "value": "30個"
+        },
+        {
+          "title": "最高出塁率",
+          "player": "仲村",
+          "team": "流山",
+          "value": ".386"
+        },
+        {
+          "title": "最優秀防御率",
+          "player": "古林",
+          "team": "横浜",
+          "value": "1.00"
+        },
+        {
+          "title": "最多勝",
+          "player": "柊",
+          "team": "流山",
+          "value": "21勝"
+        },
+        {
+          "title": "最多勝",
+          "player": "眉村",
+          "team": "流山",
+          "value": "21勝"
+        },
+        {
+          "title": "最多奪三振",
+          "player": "古林",
+          "team": "横浜",
+          "value": "330個"
+        },
+        {
+          "title": "勝率第1位投手賞",
+          "player": "霜田",
+          "team": "流山",
+          "value": ".826"
+        },
+        {
+          "title": "最多セーブ",
+          "player": "堀米",
+          "team": "長崎",
+          "value": "26セーブ"
+        },
+        {
+          "title": "最優秀中継ぎ",
+          "player": "津島",
+          "team": "川崎",
+          "value": "33HP"
+        }
+      ]
+    }
+  },
+  {
+    "year": 2031,
+    "leagues": {
+      "セ・リーグ": [
+        {
+          "title": "MVP",
+          "player": "大森一輝",
+          "team": "清澄"
+        },
+        {
+          "title": "新人王",
+          "player": "押下",
+          "team": "愛知"
+        },
+        {
+          "title": "首位打者",
+          "player": "識",
+          "team": "広島",
+          "value": ".268"
+        },
+        {
+          "title": "本塁打王",
+          "player": "古門",
+          "team": "清澄",
+          "value": "24本"
+        },
+        {
+          "title": "打点王",
+          "player": "元木",
+          "team": "広島",
+          "value": "69打点"
+        },
+        {
+          "title": "盗塁王",
+          "player": "百合草",
+          "team": "渋谷",
+          "value": "28個"
+        },
+        {
+          "title": "最多安打",
+          "player": "満丸",
+          "team": "難波",
+          "value": "142本"
+        },
+        {
+          "title": "最高出塁率",
+          "player": "小山",
+          "team": "広島",
+          "value": ".341"
+        },
+        {
+          "title": "最多勝",
+          "player": "押下",
+          "team": "愛知",
+          "value": "16勝"
+        },
+        {
+          "title": "最優秀防御率",
+          "player": "大森",
+          "team": "清澄",
+          "value": "0.79"
+        },
+        {
+          "title": "最多奪三振",
+          "player": "眉村",
+          "team": "京都",
+          "value": "258個"
+        },
+        {
+          "title": "勝率第1位投手賞",
+          "player": "大森",
+          "team": "清澄",
+          "value": ".778"
+        },
+        {
+          "title": "最多セーブ",
+          "player": "岡崎",
+          "team": "広島",
+          "value": "35セーブ"
+        },
+        {
+          "title": "最優秀中継ぎ",
+          "player": "呉",
+          "team": "広島",
+          "value": "42HP"
+        }
+      ],
+      "パ・リーグ": [
+        {
+          "title": "MVP",
+          "player": "佐藤英智",
+          "team": "流山"
+        },
+        {
+          "title": "沢村賞",
+          "player": "佐藤英智",
+          "team": "流山"
+        },
+        {
+          "title": "新人王",
+          "player": "小金井",
+          "team": "流山"
+        },
+        {
+          "title": "首位打者",
+          "player": "仮良真",
+          "team": "流山",
+          "value": ".286"
+        },
+        {
+          "title": "本塁打王",
+          "player": "小林",
+          "team": "長崎",
+          "value": "27本"
+        },
+        {
+          "title": "打点王",
+          "player": "赤井",
+          "team": "長崎",
+          "value": "73打点"
+        },
+        {
+          "title": "盗塁王",
+          "player": "御手洗",
+          "team": "新潟",
+          "value": "28個"
+        },
+        {
+          "title": "最多安打",
+          "player": "夏木",
+          "team": "博多",
+          "value": "154本"
+        },
+        {
+          "title": "最高出塁率",
+          "player": "草野",
+          "team": "横浜",
+          "value": ".355"
+        },
+        {
+          "title": "最多勝",
+          "player": "佐藤英・忍野",
+          "team": "流山・川崎",
+          "value": "20勝"
+        },
+        {
+          "title": "最優秀防御率",
+          "player": "赤月",
+          "team": "長崎",
+          "value": "0.68"
+        },
+        {
+          "title": "最多奪三振",
+          "player": "忍野",
+          "team": "川崎",
+          "value": "299個"
+        },
+        {
+          "title": "勝率第1位投手賞",
+          "player": "佐藤英",
+          "team": "流山",
+          "value": ".833"
+        },
+        {
+          "title": "最多セーブ",
+          "player": "音無",
+          "team": "新潟",
+          "value": "30セーブ"
+        },
+        {
+          "title": "最優秀中継ぎ",
+          "player": "一場・曽田",
+          "team": "新潟・福知山",
+          "value": "37HP"
+        }
+      ]
+    }
+  },
+  {
+    "year": 2032,
+    "leagues": {
+      "セ・リーグ": [
+        {
+          "title": "MVP",
+          "player": "菅井",
+          "team": "広島"
+        },
+        {
+          "title": "新人王",
+          "player": "早乙女",
+          "team": "京都"
+        },
+        {
+          "title": "首位打者",
+          "player": "染谷",
+          "team": "広島",
+          "value": ".315"
+        },
+        {
+          "title": "本塁打王",
+          "player": "崎本",
+          "team": "渋谷",
+          "value": "37本"
+        },
+        {
+          "title": "打点王",
+          "player": "二葉",
+          "team": "広島",
+          "value": "96打点"
+        },
+        {
+          "title": "盗塁王",
+          "player": "小山",
+          "team": "広島",
+          "value": "31個"
+        },
+        {
+          "title": "最多安打",
+          "player": "二葉",
+          "team": "広島",
+          "value": "158本"
+        },
+        {
+          "title": "最高出塁率",
+          "player": "二葉",
+          "team": "広島",
+          "value": ".368"
+        },
+        {
+          "title": "最多勝",
+          "player": "菅井",
+          "team": "広島",
+          "value": "19勝"
+        },
+        {
+          "title": "最優秀防御率",
+          "player": "菅井",
+          "team": "広島",
+          "value": "1.09"
+        },
+        {
+          "title": "最多奪三振",
+          "player": "眉村",
+          "team": "京都",
+          "value": "282個"
+        },
+        {
+          "title": "勝率第1位投手賞",
+          "player": "菅井",
+          "team": "広島",
+          "value": ".826"
+        },
+        {
+          "title": "最多セーブ",
+          "player": "岡崎",
+          "team": "広島",
+          "value": "34セーブ"
+        },
+        {
+          "title": "最優秀中継ぎ",
+          "player": "亀梨",
+          "team": "渋谷",
+          "value": "40HP"
+        }
+      ],
+      "パ・リーグ": [
+        {
+          "title": "MVP",
+          "player": "草野",
+          "team": "横浜"
+        },
+        {
+          "title": "沢村賞",
+          "player": "佐藤英",
+          "team": "流山"
+        },
+        {
+          "title": "新人王",
+          "player": "大杉",
+          "team": "横浜"
+        },
+        {
+          "title": "首位打者",
+          "player": "草野",
+          "team": "横浜",
+          "value": ".328"
+        },
+        {
+          "title": "本塁打王",
+          "player": "大杉",
+          "team": "横浜",
+          "value": "38本"
+        },
+        {
+          "title": "打点王",
+          "player": "小林",
+          "team": "長崎",
+          "value": "96打点"
+        },
+        {
+          "title": "盗塁王",
+          "player": "西川",
+          "team": "横浜",
+          "value": "36個"
+        },
+        {
+          "title": "最多安打",
+          "player": "草野",
+          "team": "横浜",
+          "value": "165本"
+        },
+        {
+          "title": "最高出塁率",
+          "player": "草野",
+          "team": "横浜",
+          "value": ".402"
+        },
+        {
+          "title": "最多勝",
+          "player": "佐藤英",
+          "team": "流山",
+          "value": "21勝"
+        },
+        {
+          "title": "最優秀防御率",
+          "player": "佐藤英",
+          "team": "流山",
+          "value": "1.19"
+        },
+        {
+          "title": "最多奪三振",
+          "player": "然月",
+          "team": "流山",
+          "value": "289個"
+        },
+        {
+          "title": "勝率第1位投手賞",
+          "player": "佐藤英",
+          "team": "流山",
+          "value": ".875"
+        },
+        {
+          "title": "最多セーブ",
+          "player": "松井",
+          "team": "新潟",
+          "value": "29セーブ"
+        },
+        {
+          "title": "最優秀中継ぎ",
+          "player": "堀米",
+          "team": "長崎",
+          "value": "38HP"
+        }
+      ]
+    }
+  },
+  {
+"year": 2038,
+  "leagues": {
+    "セ・リーグ": [
+      {
+        "title": "MVP",
+        "player": "三根",
+        "team": "京都"
+      },
+      {
+        "title": "新人王",
+        "player": "川嶋",
+        "team": "京都"
+      },
+      {
+        "title": "首位打者",
+        "player": "二葉",
+        "team": "広島",
+        "value": ".275"
+      },
+      {
+        "title": "本塁打王",
+        "player": "川嶋",
+        "team": "京都",
+        "value": "30本"
+      },
+      {
+        "title": "本塁打王",
+        "player": "三根",
+        "team": "京都",
+        "value": "30本"
+      },
+      {
+        "title": "打点王",
+        "player": "三根",
+        "team": "京都",
+        "value": "94打点"
+      },
+      {
+        "title": "最多安打",
+        "player": "二葉",
+        "team": "広島",
+        "value": "156本"
+      },
+      {
+        "title": "最高出塁率",
+        "player": "二葉",
+        "team": "広島",
+        "value": ".361"
+      },
+      {
+        "title": "盗塁王",
+        "player": "二葉",
+        "team": "広島",
+        "value": "29個"
+      },
+      {
+        "title": "最多勝",
+        "player": "滝川",
+        "team": "北海道",
+        "value": "18勝"
+      },
+      {
+        "title": "最多勝",
+        "player": "久永",
+        "team": "京都",
+        "value": "18勝"
+      },
+      {
+        "title": "最優秀防御率",
+        "player": "久永",
+        "team": "京都",
+        "value": "0.94"
+      },
+      {
+        "title": "最多奪三振",
+        "player": "達本",
+        "team": "渋谷",
+        "value": "291個"
+      },
+      {
+        "title": "勝率第1位",
+        "player": "滝川",
+        "team": "北海道",
+        "value": ".818"
+      },
+      {
+        "title": "最多セーブ",
+        "player": "幕張",
+        "team": "難波",
+        "value": "29セーブ"
+      },
+      {
+        "title": "最優秀中継ぎ",
+        "player": "大宗",
+        "team": "難波",
+        "value": "38HP"
+      },
+      {
+        "title": "最優秀中継ぎ",
+        "player": "奥山",
+        "team": "北海道",
+        "value": "38HP"
+      }
+    ],
+    "パ・リーグ": [
+      {
+        "title": "MVP",
+        "player": "中井",
+        "team": "福知山"
+      },
+      {
+        "title": "沢村賞",
+        "player": "霜田",
+        "team": "流山"
+      },
+      {
+        "title": "新人王",
+        "player": "斎木",
+        "team": "福知山"
+      },
+      {
+        "title": "首位打者",
+        "player": "夏木",
+        "team": "博多",
+        "value": ".270"
+      },
+      {
+        "title": "本塁打王",
+        "player": "中井",
+        "team": "福知山",
+        "value": "39本"
+      },
+      {
+        "title": "打点王",
+        "player": "中井",
+        "team": "福知山",
+        "value": "88打点"
+      },
+      {
+        "title": "最多安打",
+        "player": "下井",
+        "team": "横浜",
+        "value": "154本"
+      },
+      {
+        "title": "最高出塁率",
+        "player": "夏木",
+        "team": "博多",
+        "value": ".352"
+      },
+      {
+        "title": "盗塁王",
+        "player": "小林明",
+        "team": "長崎",
+        "value": "25個"
+      },
+      {
+        "title": "最多勝",
+        "player": "霜田",
+        "team": "流山",
+        "value": "19勝"
+      },
+      {
+        "title": "最優秀防御率",
+        "player": "佐藤",
+        "team": "流山",
+        "value": "1.09"
+      },
+      {
+        "title": "最多奪三振",
+        "player": "忍野",
+        "team": "川崎",
+        "value": "324個"
+      },
+      {
+        "title": "勝率第1位",
+        "player": "霜田",
+        "team": "流山",
+        "value": ".864"
+      },
+      {
+        "title": "最多セーブ",
+        "player": "殿田",
+        "team": "横浜",
+        "value": "24セーブ"
+      },
+      {
+        "title": "最優秀中継ぎ",
+        "player": "堂並",
+        "team": "川崎",
+        "value": "33HP"
+                }
+      ]
+    }
+  },
+  {
+ "year": 2037,
+  "leagues": {
+    "セ・リーグ": [
+      {
+        "title": "MVP",
+        "player": "木藤",
+        "team": "北海道"
+      },
+      {
+        "title": "沢村賞",
+        "player": "滝川",
+        "team": "北海道"
+      },
+      {
+        "title": "新人王",
+        "player": "木藤",
+        "team": "北海道"
+      },
+      {
+        "title": "首位打者",
+        "player": "木藤",
+        "team": "北海道",
+        "value": ".297"
+      },
+      {
+        "title": "本塁打王",
+        "player": "木藤",
+        "team": "北海道",
+        "value": "43本"
+      },
+      {
+        "title": "打点王",
+        "player": "木藤",
+        "team": "北海道",
+        "value": "95打点"
+      },
+      {
+        "title": "最多安打",
+        "player": "二葉",
+        "team": "広島",
+        "value": "151本"
+      },
+      {
+        "title": "最高出塁率",
+        "player": "木藤",
+        "team": "北海道",
+        "value": ".363"
+      },
+      {
+        "title": "盗塁王",
+        "player": "二葉",
+        "team": "広島",
+        "value": "25個"
+      },
+      {
+        "title": "最多勝",
+        "player": "滝川",
+        "team": "北海道",
+        "value": "20勝"
+      },
+      {
+        "title": "最優秀防御率",
+        "player": "三津",
+        "team": "愛知",
+        "value": "1.12"
+      },
+      {
+        "title": "最多奪三振",
+        "player": "菅井",
+        "team": "渋谷",
+        "value": "266個"
+      },
+      {
+        "title": "勝率第1位",
+        "player": "高沢",
+        "team": "清澄",
+        "value": ".824"
+      },
+      {
+        "title": "最多セーブ",
+        "player": "倉吉",
+        "team": "広島",
+        "value": "29セーブ"
+      },
+      {
+        "title": "最優秀中継ぎ",
+        "player": "麻布",
+        "team": "渋谷",
+        "value": "35HP"
+      }
+    ],
+    "パ・リーグ": [
+      {
+        "title": "MVP",
+        "player": "古林",
+        "team": "横浜"
+      },
+      {
+        "title": "新人王",
+        "player": "渡邊",
+        "team": "博多"
+      },
+      {
+        "title": "首位打者",
+        "player": "笠松",
+        "team": "長崎",
+        "value": ".269"
+      },
+      {
+        "title": "本塁打王",
+        "player": "田仲",
+        "team": "博多",
+        "value": "30本"
+      },
+      {
+        "title": "打点王",
+        "player": "キムテヨン",
+        "team": "博多",
+        "value": "77打点"
+      },
+      {
+        "title": "打点王",
+        "player": "司馬",
+        "team": "流山",
+        "value": "77打点"
+      },
+      {
+        "title": "最多安打",
+        "player": "外埜",
+        "team": "博多",
+        "value": "152本"
+      },
+      {
+        "title": "最高出塁率",
+        "player": "キムテヨン",
+        "team": "博多",
+        "value": ".340"
+      },
+      {
+        "title": "盗塁王",
+        "player": "田仲",
+        "team": "博多",
+        "value": "26個"
+      },
+      {
+        "title": "最多勝",
+        "player": "忍野",
+        "team": "川崎",
+        "value": "18勝"
+      },
+      {
+        "title": "最優秀防御率",
+        "player": "蝦名",
+        "team": "長崎",
+        "value": "1.02"
+      },
+      {
+        "title": "最多奪三振",
+        "player": "古林",
+        "team": "横浜",
+        "value": "285個"
+      },
+      {
+        "title": "勝率第1位",
+        "player": "蝦名",
+        "team": "長崎",
+        "value": ".889"
+      },
+      {
+        "title": "最多セーブ",
+        "player": "藤本ダニエル",
+        "team": "流山",
+        "value": "26セーブ"
+      },
+      {
+        "title": "最多セーブ",
+        "player": "音無",
+        "team": "新潟",
+        "value": "26セーブ"
+      },
+      {
+        "title": "最優秀中継ぎ",
+        "player": "品川",
+        "team": "博多",
+        "value": "41HP"       }
+      ]
+    }
+  },
+  {  
+    "year": 2033,
+    "leagues": {
+      "セ・リーグ": [
+        {
+          "title": "MVP",
+          "player": "元木",
+          "team": "広島"
+        },
+        {
+          "title": "新人王",
+          "player": "兵庫",
+          "team": "清澄"
+        },
+        {
+          "title": "首位打者",
+          "player": "塙",
+          "team": "北海道",
+          "value": ".290"
+        },
+        {
+          "title": "本塁打王",
+          "player": "元木",
+          "team": "広島",
+          "value": "27本"
+        },
+        {
+          "title": "本塁打王",
+          "player": "識",
+          "team": "広島",
+          "value": "27本"
+        },
+        {
+          "title": "打点王",
+          "player": "元木",
+          "team": "広島",
+          "value": "83打点"
+        },
+        {
+          "title": "最多安打",
+          "player": "識",
+          "team": "広島",
+          "value": "143本"
+        },
+        {
+          "title": "最高出塁率",
+          "player": "早乙女",
+          "team": "京都",
+          "value": ".354"
+        },
+        {
+          "title": "盗塁王",
+          "player": "塙",
+          "team": "北海道",
+          "value": "22個"
+        },
+        {
+          "title": "最多勝",
+          "player": "須藤",
+          "team": "難波",
+          "value": "15勝"
+        },
+        {
+          "title": "最多勝",
+          "player": "太田",
+          "team": "京都",
+          "value": "15勝"
+        },
+        {
+          "title": "最多勝",
+          "player": "榊原",
+          "team": "京都",
+          "value": "15勝"
+        },
+        {
+          "title": "最優秀防御率",
+          "player": "大森",
+          "team": "清澄",
+          "value": "0.84"
+        },
+        {
+          "title": "最多奪三振",
+          "player": "赤星",
+          "team": "難波",
+          "value": "312個"
+        },
+        {
+          "title": "勝率第1位",
+          "player": "榊原",
+          "team": "京都",
+          "value": ".882"
+        },
+        {
+          "title": "最多セーブ",
+          "player": "幕張",
+          "team": "難波",
+          "value": "37セーブ"
+        },
+        {
+          "title": "最優秀中継ぎ",
+          "player": "比嘉",
+          "team": "清澄",
+          "value": "45HP"
+        }
+      ],
+      "パ・リーグ": [
+        {
+          "title": "MVP",
+          "player": "小林",
+          "team": "長崎"
+        },
+        {
+          "title": "沢村賞",
+          "player": "里中",
+          "team": "長崎"
+        },
+        {
+          "title": "新人王",
+          "player": "藤牧",
+          "team": "川崎"
+        },
+        {
+          "title": "首位打者",
+          "player": "仲村",
+          "team": "流山",
+          "value": ".306"
+        },
+        {
+          "title": "本塁打王",
+          "player": "平出",
+          "team": "福知山",
+          "value": "28本"
+        },
+        {
+          "title": "本塁打王",
+          "player": "橘",
+          "team": "新潟",
+          "value": "28本"
+        },
+        {
+          "title": "打点王",
+          "player": "平出",
+          "team": "福知山",
+          "value": "85打点"
+        },
+        {
+          "title": "最多安打",
+          "player": "草野",
+          "team": "横浜",
+          "value": "155本"
+        },
+        {
+          "title": "最高出塁率",
+          "player": "仲村",
+          "team": "流山",
+          "value": ".366"
+        },
+        {
+          "title": "盗塁王",
+          "player": "御手洗",
+          "team": "新潟",
+          "value": "32個"
+        },
+        {
+          "title": "最多勝",
+          "player": "里中",
+          "team": "長崎",
+          "value": "21勝"
+        },
+        {
+          "title": "最優秀防御率",
+          "player": "達本",
+          "team": "福知山",
+          "value": "1.18"
+        },
+        {
+          "title": "最多奪三振",
+          "player": "達本",
+          "team": "福知山",
+          "value": "328個"
+        },
+        {
+          "title": "勝率第1位",
+          "player": "里中",
+          "team": "長崎",
+          "value": ".840"
+        },
+        {
+          "title": "最多セーブ",
+          "player": "音無",
+          "team": "新潟",
+          "value": "22セーブ"
+        },
+        {
+          "title": "最多セーブ",
+          "player": "近藤",
+          "team": "梅田",
+          "value": "22セーブ"
+        },
+        {
+          "title": "最優秀中継ぎ",
+          "player": "黒川",
+          "team": "新潟",
+          "value": "33HP"
+        }
+      ]
+    }
+  },
+  {
+"year": 2035,
+  "leagues": {
+    "セ・リーグ": [
+      {
+        "title": "MVP",
+        "player": "識",
+        "team": "広島"
+      },
+      {
+        "title": "新人王",
+        "player": "倉吉",
+        "team": "広島"
+      },
+      {
+        "title": "首位打者",
+        "player": "識",
+        "team": "広島",
+        "value": ".285"
+      },
+      {
+        "title": "本塁打王",
+        "player": "識",
+        "team": "広島",
+        "value": "36本"
+      },
+      {
+        "title": "打点王",
+        "player": "識",
+        "team": "広島",
+        "value": "92打点"
+      },
+      {
+        "title": "最多安打",
+        "player": "杉本",
+        "team": "難波",
+        "value": "144本"
+      },
+      {
+        "title": "最高出塁率",
+        "player": "二葉",
+        "team": "広島",
+        "value": ".370"
+      },
+      {
+        "title": "盗塁王",
+        "player": "小山",
+        "team": "広島",
+        "value": "29個"
+      },
+      {
+        "title": "最多勝",
+        "player": "太田",
+        "team": "広島",
+        "value": "20勝"
+      },
+      {
+        "title": "最優秀防御率",
+        "player": "滝川",
+        "team": "北海道",
+        "value": "1.20"
+      },
+      {
+        "title": "最多奪三振",
+        "player": "有吉",
+        "team": "北海道",
+        "value": "247個"
+      },
+      {
+        "title": "勝率第1位",
+        "player": "滝川",
+        "team": "北海道",
+        "value": ".778"
+      },
+      {
+        "title": "最多セーブ",
+        "player": "田村・岡崎",
+        "team": "清澄・広島",
+        "value": "30セーブ"
+      },
+      {
+        "title": "最優秀中継ぎ",
+        "player": "倉吉",
+        "team": "広島",
+        "value": "41HP"
+      }
+    ],
+    "パ・リーグ": [
+      {
+        "title": "MVP",
+        "player": "草野",
+        "team": "横浜"
+      },
+      {
+        "title": "沢村賞",
+        "player": "佐藤英",
+        "team": "流山"
+      },
+      {
+        "title": "新人王",
+        "player": "下井",
+        "team": "横浜"
+      },
+      {
+        "title": "首位打者",
+        "player": "北条",
+        "team": "川崎",
+        "value": ".277"
+      },
+      {
+        "title": "本塁打王",
+        "player": "梅崎悟",
+        "team": "梅田",
+        "value": "33本"
+      },
+      {
+        "title": "打点王",
+        "player": "荒賀",
+        "team": "新潟",
+        "value": "82打点"
+      },
+      {
+        "title": "最多安打",
+        "player": "北条",
+        "team": "川崎",
+        "value": "166本"
+      },
+      {
+        "title": "最高出塁率",
+        "player": "笠松",
+        "team": "長崎",
+        "value": ".346"
+      },
+      {
+        "title": "盗塁王",
+        "player": "下井",
+        "team": "横浜",
+        "value": "21個"
+      },
+      {
+        "title": "最多勝",
+        "player": "佐藤英",
+        "team": "流山",
+        "value": "20勝"
+      },
+      {
+        "title": "最優秀防御率",
+        "player": "霜田",
+        "team": "流山",
+        "value": "1.17"
+      },
+      {
+        "title": "最多奪三振",
+        "player": "眉村",
+        "team": "流山",
+        "value": "323個"
+      },
+      {
+        "title": "勝率第1位",
+        "player": "柊",
+        "team": "流山",
+        "value": ".826"
+      },
+      {
+        "title": "最多セーブ",
+        "player": "近藤",
+        "team": "梅田",
+        "value": "29セーブ"
+      },
+      {
+        "title": "最優秀中継ぎ",
+        "player": "品川",
+        "team": "博多",
+        "value": "36HP"
+       }
+      ]
+    }
+  },
+  {
+"year": 2036,
+  "leagues": {
+    "セ・リーグ": [
+      {
+        "title": "MVP",
+        "player": "二葉",
+        "team": "広島"
+      },
+      {
+        "title": "新人王",
+        "player": "唐津",
+        "team": "渋谷"
+      },
+      {
+        "title": "沢村賞",
+        "player": "菅井",
+        "team": "渋谷"
+      },
+      {
+        "title": "首位打者",
+        "player": "二葉",
+        "team": "広島",
+        "value": ".298"
+      },
+      {
+        "title": "本塁打王",
+        "player": "西場",
+        "team": "広島",
+        "value": "28本"
+      },
+      {
+        "title": "打点王",
+        "player": "識",
+        "team": "広島",
+        "value": "79打点"
+      },
+      {
+        "title": "最多安打",
+        "player": "宇尾野",
+        "team": "愛知",
+        "value": "145本"
+      },
+      {
+        "title": "最高出塁率",
+        "player": "二葉",
+        "team": "広島",
+        "value": ".366"
+      },
+      {
+        "title": "盗塁王",
+        "player": "平塚",
+        "team": "北海道",
+        "value": "31個"
+      },
+      {
+        "title": "最優秀防御率",
+        "player": "菅井",
+        "team": "渋谷",
+        "value": "0.99"
+      },
+      {
+        "title": "最多勝",
+        "player": "菅井",
+        "team": "渋谷",
+        "value": "21勝"
+      },
+      {
+        "title": "最多奪三振",
+        "player": "菅井",
+        "team": "渋谷",
+        "value": "283個"
+      },
+      {
+        "title": "勝率第1位",
+        "player": "菅井・法田",
+        "team": "渋谷・北海道",
+        "value": ".778"
+      },
+      {
+        "title": "最多セーブ",
+        "player": "大崎",
+        "team": "北海道",
+        "value": "30セーブ"
+      },
+      {
+        "title": "最優秀中継ぎ",
+        "player": "呉",
+        "team": "広島",
+        "value": "37HP"
+      }
+    ],
+    "パ・リーグ": [
+      {
+        "title": "MVP",
+        "player": "藤田篤",
+        "team": "新潟"
+      },
+      {
+        "title": "新人王",
+        "player": "豊橋",
+        "team": "横浜"
+      },
+      {
+        "title": "首位打者",
+        "player": "藤田篤",
+        "team": "新潟",
+        "value": ".286"
+      },
+      {
+        "title": "本塁打王",
+        "player": "蜂須賀",
+        "team": "新潟",
+        "value": "35本"
+      },
+      {
+        "title": "打点王",
+        "player": "豊橋",
+        "team": "横浜",
+        "value": "86打点"
+      },
+      {
+        "title": "最多安打",
+        "player": "田仲",
+        "team": "博多",
+        "value": "149本"
+      },
+      {
+        "title": "最高出塁率",
+        "player": "赤井",
+        "team": "長崎",
+        "value": ".351"
+      },
+      {
+        "title": "盗塁王",
+        "player": "田仲",
+        "team": "博多",
+        "value": "26個"
+      },
+      {
+        "title": "最優秀防御率",
+        "player": "忍野",
+        "team": "川崎",
+        "value": "0.87"
+      },
+      {
+        "title": "最多勝",
+        "player": "眉村",
+        "team": "流山",
+        "value": "19勝"
+      },
+      {
+        "title": "最多奪三振",
+        "player": "眉村",
+        "team": "流山",
+        "value": "352個"
+      },
+      {
+        "title": "勝率第1位",
+        "player": "眉村",
+        "team": "流山",
+        "value": ".792"
+      },
+      {
+        "title": "最多セーブ",
+        "player": "朝野",
+        "team": "博多",
+        "value": "31セーブ"
+      },
+      {
+        "title": "最優秀中継ぎ",
+        "player": "品川",
+        "team": "博多",
+        "value": "35HP"
+       }
+      ]
+    }
+  },
+  {      
+    "year": 2039,
+    "leagues": {
+      "セ・リーグ": [
+        {
+          "title": "MVP",
+          "player": "元木",
+          "team": "広島"
+        },
+        {
+          "title": "新人王",
+          "player": "松石",
+          "team": "清澄"
+        },
+        {
+          "title": "沢村賞",
+          "player": "菅井",
+          "team": "渋谷"
+        },
+        {
+          "title": "首位打者",
+          "player": "志野",
+          "team": "広島",
+          "value": ".304"
+        },
+        {
+          "title": "本塁打王",
+          "player": "嵯峨",
+          "team": "北海道",
+          "value": "38本"
+        },
+        {
+          "title": "打点王",
+          "player": "嵯峨",
+          "team": "北海道",
+          "value": "98打点"
+        },
+        {
+          "title": "最多安打",
+          "player": "二葉",
+          "team": "広島",
+          "value": "148本"
+        },
+        {
+          "title": "最高出塁率",
+          "player": "志野",
+          "team": "広島",
+          "value": ".378"
+        },
+        {
+          "title": "盗塁王",
+          "player": "古門・二葉",
+          "team": "清澄・広島",
+          "value": "30個"
+        },
+        {
+          "title": "最優秀防御率",
+          "player": "菅井",
+          "team": "渋谷",
+          "value": "1.00"
+        },
+        {
+          "title": "最多勝",
+          "player": "法田",
+          "team": "北海道",
+          "value": "19勝"
+        },
+        {
+          "title": "最多奪三振",
+          "player": "熊谷",
+          "team": "清澄",
+          "value": "251個"
+        },
+        {
+          "title": "勝率第1位",
+          "player": "如月",
+          "team": "清澄",
+          "value": ".900"
+        },
+        {
+          "title": "最多セーブ",
+          "player": "倉吉",
+          "team": "広島",
+          "value": "40S"
+        },
+        {
+          "title": "最優秀中継ぎ",
+          "player": "比嘉",
+          "team": "清澄",
+          "value": "35HP"
+        }
+      ],
+      "パ・リーグ": [
+        {
+          "title": "MVP",
+          "player": "豊橋",
+          "team": "横浜"
+        },
+        {
+          "title": "新人王",
+          "player": "小熊一",
+          "team": "横浜"
+        },
+        {
+          "title": "首位打者",
+          "player": "司馬",
+          "team": "流山",
+          "value": ".280"
+        },
+        {
+          "title": "本塁打王",
+          "player": "椿",
+          "team": "梅田",
+          "value": "28本"
+        },
+        {
+          "title": "打点王",
+          "player": "豊橋",
+          "team": "横浜",
+          "value": "80打点"
+        },
+        {
+          "title": "最多安打",
+          "player": "豊橋",
+          "team": "横浜",
+          "value": "148本"
+        },
+        {
+          "title": "最高出塁率",
+          "player": "豊橋",
+          "team": "横浜",
+          "value": ".348"
+        },
+        {
+          "title": "盗塁王",
+          "player": "田仲",
+          "team": "博多",
+          "value": "27個"
+        },
+        {
+          "title": "最優秀防御率",
+          "player": "古林・佐藤",
+          "team": "横浜・流山",
+          "value": "1.14"
+        },
+        {
+          "title": "最多勝",
+          "player": "曽田",
+          "team": "福知山",
+          "value": "18勝"
+        },
+        {
+          "title": "最多奪三振",
+          "player": "眉村",
+          "team": "梅田",
+          "value": "283個"
+        },
+        {
+          "title": "勝率第1位",
+          "player": "曽田",
+          "team": "福知山",
+          "value": ".818"
+        },
+        {
+          "title": "最多セーブ",
+          "player": "大崎・和田",
+          "team": "川崎・福知山",
+          "value": "22S"
+        },
+        {
+          "title": "最優秀中継ぎ",
+          "player": "品川・藤川",
+          "team": "博多・川崎",
+          "value": "27HP"
+        }
+      ]
+    }
+  },
+  {
+    "year": 2041,
+    "leagues": {
+      "セ・リーグ": [
+        {
+          "title": "MVP",
+          "player": "松村",
+          "team": "北海道レイブンクロウズ"
+        },
+        {
+          "title": "沢村賞",
+          "player": "三千院",
+          "team": "広島セントラルレイカーズ"
+        },
+        {
+          "title": "新人王",
+          "player": "須田",
+          "team": "難波ボルテッカーズ"
+        },
+        {
+          "title": "首位打者",
+          "player": "松村",
+          "team": "北海道レイブンクロウズ",
+          "value": ".298"
+        },
+        {
+          "title": "本塁打王",
+          "player": "松村",
+          "team": "北海道レイブンクロウズ",
+          "value": "38本"
+        },
+        {
+          "title": "打点王",
+          "player": "福島",
+          "team": "北海道レイブンクロウズ",
+          "value": "99打点"
+        },
+        {
+          "title": "最多安打",
+          "player": "嵯峨",
+          "team": "北海道レイブンクロウズ",
+          "value": "164本"
+        },
+        {
+          "title": "最高出塁率",
+          "player": "早乙女",
+          "team": "京都ミリオンアッシュ",
+          "value": ".370"
+        },
+        {
+          "title": "盗塁王",
+          "player": "二葉",
+          "team": "広島セントラルレイカーズ",
+          "value": "30個"
+        },
+        {
+          "title": "最優秀防御率",
+          "player": "大森",
+          "team": "愛知プロミネンス",
+          "value": "0.72"
+        },
+        {
+          "title": "最多勝",
+          "player": "三千院",
+          "team": "広島セントラルレイカーズ",
+          "value": "22勝"
+        },
+        {
+          "title": "勝率第1位投手賞",
+          "player": "趙",
+          "team": "北海道レイブンクロウズ",
+          "value": ".867"
+        },
+        {
+          "title": "最多奪三振",
+          "player": "達本",
+          "team": "渋谷アーバンスターズ",
+          "value": "284個"
+        },
+        {
+          "title": "最多セーブ",
+          "player": "加藤・倉吉・田村・他1名",
+          "team": "愛知プロミネンス・広島セントラルレイカーズ・清澄ホワイトリバーズ",
+          "value": "29セーブ"
+        },
+        {
+          "title": "最優秀中継ぎ",
+          "player": "吉見",
+          "team": "北海道レイブンクロウズ",
+          "value": "35HP"
+        }
+      ],
+      "パ・リーグ": [
+        {
+          "title": "MVP",
+          "player": "草野",
+          "team": "横浜ベイクルーザーズ"
+        },
+        {
+          "title": "新人王",
+          "player": "坂本",
+          "team": "梅田スラッガーズ"
+        },
+        {
+          "title": "首位打者",
+          "player": "迫山",
+          "team": "川崎ウインドブレイカーズ",
+          "value": ".297"
+        },
+        {
+          "title": "本塁打王",
+          "player": "渡邉",
+          "team": "博多アクアリアス",
+          "value": "35本"
+        },
+        {
+          "title": "打点王",
+          "player": "迫山",
+          "team": "川崎ウインドブレイカーズ",
+          "value": "90打点"
+        },
+        {
+          "title": "最多安打",
+          "player": "北条",
+          "team": "川崎ウインドブレイカーズ",
+          "value": "165本"
+        },
+        {
+          "title": "最高出塁率",
+          "player": "笠松",
+          "team": "長崎マリンフォース",
+          "value": ".382"
+        },
+        {
+          "title": "盗塁王",
+          "player": "渡邉",
+          "team": "博多アクアリアス",
+          "value": "26個"
+        },
+        {
+          "title": "最優秀防御率",
+          "player": "斎木",
+          "team": "福知山ネクサスナイン",
+          "value": "1.01"
+        },
+        {
+          "title": "最多勝",
+          "player": "古林",
+          "team": "横浜ベイクルーザーズ",
+          "value": "18勝"
+        },
+        {
+          "title": "勝率第1位投手賞",
+          "player": "古林",
+          "team": "横浜ベイクルーザーズ",
+          "value": ".857"
+        },
+        {
+          "title": "最多奪三振",
+          "player": "斎木",
+          "team": "福知山ネクサスナイン",
+          "value": "266個"
+        },
+        {
+          "title": "最多セーブ",
+          "player": "堀米",
+          "team": "長崎マリンフォース",
+          "value": "25セーブ"
+        },
+        {
+          "title": "最優秀中継ぎ",
+          "player": "品川",
+          "team": "博多アクアリアス",
+          "value": "34HP"
+        }
+      ]
+    }
+  },
+  {
+    "year": 2040,
+    "leagues": {
+      "セ・リーグ": [
+        {
+          "title": "MVP",
+          "player": "吉沢孝",
+          "team": "清澄ホワイトリバーズ"
+        },
+        {
+          "title": "新人王",
+          "player": "睦",
+          "team": "難波ボルテッカーズ"
+        },
+        {
+          "title": "首位打者",
+          "player": "兵藤",
+          "team": "清澄ホワイトリバーズ",
+          "value": ".292"
+        },
+        {
+          "title": "首位打者",
+          "player": "吉沢孝",
+          "team": "清澄ホワイトリバーズ",
+          "value": ".292"
+        },
+        {
+          "title": "本塁打王",
+          "player": "勝山",
+          "team": "難波ボルテッカーズ",
+          "value": "35本"
+        },
+        {
+          "title": "打点王",
+          "player": "吉沢孝",
+          "team": "清澄ホワイトリバーズ",
+          "value": "91打点"
+        },
+        {
+          "title": "最多安打",
+          "player": "吉沢孝",
+          "team": "清澄ホワイトリバーズ",
+          "value": "171本"
+        },
+        {
+          "title": "盗塁王",
+          "player": "二葉",
+          "team": "広島セントラルレイカーズ",
+          "value": "27個"
+        },
+        {
+          "title": "最高出塁率",
+          "player": "兵藤",
+          "team": "清澄ホワイトリバーズ",
+          "value": ".354"
+        },
+        {
+          "title": "最優秀防御率",
+          "player": "久永",
+          "team": "京都ミリオンアッシュ",
+          "value": "0.69"
+        },
+        {
+          "title": "最多勝",
+          "player": "久永",
+          "team": "京都ミリオンアッシュ",
+          "value": "17勝"
+        },
+        {
+          "title": "勝率第1位投手賞",
+          "player": "久永",
+          "team": "京都ミリオンアッシュ",
+          "value": ".773"
+        },
+        {
+          "title": "最多奪三振",
+          "player": "赤星",
+          "team": "広島セントラルレイカーズ",
+          "value": "270個"
+        },
+        {
+          "title": "最多セーブ",
+          "player": "田村",
+          "team": "清澄ホワイトリバーズ",
+          "value": "34セーブ"
+        },
+        {
+          "title": "最優秀中継ぎ",
+          "player": "楠木",
+          "team": "広島セントラルレイカーズ",
+          "value": "34HP"
+        },
+        {
+          "title": "最優秀中継ぎ",
+          "player": "鹿野",
+          "team": "清澄ホワイトリバーズ",
+          "value": "34HP"
+        }
+      ],
+      "パ・リーグ": [
+        {
+          "title": "MVP",
+          "player": "夏木",
+          "team": "博多アクアリアス"
+        },
+        {
+          "title": "沢村賞",
+          "player": "古林",
+          "team": "横浜ベイクルーザーズ"
+        },
+        {
+          "title": "新人王",
+          "player": "鳥山",
+          "team": "流山シーマリナーズ"
+        },
+        {
+          "title": "首位打者",
+          "player": "夏木",
+          "team": "博多アクアリアス",
+          "value": ".300"
+        },
+        {
+          "title": "本塁打王",
+          "player": "鈴蘭",
+          "team": "新潟イプシロンズ",
+          "value": "32本"
+        },
+        {
+          "title": "打点王",
+          "player": "迫山",
+          "team": "川崎ウインドブレイカーズ",
+          "value": "88打点"
+        },
+        {
+          "title": "最多安打",
+          "player": "夏木",
+          "team": "博多アクアリアス",
+          "value": "166本"
+        },
+        {
+          "title": "盗塁王",
+          "player": "柴山",
+          "team": "博多アクアリアス",
+          "value": "26個"
+        },
+        {
+          "title": "最高出塁率",
+          "player": "迫山",
+          "team": "川崎ウインドブレイカーズ",
+          "value": ".374"
+        },
+        {
+          "title": "最優秀防御率",
+          "player": "忍野",
+          "team": "川崎ウインドブレイカーズ",
+          "value": "1.04"
+        },
+        {
+          "title": "最多勝",
+          "player": "古林",
+          "team": "横浜ベイクルーザーズ",
+          "value": "21勝"
+        },
+        {
+          "title": "勝率第1位投手賞",
+          "player": "土方",
+          "team": "横浜ベイクルーザーズ",
+          "value": ".895"
+        },
+        {
+          "title": "最多奪三振",
+          "player": "忍野",
+          "team": "川崎ウインドブレイカーズ",
+          "value": "302個"
+        },
+        {
+          "title": "最多セーブ",
+          "player": "藤本ダニエル",
+          "team": "流山シーマリナーズ",
+          "value": "28セーブ"
+        },
+        {
+          "title": "最優秀中継ぎ",
+          "player": "堂並",
+          "team": "川崎ウインドブレイカーズ",
+          "value": "36HP"
+        }
+      ]
+    }
+  }
+]

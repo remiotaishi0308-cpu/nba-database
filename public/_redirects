@@ -1,0 +1,4 @@
+# SPA fallback: すべてのパスを index.html に渡し、React Router 側で解決する。
+# これがないと /articles/xxx などを直接開いた時に 404 になる。
+# /admin/ (Sveltia CMS) と実ファイルはこの手前で処理されるので影響しない。
+/*    /index.html   200

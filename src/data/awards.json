@@ -1,0 +1,3541 @@
+[
+  {
+    "year": 2025,
+    "leagues": {
+      "セ・リーグ": {
+        "ベストナイン": [
+          {
+            "position": "投手",
+            "player": "滝川",
+            "team": "難波"
+          },
+          {
+            "position": "捕手",
+            "player": "二葉",
+            "team": "広島"
+          },
+          {
+            "position": "一塁手",
+            "player": "梶谷",
+            "team": "難波"
+          },
+          {
+            "position": "二塁手",
+            "player": "小山",
+            "team": "広島"
+          },
+          {
+            "position": "三塁手",
+            "player": "飯島",
+            "team": "愛知"
+          },
+          {
+            "position": "遊撃手",
+            "player": "末光",
+            "team": "愛知"
+          },
+          {
+            "position": "外野手",
+            "player": "古門",
+            "team": "清澄"
+          },
+          {
+            "position": "外野手",
+            "player": "早乙女",
+            "team": "京都"
+          },
+          {
+            "position": "外野手",
+            "player": "平松",
+            "team": "渋谷"
+          }
+        ],
+        "ゴールデングラブ": [
+          {
+            "position": "投手",
+            "player": "菅井",
+            "team": "広島"
+          },
+          {
+            "position": "捕手",
+            "player": "二葉",
+            "team": "広島"
+          },
+          {
+            "position": "一塁手",
+            "player": "牧",
+            "team": "清澄"
+          },
+          {
+            "position": "二塁手",
+            "player": "菊丸",
+            "team": "清澄"
+          },
+          {
+            "position": "三塁手",
+            "player": "飯島",
+            "team": "愛知"
+          },
+          {
+            "position": "遊撃手",
+            "player": "末光",
+            "team": "愛知"
+          },
+          {
+            "position": "外野手",
+            "player": "古門",
+            "team": "清澄"
+          },
+          {
+            "position": "外野手",
+            "player": "末田",
+            "team": "北海道"
+          },
+          {
+            "position": "外野手",
+            "player": "津村",
+            "team": "清澄"
+          }
+        ]
+      },
+      "パ・リーグ": {
+        "ベストナイン": [
+          {
+            "position": "投手",
+            "player": "佐藤英",
+            "team": "流山"
+          },
+          {
+            "position": "捕手",
+            "player": "笠松",
+            "team": "長崎"
+          },
+          {
+            "position": "一塁手",
+            "player": "横森",
+            "team": "博多"
+          },
+          {
+            "position": "二塁手",
+            "player": "大杉",
+            "team": "横浜"
+          },
+          {
+            "position": "三塁手",
+            "player": "奥久慈",
+            "team": "福知山"
+          },
+          {
+            "position": "遊撃手",
+            "player": "小林",
+            "team": "長崎"
+          },
+          {
+            "position": "外野手",
+            "player": "仲村",
+            "team": "流山"
+          },
+          {
+            "position": "外野手",
+            "player": "田仲",
+            "team": "博多"
+          },
+          {
+            "position": "外野手",
+            "player": "仮良真",
+            "team": "流山"
+          },
+          {
+            "position": "DH",
+            "player": "波田",
+            "team": "福知山"
+          }
+        ],
+        "ゴールデングラブ": [
+          {
+            "position": "投手",
+            "player": "佐藤英",
+            "team": "流山"
+          },
+          {
+            "position": "捕手",
+            "player": "笠松",
+            "team": "長崎"
+          },
+          {
+            "position": "一塁手",
+            "player": "平出",
+            "team": "福知山"
+          },
+          {
+            "position": "二塁手",
+            "player": "加藤",
+            "team": "新潟"
+          },
+          {
+            "position": "三塁手",
+            "player": "大前",
+            "team": "流山"
+          },
+          {
+            "position": "遊撃手",
+            "player": "小林",
+            "team": "長崎"
+          },
+          {
+            "position": "外野手",
+            "player": "岡本",
+            "team": "新潟"
+          },
+          {
+            "position": "外野手",
+            "player": "田仲",
+            "team": "博多"
+          },
+          {
+            "position": "外野手",
+            "player": "椿",
+            "team": "梅田"
+          }
+        ]
+      }
+    }
+  },
+  {
+"year": 2036,
+  "leagues": {
+    "セ・リーグ": {
+      "ベストナイン": [
+        {
+          "position": "投手",
+          "player": "太田",
+          "team": "広島"
+        },
+        {
+          "position": "捕手",
+          "player": "二葉",
+          "team": "広島"
+        },
+        {
+          "position": "一塁手",
+          "player": "左近寺",
+          "team": "渋谷"
+        },
+        {
+          "position": "二塁手",
+          "player": "杉本",
+          "team": "難波"
+        },
+        {
+          "position": "三塁手",
+          "player": "多田",
+          "team": "広島"
+        },
+        {
+          "position": "遊撃手",
+          "player": "末光",
+          "team": "愛知"
+        },
+        {
+          "position": "外野手",
+          "player": "識",
+          "team": "広島"
+        },
+        {
+          "position": "外野手",
+          "player": "志野",
+          "team": "広島"
+        },
+        {
+          "position": "外野手",
+          "player": "早乙女",
+          "team": "京都"
+        }
+      ],
+      "ゴールデングラブ": [
+        {
+          "position": "投手",
+          "player": "太田",
+          "team": "広島"
+        },
+        {
+          "position": "捕手",
+          "player": "二葉",
+          "team": "広島"
+        },
+        {
+          "position": "一塁手",
+          "player": "嵯峨",
+          "team": "北海道"
+        },
+        {
+          "position": "二塁手",
+          "player": "竹中",
+          "team": "杜王"
+        },
+        {
+          "position": "三塁手",
+          "player": "宇尾野",
+          "team": "愛知"
+        },
+        {
+          "position": "遊撃手",
+          "player": "末光",
+          "team": "愛知"
+        },
+        {
+          "position": "外野手",
+          "player": "識",
+          "team": "広島"
+        },
+        {
+          "position": "外野手",
+          "player": "古門",
+          "team": "清澄"
+        },
+        {
+          "position": "外野手",
+          "player": "満生",
+          "team": "難波"
+        }
+      ]
+    },
+    "パ・リーグ": {
+      "ベストナイン": [
+        {
+          "position": "投手",
+          "player": "霜田",
+          "team": "流山"
+        },
+        {
+          "position": "捕手",
+          "player": "草野",
+          "team": "横浜"
+        },
+        {
+          "position": "一塁手",
+          "player": "北条",
+          "team": "川崎"
+        },
+        {
+          "position": "二塁手",
+          "player": "栗山",
+          "team": "川崎"
+        },
+        {
+          "position": "三塁手",
+          "player": "東出",
+          "team": "新潟"
+        },
+        {
+          "position": "遊撃手",
+          "player": "梅崎悟",
+          "team": "梅田"
+        },
+        {
+          "position": "外野手",
+          "player": "荒賀",
+          "team": "新潟"
+        },
+        {
+          "position": "外野手",
+          "player": "仲村",
+          "team": "流山"
+        },
+        {
+          "position": "外野手",
+          "player": "田中",
+          "team": "博多"
+        },
+        {
+          "position": "DH",
+          "player": "仮良真",
+          "team": "流山"
+        }
+      ],
+      "ゴールデングラブ": [
+        {
+          "position": "投手",
+          "player": "霜田",
+          "team": "流山"
+        },
+        {
+          "position": "捕手",
+          "player": "草野",
+          "team": "横浜"
+        },
+        {
+          "position": "一塁手",
+          "player": "夏木",
+          "team": "博多"
+        },
+        {
+          "position": "二塁手",
+          "player": "小金井",
+          "team": "流山"
+        },
+        {
+          "position": "三塁手",
+          "player": "那波",
+          "team": "博多"
+        },
+        {
+          "position": "遊撃手",
+          "player": "梅崎悟",
+          "team": "梅田"
+        },
+        {
+          "position": "外野手",
+          "player": "荒賀",
+          "team": "新潟"
+        },
+        {
+          "position": "外野手",
+          "player": "野口",
+          "team": "横浜"
+        },
+        {
+          "position": "外野手",
+          "player": "細見",
+          "team": "福知山"    
+          }
+        ]
+      }
+    }
+  },
+  {    
+"year": 2037,
+  "leagues": {
+    "セ・リーグ": {
+      "ベストナイン": [
+        {
+          "position": "投手",
+          "player": "三津",
+          "team": "愛知"
+        },
+        {
+          "position": "捕手",
+          "player": "二葉",
+          "team": "広島"
+        },
+        {
+          "position": "一塁手",
+          "player": "嵯峨",
+          "team": "北海道"
+        },
+        {
+          "position": "二塁手",
+          "player": "江戸",
+          "team": "京都"
+        },
+        {
+          "position": "三塁手",
+          "player": "木藤",
+          "team": "北海道"
+        },
+        {
+          "position": "遊撃手",
+          "player": "御手洗",
+          "team": "渋谷"
+        },
+        {
+          "position": "外野手",
+          "player": "元木",
+          "team": "広島"
+        },
+        {
+          "position": "外野手",
+          "player": "福島",
+          "team": "北海道"
+        },
+        {
+          "position": "外野手",
+          "player": "平松",
+          "team": "渋谷"
+        }
+      ],
+      "ゴールデングラブ": [
+        {
+          "position": "投手",
+          "player": "滝川",
+          "team": "北海道"
+        },
+        {
+          "position": "捕手",
+          "player": "二葉",
+          "team": "広島"
+        },
+        {
+          "position": "一塁手",
+          "player": "森山",
+          "team": "愛知"
+        },
+        {
+          "position": "二塁手",
+          "player": "竹中",
+          "team": "杜王"
+        },
+        {
+          "position": "三塁手",
+          "player": "木藤",
+          "team": "北海道"
+        },
+        {
+          "position": "遊撃手",
+          "player": "八王子",
+          "team": "杜王"
+        },
+        {
+          "position": "外野手",
+          "player": "上原",
+          "team": "難波"
+        },
+        {
+          "position": "外野手",
+          "player": "勝山",
+          "team": "難波"
+        },
+        {
+          "position": "外野手",
+          "player": "原田",
+          "team": "広島"
+        }
+      ]
+    },
+    "パ・リーグ": {
+      "ベストナイン": [
+        {
+          "position": "投手",
+          "player": "忍野",
+          "team": "川崎"
+        },
+        {
+          "position": "捕手",
+          "player": "笠松",
+          "team": "長崎"
+        },
+        {
+          "position": "一塁手",
+          "player": "北条",
+          "team": "川崎"
+        },
+        {
+          "position": "二塁手",
+          "player": "小金井",
+          "team": "流山"
+        },
+        {
+          "position": "三塁手",
+          "player": "豊橋",
+          "team": "横浜"
+        },
+        {
+          "position": "遊撃手",
+          "player": "蜂須賀",
+          "team": "新潟"
+        },
+        {
+          "position": "外野手",
+          "player": "田中",
+          "team": "博多"
+        },
+        {
+          "position": "外野手",
+          "player": "キムテヨン",
+          "team": "博多"
+        },
+        {
+          "position": "外野手",
+          "player": "仲村",
+          "team": "流山"
+        },
+        {
+          "position": "DH",
+          "player": "古林",
+          "team": "横浜"
+        }
+      ],
+      "ゴールデングラブ": [
+        {
+          "position": "投手",
+          "player": "忍野",
+          "team": "川崎"
+        },
+        {
+          "position": "捕手",
+          "player": "笠松",
+          "team": "長崎"
+        },
+        {
+          "position": "一塁手",
+          "player": "北条",
+          "team": "川崎"
+        },
+        {
+          "position": "二塁手",
+          "player": "小金井",
+          "team": "流山"
+        },
+        {
+          "position": "三塁手",
+          "player": "豊橋",
+          "team": "横浜"
+        },
+        {
+          "position": "遊撃手",
+          "player": "外埜",
+          "team": "博多"
+        },
+        {
+          "position": "外野手",
+          "player": "荒賀",
+          "team": "新潟"
+        },
+        {
+          "position": "外野手",
+          "player": "渡邊",
+          "team": "博多"
+        },
+        {
+          "position": "外野手",
+          "player": "田中",
+          "team": "博多"
+
+          }
+        ]
+      }
+    }
+  },
+  {
+"year": 2038,
+  "leagues": {
+    "セ・リーグ": {
+      "ベストナイン": [
+        {
+          "position": "投手",
+          "player": "久永",
+          "team": "京都"
+        },
+        {
+          "position": "捕手",
+          "player": "二葉",
+          "team": "広島"
+        },
+        {
+          "position": "一塁手",
+          "player": "西場",
+          "team": "広島"
+        },
+        {
+          "position": "二塁手",
+          "player": "江戸",
+          "team": "京都"
+        },
+        {
+          "position": "三塁手",
+          "player": "目黒",
+          "team": "京都"
+        },
+        {
+          "position": "遊撃手",
+          "player": "福島",
+          "team": "北海道"
+        },
+        {
+          "position": "外野手",
+          "player": "崎本",
+          "team": "渋谷"
+        },
+        {
+          "position": "外野手",
+          "player": "古門",
+          "team": "清澄"
+        },
+        {
+          "position": "外野手",
+          "player": "識",
+          "team": "広島"
+        }
+      ],
+      "ゴールデングラブ": [
+        {
+          "position": "投手",
+          "player": "久永",
+          "team": "京都"
+        },
+        {
+          "position": "捕手",
+          "player": "二葉",
+          "team": "広島"
+        },
+        {
+          "position": "一塁手",
+          "player": "吉沢孝",
+          "team": "清澄"
+        },
+        {
+          "position": "二塁手",
+          "player": "竹中",
+          "team": "杜王"
+        },
+        {
+          "position": "三塁手",
+          "player": "宇尾野",
+          "team": "愛知"
+        },
+        {
+          "position": "遊撃手",
+          "player": "八王子",
+          "team": "杜王"
+        },
+        {
+          "position": "外野手",
+          "player": "古門",
+          "team": "清澄"
+        },
+        {
+          "position": "外野手",
+          "player": "識",
+          "team": "広島"
+        },
+        {
+          "position": "外野手",
+          "player": "勝山",
+          "team": "難波"
+        }
+      ]
+    },
+    "パ・リーグ": {
+      "ベストナイン": [
+        {
+          "position": "投手",
+          "player": "霜田",
+          "team": "流山"
+        },
+        {
+          "position": "捕手",
+          "player": "安富",
+          "team": "福知山"
+        },
+        {
+          "position": "一塁手",
+          "player": "夏木",
+          "team": "博多"
+        },
+        {
+          "position": "二塁手",
+          "player": "吉川勇",
+          "team": "長崎"
+        },
+        {
+          "position": "三塁手",
+          "player": "中井",
+          "team": "福知山"
+        },
+        {
+          "position": "遊撃手",
+          "player": "梅崎",
+          "team": "梅田"
+        },
+        {
+          "position": "外野手",
+          "player": "赤井",
+          "team": "長崎"
+        },
+        {
+          "position": "外野手",
+          "player": "荒賀",
+          "team": "長崎"
+        },
+        {
+          "position": "外野手",
+          "player": "西園寺",
+          "team": "横浜"
+        },
+        {
+          "position": "DH",
+          "player": "鳥丸",
+          "team": "長崎"
+        }
+      ],
+      "ゴールデングラブ": [
+        {
+          "position": "投手",
+          "player": "霜田",
+          "team": "流山"
+        },
+        {
+          "position": "捕手",
+          "player": "高石",
+          "team": "梅田"
+        },
+        {
+          "position": "一塁手",
+          "player": "凪",
+          "team": "流山"
+        },
+        {
+          "position": "二塁手",
+          "player": "藤野",
+          "team": "梅田"
+        },
+        {
+          "position": "三塁手",
+          "player": "下井",
+          "team": "横浜"
+        },
+        {
+          "position": "遊撃手",
+          "player": "堂上",
+          "team": "流山"
+        },
+        {
+          "position": "外野手",
+          "player": "荒賀",
+          "team": "長崎"
+        },
+        {
+          "position": "外野手",
+          "player": "橘",
+          "team": "長崎"
+        },
+        {
+          "position": "外野手",
+          "player": "権田",
+          "team": "横浜"
+          }
+        ]
+      }
+    }
+  },
+  {
+"year": 2034,
+  "leagues": {
+    "セ・リーグ": {
+      "ベストナイン": [
+        {
+          "position": "投手",
+          "player": "三津",
+          "team": "杜王"
+        },
+        {
+          "position": "捕手",
+          "player": "舟田",
+          "team": "京都"
+        },
+        {
+          "position": "一塁手",
+          "player": "満丸",
+          "team": "難波"
+        },
+        {
+          "position": "二塁手",
+          "player": "殿馬",
+          "team": "渋谷"
+        },
+        {
+          "position": "三塁手",
+          "player": "宇尾野",
+          "team": "愛知"
+        },
+        {
+          "position": "遊撃手",
+          "player": "福島",
+          "team": "北海道"
+        },
+        {
+          "position": "外野手",
+          "player": "崎本",
+          "team": "渋谷"
+        },
+        {
+          "position": "外野手",
+          "player": "早乙女",
+          "team": "京都"
+        },
+        {
+          "position": "外野手",
+          "player": "松戸",
+          "team": "杜王"
+        }
+      ],
+      "ゴールデングラブ": [
+        {
+          "position": "投手",
+          "player": "三津",
+          "team": "杜王"
+        },
+        {
+          "position": "捕手",
+          "player": "舟田",
+          "team": "京都"
+        },
+        {
+          "position": "一塁手",
+          "player": "嵯峨",
+          "team": "北海道"
+        },
+        {
+          "position": "二塁手",
+          "player": "竹中",
+          "team": "杜王"
+        },
+        {
+          "position": "三塁手",
+          "player": "宇尾野",
+          "team": "愛知"
+        },
+        {
+          "position": "遊撃手",
+          "player": "大澤",
+          "team": "京都"
+        },
+        {
+          "position": "外野手",
+          "player": "甲斐",
+          "team": "杜王"
+        },
+        {
+          "position": "外野手",
+          "player": "辰己",
+          "team": "愛知"
+        },
+        {
+          "position": "外野手",
+          "player": "識",
+          "team": "広島"
+        }
+      ]
+    },
+    "パ・リーグ": {
+      "ベストナイン": [
+        {
+          "position": "投手",
+          "player": "忍野",
+          "team": "川崎"
+        },
+        {
+          "position": "捕手",
+          "player": "笠松",
+          "team": "流山"
+        },
+        {
+          "position": "一塁手",
+          "player": "夏木",
+          "team": "博多"
+        },
+        {
+          "position": "二塁手",
+          "player": "小金井",
+          "team": "流山"
+        },
+        {
+          "position": "三塁手",
+          "player": "藤牧",
+          "team": "川崎"
+        },
+        {
+          "position": "遊撃手",
+          "player": "蜂須賀",
+          "team": "新潟"
+        },
+        {
+          "position": "外野手",
+          "player": "重松",
+          "team": "流山"
+        },
+        {
+          "position": "外野手",
+          "player": "仲村",
+          "team": "流山"
+        },
+        {
+          "position": "外野手",
+          "player": "田中",
+          "team": "博多"
+        },
+        {
+          "position": "DH",
+          "player": "識神",
+          "team": "川崎"
+        }
+      ],
+      "ゴールデングラブ": [
+        {
+          "position": "投手",
+          "player": "忍野",
+          "team": "川崎"
+        },
+        {
+          "position": "捕手",
+          "player": "笠松",
+          "team": "流山"
+        },
+        {
+          "position": "一塁手",
+          "player": "夏木",
+          "team": "博多"
+        },
+        {
+          "position": "二塁手",
+          "player": "加藤",
+          "team": "新潟"
+        },
+        {
+          "position": "三塁手",
+          "player": "藤牧",
+          "team": "川崎"
+        },
+        {
+          "position": "遊撃手",
+          "player": "蜂須賀",
+          "team": "新潟"
+        },
+        {
+          "position": "外野手",
+          "player": "田中",
+          "team": "博多"
+        },
+        {
+          "position": "外野手",
+          "player": "新庄",
+          "team": "川崎"
+        },
+        {
+          "position": "外野手",
+          "player": "橘",
+          "team": "新潟"
+          }
+        ]
+      }
+    }
+  },
+  {
+"year": 2035,
+  "leagues": {
+    "セ・リーグ": {
+      "ベストナイン": [
+        {
+          "position": "投手",
+          "player": "太田",
+          "team": "広島"
+        },
+        {
+          "position": "捕手",
+          "player": "二葉",
+          "team": "広島"
+        },
+        {
+          "position": "一塁手",
+          "player": "左近寺",
+          "team": "渋谷"
+        },
+        {
+          "position": "二塁手",
+          "player": "杉本",
+          "team": "難波"
+        },
+        {
+          "position": "三塁手",
+          "player": "多田",
+          "team": "広島"
+        },
+        {
+          "position": "遊撃手",
+          "player": "末光",
+          "team": "愛知"
+        },
+        {
+          "position": "外野手",
+          "player": "識",
+          "team": "広島"
+        },
+        {
+          "position": "外野手",
+          "player": "志野",
+          "team": "広島"
+        },
+        {
+          "position": "外野手",
+          "player": "早乙女",
+          "team": "京都"
+        }
+      ],
+      "ゴールデングラブ": [
+        {
+          "position": "投手",
+          "player": "太田",
+          "team": "広島"
+        },
+        {
+          "position": "捕手",
+          "player": "二葉",
+          "team": "広島"
+        },
+        {
+          "position": "一塁手",
+          "player": "嵯峨",
+          "team": "北海道"
+        },
+        {
+          "position": "二塁手",
+          "player": "竹中",
+          "team": "杜王"
+        },
+        {
+          "position": "三塁手",
+          "player": "宇尾野",
+          "team": "愛知"
+        },
+        {
+          "position": "遊撃手",
+          "player": "末光",
+          "team": "愛知"
+        },
+        {
+          "position": "外野手",
+          "player": "識",
+          "team": "広島"
+        },
+        {
+          "position": "外野手",
+          "player": "古門",
+          "team": "清澄"
+        },
+        {
+          "position": "外野手",
+          "player": "満生",
+          "team": "難波"
+        }
+      ]
+    },
+    "パ・リーグ": {
+      "ベストナイン": [
+        {
+          "position": "投手",
+          "player": "霜田",
+          "team": "流山"
+        },
+        {
+          "position": "捕手",
+          "player": "草野",
+          "team": "横浜"
+        },
+        {
+          "position": "一塁手",
+          "player": "北条",
+          "team": "川崎"
+        },
+        {
+          "position": "二塁手",
+          "player": "栗山",
+          "team": "川崎"
+        },
+        {
+          "position": "三塁手",
+          "player": "東出",
+          "team": "新潟"
+        },
+        {
+          "position": "遊撃手",
+          "player": "梅崎悟",
+          "team": "梅田"
+        },
+        {
+          "position": "外野手",
+          "player": "荒賀",
+          "team": "新潟"
+        },
+        {
+          "position": "外野手",
+          "player": "仲村",
+          "team": "流山"
+        },
+        {
+          "position": "外野手",
+          "player": "田仲",
+          "team": "博多"
+        },
+        {
+          "position": "DH",
+          "player": "仮良真",
+          "team": "流山"
+        }
+      ],
+      "ゴールデングラブ": [
+        {
+          "position": "投手",
+          "player": "霜田",
+          "team": "流山"
+        },
+        {
+          "position": "捕手",
+          "player": "草野",
+          "team": "横浜"
+        },
+        {
+          "position": "一塁手",
+          "player": "夏木",
+          "team": "博多"
+        },
+        {
+          "position": "二塁手",
+          "player": "小金井",
+          "team": "流山"
+        },
+        {
+          "position": "三塁手",
+          "player": "那波",
+          "team": "博多"
+        },
+        {
+          "position": "遊撃手",
+          "player": "梅崎悟",
+          "team": "梅田"
+        },
+        {
+          "position": "外野手",
+          "player": "荒賀",
+          "team": "新潟"
+        },
+        {
+          "position": "外野手",
+          "player": "野口",
+          "team": "横浜"
+        },
+        {
+          "position": "外野手",
+          "player": "細見",
+          "team": "福知山"
+          }
+        ]
+      }
+    }
+  },
+  {             
+    "year": 2026,
+    "leagues": {
+      "セ・リーグ": {
+        "ベストナイン": [
+          {
+            "position": "投手",
+            "player": "辻",
+            "team": "渋谷"
+          },
+          {
+            "position": "捕手",
+            "player": "二葉",
+            "team": "広島"
+          },
+          {
+            "position": "一塁手",
+            "player": "三根",
+            "team": "京都"
+          },
+          {
+            "position": "二塁手",
+            "player": "竹中",
+            "team": "杜王"
+          },
+          {
+            "position": "三塁手",
+            "player": "飯島達郎",
+            "team": "愛知"
+          },
+          {
+            "position": "遊撃手",
+            "player": "山城",
+            "team": "北海道"
+          },
+          {
+            "position": "外野手",
+            "player": "嶋根",
+            "team": "杜王"
+          },
+          {
+            "position": "外野手",
+            "player": "越智",
+            "team": "広島"
+          },
+          {
+            "position": "外野手",
+            "player": "田之上",
+            "team": "京都"
+          }
+        ],
+        "ゴールデングラブ": [
+          {
+            "position": "投手",
+            "player": "辻",
+            "team": "渋谷"
+          },
+          {
+            "position": "捕手",
+            "player": "二葉",
+            "team": "広島"
+          },
+          {
+            "position": "一塁手",
+            "player": "三根",
+            "team": "京都"
+          },
+          {
+            "position": "二塁手",
+            "player": "杉本亨",
+            "team": "難波"
+          },
+          {
+            "position": "三塁手",
+            "player": "飯島達",
+            "team": "梅田"
+          },
+          {
+            "position": "遊撃手",
+            "player": "染谷",
+            "team": "広島"
+          },
+          {
+            "position": "外野手",
+            "player": "西場",
+            "team": "広島"
+          },
+          {
+            "position": "外野手",
+            "player": "辰巳",
+            "team": "梅田"
+          },
+          {
+            "position": "外野手",
+            "player": "早乙女",
+            "team": "京都"
+          }
+        ]
+      },
+      "パ・リーグ": {
+        "ベストナイン": [
+          {
+            "position": "投手",
+            "player": "達本 亜人",
+            "team": "福知山"
+          },
+          {
+            "position": "捕手",
+            "player": "大城 将九",
+            "team": "福知山"
+          },
+          {
+            "position": "一塁手",
+            "player": "安田 恭平",
+            "team": "流山"
+          },
+          {
+            "position": "二塁手",
+            "player": "加藤 光一郎",
+            "team": "新潟"
+          },
+          {
+            "position": "三塁手",
+            "player": "落合 博満",
+            "team": "川崎"
+          },
+          {
+            "position": "遊撃手",
+            "player": "梅崎 悟",
+            "team": "梅田"
+          },
+          {
+            "position": "外野手",
+            "player": "岡本 司",
+            "team": "新潟"
+          },
+          {
+            "position": "外野手",
+            "player": "田仲 龍治",
+            "team": "博多"
+          },
+          {
+            "position": "外野手",
+            "player": "重松 龍人",
+            "team": "流山"
+          },
+          {
+            "position": "DH",
+            "player": "広池",
+            "team": "川崎"
+          }
+        ],
+        "ゴールデングラブ": [
+          {
+            "position": "投手",
+            "player": "達本",
+            "team": "福知山"
+          },
+          {
+            "position": "捕手",
+            "player": "笠松",
+            "team": "長崎"
+          },
+          {
+            "position": "一塁手",
+            "player": "波田",
+            "team": "福知山"
+          },
+          {
+            "position": "二塁手",
+            "player": "加藤",
+            "team": "長崎"
+          },
+          {
+            "position": "三塁手",
+            "player": "久保",
+            "team": "長崎"
+          },
+          {
+            "position": "遊撃手",
+            "player": "蜂須賀",
+            "team": "長崎"
+          },
+          {
+            "position": "外野手",
+            "player": "仲村",
+            "team": "流山"
+          },
+          {
+            "position": "外野手",
+            "player": "田仲",
+            "team": "博多"
+          },
+          {
+            "position": "外野手",
+            "player": "西園寺",
+            "team": "横浜"
+          }
+        ]
+      }
+    }
+  },
+  {
+
+
+
+    
+    
+    
+    "year": 2027,
+    "leagues": {
+      "セ・リーグ": {
+        "個人タイトル": [
+          {
+            "title": "MVP",
+            "player": "田之上 晃紀",
+            "team": "京都",
+            "record": "打率.256、本塁打33本、OPS.843",
+            "comment": "リーグ優勝に最も貢献した選手。安定した打撃と守備で京都に勝利をもたらした。"
+          },
+          {
+            "title": "新人王",
+            "player": "司馬",
+            "team": "渋谷",
+            "record": "打率.262、148安打、盗塁21回、OPS.747",
+            "comment": "ルーキーながら正捕手として攻守で貢献。"
+          },
+          {
+            "title": "首位打者",
+            "player": "早乙女",
+            "team": "京都",
+            "record": "打率.290",
+            "comment": "1年ぶり2回目"
+          },
+          {
+            "title": "本塁打王",
+            "player": "田之上 晃紀",
+            "team": "京都",
+            "record": "33本塁打"
+          },
+          {
+            "title": "打点王",
+            "player": "三根",
+            "team": "京都",
+            "record": "73打点",
+            "comment": "早乙女と同率"
+          },
+          {
+            "title": "打点王",
+            "player": "早乙女",
+            "team": "京都",
+            "record": "73打点",
+            "comment": "三根と同率"
+          },
+          {
+            "title": "盗塁王",
+            "player": "小山雄一",
+            "team": "広島",
+            "record": "30個",
+            "comment": "3年連続"
+          },
+          {
+            "title": "最多安打",
+            "player": "司馬",
+            "team": "渋谷",
+            "record": "149本",
+            "comment": "ルーキーながら最多安打"
+          },
+          {
+            "title": "最高出塁率",
+            "player": "早乙女",
+            "team": "京都",
+            "record": ".374"
+          },
+          {
+            "title": "最多勝",
+            "player": "菅井誠",
+            "team": "広島",
+            "record": "20勝"
+          },
+          {
+            "title": "最優秀防御率",
+            "player": "菅井誠",
+            "team": "広島",
+            "record": "0.55",
+            "comment": "JBU歴代最高数値"
+          },
+          {
+            "title": "最多奪三振",
+            "player": "眉村健",
+            "team": "京都",
+            "record": "296個",
+            "comment": "300奪三振まで迫った。"
+          },
+          {
+            "title": "勝率第1位",
+            "player": "菅井誠",
+            "team": "広島",
+            "record": ".833"
+          },
+          {
+            "title": "最多セーブ",
+            "player": "R.マルティネス",
+            "team": "渋谷",
+            "record": "37セーブ",
+            "comment": "JBU歴代最多セーブ"
+          },
+          {
+            "title": "最優秀中継ぎ",
+            "player": "亀梨和也",
+            "team": "渋谷",
+            "record": "38HP",
+            "comment": "歴代最多ホールドポイント"
+          }
+        ],
+        "ベストナイン": [
+          {
+            "position": "投手",
+            "player": "菅井誠",
+            "team": "広島"
+          },
+          {
+            "position": "捕手",
+            "player": "二葉",
+            "team": "広島"
+          },
+          {
+            "position": "一塁手",
+            "player": "三根",
+            "team": "京都"
+          },
+          {
+            "position": "二塁手",
+            "player": "小山雄一",
+            "team": "広島"
+          },
+          {
+            "position": "三塁手",
+            "player": "長田",
+            "team": "京都"
+          },
+          {
+            "position": "遊撃手",
+            "player": "末光",
+            "team": "愛知"
+          },
+          {
+            "position": "外野手",
+            "player": "早乙女",
+            "team": "京都"
+          },
+          {
+            "position": "外野手",
+            "player": "田之上晃紀",
+            "team": "京都"
+          },
+          {
+            "position": "外野手",
+            "player": "崎本",
+            "team": "渋谷"
+          }
+        ],
+        "ゴールデングラブ": [
+          {
+            "position": "投手",
+            "player": "菅井",
+            "team": "広島"
+          },
+          {
+            "position": "捕手",
+            "player": "館石",
+            "team": "横浜"
+          },
+          {
+            "position": "一塁手",
+            "player": "安田",
+            "team": "流山"
+          },
+          {
+            "position": "二塁手",
+            "player": "坂田",
+            "team": "横浜"
+          },
+          {
+            "position": "三塁手",
+            "player": "大杉",
+            "team": "横浜"
+          },
+          {
+            "position": "遊撃手",
+            "player": "堂上",
+            "team": "流山"
+          },
+          {
+            "position": "外野手",
+            "player": "岸永",
+            "team": "梅田"
+          },
+          {
+            "position": "外野手",
+            "player": "岡本",
+            "team": "新潟"
+          },
+          {
+            "position": "外野手",
+            "player": "山根",
+            "team": "川崎"
+          }
+        ]
+      },
+      "パ・リーグ": {
+        "個人タイトル": [
+          {
+            "title": "MVP",
+            "player": "重松龍人",
+            "team": "流山",
+            "record": "本塁打41本、打点82点、OPS.798",
+            "comment": "長打と本塁打を組み合わせ見事な活躍。チームの優勝に大きく貢献し、ゲームキャプテンとして指揮も取った。"
+          },
+          {
+            "title": "沢村賞",
+            "player": "佐藤英智",
+            "team": "流山",
+            "record": "防御率1.19、20勝、WHIP0.77、222奪三振",
+            "comment": "圧巻の成績で日本一まで上り詰めた。"
+          },
+          {
+            "title": "新人王",
+            "player": "忍野",
+            "team": "川崎",
+            "record": "防御率1.42、15勝6敗、222奪三振",
+            "comment": "下位の川崎を引っ張る存在。"
+          },
+          {
+            "title": "首位打者",
+            "player": "仲村",
+            "team": "流山",
+            "record": ".300",
+            "comment": "3年連続の首位打者を獲得。"
+          },
+          {
+            "title": "首位打者",
+            "player": "桧野",
+            "team": "博多",
+            "record": ".300"
+          },
+          {
+            "title": "本塁打王",
+            "player": "重松龍人",
+            "team": "流山",
+            "record": "41本"
+          },
+          {
+            "title": "打点王",
+            "player": "落合博満",
+            "team": "川崎",
+            "record": "85打点",
+            "comment": "生きる伝説は令和でも大暴れ。"
+          },
+          {
+            "title": "盗塁王",
+            "player": "千石真人",
+            "team": "博多",
+            "record": "26盗塁",
+            "comment": "2年連続の盗塁王"
+          },
+          {
+            "title": "最多安打",
+            "player": "御手洗",
+            "team": "新潟",
+            "record": "150本"
+          },
+          {
+            "title": "最高出塁率",
+            "player": "仲村",
+            "team": "流山",
+            "record": ".375"
+          },
+          {
+            "title": "最多勝",
+            "player": "佐藤英智",
+            "team": "流山",
+            "record": "20勝"
+          },
+          {
+            "title": "最優秀防御率",
+            "player": "佐藤英智",
+            "team": "流山",
+            "record": "1.19"
+          },
+          {
+            "title": "最多奪三振",
+            "player": "達本亜人",
+            "team": "福知山",
+            "record": "323奪三振",
+            "comment": "現時点のJBUシーズン記録"
+          },
+          {
+            "title": "勝率第1位",
+            "player": "佐藤英智",
+            "team": "流山",
+            "record": ".870"
+          },
+          {
+            "title": "最多セーブ",
+            "player": "松井",
+            "team": "新潟",
+            "record": "29セーブ"
+          },
+          {
+            "title": "最優秀中継ぎ",
+            "player": "堀米",
+            "team": "長崎",
+            "record": "38HP"
+          }
+        ],
+        "ベストナイン": [
+          {
+            "position": "投手",
+            "player": "佐藤英智",
+            "team": "流山"
+          },
+          {
+            "position": "捕手",
+            "player": "笠松",
+            "team": "長崎"
+          },
+          {
+            "position": "一塁手",
+            "player": "安田",
+            "team": "流山"
+          },
+          {
+            "position": "二塁手",
+            "player": "千石真人",
+            "team": "博多"
+          },
+          {
+            "position": "三塁手",
+            "player": "落合博満",
+            "team": "川崎"
+          },
+          {
+            "position": "遊撃手",
+            "player": "御手洗",
+            "team": "新潟"
+          },
+          {
+            "position": "外野手",
+            "player": "桧野",
+            "team": "博多"
+          },
+          {
+            "position": "外野手",
+            "player": "中山",
+            "team": "新潟"
+          },
+          {
+            "position": "外野手",
+            "player": "仲村",
+            "team": "流山"
+          },
+          {
+            "position": "DH",
+            "player": "広池",
+            "team": "川崎"
+          }
+        ],
+        "ゴールデングラブ": [
+          {
+            "position": "投手",
+            "player": "佐藤英",
+            "team": "流山"
+          },
+          {
+            "position": "捕手",
+            "player": "司馬",
+            "team": "渋谷"
+          },
+          {
+            "position": "一塁手",
+            "player": "田中",
+            "team": "博多"
+          },
+          {
+            "position": "二塁手",
+            "player": "小山",
+            "team": "広島"
+          },
+          {
+            "position": "三塁手",
+            "player": "平塚",
+            "team": "北海道"
+          },
+          {
+            "position": "遊撃手",
+            "player": "大田原",
+            "team": "京都"
+          },
+          {
+            "position": "外野手",
+            "player": "石川",
+            "team": "京都"
+          },
+          {
+            "position": "外野手",
+            "player": "古門",
+            "team": "清澄"
+          },
+          {
+            "position": "外野手",
+            "player": "一条",
+            "team": "難波"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "year": 2029,
+    "leagues": {
+      "セ・リーグ": {
+        "ベストナイン": [
+          {
+            "position": "投手",
+            "player": "大森",
+            "team": "清澄"
+          },
+          {
+            "position": "捕手",
+            "player": "二葉",
+            "team": "広島"
+          },
+          {
+            "position": "一塁手",
+            "player": "田中",
+            "team": "渋谷"
+          },
+          {
+            "position": "二塁手",
+            "player": "門松",
+            "team": "渋谷"
+          },
+          {
+            "position": "三塁手",
+            "player": "長田",
+            "team": "京都"
+          },
+          {
+            "position": "遊撃手",
+            "player": "日暮",
+            "team": "渋谷"
+          },
+          {
+            "position": "外野手",
+            "player": "崎本",
+            "team": "渋谷"
+          },
+          {
+            "position": "外野手",
+            "player": "辰己",
+            "team": "愛知"
+          },
+          {
+            "position": "外野手",
+            "player": "田部",
+            "team": "杜王"
+          }
+        ],
+        "ゴールデングラブ": [
+          {
+            "position": "投手",
+            "player": "大森",
+            "team": "清澄"
+          },
+          {
+            "position": "捕手",
+            "player": "塙",
+            "team": "北海道"
+          },
+          {
+            "position": "一塁手",
+            "player": "牧",
+            "team": "清澄"
+          },
+          {
+            "position": "二塁手",
+            "player": "杉本",
+            "team": "難波"
+          },
+          {
+            "position": "三塁手",
+            "player": "ハリウッドゴンショウ",
+            "team": "難波"
+          },
+          {
+            "position": "遊撃手",
+            "player": "大澤",
+            "team": "京都"
+          },
+          {
+            "position": "外野手",
+            "player": "平松",
+            "team": "渋谷"
+          },
+          {
+            "position": "外野手",
+            "player": "古門",
+            "team": "清澄"
+          },
+          {
+            "position": "外野手",
+            "player": "田部",
+            "team": "杜王"
+          }
+        ]
+      },
+      "パ・リーグ": {
+        "ベストナイン": [
+          {
+            "position": "投手",
+            "player": "赤月",
+            "team": "長崎"
+          },
+          {
+            "position": "捕手",
+            "player": "城之内",
+            "team": "博多"
+          },
+          {
+            "position": "一塁手",
+            "player": "夏木",
+            "team": "博多"
+          },
+          {
+            "position": "二塁手",
+            "player": "加藤",
+            "team": "新潟"
+          },
+          {
+            "position": "三塁手",
+            "player": "那波",
+            "team": "博多"
+          },
+          {
+            "position": "遊撃手",
+            "player": "蜂須賀",
+            "team": "新潟"
+          },
+          {
+            "position": "外野手",
+            "player": "重松",
+            "team": "流山"
+          },
+          {
+            "position": "外野手",
+            "player": "奥山",
+            "team": "新潟"
+          },
+          {
+            "position": "外野手",
+            "player": "田仲",
+            "team": "博多"
+          },
+          {
+            "position": "DH",
+            "player": "仮良真",
+            "team": "流山"
+          }
+        ],
+        "ゴールデングラブ": [
+          {
+            "position": "投手",
+            "player": "霜田",
+            "team": "新潟"
+          },
+          {
+            "position": "捕手",
+            "player": "草野",
+            "team": "横浜"
+          },
+          {
+            "position": "一塁手",
+            "player": "夏木",
+            "team": "博多"
+          },
+          {
+            "position": "二塁手",
+            "player": "加藤",
+            "team": "新潟"
+          },
+          {
+            "position": "三塁手",
+            "player": "大杉",
+            "team": "横浜"
+          },
+          {
+            "position": "遊撃手",
+            "player": "堂上",
+            "team": "流山"
+          },
+          {
+            "position": "外野手",
+            "player": "山岡",
+            "team": "流山"
+          },
+          {
+            "position": "外野手",
+            "player": "重松",
+            "team": "流山"
+          },
+          {
+            "position": "外野手",
+            "player": "田仲",
+            "team": "博多"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "year": 2030,
+    "leagues": {
+      "セ・リーグ": {
+        "ゴールデングラブ": [
+          {
+            "position": "投手",
+            "player": "大森",
+            "team": "清澄"
+          },
+          {
+            "position": "捕手",
+            "player": "二葉",
+            "team": "広島"
+          },
+          {
+            "position": "一塁手",
+            "player": "田中",
+            "team": "渋谷"
+          },
+          {
+            "position": "二塁手",
+            "player": "竹中",
+            "team": "杜王"
+          },
+          {
+            "position": "三塁手",
+            "player": "峯村",
+            "team": "清澄"
+          },
+          {
+            "position": "遊撃手",
+            "player": "日暮",
+            "team": "渋谷"
+          },
+          {
+            "position": "外野手",
+            "player": "古門",
+            "team": "清澄"
+          },
+          {
+            "position": "外野手",
+            "player": "嶋根",
+            "team": "杜王"
+          },
+          {
+            "position": "外野手",
+            "player": "菊田",
+            "team": "渋谷"
+          }
+        ]
+      },
+      "パ・リーグ": {
+        "ゴールデングラブ": [
+          {
+            "position": "投手",
+            "player": "赤月",
+            "team": "長崎"
+          },
+          {
+            "position": "捕手",
+            "player": "笠松",
+            "team": "長崎"
+          },
+          {
+            "position": "一塁手",
+            "player": "中山",
+            "team": "新潟"
+          },
+          {
+            "position": "二塁手",
+            "player": "栗山",
+            "team": "川崎"
+          },
+          {
+            "position": "三塁手",
+            "player": "大前",
+            "team": "流山"
+          },
+          {
+            "position": "遊撃手",
+            "player": "小林",
+            "team": "長崎"
+          },
+          {
+            "position": "外野手",
+            "player": "権田",
+            "team": "横浜"
+          },
+          {
+            "position": "外野手",
+            "player": "岸永",
+            "team": "梅田"
+          },
+          {
+            "position": "外野手",
+            "player": "山根",
+            "team": "川崎"
+          }
+        ]
+      }
+    }
+  },
+  {
+  "year": 2031,
+  "leagues": {
+    "セ・リーグ": {
+      "ベストナイン": [
+        {
+          "position": "投手",
+          "player": "大森",
+          "team": "清澄"
+        },
+        {
+          "position": "捕手",
+          "player": "司馬",
+          "team": "渋谷"
+        },
+        {
+          "position": "一塁手",
+          "player": "嵯峨",
+          "team": "北海道"
+        },
+        {
+          "position": "二塁手",
+          "player": "小山",
+          "team": "広島"
+        },
+        {
+          "position": "三塁手",
+          "player": "ハリウッドザコシショウ",
+          "team": "難波"
+        },
+        {
+          "position": "遊撃手",
+          "player": "福島",
+          "team": "北海道"
+        },
+        {
+          "position": "外野手",
+          "player": "百合草",
+          "team": "渋谷"
+        },
+        {
+          "position": "外野手",
+          "player": "辰己",
+          "team": "愛知"
+        },
+        {
+          "position": "外野手",
+          "player": "満丸",
+          "team": "難波"
+        }
+      ],
+      "ゴールデングラブ": [
+        {
+          "position": "投手",
+          "player": "大森",
+          "team": "清澄"
+        },
+        {
+          "position": "捕手",
+          "player": "舟田",
+          "team": "京都"
+        },
+        {
+          "position": "一塁手",
+          "player": "磯宮",
+          "team": "清澄"
+        },
+        {
+          "position": "二塁手",
+          "player": "小山",
+          "team": "広島"
+        },
+        {
+          "position": "三塁手",
+          "player": "越智",
+          "team": "広島"
+        },
+        {
+          "position": "遊撃手",
+          "player": "福島",
+          "team": "北海道"
+        },
+        {
+          "position": "外野手",
+          "player": "古門",
+          "team": "清澄"
+        },
+        {
+          "position": "外野手",
+          "player": "識",
+          "team": "広島"
+        },
+        {
+          "position": "外野手",
+          "player": "末田",
+          "team": "北海道"
+        }
+      ]
+    },
+    "パ・リーグ": {
+      "ベストナイン": [
+        {
+          "position": "投手",
+          "player": "佐藤英",
+          "team": "流山"
+        },
+        {
+          "position": "捕手",
+          "player": "草野",
+          "team": "横浜"
+        },
+        {
+          "position": "一塁手",
+          "player": "夏木",
+          "team": "博多"
+        },
+        {
+          "position": "二塁手",
+          "player": "定岡",
+          "team": "福知山"
+        },
+        {
+          "position": "三塁手",
+          "player": "柴山",
+          "team": "梅田"
+        },
+        {
+          "position": "遊撃手",
+          "player": "小林",
+          "team": "長崎"
+        },
+        {
+          "position": "外野手",
+          "player": "深川",
+          "team": "福知山"
+        },
+        {
+          "position": "外野手",
+          "player": "田仲",
+          "team": "博多"
+        },
+        {
+          "position": "外野手",
+          "player": "権田",
+          "team": "横浜"
+        },
+        {
+          "position": "DH",
+          "player": "仮良真",
+          "team": "流山"
+        }
+      ],
+      "ゴールデングラブ": [
+        {
+          "position": "投手",
+          "player": "佐藤英",
+          "team": "流山"
+        },
+        {
+          "position": "捕手",
+          "player": "笠松",
+          "team": "長崎"
+        },
+        {
+          "position": "一塁手",
+          "player": "夏木",
+          "team": "博多"
+        },
+        {
+          "position": "二塁手",
+          "player": "小金井",
+          "team": "流山"
+        },
+        {
+          "position": "三塁手",
+          "player": "大杉",
+          "team": "横浜"
+        },
+        {
+          "position": "遊撃手",
+          "player": "堂上",
+          "team": "流山"
+        },
+        {
+          "position": "外野手",
+          "player": "氷上",
+          "team": "長崎"
+        },
+        {
+          "position": "外野手",
+          "player": "荒賀",
+          "team": "新潟"
+        },
+        {
+          "position": "外野手",
+          "player": "重松",
+          "team": "流山"    
+              }
+        ]
+      }
+    }
+  },
+  {
+    "year": 2032,
+    "leagues": {
+      "セ・リーグ": {
+        "ベストナイン": [
+          {
+            "position": "投手",
+            "player": "菅井",
+            "team": "広島"
+          },
+          {
+            "position": "捕手",
+            "player": "二葉",
+            "team": "広島"
+          },
+          {
+            "position": "一塁手",
+            "player": "染谷",
+            "team": "広島"
+          },
+          {
+            "position": "二塁手",
+            "player": "小山",
+            "team": "広島"
+          },
+          {
+            "position": "三塁手",
+            "player": "早乙女",
+            "team": "京都"
+          },
+          {
+            "position": "遊撃手",
+            "player": "兵藤",
+            "team": "渋谷"
+          },
+          {
+            "position": "外野手",
+            "player": "崎本",
+            "team": "渋谷"
+          },
+          {
+            "position": "外野手",
+            "player": "杉本",
+            "team": "難波"
+          },
+          {
+            "position": "外野手",
+            "player": "津村",
+            "team": "清澄"
+          }
+        ],
+        "ゴールデングラブ": [
+          {
+            "position": "投手",
+            "player": "菅井",
+            "team": "広島"
+          },
+          {
+            "position": "捕手",
+            "player": "二葉",
+            "team": "広島"
+          },
+          {
+            "position": "一塁手",
+            "player": "染谷",
+            "team": "広島"
+          },
+          {
+            "position": "二塁手",
+            "player": "小山",
+            "team": "広島"
+          },
+          {
+            "position": "三塁手",
+            "player": "早乙女",
+            "team": "京都"
+          },
+          {
+            "position": "遊撃手",
+            "player": "兵藤",
+            "team": "渋谷"
+          },
+          {
+            "position": "外野手",
+            "player": "崎本",
+            "team": "渋谷"
+          },
+          {
+            "position": "外野手",
+            "player": "杉本",
+            "team": "難波"
+          },
+          {
+            "position": "外野手",
+            "player": "津村",
+            "team": "清澄"
+          }
+        ]
+      },
+      "パ・リーグ": {
+        "ベストナイン": [
+          {
+            "position": "投手",
+            "player": "佐藤英",
+            "team": "流山"
+          },
+          {
+            "position": "捕手",
+            "player": "笠松",
+            "team": "長崎"
+          },
+          {
+            "position": "一塁手",
+            "player": "大杉",
+            "team": "横浜"
+          },
+          {
+            "position": "二塁手",
+            "player": "西川",
+            "team": "横浜"
+          },
+          {
+            "position": "三塁手",
+            "player": "小林",
+            "team": "長崎"
+          },
+          {
+            "position": "遊撃手",
+            "player": "田中",
+            "team": "博多"
+          },
+          {
+            "position": "外野手",
+            "player": "草野",
+            "team": "横浜"
+          },
+          {
+            "position": "外野手",
+            "player": "久保",
+            "team": "新潟"
+          },
+          {
+            "position": "外野手",
+            "player": "大杉",
+            "team": "横浜"
+          },
+          {
+            "position": "DH",
+            "player": "田中",
+            "team": "博多"
+          }
+        ],
+        "ゴールデングラブ": [
+          {
+            "position": "投手",
+            "player": "佐藤英",
+            "team": "流山"
+          },
+          {
+            "position": "捕手",
+            "player": "笠松",
+            "team": "長崎"
+          },
+          {
+            "position": "一塁手",
+            "player": "大杉",
+            "team": "横浜"
+          },
+          {
+            "position": "二塁手",
+            "player": "西川",
+            "team": "横浜"
+          },
+          {
+            "position": "三塁手",
+            "player": "小林",
+            "team": "長崎"
+          },
+          {
+            "position": "遊撃手",
+            "player": "田中",
+            "team": "博多"
+          },
+          {
+            "position": "外野手",
+            "player": "草野",
+            "team": "横浜"
+          },
+          {
+            "position": "外野手",
+            "player": "久保",
+            "team": "新潟"
+          },
+          {
+            "position": "外野手",
+            "player": "大杉",
+            "team": "横浜"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "year": 2033,
+    "leagues": {
+      "セ・リーグ": {
+        "個人タイトル": [
+          {
+            "title": "MVP",
+            "player": "元木",
+            "team": "広島",
+            "record": ""
+          },
+          {
+            "title": "新人王",
+            "player": "兵庫",
+            "team": "清澄",
+            "record": ""
+          },
+          {
+            "title": "首位打者",
+            "player": "塙",
+            "team": "北海道",
+            "record": ".290"
+          },
+          {
+            "title": "本塁打王",
+            "player": "元木",
+            "team": "広島",
+            "record": "27本"
+          },
+          {
+            "title": "本塁打王",
+            "player": "識",
+            "team": "広島",
+            "record": "27本"
+          },
+          {
+            "title": "打点王",
+            "player": "元木",
+            "team": "広島",
+            "record": "83打点"
+          },
+          {
+            "title": "最多安打",
+            "player": "識",
+            "team": "広島",
+            "record": "143本"
+          },
+          {
+            "title": "最高出塁率",
+            "player": "早乙女",
+            "team": "京都",
+            "record": ".354"
+          },
+          {
+            "title": "盗塁王",
+            "player": "塙",
+            "team": "北海道",
+            "record": "22個"
+          },
+          {
+            "title": "最多勝",
+            "player": "須藤",
+            "team": "難波",
+            "record": "15勝"
+          },
+          {
+            "title": "最多勝",
+            "player": "太田",
+            "team": "京都",
+            "record": "15勝"
+          },
+          {
+            "title": "最多勝",
+            "player": "榊原",
+            "team": "京都",
+            "record": "15勝"
+          },
+          {
+            "title": "最優秀防御率",
+            "player": "大森",
+            "team": "清澄",
+            "record": "0.84"
+          },
+          {
+            "title": "最多奪三振",
+            "player": "赤星",
+            "team": "難波",
+            "record": "312個"
+          },
+          {
+            "title": "勝率第1位",
+            "player": "榊原",
+            "team": "京都",
+            "record": ".882"
+          },
+          {
+            "title": "最多セーブ",
+            "player": "幕張",
+            "team": "難波",
+            "record": "37セーブ"
+          },
+          {
+            "title": "最優秀中継ぎ",
+            "player": "比嘉",
+            "team": "清澄",
+            "record": "45HP"
+          }
+        ],
+        "ベストナイン": [
+          {
+            "position": "投手",
+            "player": "大森",
+            "team": "清澄"
+          },
+          {
+            "position": "捕手",
+            "player": "二葉",
+            "team": "広島"
+          },
+          {
+            "position": "一塁手",
+            "player": "梶谷",
+            "team": "難波"
+          },
+          {
+            "position": "二塁手",
+            "player": "古賀",
+            "team": "愛知"
+          },
+          {
+            "position": "三塁手",
+            "player": "越智",
+            "team": "広島"
+          },
+          {
+            "position": "遊撃手",
+            "player": "福島",
+            "team": "北海道"
+          },
+          {
+            "position": "外野手",
+            "player": "元木",
+            "team": "広島"
+          },
+          {
+            "position": "外野手",
+            "player": "平松",
+            "team": "渋谷"
+          },
+          {
+            "position": "外野手",
+            "player": "識",
+            "team": "広島"
+          }
+        ],
+        "ゴールデングラブ": [
+          {
+            "position": "投手",
+            "player": "大森",
+            "team": "清澄"
+          },
+          {
+            "position": "捕手",
+            "player": "舟田",
+            "team": "京都"
+          },
+          {
+            "position": "一塁手",
+            "player": "三根",
+            "team": "京都"
+          },
+          {
+            "position": "二塁手",
+            "player": "江戸",
+            "team": "京都"
+          },
+          {
+            "position": "三塁手",
+            "player": "宇尾野",
+            "team": "愛知"
+          },
+          {
+            "position": "遊撃手",
+            "player": "染谷",
+            "team": "広島"
+          },
+          {
+            "position": "外野手",
+            "player": "識",
+            "team": "広島"
+          },
+          {
+            "position": "外野手",
+            "player": "古門",
+            "team": "清澄"
+          },
+          {
+            "position": "外野手",
+            "player": "辰己",
+            "team": "愛知"
+          }
+        ]
+      },
+      "パ・リーグ": {
+        "個人タイトル": [
+          {
+            "title": "MVP",
+            "player": "小林",
+            "team": "長崎",
+            "record": ""
+          },
+          {
+            "title": "沢村賞",
+            "player": "里中",
+            "team": "長崎",
+            "record": ""
+          },
+          {
+            "title": "新人王",
+            "player": "藤牧",
+            "team": "川崎",
+            "record": ""
+          },
+          {
+            "title": "首位打者",
+            "player": "仲村",
+            "team": "流山",
+            "record": ".306"
+          },
+          {
+            "title": "本塁打王",
+            "player": "平出",
+            "team": "福知山",
+            "record": "28本"
+          },
+          {
+            "title": "本塁打王",
+            "player": "橘",
+            "team": "新潟",
+            "record": "28本"
+          },
+          {
+            "title": "打点王",
+            "player": "平出",
+            "team": "福知山",
+            "record": "85打点"
+          },
+          {
+            "title": "最多安打",
+            "player": "草野",
+            "team": "横浜",
+            "record": "155本"
+          },
+          {
+            "title": "最高出塁率",
+            "player": "仲村",
+            "team": "流山",
+            "record": ".366"
+          },
+          {
+            "title": "盗塁王",
+            "player": "御手洗",
+            "team": "新潟",
+            "record": "32個"
+          },
+          {
+            "title": "最多勝",
+            "player": "里中",
+            "team": "長崎",
+            "record": "21勝"
+          },
+          {
+            "title": "最優秀防御率",
+            "player": "達本",
+            "team": "福知山",
+            "record": "1.18"
+          },
+          {
+            "title": "最多奪三振",
+            "player": "達本",
+            "team": "福知山",
+            "record": "328個"
+          },
+          {
+            "title": "勝率第1位",
+            "player": "里中",
+            "team": "長崎",
+            "record": ".840"
+          },
+          {
+            "title": "最多セーブ",
+            "player": "音無",
+            "team": "新潟",
+            "record": "22セーブ"
+          },
+          {
+            "title": "最多セーブ",
+            "player": "近藤",
+            "team": "梅田",
+            "record": "22セーブ"
+          },
+          {
+            "title": "最優秀中継ぎ",
+            "player": "黒川",
+            "team": "新潟",
+            "record": "33HP"
+          }
+        ],
+        "ベストナイン": [
+          {
+            "position": "投手",
+            "player": "里中",
+            "team": "長崎"
+          },
+          {
+            "position": "捕手",
+            "player": "草野",
+            "team": "横浜"
+          },
+          {
+            "position": "一塁手",
+            "player": "平出",
+            "team": "福知山"
+          },
+          {
+            "position": "二塁手",
+            "player": "清水",
+            "team": "長崎"
+          },
+          {
+            "position": "三塁手",
+            "player": "中井",
+            "team": "福知山"
+          },
+          {
+            "position": "遊撃手",
+            "player": "小林",
+            "team": "長崎"
+          },
+          {
+            "position": "外野手",
+            "player": "仲村",
+            "team": "流山"
+          },
+          {
+            "position": "外野手",
+            "player": "山根",
+            "team": "川崎"
+          },
+          {
+            "position": "外野手",
+            "player": "田仲",
+            "team": "博多"
+          },
+          {
+            "position": "DH",
+            "player": "仮良真",
+            "team": "流山"
+          }
+        ],
+        "ゴールデングラブ": [
+          {
+            "position": "投手",
+            "player": "里中",
+            "team": "長崎"
+          },
+          {
+            "position": "捕手",
+            "player": "笠松",
+            "team": "長崎"
+          },
+          {
+            "position": "一塁手",
+            "player": "中山",
+            "team": "新潟"
+          },
+          {
+            "position": "二塁手",
+            "player": "門束",
+            "team": "川崎"
+          },
+          {
+            "position": "三塁手",
+            "player": "大杉",
+            "team": "横浜"
+          },
+          {
+            "position": "遊撃手",
+            "player": "堂上",
+            "team": "流山"
+          },
+          {
+            "position": "外野手",
+            "player": "橘",
+            "team": "新潟"
+          },
+          {
+            "position": "外野手",
+            "player": "岸永",
+            "team": "梅田"
+          },
+          {
+            "position": "外野手",
+            "player": "田中",
+            "team": "博多"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "year": 2039,
+    "leagues": {
+      "セ・リーグ": {
+        "ベストナイン": [
+          {
+            "position": "投手",
+            "player": "菅井",
+            "team": "渋谷"
+          },
+          {
+            "position": "捕手",
+            "player": "二葉",
+            "team": "広島"
+          },
+          {
+            "position": "一塁手",
+            "player": "嵯峨",
+            "team": "北海道"
+          },
+          {
+            "position": "二塁手",
+            "player": "三田",
+            "team": "北海道"
+          },
+          {
+            "position": "三塁手",
+            "player": "吉沢孝",
+            "team": "清澄"
+          },
+          {
+            "position": "遊撃手",
+            "player": "福島",
+            "team": "北海道"
+          },
+          {
+            "position": "外野手",
+            "player": "元木",
+            "team": "広島"
+          },
+          {
+            "position": "外野手",
+            "player": "志野",
+            "team": "広島"
+          },
+          {
+            "position": "外野手",
+            "player": "識",
+            "team": "広島"
+          }
+        ],
+        "ゴールデングラブ": [
+          {
+            "position": "投手",
+            "player": "菅井",
+            "team": "渋谷"
+          },
+          {
+            "position": "捕手",
+            "player": "二葉",
+            "team": "広島"
+          },
+          {
+            "position": "一塁手",
+            "player": "嵯峨",
+            "team": "北海道"
+          },
+          {
+            "position": "二塁手",
+            "player": "杉本",
+            "team": "難波"
+          },
+          {
+            "position": "三塁手",
+            "player": "木藤",
+            "team": "北海道"
+          },
+          {
+            "position": "遊撃手",
+            "player": "八王子",
+            "team": "杜王"
+          },
+          {
+            "position": "外野手",
+            "player": "甲斐",
+            "team": "杜王"
+          },
+          {
+            "position": "外野手",
+            "player": "辰己",
+            "team": "愛知"
+          },
+          {
+            "position": "外野手",
+            "player": "三菱",
+            "team": "京都"
+          }
+        ]
+      },
+      "パ・リーグ": {
+        "ベストナイン": [
+          {
+            "position": "投手",
+            "player": "古林",
+            "team": "横浜"
+          },
+          {
+            "position": "捕手",
+            "player": "司馬",
+            "team": "流山"
+          },
+          {
+            "position": "一塁手",
+            "player": "豊橋",
+            "team": "横浜"
+          },
+          {
+            "position": "二塁手",
+            "player": "加藤",
+            "team": "新潟"
+          },
+          {
+            "position": "三塁手",
+            "player": "吉木",
+            "team": "川崎"
+          },
+          {
+            "position": "遊撃手",
+            "player": "鳥丸",
+            "team": "長崎"
+          },
+          {
+            "position": "外野手",
+            "player": "田中",
+            "team": "博多"
+          },
+          {
+            "position": "外野手",
+            "player": "椿",
+            "team": "梅田"
+          },
+          {
+            "position": "外野手",
+            "player": "田之上",
+            "team": "横浜"
+          },
+          {
+            "position": "DH",
+            "player": "中山",
+            "team": "新潟"
+          }
+        ],
+        "ゴールデングラブ": [
+          {
+            "position": "投手",
+            "player": "古林",
+            "team": "横浜"
+          },
+          {
+            "position": "捕手",
+            "player": "草野",
+            "team": "横浜"
+          },
+          {
+            "position": "一塁手",
+            "player": "凪",
+            "team": "流山"
+          },
+          {
+            "position": "二塁手",
+            "player": "小金井",
+            "team": "流山"
+          },
+          {
+            "position": "三塁手",
+            "player": "中井",
+            "team": "福知山"
+          },
+          {
+            "position": "遊撃手",
+            "player": "堂上",
+            "team": "流山"
+          },
+          {
+            "position": "外野手",
+            "player": "荒賀",
+            "team": "新潟"
+          },
+          {
+            "position": "外野手",
+            "player": "泉",
+            "team": "長崎"
+          },
+          {
+            "position": "外野手",
+            "player": "橘",
+            "team": "新潟"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "year": 2040,
+    "leagues": {
+      "セ・リーグ": {
+        "個人タイトル": [
+          {
+            "title": "MVP",
+            "player": "吉沢孝",
+            "team": "清澄"
+          },
+          {
+            "title": "新人王",
+            "player": "睦",
+            "team": "難波"
+          },
+          {
+            "title": "首位打者",
+            "player": "兵藤",
+            "team": "清澄",
+            "record": ".292"
+          },
+          {
+            "title": "首位打者",
+            "player": "吉沢孝",
+            "team": "清澄",
+            "record": ".292"
+          },
+          {
+            "title": "本塁打王",
+            "player": "勝山",
+            "team": "難波",
+            "record": "35本"
+          },
+          {
+            "title": "打点王",
+            "player": "吉沢孝",
+            "team": "清澄",
+            "record": "91打点"
+          },
+          {
+            "title": "最多安打",
+            "player": "吉沢孝",
+            "team": "清澄",
+            "record": "171本"
+          },
+          {
+            "title": "盗塁王",
+            "player": "二葉",
+            "team": "広島",
+            "record": "27個"
+          },
+          {
+            "title": "最高出塁率",
+            "player": "兵藤",
+            "team": "清澄",
+            "record": ".354"
+          },
+          {
+            "title": "最優秀防御率",
+            "player": "久永",
+            "team": "京都",
+            "record": "0.69"
+          },
+          {
+            "title": "最多勝",
+            "player": "久永",
+            "team": "京都",
+            "record": "17勝"
+          },
+          {
+            "title": "勝率第1位",
+            "player": "久永",
+            "team": "京都",
+            "record": ".773"
+          },
+          {
+            "title": "最多奪三振",
+            "player": "赤星",
+            "team": "広島",
+            "record": "270個"
+          },
+          {
+            "title": "最多セーブ",
+            "player": "田村",
+            "team": "清澄",
+            "record": "34セーブ"
+          },
+          {
+            "title": "最優秀中継ぎ",
+            "player": "楠木",
+            "team": "広島",
+            "record": "34HP"
+          },
+          {
+            "title": "最優秀中継ぎ",
+            "player": "鹿野",
+            "team": "清澄",
+            "record": "34HP"
+          }
+        ],
+        "ベストナイン": [
+          {
+            "position": "投手",
+            "player": "久永",
+            "team": "京都"
+          },
+          {
+            "position": "捕手",
+            "player": "二葉",
+            "team": "広島"
+          },
+          {
+            "position": "一塁手",
+            "player": "磯宮",
+            "team": "清澄"
+          },
+          {
+            "position": "二塁手",
+            "player": "古賀",
+            "team": "愛知"
+          },
+          {
+            "position": "三塁手",
+            "player": "吉沢孝",
+            "team": "清澄"
+          },
+          {
+            "position": "遊撃手",
+            "player": "福島",
+            "team": "北海道"
+          },
+          {
+            "position": "外野手",
+            "player": "勝山",
+            "team": "難波"
+          },
+          {
+            "position": "外野手",
+            "player": "辰己",
+            "team": "愛知"
+          },
+          {
+            "position": "外野手",
+            "player": "元木",
+            "team": "広島"
+          }
+        ],
+        "ゴールデングラブ": [
+          {
+            "position": "投手",
+            "player": "久永",
+            "team": "京都"
+          },
+          {
+            "position": "捕手",
+            "player": "二葉",
+            "team": "広島"
+          },
+          {
+            "position": "一塁手",
+            "player": "東村山",
+            "team": "杜王"
+          },
+          {
+            "position": "二塁手",
+            "player": "竹中",
+            "team": "杜王"
+          },
+          {
+            "position": "三塁手",
+            "player": "宇尾野",
+            "team": "愛知"
+          },
+          {
+            "position": "遊撃手",
+            "player": "大澤",
+            "team": "京都"
+          },
+          {
+            "position": "外野手",
+            "player": "勝山",
+            "team": "難波"
+          },
+          {
+            "position": "外野手",
+            "player": "辰己",
+            "team": "愛知"
+          },
+          {
+            "position": "外野手",
+            "player": "甲斐",
+            "team": "杜王"
+          }
+        ]
+      },
+      "パ・リーグ": {
+        "個人タイトル": [
+          {
+            "title": "MVP",
+            "player": "夏木",
+            "team": "博多"
+          },
+          {
+            "title": "沢村賞",
+            "player": "古林",
+            "team": "横浜"
+          },
+          {
+            "title": "新人王",
+            "player": "鳥山",
+            "team": "流山"
+          },
+          {
+            "title": "首位打者",
+            "player": "夏木",
+            "team": "博多",
+            "record": ".300"
+          },
+          {
+            "title": "本塁打王",
+            "player": "鈴蘭",
+            "team": "新潟",
+            "record": "32本"
+          },
+          {
+            "title": "打点王",
+            "player": "迫山",
+            "team": "川崎",
+            "record": "88打点"
+          },
+          {
+            "title": "最多安打",
+            "player": "夏木",
+            "team": "博多",
+            "record": "166本"
+          },
+          {
+            "title": "盗塁王",
+            "player": "柴山",
+            "team": "博多",
+            "record": "26個"
+          },
+          {
+            "title": "最高出塁率",
+            "player": "迫山",
+            "team": "川崎",
+            "record": ".374"
+          },
+          {
+            "title": "最優秀防御率",
+            "player": "忍野",
+            "team": "川崎",
+            "record": "1.04"
+          },
+          {
+            "title": "最多勝",
+            "player": "古林",
+            "team": "横浜",
+            "record": "21勝"
+          },
+          {
+            "title": "勝率第1位",
+            "player": "土方",
+            "team": "横浜",
+            "record": ".895"
+          },
+          {
+            "title": "最多奪三振",
+            "player": "忍野",
+            "team": "川崎",
+            "record": "302個"
+          },
+          {
+            "title": "最多セーブ",
+            "player": "藤本ダニエル",
+            "team": "流山",
+            "record": "28セーブ"
+          },
+          {
+            "title": "最優秀中継ぎ",
+            "player": "堂並",
+            "team": "川崎",
+            "record": "36HP"
+          }
+        ],
+        "ベストナイン": [
+          {
+            "position": "投手",
+            "player": "古林",
+            "team": "横浜"
+          },
+          {
+            "position": "捕手",
+            "player": "迫山",
+            "team": "川崎"
+          },
+          {
+            "position": "一塁手",
+            "player": "夏木",
+            "team": "博多"
+          },
+          {
+            "position": "二塁手",
+            "player": "門束",
+            "team": "川崎"
+          },
+          {
+            "position": "三塁手",
+            "player": "吉木",
+            "team": "川崎"
+          },
+          {
+            "position": "遊撃手",
+            "player": "柴山",
+            "team": "博多"
+          },
+          {
+            "position": "外野手",
+            "player": "田仲",
+            "team": "博多"
+          },
+          {
+            "position": "外野手",
+            "player": "仲村",
+            "team": "流山"
+          },
+          {
+            "position": "外野手",
+            "player": "深川",
+            "team": "福知山"
+          },
+          {
+            "position": "DH",
+            "player": "下井",
+            "team": "横浜"
+          }
+        ],
+        "ゴールデングラブ": [
+          {
+            "position": "投手",
+            "player": "土方",
+            "team": "横浜"
+          },
+          {
+            "position": "捕手",
+            "player": "司馬",
+            "team": "流山"
+          },
+          {
+            "position": "一塁手",
+            "player": "凪",
+            "team": "流山"
+          },
+          {
+            "position": "二塁手",
+            "player": "門束",
+            "team": "川崎"
+          },
+          {
+            "position": "三塁手",
+            "player": "吉木",
+            "team": "川崎"
+          },
+          {
+            "position": "遊撃手",
+            "player": "福家",
+            "team": "横浜"
+          },
+          {
+            "position": "外野手",
+            "player": "荒賀",
+            "team": "新潟"
+          },
+          {
+            "position": "外野手",
+            "player": "渡邊",
+            "team": "博多"
+          },
+          {
+            "position": "外野手",
+            "player": "田之上",
+            "team": "横浜"
+          }
+        ]
+      }
+    }
+  }
+]

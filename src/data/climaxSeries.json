@@ -1,0 +1,1930 @@
+[
+  {
+    "year": 2025,
+    "セ・リーグ": {
+      "ファーストステージ": {
+        "winner": "清澄ホワイトリバーズ",
+        "loser": "北海道レイブンクロウズ",
+        "winnerWins": 2,
+        "loserWins": 0,
+        "advantageTo": null,
+        "advantageWins": 0,
+        "games": [
+          {
+            "game": 1,
+            "winnerScore": 3,
+            "loserScore": 0
+          },
+          {
+            "game": 2,
+            "winnerScore": 4,
+            "loserScore": 3
+          }
+        ]
+      },
+      "ファイナルステージ": {
+        "winner": "清澄ホワイトリバーズ",
+        "loser": "難波ボルテッカーズ",
+        "winnerWins": 4,
+        "loserWins": 1,
+        "advantageTo": "loser",
+        "advantageWins": 1,
+        "games": [
+          {
+            "game": 1,
+            "winnerScore": 9,
+            "loserScore": 0
+          },
+          {
+            "game": 2,
+            "winnerScore": 7,
+            "loserScore": 1
+          },
+          {
+            "game": 3,
+            "winnerScore": 6,
+            "loserScore": 3
+          },
+          {
+            "game": 4,
+            "winnerScore": 5,
+            "loserScore": 1
+          }
+        ]
+      }
+    },
+    "パ・リーグ": {
+      "ファーストステージ": {
+        "winner": "博多アクアリアス",
+        "loser": "流山シーマリナーズ",
+        "winnerWins": 2,
+        "loserWins": 1,
+        "advantageTo": null,
+        "advantageWins": 0,
+        "games": [
+          {
+            "game": 1,
+            "winnerScore": 4,
+            "loserScore": 0
+          },
+          {
+            "game": 2,
+            "winnerScore": 1,
+            "loserScore": 3
+          },
+          {
+            "game": 3,
+            "winnerScore": 5,
+            "loserScore": 3
+          }
+        ]
+      },
+      "ファイナルステージ": {
+        "winner": "博多アクアリアス",
+        "loser": "長崎マリンフォース",
+        "winnerWins": 4,
+        "loserWins": 2,
+        "advantageTo": "loser",
+        "advantageWins": 1,
+        "games": [
+          {
+            "game": 1,
+            "winnerScore": 2,
+            "loserScore": 1
+          },
+          {
+            "game": 2,
+            "winnerScore": 0,
+            "loserScore": 5
+          },
+          {
+            "game": 3,
+            "winnerScore": 8,
+            "loserScore": 2
+          },
+          {
+            "game": 4,
+            "winnerScore": 4,
+            "loserScore": 3
+          },
+          {
+            "game": 5,
+            "winnerScore": 11,
+            "loserScore": 0
+          }
+        ]
+      }
+    }
+  },
+  {
+    "year": 2026,
+    "セ・リーグ": {
+      "ファーストステージ": {
+        "winner": "難波ボルテッカーズ",
+        "loser": "京都ミリオンアッシュ",
+        "winnerWins": 2,
+        "loserWins": 0,
+        "advantageTo": null,
+        "advantageWins": 0,
+        "games": [
+          {
+            "game": 1,
+            "winnerScore": 6,
+            "loserScore": 0
+          },
+          {
+            "game": 2,
+            "winnerScore": 1,
+            "loserScore": 0
+          }
+        ]
+      },
+      "ファイナルステージ": {
+        "winner": "広島セントラルレイカーズ",
+        "loser": "難波ボルテッカーズ",
+        "winnerWins": 4,
+        "loserWins": 2,
+        "advantageTo": "winner",
+        "advantageWins": 1,
+        "games": [
+          {
+            "game": 1,
+            "winnerScore": 4,
+            "loserScore": 0
+          },
+          {
+            "game": 2,
+            "winnerScore": 3,
+            "loserScore": 6
+          },
+          {
+            "game": 3,
+            "winnerScore": 5,
+            "loserScore": 0
+          },
+          {
+            "game": 4,
+            "winnerScore": 3,
+            "loserScore": 8
+          },
+          {
+            "game": 5,
+            "winnerScore": 5,
+            "loserScore": 3
+          }
+        ]
+      }
+    },
+    "パ・リーグ": {
+      "ファーストステージ": {
+        "winner": "新潟イプシロンズ",
+        "loser": "長崎マリンフォース",
+        "winnerWins": 2,
+        "loserWins": 0,
+        "advantageTo": null,
+        "advantageWins": 0,
+        "games": [
+          {
+            "game": 1,
+            "winnerScore": 1,
+            "loserScore": 0
+          },
+          {
+            "game": 2,
+            "winnerScore": 4,
+            "loserScore": 1
+          }
+        ]
+      },
+      "ファイナルステージ": {
+        "winner": "福知山ネクサスナイン",
+        "loser": "新潟イプシロンズ",
+        "winnerWins": 4,
+        "loserWins": 3,
+        "advantageTo": "winner",
+        "advantageWins": 1,
+        "games": [
+          {
+            "game": 1,
+            "winnerScore": 3,
+            "loserScore": 4
+          },
+          {
+            "game": 2,
+            "winnerScore": 12,
+            "loserScore": 5
+          },
+          {
+            "game": 3,
+            "winnerScore": 14,
+            "loserScore": 5
+          },
+          {
+            "game": 4,
+            "winnerScore": 3,
+            "loserScore": 7
+          },
+          {
+            "game": 5,
+            "winnerScore": 1,
+            "loserScore": 2
+          },
+          {
+            "game": 6,
+            "winnerScore": 7,
+            "loserScore": 3
+          }
+        ]
+      }
+    }
+  },
+  {
+    "year": 2027,
+    "セ・リーグ": {
+      "ファーストステージ": {
+        "winner": "難波ボルテッカーズ",
+        "loser": "北海道レイブンクロウズ",
+        "winnerWins": 2,
+        "loserWins": 1,
+        "advantageTo": null,
+        "advantageWins": 0,
+        "games": [
+          {
+            "game": 1,
+            "winnerScore": 1,
+            "loserScore": 0
+          },
+          {
+            "game": 2,
+            "winnerScore": 3,
+            "loserScore": 5
+          },
+          {
+            "game": 3,
+            "winnerScore": 3,
+            "loserScore": 0
+          }
+        ]
+      },
+      "ファイナルステージ": {
+        "winner": "京都ミリオンアッシュ",
+        "loser": "難波ボルテッカーズ",
+        "winnerWins": 4,
+        "loserWins": 1,
+        "advantageTo": "winner",
+        "advantageWins": 1,
+        "games": [
+          {
+            "game": 1,
+            "winnerScore": 4,
+            "loserScore": 3
+          },
+          {
+            "game": 2,
+            "winnerScore": 5,
+            "loserScore": 7
+          },
+          {
+            "game": 3,
+            "winnerScore": 6,
+            "loserScore": 0
+          },
+          {
+            "game": 4,
+            "winnerScore": 5,
+            "loserScore": 4
+          }
+        ]
+      }
+    },
+    "パ・リーグ": {
+      "ファーストステージ": {
+        "winner": "福知山ネクサスナイン",
+        "loser": "長崎マリンフォース",
+        "winnerWins": 2,
+        "loserWins": 0,
+        "advantageTo": null,
+        "advantageWins": 0,
+        "games": [
+          {
+            "game": 1,
+            "winnerScore": 2,
+            "loserScore": 1
+          },
+          {
+            "game": 2,
+            "winnerScore": 2,
+            "loserScore": 1
+          }
+        ]
+      },
+      "ファイナルステージ": {
+        "winner": "流山シーマリナーズ",
+        "loser": "福知山ネクサスナイン",
+        "winnerWins": 4,
+        "loserWins": 1,
+        "advantageTo": "winner",
+        "advantageWins": 1,
+        "games": [
+          {
+            "game": 1,
+            "winnerScore": 1,
+            "loserScore": 0
+          },
+          {
+            "game": 2,
+            "winnerScore": 6,
+            "loserScore": 1
+          },
+          {
+            "game": 3,
+            "winnerScore": 3,
+            "loserScore": 6
+          },
+          {
+            "game": 4,
+            "winnerScore": 4,
+            "loserScore": 3
+          }
+        ]
+      }
+    }
+  },
+  {
+    "year": 2028,
+    "セ・リーグ": {
+      "ファーストステージ": {
+        "winner": "愛知プロミネンス",
+        "loser": "清澄ホワイトリバーズ",
+        "winnerWins": 2,
+        "loserWins": 1,
+        "advantageTo": null,
+        "advantageWins": 0,
+        "games": [
+          {
+            "game": 1,
+            "winnerScore": 2,
+            "loserScore": 0
+          },
+          {
+            "game": 2,
+            "winnerScore": 0,
+            "loserScore": 1
+          },
+          {
+            "game": 3,
+            "winnerScore": 8,
+            "loserScore": 4
+          }
+        ]
+      },
+      "ファイナルステージ": {
+        "winner": "難波ボルテッカーズ",
+        "loser": "愛知プロミネンス",
+        "winnerWins": 4,
+        "loserWins": 1,
+        "advantageTo": "winner",
+        "advantageWins": 1,
+        "games": [
+          {
+            "game": 1,
+            "winnerScore": 3,
+            "loserScore": 2
+          },
+          {
+            "game": 2,
+            "winnerScore": 4,
+            "loserScore": 0
+          },
+          {
+            "game": 3,
+            "winnerScore": 4,
+            "loserScore": 8
+          },
+          {
+            "game": 4,
+            "winnerScore": 2,
+            "loserScore": 0
+          }
+        ]
+      }
+    },
+    "パ・リーグ": {
+      "ファーストステージ": {
+        "winner": "横浜ベイクルーザーズ",
+        "loser": "福知山ネクサスナイン",
+        "winnerWins": 2,
+        "loserWins": 0,
+        "advantageTo": null,
+        "advantageWins": 0,
+        "games": [
+          {
+            "game": 1,
+            "winnerScore": 3,
+            "loserScore": 2
+          },
+          {
+            "game": 2,
+            "winnerScore": 7,
+            "loserScore": 0
+          }
+        ]
+      },
+      "ファイナルステージ": {
+        "winner": "横浜ベイクルーザーズ",
+        "loser": "博多アクアリアス",
+        "winnerWins": 4,
+        "loserWins": 3,
+        "advantageTo": "loser",
+        "advantageWins": 1,
+        "games": [
+          {
+            "game": 1,
+            "winnerScore": 4,
+            "loserScore": 6
+          },
+          {
+            "game": 2,
+            "winnerScore": 5,
+            "loserScore": 1
+          },
+          {
+            "game": 3,
+            "winnerScore": 5,
+            "loserScore": 7
+          },
+          {
+            "game": 4,
+            "winnerScore": 6,
+            "loserScore": 4
+          },
+          {
+            "game": 5,
+            "winnerScore": 7,
+            "loserScore": 0
+          },
+          {
+            "game": 6,
+            "winnerScore": 7,
+            "loserScore": 4
+          }
+        ]
+      }
+    }
+  },
+  {
+    "year": 2029,
+    "セ・リーグ": {
+      "ファーストステージ": {
+        "winner": "難波ボルテッカーズ",
+        "loser": "渋谷アーバンスターズ",
+        "winnerWins": 2,
+        "loserWins": 1,
+        "advantageTo": null,
+        "advantageWins": 0,
+        "games": [
+          {
+            "game": 1,
+            "winnerScore": 6,
+            "loserScore": 0
+          },
+          {
+            "game": 2,
+            "winnerScore": 0,
+            "loserScore": 2
+          },
+          {
+            "game": 3,
+            "winnerScore": 6,
+            "loserScore": 5
+          }
+        ]
+      },
+      "ファイナルステージ": {
+        "winner": "渋谷アーバンスターズ",
+        "loser": "難波ボルテッカーズ",
+        "winnerWins": 4,
+        "loserWins": 0,
+        "advantageTo": "winner",
+        "advantageWins": 1,
+        "games": [
+          {
+            "game": 1,
+            "winnerScore": 6,
+            "loserScore": 4
+          },
+          {
+            "game": 2,
+            "winnerScore": 6,
+            "loserScore": 1
+          },
+          {
+            "game": 3,
+            "winnerScore": 4,
+            "loserScore": 1
+          }
+        ]
+      }
+    },
+    "パ・リーグ": {
+      "ファーストステージ": {
+        "winner": "博多アクアリアス",
+        "loser": "新潟イプシロンズ",
+        "winnerWins": 2,
+        "loserWins": 1,
+        "advantageTo": null,
+        "advantageWins": 0,
+        "games": [
+          {
+            "game": 1,
+            "winnerScore": 7,
+            "loserScore": 0
+          },
+          {
+            "game": 2,
+            "winnerScore": 0,
+            "loserScore": 2
+          },
+          {
+            "game": 3,
+            "winnerScore": 5,
+            "loserScore": 2
+          }
+        ]
+      },
+      "ファイナルステージ": {
+        "winner": "新潟イプシロンズ",
+        "loser": "博多アクアリアス",
+        "winnerWins": 4,
+        "loserWins": 0,
+        "advantageTo": "winner",
+        "advantageWins": 1,
+        "games": [
+          {
+            "game": 1,
+            "winnerScore": 8,
+            "loserScore": 5
+          },
+          {
+            "game": 2,
+            "winnerScore": 8,
+            "loserScore": 5
+          },
+          {
+            "game": 3,
+            "winnerScore": 9,
+            "loserScore": 1
+          }
+        ]
+      }
+    }
+  },
+  {
+  "year": 2031,
+  "セ・リーグ": {
+    "ファーストステージ": {
+      "winner": "広島セントラルレイカーズ",
+      "loser": "清澄ホワイトリバーズ",
+      "winnerWins": 2,
+      "loserWins": 0,
+      "advantageTo": null,
+      "advantageWins": 0,
+      "games": [
+        {
+          "game": 1,
+          "winnerScore": 7,
+          "loserScore": 0
+        },
+        {
+          "game": 2,
+          "winnerScore": 2,
+          "loserScore": 0
+        }
+      ]
+    },
+    "ファイナルステージ": {
+      "winner": "愛知プロミネンス",
+      "loser": "広島セントラルレイカーズ",
+      "winnerWins": 4,
+      "loserWins": 0,
+      "advantageTo": "winner",
+      "advantageWins": 1,
+      "games": [
+        {
+          "game": 1,
+          "winnerScore": 3,
+          "loserScore": 2
+        },
+        {
+          "game": 2,
+          "winnerScore": 13,
+          "loserScore": 3
+        },
+        {
+          "game": 3,
+          "winnerScore": 4,
+          "loserScore": 0
+        }
+      ]
+    }
+  },
+  "パ・リーグ": {
+    "ファーストステージ": {
+      "winner": "長崎マリンフォース",
+      "loser": "新潟イプシロンズ",
+      "winnerWins": 2,
+      "loserWins": 0,
+      "advantageTo": null,
+      "advantageWins": 0,
+      "games": [
+        {
+          "game": 1,
+          "winnerScore": 1,
+          "loserScore": 0
+        },
+        {
+          "game": 2,
+          "winnerScore": 7,
+          "loserScore": 3
+        }
+      ]
+    },
+    "ファイナルステージ": {
+      "winner": "流山シーマリナーズ",
+      "loser": "長崎マリンフォース",
+      "winnerWins": 4,
+      "loserWins": 2,
+      "advantageTo": "winner",
+      "advantageWins": 1,
+      "games": [
+        {
+          "game": 1,
+          "winnerScore": 4,
+          "loserScore": 0
+        },
+        {
+          "game": 2,
+          "winnerScore": 5,
+          "loserScore": 4
+        },
+        {
+          "game": 3,
+          "winnerScore": 4,
+          "loserScore": 8
+        },
+        {
+          "game": 4,
+          "winnerScore": 0,
+          "loserScore": 6
+        },
+        {
+          "game": 5,
+          "winnerScore": 6,
+          "loserScore": 5
+          }
+        ]
+      }
+    }
+  },
+  { 
+    "year": 2030,
+    "セ・リーグ": {
+      "ファーストステージ": {
+        "winner": "清澄ホワイトリバーズ",
+        "loser": "杜王スピリットフェニックス",
+        "winnerWins": 2,
+        "loserWins": 1,
+        "advantageTo": null,
+        "advantageWins": 0,
+        "games": [
+          {
+            "game": 1,
+            "winnerScore": 4,
+            "loserScore": 0
+          },
+          {
+            "game": 2,
+            "winnerScore": 0,
+            "loserScore": 2
+          },
+          {
+            "game": 3,
+            "winnerScore": 2,
+            "loserScore": 1
+          }
+        ]
+      },
+      "ファイナルステージ": {
+        "winner": "難波ボルテッカーズ",
+        "loser": "清澄ホワイトリバーズ",
+        "winnerWins": 4,
+        "loserWins": 0,
+        "advantageTo": "winner",
+        "advantageWins": 1,
+        "games": [
+          {
+            "game": 1,
+            "winnerScore": 5,
+            "loserScore": 2
+          },
+          {
+            "game": 2,
+            "winnerScore": 2,
+            "loserScore": 1
+          },
+          {
+            "game": 3,
+            "winnerScore": 1,
+            "loserScore": 0
+          }
+        ]
+      }
+    },
+    "パ・リーグ": {
+      "ファーストステージ": {
+        "winner": "梅田スラッガーズ",
+        "loser": "横浜ベイクルーザーズ",
+        "winnerWins": 2,
+        "loserWins": 0,
+        "advantageTo": null,
+        "advantageWins": 0,
+        "games": [
+          {
+            "game": 1,
+            "winnerScore": 10,
+            "loserScore": 0
+          },
+          {
+            "game": 2,
+            "winnerScore": 13,
+            "loserScore": 1
+          }
+        ]
+      },
+      "ファイナルステージ": {
+        "winner": "長崎マリンフォース",
+        "loser": "梅田スラッガーズ",
+        "winnerWins": 4,
+        "loserWins": 1,
+        "ties": 1,
+        "advantageTo": "winner",
+        "advantageWins": 1,
+        "games": [
+          {
+            "game": 1,
+            "winnerScore": 5,
+            "loserScore": 0
+          },
+          {
+            "game": 2,
+            "winnerScore": 5,
+            "loserScore": 1
+          },
+          {
+            "game": 3,
+            "winnerScore": 7,
+            "loserScore": 15
+          },
+          {
+            "game": 4,
+            "winnerScore": 3,
+            "loserScore": 3,
+            "draw": true
+          }
+        ]
+      }
+    }
+  },
+  {
+"year": 2034,
+    "セ・リーグ": {
+      "ファーストステージ": {
+        "winner": "清澄ホワイトリバーズ",
+        "loser": "北海道レイブンクロウズ",
+        "winnerWins": 2,
+        "loserWins": 0,
+        "advantageTo": null,
+        "advantageWins": 0,
+        "games": [
+          {
+            "game": 1,
+            "winnerScore": 4,
+            "loserScore": 0
+          },
+          {
+            "game": 2,
+            "winnerScore": 2,
+            "loserScore": 0
+          }
+        ]
+      },
+      "ファイナルステージ": {
+        "winner": "杜王スピリットフェニックス",
+        "loser": "清澄ホワイトリバーズ",
+        "winnerWins": 4,
+        "loserWins": 0,
+        "advantageTo": "winner",
+        "advantageWins": 1,
+        "games": [
+          {
+            "game": 1,
+            "winnerScore": 3,
+            "loserScore": 0
+          },
+          {
+            "game": 2,
+            "winnerScore": 2,
+            "loserScore": 1
+          },
+          {
+            "game": 3,
+            "winnerScore": 4,
+            "loserScore": 0
+          }
+        ]
+      }
+    },
+    "パ・リーグ": {
+      "ファーストステージ": {
+        "winner": "川崎ウインドブレイカーズ",
+        "loser": "長崎マリンフォース",
+        "winnerWins": 2,
+        "loserWins": 1,
+        "advantageTo": null,
+        "advantageWins": 0,
+        "games": [
+          {
+            "game": 1,
+            "winnerScore": 2,
+            "loserScore": 0
+          },
+          {
+            "game": 2,
+            "winnerScore": 0,
+            "loserScore": 2
+          },
+          {
+            "game": 3,
+            "winnerScore": 6,
+            "loserScore": 3
+          }
+        ]
+      },
+      "ファイナルステージ": {
+        "winner": "流山シーマリナーズ",
+        "loser": "川崎ウインドブレイカーズ",
+        "winnerWins": 4,
+        "loserWins": 2,
+        "advantageTo": "winner",
+        "advantageWins": 1,
+        "games": [
+          {
+            "game": 1,
+            "winnerScore": 8,
+            "loserScore": 0
+          },
+          {
+            "game": 2,
+            "winnerScore": 1,
+            "loserScore": 0
+          },
+          {
+            "game": 3,
+            "winnerScore": 0,
+            "loserScore": 1
+          },
+          {
+            "game": 4,
+            "winnerScore": 5,
+            "loserScore": 6
+          },
+          {
+            "game": 5,
+            "winnerScore": 8,
+            "loserScore": 2    
+          }
+        ]
+      }
+    }
+  },
+  {
+"year": 2035,
+  "セ・リーグ": {
+    "ファーストステージ": {
+      "winner": "清澄ホワイトリバーズ",
+      "loser": "杜王スピリットフェニックス",
+      "winnerWins": 2,
+      "loserWins": 0,
+      "advantageTo": null,
+      "advantageWins": 0,
+      "games": [
+        {
+          "game": 1,
+          "winnerScore": 4,
+          "loserScore": 0
+        },
+        {
+          "game": 2,
+          "winnerScore": 2,
+          "loserScore": 0
+        }
+      ]
+    },
+    "ファイナルステージ": {
+      "winner": "広島セントラルレイカーズ",
+      "loser": "清澄ホワイトリバーズ",
+      "winnerWins": 4,
+      "loserWins": 1,
+      "advantageTo": "winner",
+      "advantageWins": 1,
+      "games": [
+        {
+          "game": 1,
+          "winnerScore": 8,
+          "loserScore": 0
+        },
+        {
+          "game": 2,
+          "winnerScore": 2,
+          "loserScore": 7
+        },
+        {
+          "game": 3,
+          "winnerScore": 9,
+          "loserScore": 5
+        },
+        {
+          "game": 4,
+          "winnerScore": 8,
+          "loserScore": 7
+        }
+      ]
+    }
+  },
+  "パ・リーグ": {
+    "ファーストステージ": {
+      "winner": "横浜ベイクルーザーズ",
+      "loser": "長崎マリンフォース",
+      "winnerWins": 1,
+      "loserWins": 0,
+      "advantageTo": null,
+      "advantageWins": 0,
+      "games": [
+        {
+          "game": 1,
+          "winnerScore": 1,
+          "loserScore": 0
+        },
+        {
+          "game": 2,
+          "winnerScore": 0,
+          "loserScore": 0
+        }
+      ]
+    },
+    "ファイナルステージ": {
+      "winner": "流山シーマリナーズ",
+      "loser": "横浜ベイクルーザーズ",
+      "winnerWins": 4,
+      "loserWins": 0,
+      "advantageTo": "winner",
+      "advantageWins": 1,
+      "games": [
+        {
+          "game": 1,
+          "winnerScore": 2,
+          "loserScore": 0
+        },
+        {
+          "game": 2,
+          "winnerScore": 1,
+          "loserScore": 0
+        },
+        {
+          "game": 3,
+          "winnerScore": 4,
+          "loserScore": 0  
+          }
+        ]
+      }
+    }
+  },
+  {   
+"year": 2037,
+  "セ・リーグ": {
+    "ファーストステージ": {
+      "winner": "北海道レイブンクロウズ",
+      "loser": "清澄ホワイトリバーズ",
+      "winnerWins": 2,
+      "loserWins": 1,
+      "advantageTo": null,
+      "advantageWins": 0,
+      "games": [
+        {
+          "game": 1,
+          "winnerScore": 7,
+          "loserScore": 6
+        },
+        {
+          "game": 2,
+          "winnerScore": 5,
+          "loserScore": 8
+        },
+        {
+          "game": 3,
+          "winnerScore": 5,
+          "loserScore": 2
+        }
+      ]
+    },
+    "ファイナルステージ": {
+      "winner": "北海道レイブンクロウズ",
+      "loser": "広島セントラルレイカーズ",
+      "winnerWins": 4,
+      "loserWins": 2,
+      "advantageTo": "loser",
+      "advantageWins": 1,
+      "games": [
+        {
+          "game": 1,
+          "winnerScore": 6,
+          "loserScore": 4
+        },
+        {
+          "game": 2,
+          "winnerScore": 1,
+          "loserScore": 8
+        },
+        {
+          "game": 3,
+          "winnerScore": 3,
+          "loserScore": 2
+        },
+        {
+          "game": 4,
+          "winnerScore": 3,
+          "loserScore": 2
+        },
+        {
+          "game": 5,
+          "winnerScore": 9,
+          "loserScore": 4
+        }
+      ]
+    }
+  },
+  "パ・リーグ": {
+    "ファーストステージ": {
+      "winner": "流山シーマリナーズ",
+      "loser": "新潟イプシロンズ",
+      "winnerWins": 2,
+      "loserWins": 1,
+      "advantageTo": null,
+      "advantageWins": 0,
+      "games": [
+        {
+          "game": 1,
+          "winnerScore": 0,
+          "loserScore": 3
+        },
+        {
+          "game": 2,
+          "winnerScore": 6,
+          "loserScore": 2
+        },
+        {
+          "game": 3,
+          "winnerScore": 3,
+          "loserScore": 2
+        }
+      ]
+    },
+    "ファイナルステージ": {
+      "winner": "長崎マリンフォース",
+      "loser": "流山シーマリナーズ",
+      "winnerWins": 4,
+      "loserWins": 2,
+      "advantageTo": "winner",
+      "advantageWins": 1,
+      "games": [
+        {
+          "game": 1,
+          "winnerScore": 4,
+          "loserScore": 5
+        },
+        {
+          "game": 2,
+          "winnerScore": 4,
+          "loserScore": 0
+        },
+        {
+          "game": 3,
+          "winnerScore": 3,
+          "loserScore": 1
+        },
+        {
+          "game": 4,
+          "winnerScore": 1,
+          "loserScore": 2
+        },
+        {
+          "game": 5,
+          "winnerScore": 1,
+          "loserScore": 0    
+          }
+        ]
+      }
+    }
+  },
+  {     
+"year": 2038,
+  "セ・リーグ": {
+    "ファーストステージ": {
+      "winner": "渋谷アーバンスターズ",
+      "loser": "京都ミリオンアッシュ",
+      "winnerWins": 2,
+      "loserWins": 1,
+      "advantageTo": null,
+      "advantageWins": 0,
+      "games": [
+        {
+          "game": 1,
+          "winnerScore": 0,
+          "loserScore": 3
+        },
+        {
+          "game": 2,
+          "winnerScore": 2,
+          "loserScore": 1
+        },
+        {
+          "game": 3,
+          "winnerScore": 4,
+          "loserScore": 1
+        }
+      ]
+    },
+    "ファイナルステージ": {
+      "winner": "広島セントラルレイカーズ",
+      "loser": "渋谷アーバンスターズ",
+      "winnerWins": 4,
+      "loserWins": 0,
+      "advantageTo": "winner",
+      "advantageWins": 1,
+      "games": [
+        {
+          "game": 1,
+          "winnerScore": 2,
+          "loserScore": 0
+        },
+        {
+          "game": 2,
+          "winnerScore": 3,
+          "loserScore": 2
+        },
+        {
+          "game": 3,
+          "winnerScore": 1,
+          "loserScore": 0
+        }
+      ]
+    }
+  },
+  "パ・リーグ": {
+    "ファーストステージ": {
+      "winner": "川崎ウインドブレイカーズ",
+      "loser": "新潟イプシロンズ",
+      "winnerWins": 2,
+      "loserWins": 0,
+      "advantageTo": null,
+      "advantageWins": 0,
+      "games": [
+        {
+          "game": 1,
+          "winnerScore": 1,
+          "loserScore": 0
+        },
+        {
+          "game": 2,
+          "winnerScore": 3,
+          "loserScore": 1
+        }
+      ]
+    },
+    "ファイナルステージ": {
+      "winner": "長崎マリンフォース",
+      "loser": "川崎ウインドブレイカーズ",
+      "winnerWins": 4,
+      "loserWins": 0,
+      "advantageTo": "winner",
+      "advantageWins": 1,
+      "games": [
+        {
+          "game": 1,
+          "winnerScore": 5,
+          "loserScore": 0
+        },
+        {
+          "game": 2,
+          "winnerScore": 3,
+          "loserScore": 0
+        },
+        {
+          "game": 3,
+          "winnerScore": 4,
+          "loserScore": 1
+
+          }
+        ]
+      }
+    }
+  },
+  {    
+
+            "year": 2032,
+    "セ・リーグ": {
+      "ファーストステージ": {
+        "winner": "愛知プロミネンス",
+        "loser": "渋谷アーバンスターズ",
+        "winnerWins": 2,
+        "loserWins": 0,
+        "advantageTo": null,
+        "advantageWins": 0,
+        "games": [
+          {
+            "game": 1,
+            "winnerScore": 4,
+            "loserScore": 1
+          },
+          {
+            "game": 2,
+            "winnerScore": 5,
+            "loserScore": 2
+          }
+        ]
+      },
+      "ファイナルステージ": {
+        "winner": "愛知プロミネンス",
+        "loser": "広島セントラルレイカーズ",
+        "winnerWins": 4,
+        "loserWins": 3,
+        "advantageTo": "loser",
+        "advantageWins": 1,
+        "games": [
+          {
+            "game": 1,
+            "winnerScore": 5,
+            "loserScore": 1
+          },
+          {
+            "game": 2,
+            "winnerScore": 2,
+            "loserScore": 4
+          },
+          {
+            "game": 3,
+            "winnerScore": 1,
+            "loserScore": 2
+          },
+          {
+            "game": 4,
+            "winnerScore": 3,
+            "loserScore": 2
+          },
+          {
+            "game": 5,
+            "winnerScore": 3,
+            "loserScore": 1
+          },
+          {
+            "game": 6,
+            "winnerScore": 9,
+            "loserScore": 3
+          }
+        ]
+      }
+    },
+    "パ・リーグ": {
+      "ファーストステージ": {
+        "winner": "長崎マリンフォース",
+        "loser": "新潟イプシロンズ",
+        "winnerWins": 2,
+        "loserWins": 0,
+        "advantageTo": null,
+        "advantageWins": 0,
+        "games": [
+          {
+            "game": 1,
+            "winnerScore": 2,
+            "loserScore": 1
+          },
+          {
+            "game": 2,
+            "winnerScore": 7,
+            "loserScore": 4
+          }
+        ]
+      },
+      "ファイナルステージ": {
+        "winner": "長崎マリンフォース",
+        "loser": "横浜ベイクルーザーズ",
+        "winnerWins": 4,
+        "loserWins": 2,
+        "advantageTo": "loser",
+        "advantageWins": 1,
+        "games": [
+          {
+            "game": 1,
+            "winnerScore": 3,
+            "loserScore": 9
+          },
+          {
+            "game": 2,
+            "winnerScore": 4,
+            "loserScore": 3
+          },
+          {
+            "game": 3,
+            "winnerScore": 12,
+            "loserScore": 0
+          },
+          {
+            "game": 4,
+            "winnerScore": 12,
+            "loserScore": 0
+          },
+          {
+            "game": 5,
+            "winnerScore": 7,
+            "loserScore": 1
+          }
+        ]
+      }
+    }
+  },
+  {
+    "year": 2033,
+    "セ・リーグ": {
+      "ファーストステージ": {
+        "winner": "北海道レイブンクロウズ",
+        "loser": "愛知プロミネンス",
+        "winnerWins": 2,
+        "loserWins": 1,
+        "advantageTo": null,
+        "advantageWins": 0,
+        "games": [
+          {
+            "game": 1,
+            "winnerScore": 3,
+            "loserScore": 1
+          },
+          {
+            "game": 2,
+            "winnerScore": 3,
+            "loserScore": 1
+          },
+          {
+            "game": 3,
+            "winnerScore": 3,
+            "loserScore": 0
+          }
+        ]
+      },
+      "ファイナルステージ": {
+        "winner": "北海道レイブンクロウズ",
+        "loser": "渋谷アーバンスターズ",
+        "winnerWins": 4,
+        "loserWins": 1,
+        "advantageTo": "loser",
+        "advantageWins": 1,
+        "games": [
+          {
+            "game": 1,
+            "winnerScore": 4,
+            "loserScore": 2
+          },
+          {
+            "game": 2,
+            "winnerScore": 4,
+            "loserScore": 2
+          },
+          {
+            "game": 3,
+            "winnerScore": 5,
+            "loserScore": 4
+          },
+          {
+            "game": 4,
+            "winnerScore": 2,
+            "loserScore": 1
+          }
+        ]
+      }
+    },
+    "パ・リーグ": {
+      "ファーストステージ": {
+        "winner": "流山シーマリナーズ",
+        "loser": "新潟イプシロンズ",
+        "winnerWins": 2,
+        "loserWins": 1,
+        "advantageTo": null,
+        "advantageWins": 0,
+        "games": [
+          {
+            "game": 1,
+            "winnerScore": 3,
+            "loserScore": 2
+          },
+          {
+            "game": 2,
+            "winnerScore": 3,
+            "loserScore": 2
+          },
+          {
+            "game": 3,
+            "winnerScore": 3,
+            "loserScore": 1
+          }
+        ]
+      },
+      "ファイナルステージ": {
+        "winner": "長崎マリンフォース",
+        "loser": "流山シーマリナーズ",
+        "winnerWins": 4,
+        "loserWins": 0,
+        "advantageTo": "winner",
+        "advantageWins": 1,
+        "games": [
+          {
+            "game": 1,
+            "winnerScore": 2,
+            "loserScore": 0
+          },
+          {
+            "game": 2,
+            "winnerScore": 3,
+            "loserScore": 1
+          },
+          {
+            "game": 3,
+            "winnerScore": 6,
+            "loserScore": 1
+          }
+        ]
+      }
+    }
+  },
+  {
+"year": 2036,
+    "セ・リーグ": {
+      "ファーストステージ": {
+        "winner": "清澄ホワイトリバーズ",
+        "loser": "渋谷アーバンスターズ",
+        "winnerWins": 2,
+        "loserWins": 1,
+        "advantageTo": null,
+        "advantageWins": 0,
+        "games": [
+          {
+            "game": 1,
+            "winnerScore": 0,
+            "loserScore": 3
+          },
+          {
+            "game": 2,
+            "winnerScore": 3,
+            "loserScore": 1
+          },
+          {
+            "game": 3,
+            "winnerScore": 1,
+            "loserScore": 0
+          }
+        ]
+      },
+      "ファイナルステージ": {
+        "winner": "広島セントラルレイカーズ",
+        "loser": "清澄ホワイトリバーズ",
+        "winnerWins": 4,
+        "loserWins": 3,
+        "advantageTo": "winner",
+        "advantageWins": 1,
+        "games": [
+          {
+            "game": 1,
+            "winnerScore": 2,
+            "loserScore": 1
+          },
+          {
+            "game": 2,
+            "winnerScore": 1,
+            "loserScore": 2
+          },
+          {
+            "game": 3,
+            "winnerScore": 2,
+            "loserScore": 4
+          },
+          {
+            "game": 4,
+            "winnerScore": 2,
+            "loserScore": 1
+          },
+          {
+            "game": 5,
+            "winnerScore": 0,
+            "loserScore": 4
+          },
+          {
+            "game": 6,
+            "winnerScore": 9,
+            "loserScore": 3
+          }
+        ]
+      }
+    },
+    "パ・リーグ": {
+      "ファーストステージ": {
+        "winner": "長崎マリンフォース",
+        "loser": "新潟イプシロンズ",
+        "winnerWins": 2,
+        "loserWins": 1,
+        "advantageTo": null,
+        "advantageWins": 0,
+        "games": [
+          {
+            "game": 1,
+            "winnerScore": 5,
+            "loserScore": 2
+          },
+          {
+            "game": 2,
+            "winnerScore": 4,
+            "loserScore": 7
+          },
+          {
+            "game": 3,
+            "winnerScore": 5,
+            "loserScore": 4
+          }
+        ]
+      },
+      "ファイナルステージ": {
+        "winner": "流山シーマリナーズ",
+        "loser": "長崎マリンフォース",
+        "winnerWins": 4,
+        "loserWins": 0,
+        "advantageTo": "winner",
+        "advantageWins": 1,
+        "games": [
+          {
+            "game": 1,
+            "winnerScore": 2,
+            "loserScore": 1
+          },
+          {
+            "game": 2,
+            "winnerScore": 3,
+            "loserScore": 0
+          },
+          {
+            "game": 3,
+            "winnerScore": 2,
+            "loserScore": 0
+          }
+        ]
+      }
+    }
+  },
+  {
+"year": 2040,
+  "セ・リーグ": {
+    "ファーストステージ": {
+      "winner": "清澄ホワイトリバーズ",
+      "loser": "京都ミリオンアッシュ",
+      "winnerWins": 2,
+      "loserWins": 0,
+      "advantageTo": null,
+      "advantageWins": 0,
+      "games": [
+        {
+          "game": 1,
+          "winnerScore": 1,
+          "loserScore": 0
+        },
+        {
+          "game": 2,
+          "winnerScore": 2,
+          "loserScore": 1
+        }
+      ]
+    },
+    "ファイナルステージ": {
+      "winner": "広島セントラルレイカーズ",
+      "loser": "清澄ホワイトリバーズ",
+      "winnerWins": 4,
+      "loserWins": 0,
+      "advantageTo": "winner",
+      "advantageWins": 1,
+      "games": [
+        {
+          "game": 1,
+          "winnerScore": 4,
+          "loserScore": 3
+        },
+        {
+          "game": 2,
+          "winnerScore": 4,
+          "loserScore": 0
+        },
+        {
+          "game": 3,
+          "winnerScore": 3,
+          "loserScore": 1
+        }
+      ]
+    }
+  },
+  "パ・リーグ": {
+    "ファーストステージ": {
+      "winner": "博多アクアリアス",
+      "loser": "横浜ベイクルーザーズ",
+      "winnerWins": 2,
+      "loserWins": 1,
+      "advantageTo": null,
+      "advantageWins": 0,
+      "games": [
+        {
+          "game": 1,
+          "winnerScore": 10,
+          "loserScore": 6
+        },
+        {
+          "game": 2,
+          "winnerScore": 5,
+          "loserScore": 7
+        },
+        {
+          "game": 3,
+          "winnerScore": 13,
+          "loserScore": 2
+        }
+      ]
+    },
+    "ファイナルステージ": {
+      "winner": "流山シーマリナーズ",
+      "loser": "博多アクアリアス",
+      "winnerWins": 4,
+      "loserWins": 1,
+      "advantageTo": "winner",
+      "advantageWins": 1,
+      "games": [
+        {
+          "game": 1,
+          "winnerScore": 2,
+          "loserScore": 1
+        },
+        {
+          "game": 2,
+          "winnerScore": 1,
+          "loserScore": 3
+        },
+        {
+          "game": 3,
+          "winnerScore": 4,
+          "loserScore": 2
+        },
+        {
+          "game": 4,
+          "winnerScore": 5,
+          "loserScore": 2    
+          }
+        ]
+      }
+    }
+  },
+  {
+    "year": 2041,
+    "セ・リーグ": {
+      "ファーストステージ": {
+        "winner": "愛知プロミネンス",
+        "loser": "北海道レイブンクロウズ",
+        "winnerWins": 2,
+        "loserWins": 1,
+        "advantageTo": null,
+        "advantageWins": 0,
+        "games": [
+          {
+            "game": 1,
+            "winnerScore": 2,
+            "loserScore": 0
+          },
+          {
+            "game": 2,
+            "winnerScore": 0,
+            "loserScore": 4
+          },
+          {
+            "game": 3,
+            "winnerScore": 1,
+            "loserScore": 2
+          }
+        ]
+      },
+      "ファイナルステージ": {
+        "winner": "広島セントラルレイカーズ",
+        "loser": "愛知プロミネンス",
+        "winnerWins": 4,
+        "loserWins": 0,
+        "advantageTo": "winner",
+        "advantageWins": 1,
+        "games": [
+          {
+            "game": 1,
+            "winnerScore": 3,
+            "loserScore": 2
+          },
+          {
+            "game": 2,
+            "winnerScore": 3,
+            "loserScore": 1
+          },
+          {
+            "game": 3,
+            "winnerScore": 12,
+            "loserScore": 2
+          }
+        ]
+      }
+    },
+    "パ・リーグ": {
+      "ファーストステージ": {
+        "winner": "流山シーマリナーズ",
+        "loser": "川崎ウインドブレイカーズ",
+        "winnerWins": 2,
+        "loserWins": 0,
+        "advantageTo": null,
+        "advantageWins": 0,
+        "games": [
+          {
+            "game": 1,
+            "winnerScore": 3,
+            "loserScore": 2
+          },
+          {
+            "game": 2,
+            "winnerScore": 2,
+            "loserScore": 0
+          }
+        ]
+      },
+      "ファイナルステージ": {
+        "winner": "横浜ベイクルーザーズ",
+        "loser": "流山シーマリナーズ",
+        "winnerWins": 4,
+        "loserWins": 0,
+        "advantageTo": "winner",
+        "advantageWins": 1,
+        "games": [
+          {
+            "game": 1,
+            "winnerScore": 4,
+            "loserScore": 0
+          },
+          {
+            "game": 2,
+            "winnerScore": 4,
+            "loserScore": 2
+          },
+          {
+            "game": 3,
+            "winnerScore": 1,
+            "loserScore": 0
+          }
+        ]
+      }
+    }
+  },
+  {          
+    "year": 2039,
+    "セ・リーグ": {
+      "ファーストステージ": {
+        "winner": "清澄ホワイトリバーズ",
+        "loser": "渋谷アーバンスターズ",
+        "winnerWins": 2,
+        "loserWins": 1,
+        "advantageTo": null,
+        "advantageWins": 0,
+        "games": [
+          {
+            "game": 1,
+            "winnerScore": 0,
+            "loserScore": 2
+          },
+          {
+            "game": 2,
+            "winnerScore": 1,
+            "loserScore": 0
+          },
+          {
+            "game": 3,
+            "winnerScore": 2,
+            "loserScore": 0
+          }
+        ]
+      },
+      "ファイナルステージ": {
+        "winner": "清澄ホワイトリバーズ",
+        "loser": "広島セントラルレイカーズ",
+        "winnerWins": 4,
+        "loserWins": 3,
+        "advantageTo": "loser",
+        "advantageWins": 1,
+        "games": [
+          {
+            "game": 1,
+            "winnerScore": 6,
+            "loserScore": 5
+          },
+          {
+            "game": 2,
+            "winnerScore": 3,
+            "loserScore": 1
+          },
+          {
+            "game": 3,
+            "winnerScore": 4,
+            "loserScore": 5
+          },
+          {
+            "game": 4,
+            "winnerScore": 2,
+            "loserScore": 3
+          },
+          {
+            "game": 5,
+            "winnerScore": 7,
+            "loserScore": 4
+          },
+          {
+            "game": 6,
+            "winnerScore": 2,
+            "loserScore": 1
+          }
+        ]
+      }
+    },
+    "パ・リーグ": {
+      "ファーストステージ": {
+        "winner": "福知山ネクサスナイン",
+        "loser": "長崎マリンフォース",
+        "winnerWins": 2,
+        "loserWins": 0,
+        "advantageTo": null,
+        "advantageWins": 0,
+        "games": [
+          {
+            "game": 1,
+            "winnerScore": 6,
+            "loserScore": 2
+          },
+          {
+            "game": 2,
+            "winnerScore": 2,
+            "loserScore": 1
+          }
+        ]
+      },
+      "ファイナルステージ": {
+        "winner": "横浜ベイクルーザーズ",
+        "loser": "福知山ネクサスナイン",
+        "winnerWins": 3,
+        "loserWins": 1,
+        "advantageTo": "winner",
+        "advantageWins": 1,
+        "games": [
+          {
+            "game": 1,
+            "winnerScore": 1,
+            "loserScore": 0
+          },
+          {
+            "game": 2,
+            "winnerScore": 2,
+            "loserScore": 3
+          },
+          {
+            "game": 3,
+            "winnerScore": 6,
+            "loserScore": 0
+          },
+          {
+            "game": 4,
+            "winnerScore": 0,
+            "loserScore": 0
+          }
+        ]
+      }
+    }
+  }
+]

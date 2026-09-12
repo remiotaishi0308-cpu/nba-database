@@ -1,0 +1,942 @@
+{
+  "season": 2026,
+  "regulationNote": "2026シーズン開幕。25球団・東西2カンファレンス制。チーム数は年度ごとに増加予定。",
+  "prospects": [],
+  "teams": [
+    {
+      "abbr": "E01",
+      "name": "イースト01",
+      "league": "East",
+      "div": "",
+      "color": "#ef4444",
+      "logo": "",
+      "seasonStats": {
+        "avg": "",
+        "slg": "",
+        "obp": "",
+        "fielding": "",
+        "era": ""
+      },
+      "rankings": {
+        "rank": "",
+        "contact": "",
+        "power": "",
+        "pitching": "",
+        "defense": "",
+        "speed": ""
+      }
+    },
+    {
+      "abbr": "E02",
+      "name": "イースト02",
+      "league": "East",
+      "div": "",
+      "color": "#f97316",
+      "logo": "",
+      "seasonStats": {
+        "avg": "",
+        "slg": "",
+        "obp": "",
+        "fielding": "",
+        "era": ""
+      },
+      "rankings": {
+        "rank": "",
+        "contact": "",
+        "power": "",
+        "pitching": "",
+        "defense": "",
+        "speed": ""
+      }
+    },
+    {
+      "abbr": "E03",
+      "name": "イースト03",
+      "league": "East",
+      "div": "",
+      "color": "#f59e0b",
+      "logo": "",
+      "seasonStats": {
+        "avg": "",
+        "slg": "",
+        "obp": "",
+        "fielding": "",
+        "era": ""
+      },
+      "rankings": {
+        "rank": "",
+        "contact": "",
+        "power": "",
+        "pitching": "",
+        "defense": "",
+        "speed": ""
+      }
+    },
+    {
+      "abbr": "E04",
+      "name": "イースト04",
+      "league": "East",
+      "div": "",
+      "color": "#eab308",
+      "logo": "",
+      "seasonStats": {
+        "avg": "",
+        "slg": "",
+        "obp": "",
+        "fielding": "",
+        "era": ""
+      },
+      "rankings": {
+        "rank": "",
+        "contact": "",
+        "power": "",
+        "pitching": "",
+        "defense": "",
+        "speed": ""
+      }
+    },
+    {
+      "abbr": "E05",
+      "name": "イースト05",
+      "league": "East",
+      "div": "",
+      "color": "#84cc16",
+      "logo": "",
+      "seasonStats": {
+        "avg": "",
+        "slg": "",
+        "obp": "",
+        "fielding": "",
+        "era": ""
+      },
+      "rankings": {
+        "rank": "",
+        "contact": "",
+        "power": "",
+        "pitching": "",
+        "defense": "",
+        "speed": ""
+      }
+    },
+    {
+      "abbr": "E06",
+      "name": "イースト06",
+      "league": "East",
+      "div": "",
+      "color": "#22c55e",
+      "logo": "",
+      "seasonStats": {
+        "avg": "",
+        "slg": "",
+        "obp": "",
+        "fielding": "",
+        "era": ""
+      },
+      "rankings": {
+        "rank": "",
+        "contact": "",
+        "power": "",
+        "pitching": "",
+        "defense": "",
+        "speed": ""
+      }
+    },
+    {
+      "abbr": "E07",
+      "name": "イースト07",
+      "league": "East",
+      "div": "",
+      "color": "#10b981",
+      "logo": "",
+      "seasonStats": {
+        "avg": "",
+        "slg": "",
+        "obp": "",
+        "fielding": "",
+        "era": ""
+      },
+      "rankings": {
+        "rank": "",
+        "contact": "",
+        "power": "",
+        "pitching": "",
+        "defense": "",
+        "speed": ""
+      }
+    },
+    {
+      "abbr": "E08",
+      "name": "イースト08",
+      "league": "East",
+      "div": "",
+      "color": "#14b8a6",
+      "logo": "",
+      "seasonStats": {
+        "avg": "",
+        "slg": "",
+        "obp": "",
+        "fielding": "",
+        "era": ""
+      },
+      "rankings": {
+        "rank": "",
+        "contact": "",
+        "power": "",
+        "pitching": "",
+        "defense": "",
+        "speed": ""
+      }
+    },
+    {
+      "abbr": "E09",
+      "name": "イースト09",
+      "league": "East",
+      "div": "",
+      "color": "#06b6d4",
+      "logo": "",
+      "seasonStats": {
+        "avg": "",
+        "slg": "",
+        "obp": "",
+        "fielding": "",
+        "era": ""
+      },
+      "rankings": {
+        "rank": "",
+        "contact": "",
+        "power": "",
+        "pitching": "",
+        "defense": "",
+        "speed": ""
+      }
+    },
+    {
+      "abbr": "E10",
+      "name": "イースト10",
+      "league": "East",
+      "div": "",
+      "color": "#3b82f6",
+      "logo": "",
+      "seasonStats": {
+        "avg": "",
+        "slg": "",
+        "obp": "",
+        "fielding": "",
+        "era": ""
+      },
+      "rankings": {
+        "rank": "",
+        "contact": "",
+        "power": "",
+        "pitching": "",
+        "defense": "",
+        "speed": ""
+      }
+    },
+    {
+      "abbr": "E11",
+      "name": "イースト11",
+      "league": "East",
+      "div": "",
+      "color": "#6366f1",
+      "logo": "",
+      "seasonStats": {
+        "avg": "",
+        "slg": "",
+        "obp": "",
+        "fielding": "",
+        "era": ""
+      },
+      "rankings": {
+        "rank": "",
+        "contact": "",
+        "power": "",
+        "pitching": "",
+        "defense": "",
+        "speed": ""
+      }
+    },
+    {
+      "abbr": "E12",
+      "name": "イースト12",
+      "league": "East",
+      "div": "",
+      "color": "#8b5cf6",
+      "logo": "",
+      "seasonStats": {
+        "avg": "",
+        "slg": "",
+        "obp": "",
+        "fielding": "",
+        "era": ""
+      },
+      "rankings": {
+        "rank": "",
+        "contact": "",
+        "power": "",
+        "pitching": "",
+        "defense": "",
+        "speed": ""
+      }
+    },
+    {
+      "abbr": "E13",
+      "name": "イースト13",
+      "league": "East",
+      "div": "",
+      "color": "#a855f7",
+      "logo": "",
+      "seasonStats": {
+        "avg": "",
+        "slg": "",
+        "obp": "",
+        "fielding": "",
+        "era": ""
+      },
+      "rankings": {
+        "rank": "",
+        "contact": "",
+        "power": "",
+        "pitching": "",
+        "defense": "",
+        "speed": ""
+      }
+    },
+    {
+      "abbr": "W01",
+      "name": "ウエスト01",
+      "league": "West",
+      "div": "",
+      "color": "#d946ef",
+      "logo": "",
+      "seasonStats": {
+        "avg": "",
+        "slg": "",
+        "obp": "",
+        "fielding": "",
+        "era": ""
+      },
+      "rankings": {
+        "rank": "",
+        "contact": "",
+        "power": "",
+        "pitching": "",
+        "defense": "",
+        "speed": ""
+      }
+    },
+    {
+      "abbr": "W02",
+      "name": "ウエスト02",
+      "league": "West",
+      "div": "",
+      "color": "#ec4899",
+      "logo": "",
+      "seasonStats": {
+        "avg": "",
+        "slg": "",
+        "obp": "",
+        "fielding": "",
+        "era": ""
+      },
+      "rankings": {
+        "rank": "",
+        "contact": "",
+        "power": "",
+        "pitching": "",
+        "defense": "",
+        "speed": ""
+      }
+    },
+    {
+      "abbr": "W03",
+      "name": "ウエスト03",
+      "league": "West",
+      "div": "",
+      "color": "#f43f5e",
+      "logo": "",
+      "seasonStats": {
+        "avg": "",
+        "slg": "",
+        "obp": "",
+        "fielding": "",
+        "era": ""
+      },
+      "rankings": {
+        "rank": "",
+        "contact": "",
+        "power": "",
+        "pitching": "",
+        "defense": "",
+        "speed": ""
+      }
+    },
+    {
+      "abbr": "W04",
+      "name": "ウエスト04",
+      "league": "West",
+      "div": "",
+      "color": "#0ea5e9",
+      "logo": "",
+      "seasonStats": {
+        "avg": "",
+        "slg": "",
+        "obp": "",
+        "fielding": "",
+        "era": ""
+      },
+      "rankings": {
+        "rank": "",
+        "contact": "",
+        "power": "",
+        "pitching": "",
+        "defense": "",
+        "speed": ""
+      }
+    },
+    {
+      "abbr": "W05",
+      "name": "ウエスト05",
+      "league": "West",
+      "div": "",
+      "color": "#22d3ee",
+      "logo": "",
+      "seasonStats": {
+        "avg": "",
+        "slg": "",
+        "obp": "",
+        "fielding": "",
+        "era": ""
+      },
+      "rankings": {
+        "rank": "",
+        "contact": "",
+        "power": "",
+        "pitching": "",
+        "defense": "",
+        "speed": ""
+      }
+    },
+    {
+      "abbr": "W06",
+      "name": "ウエスト06",
+      "league": "West",
+      "div": "",
+      "color": "#4ade80",
+      "logo": "",
+      "seasonStats": {
+        "avg": "",
+        "slg": "",
+        "obp": "",
+        "fielding": "",
+        "era": ""
+      },
+      "rankings": {
+        "rank": "",
+        "contact": "",
+        "power": "",
+        "pitching": "",
+        "defense": "",
+        "speed": ""
+      }
+    },
+    {
+      "abbr": "W07",
+      "name": "ウエスト07",
+      "league": "West",
+      "div": "",
+      "color": "#facc15",
+      "logo": "",
+      "seasonStats": {
+        "avg": "",
+        "slg": "",
+        "obp": "",
+        "fielding": "",
+        "era": ""
+      },
+      "rankings": {
+        "rank": "",
+        "contact": "",
+        "power": "",
+        "pitching": "",
+        "defense": "",
+        "speed": ""
+      }
+    },
+    {
+      "abbr": "W08",
+      "name": "ウエスト08",
+      "league": "West",
+      "div": "",
+      "color": "#fb923c",
+      "logo": "",
+      "seasonStats": {
+        "avg": "",
+        "slg": "",
+        "obp": "",
+        "fielding": "",
+        "era": ""
+      },
+      "rankings": {
+        "rank": "",
+        "contact": "",
+        "power": "",
+        "pitching": "",
+        "defense": "",
+        "speed": ""
+      }
+    },
+    {
+      "abbr": "W09",
+      "name": "ウエスト09",
+      "league": "West",
+      "div": "",
+      "color": "#e11d48",
+      "logo": "",
+      "seasonStats": {
+        "avg": "",
+        "slg": "",
+        "obp": "",
+        "fielding": "",
+        "era": ""
+      },
+      "rankings": {
+        "rank": "",
+        "contact": "",
+        "power": "",
+        "pitching": "",
+        "defense": "",
+        "speed": ""
+      }
+    },
+    {
+      "abbr": "W10",
+      "name": "ウエスト10",
+      "league": "West",
+      "div": "",
+      "color": "#7c3aed",
+      "logo": "",
+      "seasonStats": {
+        "avg": "",
+        "slg": "",
+        "obp": "",
+        "fielding": "",
+        "era": ""
+      },
+      "rankings": {
+        "rank": "",
+        "contact": "",
+        "power": "",
+        "pitching": "",
+        "defense": "",
+        "speed": ""
+      }
+    },
+    {
+      "abbr": "W11",
+      "name": "ウエスト11",
+      "league": "West",
+      "div": "",
+      "color": "#2dd4bf",
+      "logo": "",
+      "seasonStats": {
+        "avg": "",
+        "slg": "",
+        "obp": "",
+        "fielding": "",
+        "era": ""
+      },
+      "rankings": {
+        "rank": "",
+        "contact": "",
+        "power": "",
+        "pitching": "",
+        "defense": "",
+        "speed": ""
+      }
+    },
+    {
+      "abbr": "W12",
+      "name": "ウエスト12",
+      "league": "West",
+      "div": "",
+      "color": "#38bdf8",
+      "logo": "",
+      "seasonStats": {
+        "avg": "",
+        "slg": "",
+        "obp": "",
+        "fielding": "",
+        "era": ""
+      },
+      "rankings": {
+        "rank": "",
+        "contact": "",
+        "power": "",
+        "pitching": "",
+        "defense": "",
+        "speed": ""
+      }
+    }
+  ],
+  "standings": {
+    "East": [
+      {
+        "team": "E01",
+        "w": 0,
+        "l": 0,
+        "gb": "—",
+        "conf": "",
+        "home": "",
+        "away": "",
+        "l10": "",
+        "strk": "",
+        "clinch": ""
+      },
+      {
+        "team": "E02",
+        "w": 0,
+        "l": 0,
+        "gb": "—",
+        "conf": "",
+        "home": "",
+        "away": "",
+        "l10": "",
+        "strk": "",
+        "clinch": ""
+      },
+      {
+        "team": "E03",
+        "w": 0,
+        "l": 0,
+        "gb": "—",
+        "conf": "",
+        "home": "",
+        "away": "",
+        "l10": "",
+        "strk": "",
+        "clinch": ""
+      },
+      {
+        "team": "E04",
+        "w": 0,
+        "l": 0,
+        "gb": "—",
+        "conf": "",
+        "home": "",
+        "away": "",
+        "l10": "",
+        "strk": "",
+        "clinch": ""
+      },
+      {
+        "team": "E05",
+        "w": 0,
+        "l": 0,
+        "gb": "—",
+        "conf": "",
+        "home": "",
+        "away": "",
+        "l10": "",
+        "strk": "",
+        "clinch": ""
+      },
+      {
+        "team": "E06",
+        "w": 0,
+        "l": 0,
+        "gb": "—",
+        "conf": "",
+        "home": "",
+        "away": "",
+        "l10": "",
+        "strk": "",
+        "clinch": ""
+      },
+      {
+        "team": "E07",
+        "w": 0,
+        "l": 0,
+        "gb": "—",
+        "conf": "",
+        "home": "",
+        "away": "",
+        "l10": "",
+        "strk": "",
+        "clinch": ""
+      },
+      {
+        "team": "E08",
+        "w": 0,
+        "l": 0,
+        "gb": "—",
+        "conf": "",
+        "home": "",
+        "away": "",
+        "l10": "",
+        "strk": "",
+        "clinch": ""
+      },
+      {
+        "team": "E09",
+        "w": 0,
+        "l": 0,
+        "gb": "—",
+        "conf": "",
+        "home": "",
+        "away": "",
+        "l10": "",
+        "strk": "",
+        "clinch": ""
+      },
+      {
+        "team": "E10",
+        "w": 0,
+        "l": 0,
+        "gb": "—",
+        "conf": "",
+        "home": "",
+        "away": "",
+        "l10": "",
+        "strk": "",
+        "clinch": ""
+      },
+      {
+        "team": "E11",
+        "w": 0,
+        "l": 0,
+        "gb": "—",
+        "conf": "",
+        "home": "",
+        "away": "",
+        "l10": "",
+        "strk": "",
+        "clinch": ""
+      },
+      {
+        "team": "E12",
+        "w": 0,
+        "l": 0,
+        "gb": "—",
+        "conf": "",
+        "home": "",
+        "away": "",
+        "l10": "",
+        "strk": "",
+        "clinch": ""
+      },
+      {
+        "team": "E13",
+        "w": 0,
+        "l": 0,
+        "gb": "—",
+        "conf": "",
+        "home": "",
+        "away": "",
+        "l10": "",
+        "strk": "",
+        "clinch": ""
+      }
+    ],
+    "West": [
+      {
+        "team": "W01",
+        "w": 0,
+        "l": 0,
+        "gb": "—",
+        "conf": "",
+        "home": "",
+        "away": "",
+        "l10": "",
+        "strk": "",
+        "clinch": ""
+      },
+      {
+        "team": "W02",
+        "w": 0,
+        "l": 0,
+        "gb": "—",
+        "conf": "",
+        "home": "",
+        "away": "",
+        "l10": "",
+        "strk": "",
+        "clinch": ""
+      },
+      {
+        "team": "W03",
+        "w": 0,
+        "l": 0,
+        "gb": "—",
+        "conf": "",
+        "home": "",
+        "away": "",
+        "l10": "",
+        "strk": "",
+        "clinch": ""
+      },
+      {
+        "team": "W04",
+        "w": 0,
+        "l": 0,
+        "gb": "—",
+        "conf": "",
+        "home": "",
+        "away": "",
+        "l10": "",
+        "strk": "",
+        "clinch": ""
+      },
+      {
+        "team": "W05",
+        "w": 0,
+        "l": 0,
+        "gb": "—",
+        "conf": "",
+        "home": "",
+        "away": "",
+        "l10": "",
+        "strk": "",
+        "clinch": ""
+      },
+      {
+        "team": "W06",
+        "w": 0,
+        "l": 0,
+        "gb": "—",
+        "conf": "",
+        "home": "",
+        "away": "",
+        "l10": "",
+        "strk": "",
+        "clinch": ""
+      },
+      {
+        "team": "W07",
+        "w": 0,
+        "l": 0,
+        "gb": "—",
+        "conf": "",
+        "home": "",
+        "away": "",
+        "l10": "",
+        "strk": "",
+        "clinch": ""
+      },
+      {
+        "team": "W08",
+        "w": 0,
+        "l": 0,
+        "gb": "—",
+        "conf": "",
+        "home": "",
+        "away": "",
+        "l10": "",
+        "strk": "",
+        "clinch": ""
+      },
+      {
+        "team": "W09",
+        "w": 0,
+        "l": 0,
+        "gb": "—",
+        "conf": "",
+        "home": "",
+        "away": "",
+        "l10": "",
+        "strk": "",
+        "clinch": ""
+      },
+      {
+        "team": "W10",
+        "w": 0,
+        "l": 0,
+        "gb": "—",
+        "conf": "",
+        "home": "",
+        "away": "",
+        "l10": "",
+        "strk": "",
+        "clinch": ""
+      },
+      {
+        "team": "W11",
+        "w": 0,
+        "l": 0,
+        "gb": "—",
+        "conf": "",
+        "home": "",
+        "away": "",
+        "l10": "",
+        "strk": "",
+        "clinch": ""
+      },
+      {
+        "team": "W12",
+        "w": 0,
+        "l": 0,
+        "gb": "—",
+        "conf": "",
+        "home": "",
+        "away": "",
+        "l10": "",
+        "strk": "",
+        "clinch": ""
+      }
+    ]
+  },
+  "postseason": {
+    "East": {
+      "wildCard": [],
+      "division": [],
+      "lcs": {}
+    },
+    "West": {
+      "wildCard": [],
+      "division": [],
+      "lcs": {}
+    },
+    "worldSeries": {
+      "a": "",
+      "b": "",
+      "as": 0,
+      "bs": 0,
+      "champ": "",
+      "format": "",
+      "games": [],
+      "mvp": {
+        "p": "",
+        "t": ""
+      },
+      "clinchNote": "",
+      "path": []
+    },
+    "gallery": {
+      "hero": [],
+      "series": [],
+      "recap": []
+    },
+    "recap": {
+      "headline": "",
+      "body": [],
+      "moments": []
+    }
+  },
+  "awards": {
+    "voting": [],
+    "goldGlove": {},
+    "silverSlugger": {},
+    "leaders": {
+      "East": {
+        "batting": {},
+        "pitching": {}
+      },
+      "West": {
+        "batting": {},
+        "pitching": {}
+      }
+    },
+    "postseasonMvp": []
+  },
+  "teamStats": []
+}

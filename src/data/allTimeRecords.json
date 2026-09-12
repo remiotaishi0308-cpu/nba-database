@@ -1,0 +1,31 @@
+{
+  "perfectGames": [
+    { "date": "2031-07-14", "pitcher": "佐久間 蓮", "teamId": "kiyosumi", "opponent": "福知山", "score": "3-0", "ks": 13, "note": "21歳での達成は史上最年少" },
+    { "date": "2028-09-02", "pitcher": "氷見 翔太", "teamId": "hiroshima", "opponent": "京都", "score": "4-0", "ks": 9, "note": "広島本拠地で達成" }
+  ],
+  "noHitNoRun": [
+    { "date": "2030-05-22", "pitcher": "羽田 玲音", "teamId": "umeda", "opponent": "長崎", "score": "5-0", "ks": 11 },
+    { "date": "2036-08-09", "pitcher": "海堂 直人", "teamId": "nagareyama", "opponent": "横浜", "score": "2-0", "ks": 14 }
+  ],
+  "careerHR": [
+    { "rank": 1, "name": "村山 創馬", "teamId": "hokkaido", "value": 412, "active": true },
+    { "rank": 2, "name": "桐生 諒", "teamId": "namba", "value": 387, "active": true },
+    { "rank": 3, "name": "東 光太郎", "teamId": "nagareyama", "value": 264, "active": true },
+    { "rank": 4, "name": "立花 信吾", "teamId": "nagareyama", "value": 251, "active": true }
+  ],
+  "careerWins": [
+    { "rank": 1, "name": "佐久間 蓮", "teamId": "kiyosumi", "value": 142, "active": true },
+    { "rank": 2, "name": "海堂 直人", "teamId": "nagareyama", "value": 128, "active": true },
+    { "rank": 3, "name": "羽田 玲音", "teamId": "umeda", "value": 112, "active": true }
+  ],
+  "careerHits": [
+    { "rank": 1, "name": "桐生 諒", "teamId": "namba", "value": 2134, "active": true },
+    { "rank": 2, "name": "辻本 拓也", "teamId": "kiyosumi", "value": 1872, "active": true },
+    { "rank": 3, "name": "島 周作", "teamId": "nagareyama", "value": 1654, "active": true }
+  ],
+  "milestones": [
+    { "date": "2039-08-15", "event": "桐生 諒(難波)が通算2,000安打達成。史上12人目。" },
+    { "date": "2038-09-30", "event": "村山 創馬(北海道)が通算400本塁打達成。JBU史上初。" },
+    { "date": "2036-06-10", "event": "佐久間 蓮(清澄)が通算1,500奪三振を最年少で達成。" }
+  ]
+}
