@@ -1,7 +1,7 @@
-# JBU 管理 (Sveltia CMS / Decap互換設定) — アンカー展開済み(共有参照なし)
+# NBA2K 管理 (Sveltia CMS / Decap互換設定) — アンカー展開済み(共有参照なし)
 backend:
   name: github
-  repo: remiotaishi0308-cpu/jbu-database
+  repo: remiotaishi0308-cpu/nba-database
   branch: main
   base_url: https://sveltia-cms-auth.remiotaishi0308.workers.dev
 media_folder: public/images/articles
