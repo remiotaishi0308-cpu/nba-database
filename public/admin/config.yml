@@ -41,9 +41,11 @@ collections:
         time_format: false
         format: YYYY-MM-DD
       - name: season
-        label: シーズン(年)
+        label: シーズン開始年(任意)
+        hint: 空欄でOK。空なら日付から自動判定(7月開幕〜翌6月=そのシーズン)。例 2026-27シーズンは 2026 と入力。
         widget: number
         value_type: int
+        required: false
         min: 2025
       - name: category
         label: カテゴリ

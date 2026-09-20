@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { getSeasonData, getArticlesByYear, MLB_SEASON_YEARS } from "../../lib/dataService";
+import { getSeasonData, getArticlesByYear, MLB_SEASON_YEARS, seasonLabel } from "../../lib/dataService";
 import "./season2042.css";
 
 /* ============================================================================
@@ -243,7 +243,7 @@ function HomePage({ go, onOpen }) {
   const subList = sorted.slice(0, 5);
   return (
     <div>
-      <SectionHead kicker={`Season ${DATA.season}`} title="トップニュース"
+      <SectionHead kicker={`Season ${seasonLabel(DATA.season)}`} title="トップニュース"
         right={<button className="season-pill" onClick={() => go("news")} style={{ cursor: "pointer" }}>記事一覧 →</button>} />
       <div className="home-grid">
         <NewsSlider items={featured} onOpen={onOpen} /><SubNews items={subList} onOpen={onOpen} />
@@ -353,7 +353,7 @@ function WorldSeriesHero() {
   const champ = team(ws.champ);
   return (
     <div className="ws-champion" style={{ borderColor: champ.color }}>
-      <div className="ws-tag">{DATA.season} Finals</div>
+      <div className="ws-tag">{seasonLabel(DATA.season)} Finals</div>
       <div className="ws-trophy">🏆</div>
       <div className="ws-headline">Champion</div>
       <div className="ws-champ-name">{champ.name}</div>

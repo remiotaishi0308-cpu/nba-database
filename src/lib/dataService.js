@@ -355,13 +355,33 @@ export function getArticleById(id) {
   return articlesJson.find((a) => a.id === id) ?? null;
 }
 
-// Articles scoped to a single season. Uses the explicit `season` field when
-// present, otherwise falls back to the year embedded in the date ("2029-..").
+// NBAシーズンは年をまたぐ（例: 2026-27 シーズン = 2026/7〜2027/6）。
+// 記事の日付から「開始年」を求める: 7月以降=その年 / 6月以前=前年。
+export function nbaSeasonStart(dateStr) {
+  const m = String(dateStr ?? "").match(/^(\d{4})-(\d{1,2})/);
+  if (!m) return NaN;
+  const y = Number(m[1]);
+  const mo = Number(m[2]);
+  return mo >= 7 ? y : y - 1;
+}
+
+// 開始年 → "2026-27" 形式の表示ラベル。
+export function seasonLabel(startYear) {
+  const y = Number(startYear);
+  if (!Number.isFinite(y)) return String(startYear ?? "");
+  return `${y}-${String(y + 1).slice(-2)}`;
+}
+
+// Articles scoped to a single season. 明示 season フィールドがあれば最優先、
+// 無ければ日付から NBA シーズン（開始年）を判定する。これにより年をまたいだ
+// 記事（例: 2027-01 は 2026-27 シーズン）も正しいシーズンに入る。
 // Newest first so each season's article tab leads with its latest story.
 export function getArticlesByYear(year) {
   const y = Number(year);
   return [...articlesJson]
-    .filter((a) => (a.season ?? Number(String(a.date ?? "").slice(0, 4))) === y)
+    .filter((a) =>
+      (a.season != null ? Number(a.season) : nbaSeasonStart(a.date)) === y
+    )
     .sort((a, b) => (b.date || "").localeCompare(a.date || ""));
 }
 

@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from "react";
+import { seasonLabel } from "../lib/dataService";
 
 export default function YearSelector({ years, current, onChange }) {
   const [open, setOpen] = useState(false);
@@ -39,7 +40,7 @@ export default function YearSelector({ years, current, onChange }) {
               SEASON
             </div>
             <div className="font-display text-2xl leading-none mt-0.5 tabular-nums">
-              {current}
+              {seasonLabel(current)}
             </div>
           </div>
           <span className="text-jbu-muted text-xs">▾</span>
@@ -60,7 +61,7 @@ export default function YearSelector({ years, current, onChange }) {
                     : "text-jbu-text hover:bg-jbu-surface-2"
                 }`}
               >
-                {y} シーズン
+                {seasonLabel(y)} シーズン
               </button>
             ))}
           </div>
