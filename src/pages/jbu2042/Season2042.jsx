@@ -830,7 +830,7 @@ function TeamRow({ abbr, onOpen }) {
       onClick={() => onOpen(abbr)}
       style={{
         display: "flex", alignItems: "center", gap: 10, padding: "9px 12px",
-        cursor: "pointer", borderTop: "1px solid rgba(255,255,255,.06)",
+        cursor: "pointer", borderTop: "1px solid rgba(0,0,0,.08)",
       }}
     >
       <Badge abbr={abbr} />
@@ -944,7 +944,7 @@ function TeamDetailPage({ abbr, onBack }) {
       {(ssItems.length > 0 || rkItems.length > 0) && (
         <div className="card" style={{ marginBottom: 16 }}>
           {ssItems.length > 0 && (
-            <div style={{ padding: "14px 16px", borderBottom: rkItems.length ? "1px solid rgba(255,255,255,.06)" : "none" }}>
+            <div style={{ padding: "14px 16px", borderBottom: rkItems.length ? "1px solid rgba(0,0,0,.08)" : "none" }}>
               <div className="kicker" style={{ marginBottom: 10 }}>Season Statistics</div>
               <div style={{ display: "flex", flexWrap: "wrap", gap: 22 }}>
                 {ssItems.map(([k, v]) => (
@@ -978,7 +978,7 @@ function TeamDetailPage({ abbr, onBack }) {
           <div className="card" style={{ marginBottom: 16 }}>
             <div style={{ display: "flex", flexWrap: "wrap", gap: 0 }}>
               {tsEntries.map(([k, v]) => (
-                <div key={k} style={{ flex: "1 1 33%", padding: "12px 14px", borderTop: "1px solid rgba(255,255,255,.06)" }}>
+                <div key={k} style={{ flex: "1 1 33%", padding: "12px 14px", borderTop: "1px solid rgba(0,0,0,.08)" }}>
                   <div className="muted" style={{ fontSize: 11 }}>{k}</div>
                   <div className="mono" style={{ fontSize: 18, fontWeight: 700 }}>{v}</div>
                 </div>

@@ -19,7 +19,13 @@
 html, body, #root {
   margin: 0;
   padding: 0;
-  background: var(--color-jbu-bg);
+  /* ワインレッドの背景にグラデーションで変化をつける（一色を回避） */
+  background:
+    radial-gradient(1100px 720px at 12% -8%, #5c1329 0%, transparent 55%),
+    radial-gradient(1000px 900px at 100% 0%, #2a0a14 0%, transparent 50%),
+    radial-gradient(900px 700px at 50% 120%, #491425 0%, transparent 55%),
+    linear-gradient(165deg, #431320 0%, #300d18 55%, #210710 100%);
+  background-attachment: fixed;
   color: var(--color-jbu-text);
   font-family: var(--font-sans);
   min-height: 100vh;

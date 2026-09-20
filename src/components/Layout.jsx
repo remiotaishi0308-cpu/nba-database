@@ -6,7 +6,7 @@ import Header from "./Header";
 // 拡張し、定義は components/Sidebar.jsx の buildNav() を再利用できる。
 export default function Layout() {
   return (
-    <div className="min-h-screen flex flex-col bg-jbu-bg text-jbu-text">
+    <div className="min-h-screen flex flex-col text-jbu-text">
       <Header />
       <main className="flex-1 px-4 md:px-8 py-6 max-w-[1760px] w-full mx-auto">
         <Outlet />

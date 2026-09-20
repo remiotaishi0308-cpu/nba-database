@@ -5,24 +5,26 @@
    既存アプリ(index.css / Tailwind)へ干渉しないこと。
    ============================================================ */
 .jbu2042 {
-  --bg:#38101d; --bg-2:#2c0b16; --surface:#4a1626; --surface-2:#5a1c30;
-  --border:#6e2a3d; --text:#f6e9ec; --muted:#cf9fab;
-  --accent:#edc45a; --accent-dim:#a8791f; --gold:#edc45a; --gold-dim:#a8791f;
-  --al:#6aa8ff; --nl:#ffb14a;
+  /* データを載せるカード/表は「白でシンプル」、文字は濃色 */
+  --bg:#ffffff; --bg-2:#f3edf0; --surface:#ffffff; --surface-2:#f4eef1;
+  --border:#e5dbe0; --text:#241820; --muted:#8f7d86;
+  --accent:#b31e40; --accent-dim:#7d1530; --gold:#c99a2e; --gold-dim:#a8791f;
+  --al:#2f6fd0; --nl:#c2571a;
   --radius:12px;
 
-  color: var(--text);
+  /* 背景は透明にしてページのワイングラデを見せる。
+     カード外(見出し・タブ)の文字はこの淡色で表示する */
+  color:#f6e9ec;
   font-family: 'Zen Kaku Gothic New', system-ui, -apple-system, 'Segoe UI', 'Hiragino Kaku Gothic ProN', 'Meiryo', sans-serif;
   letter-spacing:.01em;
-  background:
-    radial-gradient(1200px 600px at 80% -10%, rgba(237,196,90,.10), transparent 60%),
-    radial-gradient(900px 500px at 0% 0%, rgba(120,20,40,.35), transparent 55%),
-    var(--bg);
-  border:1px solid var(--border);
-  border-radius:16px;
-  padding:18px;
+  background: transparent;
+  padding:0;
 }
-@media (min-width:768px){ .jbu2042 { padding:26px; } }
+
+/* データを載せるコンテナ内は濃色テキスト（白背景で読みやすく） */
+.jbu2042 .card, .jbu2042 .finalist, .jbu2042 .matchup, .jbu2042 .series-card,
+.jbu2042 .article-card, .jbu2042 .recap, .jbu2042 .prospect,
+.jbu2042 .mvp-hero, .jbu2042 table { color: var(--text); }
 
 .jbu2042 a { color: inherit; text-decoration: none; }
 .jbu2042 .mono { font-variant-numeric: tabular-nums; }
@@ -30,21 +32,23 @@
 .jbu2042 .kicker { font-family:'Anton',sans-serif; font-weight:600; font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:var(--accent); }
 .jbu2042 .section-title { font-family:'Anton',sans-serif; font-weight:700; font-size:22px; letter-spacing:.02em; margin:2px 0 0; }
 .jbu2042 .section-head { margin:34px 0 16px; }
+/* SectionHead はワイン背景の上に載るので明るいゴールドで表示 */
+.jbu2042 .section-head .kicker { color:#e8bf55; }
 .jbu2042 .muted { color: var(--muted); }
 .jbu2042 .grid { display:grid; gap:16px; }
 @media (min-width:880px){ .jbu2042 .g2 { grid-template-columns:1fr 1fr; } }
 @media (min-width:980px){ .jbu2042 .g3 { grid-template-columns:repeat(3,1fr); } }
 
 /* ---- 内部タブナビ ---- */
-.jbu2042 .nav { display:flex; gap:4px; flex-wrap:wrap; border-bottom:1px solid var(--border); margin-bottom:22px; }
-.jbu2042 .nav button { background:none; border:none; color:var(--muted); cursor:pointer; font-family:'Anton'; font-weight:600; font-size:13px; letter-spacing:.14em; text-transform:uppercase; padding:10px 14px; border-radius:8px 8px 0 0; transition:color .15s; position:relative; }
-.jbu2042 .nav button:hover { color:var(--text); }
-.jbu2042 .nav button.active { color:var(--accent); }
-.jbu2042 .nav button.active::after { content:""; position:absolute; left:14px; right:14px; bottom:-1px; height:2px; background:var(--accent); border-radius:2px; box-shadow:0 0 10px var(--accent); }
+.jbu2042 .nav { display:flex; gap:4px; flex-wrap:wrap; border-bottom:1px solid rgba(255,255,255,.18); margin-bottom:22px; }
+.jbu2042 .nav button { background:none; border:none; color:#c9a9b3; cursor:pointer; font-family:'Anton'; font-weight:600; font-size:13px; letter-spacing:.14em; text-transform:uppercase; padding:10px 14px; border-radius:8px 8px 0 0; transition:color .15s; position:relative; }
+.jbu2042 .nav button:hover { color:#ffffff; }
+.jbu2042 .nav button.active { color:#e8bf55; }
+.jbu2042 .nav button.active::after { content:""; position:absolute; left:14px; right:14px; bottom:-1px; height:2px; background:#e8bf55; border-radius:2px; box-shadow:0 0 10px rgba(232,191,85,.6); }
 .jbu2042 .season-pill { font-family:'Anton'; font-size:12px; letter-spacing:.12em; color:var(--gold); border:1px solid var(--gold-dim); padding:5px 10px; border-radius:999px; white-space:nowrap; }
 
 /* ---- カード ---- */
-.jbu2042 .card { background:linear-gradient(180deg,var(--surface),var(--bg-2)); border:1px solid var(--border); border-radius:var(--radius); overflow:hidden; }
+.jbu2042 .card { background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); overflow:hidden; box-shadow:0 1px 3px rgba(0,0,0,.18); }
 .jbu2042 .card-head { padding:12px 16px; border-bottom:1px solid var(--border); display:flex; align-items:center; justify-content:space-between; gap:10px; }
 .jbu2042 .card-body { padding:14px 16px; }
 
@@ -68,7 +72,7 @@
 /* ---- サブ記事 ---- */
 .jbu2042 .sub-item { display:flex; gap:12px; padding:12px 0; border-bottom:1px solid var(--border); cursor:pointer; transition:background .15s; }
 .jbu2042 .sub-item:last-child { border-bottom:none; }
-.jbu2042 .sub-item:hover { background:rgba(255,255,255,.02); }
+.jbu2042 .sub-item:hover { background:rgba(0,0,0,.03); }
 .jbu2042 .sub-thumb { width:64px; height:48px; border-radius:8px; flex:none; }
 .jbu2042 .sub-cat { font-family:'Anton'; font-size:10px; letter-spacing:.16em; color:var(--gold); text-transform:uppercase; }
 .jbu2042 .sub-title { font-size:13px; font-weight:600; margin:2px 0; line-height:1.4; }
@@ -78,7 +82,7 @@
 .jbu2042 table { width:100%; border-collapse:collapse; font-size:13px; }
 .jbu2042 thead th { text-align:left; font-family:'Anton'; font-weight:600; font-size:10px; letter-spacing:.16em; text-transform:uppercase; color:var(--muted); padding:8px 10px; background:var(--surface-2); }
 .jbu2042 tbody td { padding:9px 10px; border-top:1px solid var(--border); }
-.jbu2042 tbody tr:hover { background:rgba(255,255,255,.02); }
+.jbu2042 tbody tr:hover { background:rgba(0,0,0,.035); }
 .jbu2042 .num { text-align:right; font-variant-numeric:tabular-nums; }
 .jbu2042 .rank-cell { font-family:'Anton'; color:var(--muted); width:26px; }
 .jbu2042 .clinch { color:var(--accent); font-weight:700; }
@@ -107,9 +111,9 @@
 .jbu2042 .toggle button.on.nl { background:var(--nl); color:#2e0418; }
 .jbu2042 .toggle button.on.acc { background:var(--accent); color:#2a0810; }
 .jbu2042 .subtabs { display:flex; gap:4px; border-bottom:1px solid var(--border); margin:14px 0 18px; overflow-x:auto; }
-.jbu2042 .subtabs button { border:none; background:none; cursor:pointer; color:var(--muted); white-space:nowrap; font-family:'Anton'; font-weight:600; font-size:13px; letter-spacing:.08em; padding:10px 14px; position:relative; }
-.jbu2042 .subtabs button.active { color:var(--accent); }
-.jbu2042 .subtabs button.active::after { content:""; position:absolute; left:14px; right:14px; bottom:-1px; height:2px; background:var(--accent); }
+.jbu2042 .subtabs button { border:none; background:none; cursor:pointer; color:#c9a9b3; white-space:nowrap; font-family:'Anton'; font-weight:600; font-size:13px; letter-spacing:.08em; padding:10px 14px; position:relative; }
+.jbu2042 .subtabs button.active { color:#e8bf55; }
+.jbu2042 .subtabs button.active::after { content:""; position:absolute; left:14px; right:14px; bottom:-1px; height:2px; background:#e8bf55; }
 
 /* ---- フィールド図 ---- */
 .jbu2042 .field-wrap { position:relative; width:100%; max-width:620px; margin:0 auto; aspect-ratio:1/1; }
@@ -174,16 +178,16 @@
 .jbu2042 .game-pill { display:flex; flex-direction:column; align-items:center; min-width:62px; border:1px solid var(--border); border-radius:8px; padding:5px 8px; background:var(--bg-2); }
 .jbu2042 .game-pill .gnum { font-size:9px; letter-spacing:.1em; color:var(--muted); }
 .jbu2042 .game-pill .gsc { font-family:'Anton'; font-weight:700; font-size:14px; }
-.jbu2042 .series-note { padding:0 16px 14px; font-size:12.5px; color:#c4d0cc; line-height:1.7; }
+.jbu2042 .series-note { padding:0 16px 14px; font-size:12.5px; color:#6a5a62; line-height:1.7; }
 .jbu2042 .series-meta { padding:0 16px 14px; display:flex; gap:10px; flex-wrap:wrap; }
 .jbu2042 .meta-chip { font-size:11px; border:1px solid var(--border); border-radius:8px; padding:5px 10px; }
 .jbu2042 .meta-chip b { color:var(--accent); }
 .jbu2042 .meta-chip.mvp b { color:var(--gold); }
 
 /* ---- 総括 ---- */
-.jbu2042 .recap { border:1px solid var(--border); border-radius:var(--radius); background:linear-gradient(180deg,var(--surface),var(--bg-2)); padding:22px; }
+.jbu2042 .recap { border:1px solid var(--border); border-radius:var(--radius); background:var(--surface); box-shadow:0 1px 3px rgba(0,0,0,.18); padding:22px; }
 .jbu2042 .recap h3 { font-family:'Anton'; font-size:20px; margin:0 0 12px; }
-.jbu2042 .recap p { font-size:13.5px; line-height:1.85; color:#cdd8d4; margin:0 0 12px; }
+.jbu2042 .recap p { font-size:13.5px; line-height:1.85; color:#4a3b43; margin:0 0 12px; }
 .jbu2042 .moment { display:flex; gap:12px; padding:12px 0; border-top:1px solid var(--border); }
 .jbu2042 .moment .mk { font-family:'Anton'; color:var(--accent); font-weight:700; font-size:13px; white-space:nowrap; }
 .jbu2042 .moment .mt { font-weight:700; font-size:13px; margin-bottom:2px; }
@@ -223,7 +227,7 @@
 /* 記事ヒーロー画像：トリミングせず全体を表示（縦横比はそのまま） */
 .jbu2042 .article-hero-img { display:block; width:100%; height:auto; max-height:72vh; object-fit:contain; margin-top:14px; border-radius:var(--radius); border:1px solid var(--border); background:#000; }
 .jbu2042 .article-detail-body p { font-size:14px; line-height:1.95; color:#cdd8d4; margin:0 0 14px; max-width:760px; }
-.jbu2042 .article-detail-body .article-h { font-family:'Anton'; font-weight:700; font-size:18px; margin:26px 0 10px; color:var(--text); border-left:3px solid var(--accent); padding-left:10px; }
+.jbu2042 .article-detail-body .article-h { font-family:'Anton'; font-weight:700; font-size:18px; margin:26px 0 10px; color:#f6e9ec; border-left:3px solid #e8bf55; padding-left:10px; }
 .jbu2042 .article-detail-body .article-quote { margin:16px 0; padding:12px 16px; border-left:3px solid var(--gold); background:rgba(245,197,66,.07); border-radius:0 8px 8px 0; color:#fff; font-size:14.5px; font-weight:600; line-height:1.8; max-width:760px; }
 .jbu2042 .article-photos { display:grid; gap:12px; grid-template-columns:repeat(auto-fit, minmax(280px,1fr)); margin:20px 0; max-width:760px; }
 .jbu2042 .article-photos img { width:100%; border-radius:var(--radius); border:1px solid var(--border); display:block; }
