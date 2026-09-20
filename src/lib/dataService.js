@@ -372,16 +372,24 @@ export function seasonLabel(startYear) {
   return `${y}-${String(y + 1).slice(-2)}`;
 }
 
-// Articles scoped to a single season. 明示 season フィールドがあれば最優先、
-// 無ければ日付から NBA シーズン（開始年）を判定する。これにより年をまたいだ
-// 記事（例: 2027-01 は 2026-27 シーズン）も正しいシーズンに入る。
+// 記事の所属シーズン（開始年）を決める。
+// 1) season フィールドが「実在するシーズン」を指していればそれを使う
+// 2) そうでなければ日付から NBA シーズンを判定する
+// 2) があるため、season 欄にカレンダー年（例: 2027-02 の記事に 2027）を
+// 入れてしまっても、記事がどこにも表示されない状態にはならない。
+const KNOWN_SEASONS = new Set(MLB_SEASON_YEARS);
+function resolveArticleSeason(a) {
+  const explicit = a?.season != null ? Number(a.season) : NaN;
+  if (Number.isFinite(explicit) && KNOWN_SEASONS.has(explicit)) return explicit;
+  return nbaSeasonStart(a?.date);
+}
+
+// Articles scoped to a single season.
 // Newest first so each season's article tab leads with its latest story.
 export function getArticlesByYear(year) {
   const y = Number(year);
   return [...articlesJson]
-    .filter((a) =>
-      (a.season != null ? Number(a.season) : nbaSeasonStart(a.date)) === y
-    )
+    .filter((a) => resolveArticleSeason(a) === y)
     .sort((a, b) => (b.date || "").localeCompare(a.date || ""));
 }
 
