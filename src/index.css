@@ -1,33 +1,54 @@
 @import "tailwindcss";
 
+/* =============================================================================
+   NBA2K Design Tokens — デジタル庁デザインシステム準拠 / 赤基調
+   -----------------------------------------------------------------------------
+   準拠している主な規定:
+   - 文字のコントラスト比 4.5:1 以上 / 非テキストUI 3:1 以上
+   - 本文・UIの最小サイズ 16px（14px 未満は使用しない）
+   - 行間: 本文 150〜175% / 高密度(表) 120〜130% / 見出し 140%
+   - 字間: 大きい表示 0 / 中 1% / 小・高密度 2%
+   - フォント: Noto Sans JP (400/700)、等幅は Noto Sans Mono
+   - フォーカス表示: 黄 + 黒
+   - リンク: 既定は青、訪問済みはマゼンタ
+   ============================================================================= */
 @theme {
-  --color-jbu-bg: #38101d;
-  --color-jbu-surface: #4a1626;
-  --color-jbu-surface-2: #5a1c30;
-  --color-jbu-border: #6e2a3d;
-  --color-jbu-text: #f6e9ec;
-  --color-jbu-muted: #cf9fab;
-  --color-jbu-accent: #edc45a;
-  --color-jbu-accent-2: #ff9e6b;
-  --color-central: #6aa8ff;
-  --color-pacific: #ffb14a;
+  /* ---- Key colors（Primary = 赤） ---- */
+  --color-jbu-bg: #ffffff;         /* 背景 */
+  --color-jbu-surface: #ffffff;    /* カード面 */
+  --color-jbu-surface-2: #f2f2f4;  /* 副面（表ヘッダなど） */
+  --color-jbu-border: #d0d0d6;        /* 区切り線（装飾） */
+  --color-jbu-border-strong: #767680; /* 操作要素の境界（白地に3:1以上） */
+  --color-jbu-text: #1a1a1c;       /* 本文（白地に約16:1） */
+  --color-jbu-muted: #6b6b70;      /* 補助文（白地に約5.3:1） */
+  --color-jbu-accent: #a51111;     /* Primary 赤（白地に約7:1） */
+  --color-jbu-accent-2: #8b0f0f;   /* Primary hover */
 
-  --font-display: "Anton", "Teko", "Zen Kaku Gothic New", system-ui, sans-serif;
-  --font-sans: "Zen Kaku Gothic New", "Inter", system-ui, sans-serif;
+  /* ---- カンファレンス識別色（白地で 4.5:1 以上） ---- */
+  --color-central: #0017c1;        /* East: 青 */
+  --color-pacific: #9a3412;        /* West: 焦茶 */
+
+  /* ---- Typography ---- */
+  --font-display: "Noto Sans JP", system-ui, sans-serif;
+  --font-sans: "Noto Sans JP", system-ui, sans-serif;
+  --font-mono: "Noto Sans Mono", ui-monospace, SFMono-Regular, monospace;
 }
 
-html, body, #root {
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+html,
+body,
+#root {
   margin: 0;
   padding: 0;
-  /* ワインレッドの背景にグラデーションで変化をつける（一色を回避） */
-  background:
-    radial-gradient(1100px 720px at 12% -8%, #5c1329 0%, transparent 55%),
-    radial-gradient(1000px 900px at 100% 0%, #2a0a14 0%, transparent 50%),
-    radial-gradient(900px 700px at 50% 120%, #491425 0%, transparent 55%),
-    linear-gradient(165deg, #431320 0%, #300d18 55%, #210710 100%);
-  background-attachment: fixed;
+  background: var(--color-jbu-bg);
   color: var(--color-jbu-text);
   font-family: var(--font-sans);
+  font-size: 16px;      /* 最小本文サイズ */
+  line-height: 1.7;     /* 標準本文 170% */
+  letter-spacing: 0.02em;
   min-height: 100vh;
 }
 
@@ -35,29 +56,37 @@ html, body, #root {
   box-sizing: border-box;
 }
 
-/* Custom scrollbar */
-::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
-}
-::-webkit-scrollbar-track {
-  background: #2c0b16;
-}
-::-webkit-scrollbar-thumb {
-  background: #6e2a3d;
-  border-radius: 5px;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: #8a3550;
+/* フォーカス表示（黄 + 黒）— キーボード操作を明確に */
+:focus-visible {
+  outline: 3px solid #f2c000;
+  outline-offset: 1px;
+  box-shadow: 0 0 0 1px #1a1a1c;
 }
 
-/* Diagonal stripe accent */
-.diagonal-accent {
-  background-image: repeating-linear-gradient(
-    -45deg,
-    transparent,
-    transparent 6px,
-    rgba(237, 196, 90, 0.08) 6px,
-    rgba(237, 196, 90, 0.08) 12px
-  );
+/* スクロールバー（淡色） */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+::-webkit-scrollbar-track {
+  background: #f2f2f4;
+}
+::-webkit-scrollbar-thumb {
+  background: #b5b5bd;
+  border-radius: 6px;
+  border: 3px solid #f2f2f4;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #8a8a92;
+}
+
+/* 動きを減らす設定を尊重 */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
 }

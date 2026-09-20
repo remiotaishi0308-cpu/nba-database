@@ -14,11 +14,11 @@ export default function Header() {
             <span className="w-9 h-9 rounded-lg bg-jbu-accent text-jbu-bg font-display font-bold text-xl grid place-items-center leading-none">
               {BRAND.short.charAt(0)}
             </span>
-            <span className="font-display text-2xl tracking-wide leading-none">
+            <span className="font-display font-bold text-2xl tracking-wide leading-none">
               {BRAND.short}
             </span>
           </Link>
-          <div className="hidden md:flex items-center gap-2 text-xs text-jbu-muted ml-2">
+          <div className="hidden md:flex items-center gap-2 text-sm text-jbu-muted ml-2">
             <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
             <span>LIVE</span>
             <span className="text-jbu-text/40">|</span>

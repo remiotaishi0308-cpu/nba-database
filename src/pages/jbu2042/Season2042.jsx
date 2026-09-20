@@ -149,7 +149,7 @@ function Player({ name, t }) {
     <span style={{ display: "inline-flex", alignItems: "center", gap: 7, flexWrap: "wrap" }}>
       {t ? <Badge abbr={t} /> : null}
       <span style={{ fontWeight: 600 }}>{name}</span>
-      {t ? <span className="muted" style={{ fontSize: 11 }}>{team(t).abbr}</span> : null}
+      {t ? <span className="muted" style={{ fontSize: 14 }}>{team(t).abbr}</span> : null}
     </span>
   );
 }
@@ -199,7 +199,7 @@ function NewsSlider({ items, onOpen }) {
 function SubNews({ items, onOpen }) {
   return (
     <div className="card">
-      <div className="card-head"><span className="kicker">Latest</span><span className="muted" style={{ fontSize: 11 }}>NEWS</span></div>
+      <div className="card-head"><span className="kicker">Latest</span><span className="muted" style={{ fontSize: 14 }}>NEWS</span></div>
       <div className="card-body" style={{ paddingTop: 4, paddingBottom: 4 }}>
         {items.map((s) => (
           <div className="sub-item" key={s.id} onClick={() => onOpen(s.id)}>
@@ -271,7 +271,7 @@ const sv = (x) => (x === "" || x == null ? "—" : x);
 const CLINCH_COLOR = { Z: "var(--gold)", Y: "var(--accent)", X: "var(--al)", W: "var(--gold-dim)" };
 function ClinchTag({ c }) {
   if (!c) return null;
-  return <span className="mono" style={{ color: CLINCH_COLOR[c] || "var(--muted)", fontWeight: 700, marginRight: 6, fontSize: 11 }}>{c}-</span>;
+  return <span className="mono" style={{ color: CLINCH_COLOR[c] || "var(--muted)", fontWeight: 700, marginRight: 6, fontSize: 14 }}>{c}-</span>;
 }
 function StandingsTable({ conf }) {
   const rows = DATA.standings[conf] || [];
@@ -280,7 +280,7 @@ function StandingsTable({ conf }) {
     <div className="card" style={{ marginBottom: 14 }}>
       <div className="card-head">
         <span className="kicker" style={{ color: accent }}>{conf === "East" ? "Eastern" : "Western"} Conference</span>
-        <span className="muted" style={{ fontSize: 11 }}>{conf === "East" ? "イースタン" : "ウエスタン"}・カンファレンス</span>
+        <span className="muted" style={{ fontSize: 14 }}>{conf === "East" ? "イースタン" : "ウエスタン"}・カンファレンス</span>
       </div>
       <div className="table-scroll"><table>
         <thead><tr>
@@ -309,7 +309,7 @@ function StandingsPage() {
   return (
     <div>
       <SectionHead kicker="Standings" title="順位表"
-        right={<span className="muted" style={{ fontSize: 11 }}>Y=カンファレンス1位 ／ X=プレーオフ進出 ／ W=Play-In圏</span>} />
+        right={<span className="muted" style={{ fontSize: 14 }}>Y=カンファレンス1位 ／ X=プレーオフ進出 ／ W=Play-In圏</span>} />
       <StandingsTable conf="East" />
       <StandingsTable conf="West" />
     </div>
@@ -505,7 +505,7 @@ function PostseasonPage() {
 function ProspectsPage() {
   return (
     <div>
-      <SectionHead kicker="Prospects" title="若手有望株ランキング" right={<span className="muted" style={{ fontSize: 11 }}>FV = Future Value 評価</span>} />
+      <SectionHead kicker="Prospects" title="若手有望株ランキング" right={<span className="muted" style={{ fontSize: 14 }}>FV = Future Value 評価</span>} />
       {DATA.prospects.map((p) => (
         <div className="prospect" key={p.rank}>
           <div className="pr-rank">{p.rank}</div>
@@ -514,7 +514,7 @@ function ProspectsPage() {
               <span className="display" style={{ fontSize: 17, fontWeight: 700 }}>{p.name}</span>
               <Badge abbr={p.team} /><span className="tag">{p.pos}</span><span className="tag">{p.age}歳</span><span className="tag">ETA {p.eta}</span>
             </div>
-            <div className="muted" style={{ fontSize: 12.5, marginTop: 6 }}>{p.note}</div>
+            <div className="muted" style={{ fontSize: 14.5, marginTop: 6 }}>{p.note}</div>
           </div>
           <div className="pr-grade">{p.grade} FV</div>
         </div>
@@ -529,14 +529,14 @@ function VotingAward({ award, lg }) {
   return (
     <div className="award-block">
       <div style={{ display: "flex", alignItems: "baseline", gap: 10, marginBottom: 10 }}>
-        <span className="award-name">{award.label}</span><span className="muted" style={{ fontSize: 11, letterSpacing: ".12em" }}>{lg}</span>
+        <span className="award-name">{award.label}</span><span className="muted" style={{ fontSize: 14, letterSpacing: ".12em" }}>{lg}</span>
       </div>
       <div className="podium">
         {award[lg].map((f, i) => (
           <div key={i} className={"finalist" + (i === 0 ? " first" : "")}>
             <div className="place"><span className="medal">{MEDALS[i]}</span>{i + 1}位</div>
             <div className="player">{f.p}</div>
-            <div style={{ marginBottom: 6 }}><Badge abbr={f.t} /> <span className="muted" style={{ fontSize: 12 }}>{team(f.t).name}</span></div>
+            <div style={{ marginBottom: 6 }}><Badge abbr={f.t} /> <span className="muted" style={{ fontSize: 14 }}>{team(f.t).name}</span></div>
             <div className="stats">{f.line}</div>
             <div className="points-row">
               <span className="points-val mono">{f.pts}</span><span className="points-label">得票ポイント</span>
@@ -620,14 +620,14 @@ function FieldDiagram() {
                     <div style={{ display: "flex", flexDirection: "column", lineHeight: 1.1 }}>
                       <span className="pos-name">{row.p}</span><span className="pos-team">{t.abbr}</span>
                     </div>
-                    {dbl ? <span style={{ color: "var(--gold)", fontSize: 9, fontWeight: 700 }} title="攻守両賞">★W</span> : null}
+                    {dbl ? <span style={{ color: "var(--gold)", fontSize: 14, fontWeight: 700 }} title="攻守両賞">★W</span> : null}
                   </div>
                 </div>
               </div>
             );
           })}
         </div>
-        <p className="muted" style={{ fontSize: 11, textAlign: "center", marginTop: 10 }}>
+        <p className="muted" style={{ fontSize: 14, textAlign: "center", marginTop: 10 }}>
           <span style={{ color: "var(--gold)", fontWeight: 700 }}>★W</span> は同年に攻守両賞を獲得した選手。
         </p>
         <div className="table-scroll" style={{ marginTop: 8 }}>
@@ -642,7 +642,7 @@ function FieldDiagram() {
                     <td className="mono" style={{ color: pos.c, fontWeight: 700 }}>{pos.key}</td>
                     <td style={{ fontWeight: 600 }}>{row.p}</td>
                     <td style={{ whiteSpace: "nowrap" }}><Badge abbr={row.t} /> <span className="muted">{team(row.t).abbr}</span></td>
-                    <td className="muted" style={{ fontSize: 12 }}>{row.line || "—"}</td>
+                    <td className="muted" style={{ fontSize: 14 }}>{row.line || "—"}</td>
                   </tr>
                 );
               })}
@@ -699,7 +699,7 @@ function PostseasonMvpTab() {
           <div key={m.key} className="mvp-hero">
             <div className="label">{m.label}</div>
             <div className="player">{m.p}</div>
-            <div style={{ marginBottom: 6 }}><Badge abbr={m.t} /> <span className="muted" style={{ fontSize: 12 }}>{team(m.t).name}</span></div>
+            <div style={{ marginBottom: 6 }}><Badge abbr={m.t} /> <span className="muted" style={{ fontSize: 14 }}>{team(m.t).name}</span></div>
             <div className="line">{m.line}</div>
           </div>
         ))}
@@ -726,7 +726,7 @@ function AwardsPage() {
   return (
     <div>
       <SectionHead kicker="Awards" title="タイトル・表彰一覧"
-        right={<span className="muted" style={{ fontSize: 12, maxWidth: 320, textAlign: "right" }}>MLB The Show フランチャイズ準拠の表彰データ</span>} />
+        right={<span className="muted" style={{ fontSize: 14, maxWidth: 320, textAlign: "right" }}>MLB The Show フランチャイズ準拠の表彰データ</span>} />
       <div className="subtabs">{AWARD_TABS.map((t) => <button key={t.id} className={tab === t.id ? "active" : ""} onClick={() => setTab(t.id)}>{t.label}</button>)}</div>
       {tab === "voting" && <VotingTab />}
       {tab === "fielding" && <FieldingTab />}
@@ -765,7 +765,7 @@ function ArticleDetail({ a, onBack }) {
           <header className="article-head">
             <span className="hero-cat">{a.cat}</span>
             <h1 className="article-headline">{a.title}</h1>
-            <div className="muted mono" style={{ fontSize: 12 }}>{a.date}</div>
+            <div className="muted mono" style={{ fontSize: 14 }}>{a.date}</div>
           </header>
           <img className="article-hero-img" src={a.thumbnailUrl} alt={a.title} />
         </>
@@ -776,7 +776,7 @@ function ArticleDetail({ a, onBack }) {
           <div className="hero-content">
             <span className="hero-cat">{a.cat}</span>
             <h1 className="hero-title" style={{ fontSize: 26 }}>{a.title}</h1>
-            <div className="muted mono" style={{ fontSize: 12 }}>{a.date}</div>
+            <div className="muted mono" style={{ fontSize: 14 }}>{a.date}</div>
           </div>
         </div>
       )}
@@ -803,7 +803,7 @@ function NewsPage({ articleId, setArticleId }) {
   }
   return (
     <div>
-      <SectionHead kicker="News" title="記事一覧" right={<span className="muted" style={{ fontSize: 11 }}>{sorted.length} 件 · 新しい順</span>} />
+      <SectionHead kicker="News" title="記事一覧" right={<span className="muted" style={{ fontSize: 14 }}>{sorted.length} 件 · 新しい順</span>} />
       <div className="article-grid">
         {sorted.map((a) => <ArticleCard key={a.id} a={a} onOpen={setArticleId} />)}
       </div>
@@ -835,7 +835,7 @@ function TeamRow({ abbr, onOpen }) {
     >
       <Badge abbr={abbr} />
       <span style={{ fontWeight: 600, flex: 1, minWidth: 0 }}>{t.name}</span>
-      {s && <span className="mono muted" style={{ fontSize: 12 }}>{s.w}-{s.l}</span>}
+      {s && <span className="mono muted" style={{ fontSize: 14 }}>{s.w}-{s.l}</span>}
     </div>
   );
 }
@@ -844,7 +844,7 @@ function TeamsPage({ onOpen }) {
   return (
     <div>
       <SectionHead kicker="Teams" title="球団一覧"
-        right={<span className="muted" style={{ fontSize: 11 }}>球団をクリックで詳細</span>} />
+        right={<span className="muted" style={{ fontSize: 14 }}>球団をクリックで詳細</span>} />
       <div className="grid g2">
         {["East", "West"].map((conf) => {
           const rows = DATA.standings[conf] || [];
@@ -854,7 +854,7 @@ function TeamsPage({ onOpen }) {
                 <span className="kicker" style={{ color: conf === "East" ? "var(--al)" : "var(--nl)" }}>
                   {conf === "East" ? "Eastern" : "Western"} Conference
                 </span>
-                <span className="muted" style={{ fontSize: 11 }}>{rows.length} teams</span>
+                <span className="muted" style={{ fontSize: 14 }}>{rows.length} teams</span>
               </div>
               <div style={{ padding: "2px 0 6px" }}>
                 {rows.map((r) => (
@@ -883,7 +883,7 @@ const ROSTER_COLS = [
 function StatTable({ rows, cols, empty }) {
   if (!rows || rows.length === 0) {
     return (
-      <div className="muted" style={{ fontSize: 12, padding: "14px 4px" }}>
+      <div className="muted" style={{ fontSize: 14, padding: "14px 4px" }}>
         {empty}
       </div>
     );
@@ -933,7 +933,7 @@ function TeamDetailPage({ abbr, onBack }) {
           <div style={{ flex: 1, minWidth: 0 }}>
             <div className="font-display" style={{ fontSize: 22, fontWeight: 700 }}>{t.name}</div>
             {s && (
-              <div className="muted" style={{ fontSize: 12, marginTop: 2 }}>
+              <div className="muted" style={{ fontSize: 14, marginTop: 2 }}>
                 {s.conf === "East" ? "イースタン" : "ウエスタン"}・カンファレンス　|　{s.rank}位　|　{s.w}勝{s.l}敗（{pct(s.w, s.l)}）　|　{sv(s.gb)} GB　|　{sv(s.strk)}
               </div>
             )}
@@ -950,7 +950,7 @@ function TeamDetailPage({ abbr, onBack }) {
                 {ssItems.map(([k, v]) => (
                   <div key={k}>
                     <div className="mono" style={{ fontSize: 20, fontWeight: 700 }}>{v}</div>
-                    <div className="muted" style={{ fontSize: 11 }}>{k}</div>
+                    <div className="muted" style={{ fontSize: 14 }}>{k}</div>
                   </div>
                 ))}
               </div>
@@ -962,8 +962,8 @@ function TeamDetailPage({ abbr, onBack }) {
               <div style={{ display: "flex", flexWrap: "wrap", gap: 22 }}>
                 {rkItems.map(([k, v]) => (
                   <div key={k}>
-                    <div className="mono" style={{ fontSize: 20, fontWeight: 700, color: "var(--accent)" }}>{v}<span style={{ fontSize: 12, fontWeight: 600 }}>位</span></div>
-                    <div className="muted" style={{ fontSize: 11 }}>{k}</div>
+                    <div className="mono" style={{ fontSize: 20, fontWeight: 700, color: "var(--accent)" }}>{v}<span style={{ fontSize: 14, fontWeight: 600 }}>位</span></div>
+                    <div className="muted" style={{ fontSize: 14 }}>{k}</div>
                   </div>
                 ))}
               </div>
@@ -979,7 +979,7 @@ function TeamDetailPage({ abbr, onBack }) {
             <div style={{ display: "flex", flexWrap: "wrap", gap: 0 }}>
               {tsEntries.map(([k, v]) => (
                 <div key={k} style={{ flex: "1 1 33%", padding: "12px 14px", borderTop: "1px solid rgba(0,0,0,.08)" }}>
-                  <div className="muted" style={{ fontSize: 11 }}>{k}</div>
+                  <div className="muted" style={{ fontSize: 14 }}>{k}</div>
                   <div className="mono" style={{ fontSize: 18, fontWeight: 700 }}>{v}</div>
                 </div>
               ))}

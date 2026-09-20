@@ -44,10 +44,10 @@ export default function YearPortalLayout() {
       {/* Year selector strip */}
       <div className="flex flex-wrap items-center gap-4 justify-between">
         <div>
-          <div className="text-[10px] tracking-[0.4em] text-jbu-accent">
+          <div className="text-sm font-bold tracking-[0.16em] text-jbu-accent">
             {BRAND.short} {BRAND.tagline} · SEASON PORTAL
           </div>
-          <h1 className="font-display text-3xl md:text-4xl mt-1 leading-none">
+          <h1 className="font-display font-bold text-3xl md:text-4xl mt-1 leading-[1.4]">
             {BRAND.portalTitle}
           </h1>
         </div>

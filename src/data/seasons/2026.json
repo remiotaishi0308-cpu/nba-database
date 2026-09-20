@@ -8,7 +8,7 @@
       "name": "イースト01",
       "league": "East",
       "div": "",
-      "color": "#ef4444",
+      "color": "#ae3f29",
       "logo": "",
       "seasonStats": {
         "avg": "",
@@ -31,7 +31,7 @@
       "name": "イースト02",
       "league": "East",
       "div": "",
-      "color": "#f97316",
+      "color": "#a95c28",
       "logo": "",
       "seasonStats": {
         "avg": "",
@@ -54,7 +54,7 @@
       "name": "イースト03",
       "league": "East",
       "div": "",
-      "color": "#f59e0b",
+      "color": "#916922",
       "logo": "",
       "seasonStats": {
         "avg": "",
@@ -77,7 +77,7 @@
       "name": "イースト04",
       "league": "East",
       "div": "",
-      "color": "#eab308",
+      "color": "#7c711d",
       "logo": "",
       "seasonStats": {
         "avg": "",
@@ -100,7 +100,7 @@
       "name": "イースト05",
       "league": "East",
       "div": "",
-      "color": "#84cc16",
+      "color": "#6c781c",
       "logo": "",
       "seasonStats": {
         "avg": "",
@@ -123,7 +123,7 @@
       "name": "イースト06",
       "league": "East",
       "div": "",
-      "color": "#22c55e",
+      "color": "#597c1d",
       "logo": "",
       "seasonStats": {
         "avg": "",
@@ -146,7 +146,7 @@
       "name": "イースト07",
       "league": "East",
       "div": "",
-      "color": "#10b981",
+      "color": "#45801e",
       "logo": "",
       "seasonStats": {
         "avg": "",
@@ -169,7 +169,7 @@
       "name": "イースト08",
       "league": "East",
       "div": "",
-      "color": "#14b8a6",
+      "color": "#2d801e",
       "logo": "",
       "seasonStats": {
         "avg": "",
@@ -192,7 +192,7 @@
       "name": "イースト09",
       "league": "East",
       "div": "",
-      "color": "#06b6d4",
+      "color": "#1e8027",
       "logo": "",
       "seasonStats": {
         "avg": "",
@@ -215,7 +215,7 @@
       "name": "イースト10",
       "league": "East",
       "div": "",
-      "color": "#3b82f6",
+      "color": "#1e803e",
       "logo": "",
       "seasonStats": {
         "avg": "",
@@ -238,7 +238,7 @@
       "name": "イースト11",
       "league": "East",
       "div": "",
-      "color": "#6366f1",
+      "color": "#1e8056",
       "logo": "",
       "seasonStats": {
         "avg": "",
@@ -261,7 +261,7 @@
       "name": "イースト12",
       "league": "East",
       "div": "",
-      "color": "#8b5cf6",
+      "color": "#1e806d",
       "logo": "",
       "seasonStats": {
         "avg": "",
@@ -284,7 +284,7 @@
       "name": "イースト13",
       "league": "East",
       "div": "",
-      "color": "#a855f7",
+      "color": "#1e7b80",
       "logo": "",
       "seasonStats": {
         "avg": "",
@@ -307,7 +307,7 @@
       "name": "ウエスト01",
       "league": "West",
       "div": "",
-      "color": "#d946ef",
+      "color": "#257b9d",
       "logo": "",
       "seasonStats": {
         "avg": "",
@@ -330,7 +330,7 @@
       "name": "ウエスト02",
       "league": "West",
       "div": "",
-      "color": "#ec4899",
+      "color": "#2968ae",
       "logo": "",
       "seasonStats": {
         "avg": "",
@@ -353,7 +353,7 @@
       "name": "ウエスト03",
       "league": "West",
       "div": "",
-      "color": "#f43f5e",
+      "color": "#2948ae",
       "logo": "",
       "seasonStats": {
         "avg": "",
@@ -376,7 +376,7 @@
       "name": "ウエスト04",
       "league": "West",
       "div": "",
-      "color": "#0ea5e9",
+      "color": "#2a29ae",
       "logo": "",
       "seasonStats": {
         "avg": "",
@@ -399,7 +399,7 @@
       "name": "ウエスト05",
       "league": "West",
       "div": "",
-      "color": "#22d3ee",
+      "color": "#4929ae",
       "logo": "",
       "seasonStats": {
         "avg": "",
@@ -422,7 +422,7 @@
       "name": "ウエスト06",
       "league": "West",
       "div": "",
-      "color": "#4ade80",
+      "color": "#6929ae",
       "logo": "",
       "seasonStats": {
         "avg": "",
@@ -445,7 +445,7 @@
       "name": "ウエスト07",
       "league": "West",
       "div": "",
-      "color": "#facc15",
+      "color": "#8929ae",
       "logo": "",
       "seasonStats": {
         "avg": "",
@@ -468,7 +468,7 @@
       "name": "ウエスト08",
       "league": "West",
       "div": "",
-      "color": "#fb923c",
+      "color": "#a929ae",
       "logo": "",
       "seasonStats": {
         "avg": "",
@@ -491,7 +491,7 @@
       "name": "ウエスト09",
       "league": "West",
       "div": "",
-      "color": "#e11d48",
+      "color": "#ae2992",
       "logo": "",
       "seasonStats": {
         "avg": "",
@@ -514,7 +514,7 @@
       "name": "ウエスト10",
       "league": "West",
       "div": "",
-      "color": "#7c3aed",
+      "color": "#ae2972",
       "logo": "",
       "seasonStats": {
         "avg": "",
@@ -537,7 +537,7 @@
       "name": "ウエスト11",
       "league": "West",
       "div": "",
-      "color": "#2dd4bf",
+      "color": "#ae2952",
       "logo": "",
       "seasonStats": {
         "avg": "",
@@ -560,7 +560,7 @@
       "name": "ウエスト12",
       "league": "West",
       "div": "",
-      "color": "#38bdf8",
+      "color": "#ae2932",
       "logo": "",
       "seasonStats": {
         "avg": "",
