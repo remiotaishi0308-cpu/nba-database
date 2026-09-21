@@ -73,9 +73,9 @@ collections:
         widget: markdown
         hint: 見出しは行頭に「■ 」。画像はドラッグ&ドロップ。
   - name: seasons
-    label: シーズン (MLB 2042〜)
+    label: シーズン
     label_singular: シーズン
-    description: 「New シーズン」または複製で新しい年を作成できます。1エントリ=1シーズン。順位表・チーム/ロゴ・ポストシーズン・タイトル・選手成績をまとめて編集。
+    description: 1エントリ=1シーズン。リーグ構成・クラブ/ロゴ・順位表・ポストシーズン・表彰をまとめて編集します。
     folder: src/data/seasons
     create: true
     extension: json
@@ -87,36 +87,139 @@ collections:
       - season
     fields:
       - name: season
-        label: シーズン(年) 例2043
+        label: シーズン開始年
         widget: number
         value_type: int
-        hint: ファイル名になります(2043.json)
-      - name: regulationNote
-        label: レギュレーション注記
-        widget: string
-        required: false
+        hint: ファイル名になります（2026.json）。2026-27シーズンなら 2026
+      - name: league
+        label: リーグ構成
+        widget: object
+        collapsed: true
+        hint: カンファレンス・ディビジョン・プレーオフ枠を増減すると、サイトの表示が自動で追従します
+        fields:
+          - name: name
+            label: リーグ名
+            widget: string
+            required: false
+          - name: gamesPerTeam
+            label: 1クラブの試合数
+            widget: number
+            value_type: int
+            required: false
+            default: 82
+          - name: regulationNote
+            label: レギュレーション注記
+            widget: text
+            required: false
+          - name: conferences
+            label: カンファレンス
+            widget: list
+            summary: '{{fields.key}} {{fields.name}}'
+            fields:
+              - name: key
+                label: キー（East/West など）
+                widget: string
+              - name: name
+                label: 表示名
+                widget: string
+              - name: label
+                label: 英字表記
+                widget: string
+                required: false
+              - name: divisions
+                label: ディビジョン
+                widget: list
+                required: false
+                summary: '{{fields.key}} {{fields.name}}'
+                fields:
+                  - name: key
+                    label: キー（Atlantic など）
+                    widget: string
+                  - name: name
+                    label: 表示名
+                    widget: string
+          - name: playoff
+            label: プレーオフ規定
+            widget: object
+            collapsed: true
+            fields:
+              - name: berths
+                label: 出場枠（各カンファレンス）
+                widget: number
+                value_type: int
+                default: 8
+              - name: directBerths
+                label: 本戦へ直接進出（上位何位まで）
+                widget: number
+                value_type: int
+                default: 6
+              - name: playInStart
+                label: プレイイン開始順位
+                widget: number
+                value_type: int
+                default: 7
+              - name: playInEnd
+                label: プレイイン終了順位
+                widget: number
+                value_type: int
+                default: 10
+              - name: seriesFormat
+                label: シリーズ形式
+                widget: string
+                required: false
+                default: 7戦4勝制
+              - name: homeCourt
+                label: 開催順
+                widget: string
+                required: false
+                default: 2-2-1-1-1
+              - name: note
+                label: 注記
+                widget: text
+                required: false
+              - name: rounds
+                label: ラウンド構成
+                widget: list
+                summary: '{{fields.key}} {{fields.label}}'
+                fields:
+                  - name: key
+                    label: キー（r1/semis/confFinals）
+                    widget: string
+                  - name: label
+                    label: 表示名
+                    widget: string
+          - name: clinchMarks
+            label: クリンチ記号
+            widget: list
+            required: false
+            summary: '{{fields.key}} = {{fields.label}}'
+            fields:
+              - name: key
+                label: 記号（z/x/pi）
+                widget: string
+              - name: label
+                label: 意味
+                widget: string
       - name: teams
-        label: チーム・ロゴ
+        label: クラブ・ロゴ
         widget: list
         summary: '{{fields.abbr}} {{fields.name}}'
         fields:
           - name: abbr
-            label: 略称
+            label: 略称（順位表と紐づくキー）
             widget: string
           - name: name
-            label: チーム名
+            label: クラブ名
             widget: string
           - name: conference
             label: カンファレンス
-            widget: select
-            options:
-              - East
-              - West
+            widget: string
+            hint: league のカンファレンス key と一致させる（East / West）
           - name: division
             label: ディビジョン
-            hint: Atlantic / Central / Pacific / Midwest など。league.conferences のキーと一致させる
             widget: string
             required: false
+            hint: league のディビジョン key と一致させる（Atlantic / Central / Pacific / Midwest）
           - name: city
             label: 本拠地
             widget: string
@@ -126,2196 +229,143 @@ collections:
             widget: string
             required: false
           - name: color
-            label: 'カラー #f59e0b'
+            label: 'カラー（例 #ae3f29）'
             widget: string
+            required: false
+            hint: 白文字のバッジに使うため、濃い色を推奨
           - name: logo
             label: ロゴ画像
             widget: image
             required: false
-          - name: seasonStats
-            label: シーズン成績
-            widget: object
-            required: false
-            fields:
-              - name: avg
-                label: 打率
-                widget: string
-                required: false
-              - name: slg
-                label: 長打率
-                widget: string
-                required: false
-              - name: obp
-                label: 出塁率
-                widget: string
-                required: false
-              - name: fielding
-                label: 守備率
-                widget: string
-                required: false
-              - name: era
-                label: 防御率
-                widget: string
-                required: false
-          - name: rankings
-            label: ランキング(順位)
-            widget: object
-            required: false
-            fields:
-              - name: rank
-                label: 総合
-                widget: string
-                required: false
-              - name: contact
-                label: ミート
-                widget: string
-                required: false
-              - name: power
-                label: パワー
-                widget: string
-                required: false
-              - name: pitching
-                label: 投球
-                widget: string
-                required: false
-              - name: defense
-                label: 守備
-                widget: string
-                required: false
-              - name: speed
-                label: 走塁
-                widget: string
-                required: false
-      - name: standings
-        label: 順位表
-        widget: object
-        fields:
-          - name: AL
-            label: アメリカン・リーグ
-            widget: object
-            fields:
-              - name: East
-                label: 東地区
-                widget: list
-                fields:
-                  - name: team
-                    label: 略称/名
-                    widget: string
-                  - name: w
-                    label: 勝
-                    widget: number
-                    value_type: int
-                    default: 0
-                  - name: l
-                    label: 敗
-                    widget: number
-                    value_type: int
-                    default: 0
-                  - name: gb
-                    label: GB
-                    widget: string
-                    default: —
-                  - name: e
-                    label: E#
-                    widget: string
-                    required: false
-                    default: '-'
-                  - name: rs
-                    label: 得点RS
-                    widget: number
-                    value_type: int
-                    required: false
-                    default: 0
-                  - name: ra
-                    label: 失点RA
-                    widget: number
-                    value_type: int
-                    required: false
-                    default: 0
-                  - name: strk
-                    label: 連勝連敗
-                    widget: string
-                    required: false
-                  - name: l10
-                    label: 直近10
-                    widget: string
-                    required: false
-                  - name: div
-                    label: 地区成績
-                    widget: string
-                    required: false
-                  - name: home
-                    label: ホーム
-                    widget: string
-                    required: false
-                  - name: away
-                    label: アウェイ
-                    widget: string
-                    required: false
-                  - name: day
-                    label: デー
-                    widget: string
-                    required: false
-                  - name: night
-                    label: ナイト
-                    widget: string
-                    required: false
-                  - name: clinch
-                    label: 確定(W/X/Y/Z)
-                    widget: select
-                    options:
-                      - W
-                      - X
-                      - 'Y'
-                      - Z
-                    required: false
-              - name: Central
-                label: 中地区
-                widget: list
-                fields:
-                  - name: team
-                    label: 略称/名
-                    widget: string
-                  - name: w
-                    label: 勝
-                    widget: number
-                    value_type: int
-                    default: 0
-                  - name: l
-                    label: 敗
-                    widget: number
-                    value_type: int
-                    default: 0
-                  - name: gb
-                    label: GB
-                    widget: string
-                    default: —
-                  - name: e
-                    label: E#
-                    widget: string
-                    required: false
-                    default: '-'
-                  - name: rs
-                    label: 得点RS
-                    widget: number
-                    value_type: int
-                    required: false
-                    default: 0
-                  - name: ra
-                    label: 失点RA
-                    widget: number
-                    value_type: int
-                    required: false
-                    default: 0
-                  - name: strk
-                    label: 連勝連敗
-                    widget: string
-                    required: false
-                  - name: l10
-                    label: 直近10
-                    widget: string
-                    required: false
-                  - name: div
-                    label: 地区成績
-                    widget: string
-                    required: false
-                  - name: home
-                    label: ホーム
-                    widget: string
-                    required: false
-                  - name: away
-                    label: アウェイ
-                    widget: string
-                    required: false
-                  - name: day
-                    label: デー
-                    widget: string
-                    required: false
-                  - name: night
-                    label: ナイト
-                    widget: string
-                    required: false
-                  - name: clinch
-                    label: 確定(W/X/Y/Z)
-                    widget: select
-                    options:
-                      - W
-                      - X
-                      - 'Y'
-                      - Z
-                    required: false
-              - name: West
-                label: 西地区
-                widget: list
-                fields:
-                  - name: team
-                    label: 略称/名
-                    widget: string
-                  - name: w
-                    label: 勝
-                    widget: number
-                    value_type: int
-                    default: 0
-                  - name: l
-                    label: 敗
-                    widget: number
-                    value_type: int
-                    default: 0
-                  - name: gb
-                    label: GB
-                    widget: string
-                    default: —
-                  - name: e
-                    label: E#
-                    widget: string
-                    required: false
-                    default: '-'
-                  - name: rs
-                    label: 得点RS
-                    widget: number
-                    value_type: int
-                    required: false
-                    default: 0
-                  - name: ra
-                    label: 失点RA
-                    widget: number
-                    value_type: int
-                    required: false
-                    default: 0
-                  - name: strk
-                    label: 連勝連敗
-                    widget: string
-                    required: false
-                  - name: l10
-                    label: 直近10
-                    widget: string
-                    required: false
-                  - name: div
-                    label: 地区成績
-                    widget: string
-                    required: false
-                  - name: home
-                    label: ホーム
-                    widget: string
-                    required: false
-                  - name: away
-                    label: アウェイ
-                    widget: string
-                    required: false
-                  - name: day
-                    label: デー
-                    widget: string
-                    required: false
-                  - name: night
-                    label: ナイト
-                    widget: string
-                    required: false
-                  - name: clinch
-                    label: 確定(W/X/Y/Z)
-                    widget: select
-                    options:
-                      - W
-                      - X
-                      - 'Y'
-                      - Z
-                    required: false
-          - name: NL
-            label: ナショナル・リーグ
-            widget: object
-            fields:
-              - name: East
-                label: 東地区
-                widget: list
-                fields:
-                  - name: team
-                    label: 略称/名
-                    widget: string
-                  - name: w
-                    label: 勝
-                    widget: number
-                    value_type: int
-                    default: 0
-                  - name: l
-                    label: 敗
-                    widget: number
-                    value_type: int
-                    default: 0
-                  - name: gb
-                    label: GB
-                    widget: string
-                    default: —
-                  - name: e
-                    label: E#
-                    widget: string
-                    required: false
-                    default: '-'
-                  - name: rs
-                    label: 得点RS
-                    widget: number
-                    value_type: int
-                    required: false
-                    default: 0
-                  - name: ra
-                    label: 失点RA
-                    widget: number
-                    value_type: int
-                    required: false
-                    default: 0
-                  - name: strk
-                    label: 連勝連敗
-                    widget: string
-                    required: false
-                  - name: l10
-                    label: 直近10
-                    widget: string
-                    required: false
-                  - name: div
-                    label: 地区成績
-                    widget: string
-                    required: false
-                  - name: home
-                    label: ホーム
-                    widget: string
-                    required: false
-                  - name: away
-                    label: アウェイ
-                    widget: string
-                    required: false
-                  - name: day
-                    label: デー
-                    widget: string
-                    required: false
-                  - name: night
-                    label: ナイト
-                    widget: string
-                    required: false
-                  - name: clinch
-                    label: 確定(W/X/Y/Z)
-                    widget: select
-                    options:
-                      - W
-                      - X
-                      - 'Y'
-                      - Z
-                    required: false
-              - name: Central
-                label: 中地区
-                widget: list
-                fields:
-                  - name: team
-                    label: 略称/名
-                    widget: string
-                  - name: w
-                    label: 勝
-                    widget: number
-                    value_type: int
-                    default: 0
-                  - name: l
-                    label: 敗
-                    widget: number
-                    value_type: int
-                    default: 0
-                  - name: gb
-                    label: GB
-                    widget: string
-                    default: —
-                  - name: e
-                    label: E#
-                    widget: string
-                    required: false
-                    default: '-'
-                  - name: rs
-                    label: 得点RS
-                    widget: number
-                    value_type: int
-                    required: false
-                    default: 0
-                  - name: ra
-                    label: 失点RA
-                    widget: number
-                    value_type: int
-                    required: false
-                    default: 0
-                  - name: strk
-                    label: 連勝連敗
-                    widget: string
-                    required: false
-                  - name: l10
-                    label: 直近10
-                    widget: string
-                    required: false
-                  - name: div
-                    label: 地区成績
-                    widget: string
-                    required: false
-                  - name: home
-                    label: ホーム
-                    widget: string
-                    required: false
-                  - name: away
-                    label: アウェイ
-                    widget: string
-                    required: false
-                  - name: day
-                    label: デー
-                    widget: string
-                    required: false
-                  - name: night
-                    label: ナイト
-                    widget: string
-                    required: false
-                  - name: clinch
-                    label: 確定(W/X/Y/Z)
-                    widget: select
-                    options:
-                      - W
-                      - X
-                      - 'Y'
-                      - Z
-                    required: false
-              - name: West
-                label: 西地区
-                widget: list
-                fields:
-                  - name: team
-                    label: 略称/名
-                    widget: string
-                  - name: w
-                    label: 勝
-                    widget: number
-                    value_type: int
-                    default: 0
-                  - name: l
-                    label: 敗
-                    widget: number
-                    value_type: int
-                    default: 0
-                  - name: gb
-                    label: GB
-                    widget: string
-                    default: —
-                  - name: e
-                    label: E#
-                    widget: string
-                    required: false
-                    default: '-'
-                  - name: rs
-                    label: 得点RS
-                    widget: number
-                    value_type: int
-                    required: false
-                    default: 0
-                  - name: ra
-                    label: 失点RA
-                    widget: number
-                    value_type: int
-                    required: false
-                    default: 0
-                  - name: strk
-                    label: 連勝連敗
-                    widget: string
-                    required: false
-                  - name: l10
-                    label: 直近10
-                    widget: string
-                    required: false
-                  - name: div
-                    label: 地区成績
-                    widget: string
-                    required: false
-                  - name: home
-                    label: ホーム
-                    widget: string
-                    required: false
-                  - name: away
-                    label: アウェイ
-                    widget: string
-                    required: false
-                  - name: day
-                    label: デー
-                    widget: string
-                    required: false
-                  - name: night
-                    label: ナイト
-                    widget: string
-                    required: false
-                  - name: clinch
-                    label: 確定(W/X/Y/Z)
-                    widget: select
-                    options:
-                      - W
-                      - X
-                      - 'Y'
-                      - Z
-                    required: false
-      - name: postseason
-        label: ポストシーズン
-        widget: object
-        required: false
-        fields:
-          - name: AL
-            label: アメリカン・リーグ
-            widget: object
-            required: false
-            fields:
-              - name: wildCard
-                label: ワイルドカード
-                widget: list
-                required: false
-                fields:
-                  - name: a
-                    label: A略称
-                    widget: string
-                  - name: b
-                    label: B略称
-                    widget: string
-                  - name: sa
-                    label: Aシード
-                    widget: number
-                    required: false
-                  - name: sb
-                    label: Bシード
-                    widget: number
-                    required: false
-                  - name: as
-                    label: A勝
-                    widget: number
-                    required: false
-                    default: 0
-                  - name: bs
-                    label: B勝
-                    widget: number
-                    required: false
-                    default: 0
-                  - name: format
-                    label: 形式
-                    widget: string
-                    required: false
-                  - name: games
-                    label: 各試合スコア
-                    widget: list
-                    required: false
-                    fields:
-                      - name: a
-                        label: A
-                        widget: number
-                        value_type: int
-                      - name: b
-                        label: B
-                        widget: number
-                        value_type: int
-                  - name: standout
-                    label: 注目選手
-                    widget: object
-                    required: false
-                    fields:
-                      - name: p
-                        label: 選手
-                        widget: string
-                        required: false
-                      - name: t
-                        label: 略称
-                        widget: string
-                        required: false
-                  - name: mvp
-                    label: MVP
-                    widget: object
-                    required: false
-                    fields:
-                      - name: p
-                        label: 選手
-                        widget: string
-                        required: false
-                      - name: t
-                        label: 略称
-                        widget: string
-                        required: false
-                  - name: note
-                    label: メモ
-                    widget: text
-                    required: false
-              - name: division
-                label: 地区シリーズ
-                widget: list
-                required: false
-                fields:
-                  - name: a
-                    label: A略称
-                    widget: string
-                  - name: b
-                    label: B略称
-                    widget: string
-                  - name: sa
-                    label: Aシード
-                    widget: number
-                    required: false
-                  - name: sb
-                    label: Bシード
-                    widget: number
-                    required: false
-                  - name: as
-                    label: A勝
-                    widget: number
-                    required: false
-                    default: 0
-                  - name: bs
-                    label: B勝
-                    widget: number
-                    required: false
-                    default: 0
-                  - name: format
-                    label: 形式
-                    widget: string
-                    required: false
-                  - name: games
-                    label: 各試合スコア
-                    widget: list
-                    required: false
-                    fields:
-                      - name: a
-                        label: A
-                        widget: number
-                        value_type: int
-                      - name: b
-                        label: B
-                        widget: number
-                        value_type: int
-                  - name: standout
-                    label: 注目選手
-                    widget: object
-                    required: false
-                    fields:
-                      - name: p
-                        label: 選手
-                        widget: string
-                        required: false
-                      - name: t
-                        label: 略称
-                        widget: string
-                        required: false
-                  - name: mvp
-                    label: MVP
-                    widget: object
-                    required: false
-                    fields:
-                      - name: p
-                        label: 選手
-                        widget: string
-                        required: false
-                      - name: t
-                        label: 略称
-                        widget: string
-                        required: false
-                  - name: note
-                    label: メモ
-                    widget: text
-                    required: false
-              - name: lcs
-                label: リーグ優勝決定戦
-                widget: object
-                required: false
-                fields:
-                  - name: a
-                    label: A略称
-                    widget: string
-                  - name: b
-                    label: B略称
-                    widget: string
-                  - name: sa
-                    label: Aシード
-                    widget: number
-                    required: false
-                  - name: sb
-                    label: Bシード
-                    widget: number
-                    required: false
-                  - name: as
-                    label: A勝
-                    widget: number
-                    required: false
-                    default: 0
-                  - name: bs
-                    label: B勝
-                    widget: number
-                    required: false
-                    default: 0
-                  - name: format
-                    label: 形式
-                    widget: string
-                    required: false
-                  - name: games
-                    label: 各試合スコア
-                    widget: list
-                    required: false
-                    fields:
-                      - name: a
-                        label: A
-                        widget: number
-                        value_type: int
-                      - name: b
-                        label: B
-                        widget: number
-                        value_type: int
-                  - name: standout
-                    label: 注目選手
-                    widget: object
-                    required: false
-                    fields:
-                      - name: p
-                        label: 選手
-                        widget: string
-                        required: false
-                      - name: t
-                        label: 略称
-                        widget: string
-                        required: false
-                  - name: mvp
-                    label: MVP
-                    widget: object
-                    required: false
-                    fields:
-                      - name: p
-                        label: 選手
-                        widget: string
-                        required: false
-                      - name: t
-                        label: 略称
-                        widget: string
-                        required: false
-                  - name: note
-                    label: メモ
-                    widget: text
-                    required: false
-          - name: NL
-            label: ナショナル・リーグ
-            widget: object
-            required: false
-            fields:
-              - name: wildCard
-                label: ワイルドカード
-                widget: list
-                required: false
-                fields:
-                  - name: a
-                    label: A略称
-                    widget: string
-                  - name: b
-                    label: B略称
-                    widget: string
-                  - name: sa
-                    label: Aシード
-                    widget: number
-                    required: false
-                  - name: sb
-                    label: Bシード
-                    widget: number
-                    required: false
-                  - name: as
-                    label: A勝
-                    widget: number
-                    required: false
-                    default: 0
-                  - name: bs
-                    label: B勝
-                    widget: number
-                    required: false
-                    default: 0
-                  - name: format
-                    label: 形式
-                    widget: string
-                    required: false
-                  - name: games
-                    label: 各試合スコア
-                    widget: list
-                    required: false
-                    fields:
-                      - name: a
-                        label: A
-                        widget: number
-                        value_type: int
-                      - name: b
-                        label: B
-                        widget: number
-                        value_type: int
-                  - name: standout
-                    label: 注目選手
-                    widget: object
-                    required: false
-                    fields:
-                      - name: p
-                        label: 選手
-                        widget: string
-                        required: false
-                      - name: t
-                        label: 略称
-                        widget: string
-                        required: false
-                  - name: mvp
-                    label: MVP
-                    widget: object
-                    required: false
-                    fields:
-                      - name: p
-                        label: 選手
-                        widget: string
-                        required: false
-                      - name: t
-                        label: 略称
-                        widget: string
-                        required: false
-                  - name: note
-                    label: メモ
-                    widget: text
-                    required: false
-              - name: division
-                label: 地区シリーズ
-                widget: list
-                required: false
-                fields:
-                  - name: a
-                    label: A略称
-                    widget: string
-                  - name: b
-                    label: B略称
-                    widget: string
-                  - name: sa
-                    label: Aシード
-                    widget: number
-                    required: false
-                  - name: sb
-                    label: Bシード
-                    widget: number
-                    required: false
-                  - name: as
-                    label: A勝
-                    widget: number
-                    required: false
-                    default: 0
-                  - name: bs
-                    label: B勝
-                    widget: number
-                    required: false
-                    default: 0
-                  - name: format
-                    label: 形式
-                    widget: string
-                    required: false
-                  - name: games
-                    label: 各試合スコア
-                    widget: list
-                    required: false
-                    fields:
-                      - name: a
-                        label: A
-                        widget: number
-                        value_type: int
-                      - name: b
-                        label: B
-                        widget: number
-                        value_type: int
-                  - name: standout
-                    label: 注目選手
-                    widget: object
-                    required: false
-                    fields:
-                      - name: p
-                        label: 選手
-                        widget: string
-                        required: false
-                      - name: t
-                        label: 略称
-                        widget: string
-                        required: false
-                  - name: mvp
-                    label: MVP
-                    widget: object
-                    required: false
-                    fields:
-                      - name: p
-                        label: 選手
-                        widget: string
-                        required: false
-                      - name: t
-                        label: 略称
-                        widget: string
-                        required: false
-                  - name: note
-                    label: メモ
-                    widget: text
-                    required: false
-              - name: lcs
-                label: リーグ優勝決定戦
-                widget: object
-                required: false
-                fields:
-                  - name: a
-                    label: A略称
-                    widget: string
-                  - name: b
-                    label: B略称
-                    widget: string
-                  - name: sa
-                    label: Aシード
-                    widget: number
-                    required: false
-                  - name: sb
-                    label: Bシード
-                    widget: number
-                    required: false
-                  - name: as
-                    label: A勝
-                    widget: number
-                    required: false
-                    default: 0
-                  - name: bs
-                    label: B勝
-                    widget: number
-                    required: false
-                    default: 0
-                  - name: format
-                    label: 形式
-                    widget: string
-                    required: false
-                  - name: games
-                    label: 各試合スコア
-                    widget: list
-                    required: false
-                    fields:
-                      - name: a
-                        label: A
-                        widget: number
-                        value_type: int
-                      - name: b
-                        label: B
-                        widget: number
-                        value_type: int
-                  - name: standout
-                    label: 注目選手
-                    widget: object
-                    required: false
-                    fields:
-                      - name: p
-                        label: 選手
-                        widget: string
-                        required: false
-                      - name: t
-                        label: 略称
-                        widget: string
-                        required: false
-                  - name: mvp
-                    label: MVP
-                    widget: object
-                    required: false
-                    fields:
-                      - name: p
-                        label: 選手
-                        widget: string
-                        required: false
-                      - name: t
-                        label: 略称
-                        widget: string
-                        required: false
-                  - name: note
-                    label: メモ
-                    widget: text
-                    required: false
-          - name: worldSeries
-            label: ワールドシリーズ
-            widget: object
-            required: false
-            fields:
-              - name: a
-                label: A略称
-                widget: string
-              - name: b
-                label: B略称
-                widget: string
-              - name: as
-                label: A勝
-                widget: number
-                required: false
-                default: 0
-              - name: bs
-                label: B勝
-                widget: number
-                required: false
-                default: 0
-              - name: champ
-                label: 優勝略称
-                widget: string
-                required: false
-              - name: format
-                label: 形式
-                widget: string
-                required: false
-              - name: games
-                label: 各試合スコア
-                widget: list
-                required: false
-                fields:
-                  - name: a
-                    label: A
-                    widget: number
-                    value_type: int
-                  - name: b
-                    label: B
-                    widget: number
-                    value_type: int
-              - name: mvp
-                label: MVP
-                widget: object
-                required: false
-                fields:
-                  - name: p
-                    label: 選手
-                    widget: string
-                    required: false
-                  - name: t
-                    label: 略称
-                    widget: string
-                    required: false
-              - name: clinchNote
-                label: 決定シーン
-                widget: text
-                required: false
-              - name: path
-                label: 優勝までの道
-                widget: list
-                required: false
-                fields:
-                  - name: r
-                    label: ラウンド
-                    widget: string
-                  - name: op
-                    label: 相手略称
-                    widget: string
-                  - name: res
-                    label: 結果
-                    widget: string
-          - name: recap
-            label: 総括
-            widget: object
-            required: false
-            fields:
-              - name: headline
-                label: 見出し
-                widget: string
-                required: false
-              - name: body
-                label: 本文(段落)
-                widget: list
-                required: false
-                field:
-                  name: p
-                  label: 段落
-                  widget: text
-              - name: moments
-                label: 名場面
-                widget: list
-                required: false
-                fields:
-                  - name: k
-                    label: ラベル
-                    widget: string
-                    required: false
-                  - name: t
-                    label: タイトル
-                    widget: string
-                    required: false
-                  - name: b
-                    label: 説明
-                    widget: text
-                    required: false
-          - name: gallery
-            label: 写真ギャラリー
-            widget: object
-            required: false
-            fields:
-              - name: hero
-                label: 上部写真
-                widget: list
-                required: false
-                fields:
-                  - name: url
-                    label: 画像
-                    widget: image
-                  - name: caption
-                    label: キャプション
-                    widget: string
-                    required: false
-              - name: series
-                label: シリーズ写真
-                widget: list
-                required: false
-                fields:
-                  - name: url
-                    label: 画像
-                    widget: image
-                  - name: caption
-                    label: キャプション
-                    widget: string
-                    required: false
-              - name: recap
-                label: 総括写真
-                widget: list
-                required: false
-                fields:
-                  - name: url
-                    label: 画像
-                    widget: image
-                  - name: caption
-                    label: キャプション
-                    widget: string
-                    required: false
-      - name: awards
-        label: タイトル・表彰
-        widget: object
-        required: false
-        fields:
-          - name: voting
-            label: 投票系(MVP等・自由追加)
-            widget: list
-            required: false
-            fields:
-              - name: key
-                label: キー
-                widget: string
-              - name: label
-                label: 賞名
-                widget: string
-              - name: AL
-                label: AL候補
-                widget: list
-                required: false
-                fields:
-                  - name: p
-                    label: 選手
-                    widget: string
-                  - name: t
-                    label: 略称
-                    widget: string
-                  - name: line
-                    label: 成績
-                    widget: string
-                    required: false
-                  - name: pts
-                    label: 得点
-                    widget: number
-                    required: false
-                  - name: first
-                    label: 1位票
-                    widget: number
-                    required: false
-              - name: NL
-                label: NL候補
-                widget: list
-                required: false
-                fields:
-                  - name: p
-                    label: 選手
-                    widget: string
-                  - name: t
-                    label: 略称
-                    widget: string
-                  - name: line
-                    label: 成績
-                    widget: string
-                    required: false
-                  - name: pts
-                    label: 得点
-                    widget: number
-                    required: false
-                  - name: first
-                    label: 1位票
-                    widget: number
-                    required: false
-          - name: postseasonMvp
-            label: PS MVP(自由追加)
-            widget: list
-            required: false
-            fields:
-              - name: key
-                label: キー
-                widget: string
-              - name: label
-                label: 賞名
-                widget: string
-              - name: p
-                label: 選手
-                widget: string
-              - name: t
-                label: 略称
-                widget: string
-              - name: line
-                label: 成績
-                widget: string
-                required: false
-              - name: big
-                label: 大きく表示
-                widget: boolean
-                required: false
-          - name: goldGlove
-            label: ゴールドグラブ
-            widget: object
-            required: false
-            fields:
-              - name: AL
-                label: AL
-                widget: object
-                required: false
-                fields:
-                  - name: P
-                    widget: list
-                    required: false
-                    fields:
-                      - name: p
-                        label: 選手
-                        widget: string
-                      - name: t
-                        label: 略称/チーム名
-                        widget: string
-                      - name: line
-                        label: 成績
-                        widget: string
-                        required: false
-                  - name: C
-                    widget: list
-                    required: false
-                    fields:
-                      - name: p
-                        label: 選手
-                        widget: string
-                      - name: t
-                        label: 略称/チーム名
-                        widget: string
-                      - name: line
-                        label: 成績
-                        widget: string
-                        required: false
-                  - name: 1B
-                    widget: list
-                    required: false
-                    fields:
-                      - name: p
-                        label: 選手
-                        widget: string
-                      - name: t
-                        label: 略称/チーム名
-                        widget: string
-                      - name: line
-                        label: 成績
-                        widget: string
-                        required: false
-                  - name: 2B
-                    widget: list
-                    required: false
-                    fields:
-                      - name: p
-                        label: 選手
-                        widget: string
-                      - name: t
-                        label: 略称/チーム名
-                        widget: string
-                      - name: line
-                        label: 成績
-                        widget: string
-                        required: false
-                  - name: 3B
-                    widget: list
-                    required: false
-                    fields:
-                      - name: p
-                        label: 選手
-                        widget: string
-                      - name: t
-                        label: 略称/チーム名
-                        widget: string
-                      - name: line
-                        label: 成績
-                        widget: string
-                        required: false
-                  - name: SS
-                    widget: list
-                    required: false
-                    fields:
-                      - name: p
-                        label: 選手
-                        widget: string
-                      - name: t
-                        label: 略称/チーム名
-                        widget: string
-                      - name: line
-                        label: 成績
-                        widget: string
-                        required: false
-                  - name: LF
-                    widget: list
-                    required: false
-                    fields:
-                      - name: p
-                        label: 選手
-                        widget: string
-                      - name: t
-                        label: 略称/チーム名
-                        widget: string
-                      - name: line
-                        label: 成績
-                        widget: string
-                        required: false
-                  - name: CF
-                    widget: list
-                    required: false
-                    fields:
-                      - name: p
-                        label: 選手
-                        widget: string
-                      - name: t
-                        label: 略称/チーム名
-                        widget: string
-                      - name: line
-                        label: 成績
-                        widget: string
-                        required: false
-                  - name: RF
-                    widget: list
-                    required: false
-                    fields:
-                      - name: p
-                        label: 選手
-                        widget: string
-                      - name: t
-                        label: 略称/チーム名
-                        widget: string
-                      - name: line
-                        label: 成績
-                        widget: string
-                        required: false
-                  - name: DH
-                    widget: list
-                    required: false
-                    fields:
-                      - name: p
-                        label: 選手
-                        widget: string
-                      - name: t
-                        label: 略称/チーム名
-                        widget: string
-                      - name: line
-                        label: 成績
-                        widget: string
-                        required: false
-              - name: NL
-                label: NL
-                widget: object
-                required: false
-                fields:
-                  - name: P
-                    widget: list
-                    required: false
-                    fields:
-                      - name: p
-                        label: 選手
-                        widget: string
-                      - name: t
-                        label: 略称/チーム名
-                        widget: string
-                      - name: line
-                        label: 成績
-                        widget: string
-                        required: false
-                  - name: C
-                    widget: list
-                    required: false
-                    fields:
-                      - name: p
-                        label: 選手
-                        widget: string
-                      - name: t
-                        label: 略称/チーム名
-                        widget: string
-                      - name: line
-                        label: 成績
-                        widget: string
-                        required: false
-                  - name: 1B
-                    widget: list
-                    required: false
-                    fields:
-                      - name: p
-                        label: 選手
-                        widget: string
-                      - name: t
-                        label: 略称/チーム名
-                        widget: string
-                      - name: line
-                        label: 成績
-                        widget: string
-                        required: false
-                  - name: 2B
-                    widget: list
-                    required: false
-                    fields:
-                      - name: p
-                        label: 選手
-                        widget: string
-                      - name: t
-                        label: 略称/チーム名
-                        widget: string
-                      - name: line
-                        label: 成績
-                        widget: string
-                        required: false
-                  - name: 3B
-                    widget: list
-                    required: false
-                    fields:
-                      - name: p
-                        label: 選手
-                        widget: string
-                      - name: t
-                        label: 略称/チーム名
-                        widget: string
-                      - name: line
-                        label: 成績
-                        widget: string
-                        required: false
-                  - name: SS
-                    widget: list
-                    required: false
-                    fields:
-                      - name: p
-                        label: 選手
-                        widget: string
-                      - name: t
-                        label: 略称/チーム名
-                        widget: string
-                      - name: line
-                        label: 成績
-                        widget: string
-                        required: false
-                  - name: LF
-                    widget: list
-                    required: false
-                    fields:
-                      - name: p
-                        label: 選手
-                        widget: string
-                      - name: t
-                        label: 略称/チーム名
-                        widget: string
-                      - name: line
-                        label: 成績
-                        widget: string
-                        required: false
-                  - name: CF
-                    widget: list
-                    required: false
-                    fields:
-                      - name: p
-                        label: 選手
-                        widget: string
-                      - name: t
-                        label: 略称/チーム名
-                        widget: string
-                      - name: line
-                        label: 成績
-                        widget: string
-                        required: false
-                  - name: RF
-                    widget: list
-                    required: false
-                    fields:
-                      - name: p
-                        label: 選手
-                        widget: string
-                      - name: t
-                        label: 略称/チーム名
-                        widget: string
-                      - name: line
-                        label: 成績
-                        widget: string
-                        required: false
-                  - name: DH
-                    widget: list
-                    required: false
-                    fields:
-                      - name: p
-                        label: 選手
-                        widget: string
-                      - name: t
-                        label: 略称/チーム名
-                        widget: string
-                      - name: line
-                        label: 成績
-                        widget: string
-                        required: false
-          - name: silverSlugger
-            label: シルバースラッガー
-            widget: object
-            required: false
-            fields:
-              - name: AL
-                label: AL
-                widget: object
-                required: false
-                fields:
-                  - name: P
-                    widget: list
-                    required: false
-                    fields:
-                      - name: p
-                        label: 選手
-                        widget: string
-                      - name: t
-                        label: 略称/チーム名
-                        widget: string
-                      - name: line
-                        label: 成績
-                        widget: string
-                        required: false
-                  - name: C
-                    widget: list
-                    required: false
-                    fields:
-                      - name: p
-                        label: 選手
-                        widget: string
-                      - name: t
-                        label: 略称/チーム名
-                        widget: string
-                      - name: line
-                        label: 成績
-                        widget: string
-                        required: false
-                  - name: 1B
-                    widget: list
-                    required: false
-                    fields:
-                      - name: p
-                        label: 選手
-                        widget: string
-                      - name: t
-                        label: 略称/チーム名
-                        widget: string
-                      - name: line
-                        label: 成績
-                        widget: string
-                        required: false
-                  - name: 2B
-                    widget: list
-                    required: false
-                    fields:
-                      - name: p
-                        label: 選手
-                        widget: string
-                      - name: t
-                        label: 略称/チーム名
-                        widget: string
-                      - name: line
-                        label: 成績
-                        widget: string
-                        required: false
-                  - name: 3B
-                    widget: list
-                    required: false
-                    fields:
-                      - name: p
-                        label: 選手
-                        widget: string
-                      - name: t
-                        label: 略称/チーム名
-                        widget: string
-                      - name: line
-                        label: 成績
-                        widget: string
-                        required: false
-                  - name: SS
-                    widget: list
-                    required: false
-                    fields:
-                      - name: p
-                        label: 選手
-                        widget: string
-                      - name: t
-                        label: 略称/チーム名
-                        widget: string
-                      - name: line
-                        label: 成績
-                        widget: string
-                        required: false
-                  - name: LF
-                    widget: list
-                    required: false
-                    fields:
-                      - name: p
-                        label: 選手
-                        widget: string
-                      - name: t
-                        label: 略称/チーム名
-                        widget: string
-                      - name: line
-                        label: 成績
-                        widget: string
-                        required: false
-                  - name: CF
-                    widget: list
-                    required: false
-                    fields:
-                      - name: p
-                        label: 選手
-                        widget: string
-                      - name: t
-                        label: 略称/チーム名
-                        widget: string
-                      - name: line
-                        label: 成績
-                        widget: string
-                        required: false
-                  - name: RF
-                    widget: list
-                    required: false
-                    fields:
-                      - name: p
-                        label: 選手
-                        widget: string
-                      - name: t
-                        label: 略称/チーム名
-                        widget: string
-                      - name: line
-                        label: 成績
-                        widget: string
-                        required: false
-                  - name: DH
-                    widget: list
-                    required: false
-                    fields:
-                      - name: p
-                        label: 選手
-                        widget: string
-                      - name: t
-                        label: 略称/チーム名
-                        widget: string
-                      - name: line
-                        label: 成績
-                        widget: string
-                        required: false
-              - name: NL
-                label: NL
-                widget: object
-                required: false
-                fields:
-                  - name: P
-                    widget: list
-                    required: false
-                    fields:
-                      - name: p
-                        label: 選手
-                        widget: string
-                      - name: t
-                        label: 略称/チーム名
-                        widget: string
-                      - name: line
-                        label: 成績
-                        widget: string
-                        required: false
-                  - name: C
-                    widget: list
-                    required: false
-                    fields:
-                      - name: p
-                        label: 選手
-                        widget: string
-                      - name: t
-                        label: 略称/チーム名
-                        widget: string
-                      - name: line
-                        label: 成績
-                        widget: string
-                        required: false
-                  - name: 1B
-                    widget: list
-                    required: false
-                    fields:
-                      - name: p
-                        label: 選手
-                        widget: string
-                      - name: t
-                        label: 略称/チーム名
-                        widget: string
-                      - name: line
-                        label: 成績
-                        widget: string
-                        required: false
-                  - name: 2B
-                    widget: list
-                    required: false
-                    fields:
-                      - name: p
-                        label: 選手
-                        widget: string
-                      - name: t
-                        label: 略称/チーム名
-                        widget: string
-                      - name: line
-                        label: 成績
-                        widget: string
-                        required: false
-                  - name: 3B
-                    widget: list
-                    required: false
-                    fields:
-                      - name: p
-                        label: 選手
-                        widget: string
-                      - name: t
-                        label: 略称/チーム名
-                        widget: string
-                      - name: line
-                        label: 成績
-                        widget: string
-                        required: false
-                  - name: SS
-                    widget: list
-                    required: false
-                    fields:
-                      - name: p
-                        label: 選手
-                        widget: string
-                      - name: t
-                        label: 略称/チーム名
-                        widget: string
-                      - name: line
-                        label: 成績
-                        widget: string
-                        required: false
-                  - name: LF
-                    widget: list
-                    required: false
-                    fields:
-                      - name: p
-                        label: 選手
-                        widget: string
-                      - name: t
-                        label: 略称/チーム名
-                        widget: string
-                      - name: line
-                        label: 成績
-                        widget: string
-                        required: false
-                  - name: CF
-                    widget: list
-                    required: false
-                    fields:
-                      - name: p
-                        label: 選手
-                        widget: string
-                      - name: t
-                        label: 略称/チーム名
-                        widget: string
-                      - name: line
-                        label: 成績
-                        widget: string
-                        required: false
-                  - name: RF
-                    widget: list
-                    required: false
-                    fields:
-                      - name: p
-                        label: 選手
-                        widget: string
-                      - name: t
-                        label: 略称/チーム名
-                        widget: string
-                      - name: line
-                        label: 成績
-                        widget: string
-                        required: false
-                  - name: DH
-                    widget: list
-                    required: false
-                    fields:
-                      - name: p
-                        label: 選手
-                        widget: string
-                      - name: t
-                        label: 略称/チーム名
-                        widget: string
-                      - name: line
-                        label: 成績
-                        widget: string
-                        required: false
-          - name: leaders
-            label: リーグリーダー
-            widget: object
-            required: false
-            fields:
-              - name: AL
-                label: AL
-                widget: object
-                required: false
-                fields:
-                  - name: batting
-                    label: 打撃
-                    widget: object
-                    required: false
-                    fields:
-                      - name: 打率
-                        widget: list
-                        required: false
-                        fields:
-                          - name: p
-                            label: 選手
-                            widget: string
-                          - name: t
-                            label: 略称
-                            widget: string
-                          - name: v
-                            label: 値
-                            widget: string
-                      - name: 本塁打
-                        widget: list
-                        required: false
-                        fields:
-                          - name: p
-                            label: 選手
-                            widget: string
-                          - name: t
-                            label: 略称
-                            widget: string
-                          - name: v
-                            label: 値
-                            widget: string
-                      - name: 打点
-                        widget: list
-                        required: false
-                        fields:
-                          - name: p
-                            label: 選手
-                            widget: string
-                          - name: t
-                            label: 略称
-                            widget: string
-                          - name: v
-                            label: 値
-                            widget: string
-                      - name: 盗塁
-                        widget: list
-                        required: false
-                        fields:
-                          - name: p
-                            label: 選手
-                            widget: string
-                          - name: t
-                            label: 略称
-                            widget: string
-                          - name: v
-                            label: 値
-                            widget: string
-                  - name: pitching
-                    label: 投手
-                    widget: object
-                    required: false
-                    fields:
-                      - name: 勝利
-                        widget: list
-                        required: false
-                        fields:
-                          - name: p
-                            label: 選手
-                            widget: string
-                          - name: t
-                            label: 略称
-                            widget: string
-                          - name: v
-                            label: 値
-                            widget: string
-                      - name: 防御率
-                        widget: list
-                        required: false
-                        fields:
-                          - name: p
-                            label: 選手
-                            widget: string
-                          - name: t
-                            label: 略称
-                            widget: string
-                          - name: v
-                            label: 値
-                            widget: string
-                      - name: 奪三振
-                        widget: list
-                        required: false
-                        fields:
-                          - name: p
-                            label: 選手
-                            widget: string
-                          - name: t
-                            label: 略称
-                            widget: string
-                          - name: v
-                            label: 値
-                            widget: string
-                      - name: セーブ
-                        widget: list
-                        required: false
-                        fields:
-                          - name: p
-                            label: 選手
-                            widget: string
-                          - name: t
-                            label: 略称
-                            widget: string
-                          - name: v
-                            label: 値
-                            widget: string
-              - name: NL
-                label: NL
-                widget: object
-                required: false
-                fields:
-                  - name: batting
-                    label: 打撃
-                    widget: object
-                    required: false
-                    fields:
-                      - name: 打率
-                        widget: list
-                        required: false
-                        fields:
-                          - name: p
-                            label: 選手
-                            widget: string
-                          - name: t
-                            label: 略称
-                            widget: string
-                          - name: v
-                            label: 値
-                            widget: string
-                      - name: 本塁打
-                        widget: list
-                        required: false
-                        fields:
-                          - name: p
-                            label: 選手
-                            widget: string
-                          - name: t
-                            label: 略称
-                            widget: string
-                          - name: v
-                            label: 値
-                            widget: string
-                      - name: 打点
-                        widget: list
-                        required: false
-                        fields:
-                          - name: p
-                            label: 選手
-                            widget: string
-                          - name: t
-                            label: 略称
-                            widget: string
-                          - name: v
-                            label: 値
-                            widget: string
-                      - name: 盗塁
-                        widget: list
-                        required: false
-                        fields:
-                          - name: p
-                            label: 選手
-                            widget: string
-                          - name: t
-                            label: 略称
-                            widget: string
-                          - name: v
-                            label: 値
-                            widget: string
-                  - name: pitching
-                    label: 投手
-                    widget: object
-                    required: false
-                    fields:
-                      - name: 勝利
-                        widget: list
-                        required: false
-                        fields:
-                          - name: p
-                            label: 選手
-                            widget: string
-                          - name: t
-                            label: 略称
-                            widget: string
-                          - name: v
-                            label: 値
-                            widget: string
-                      - name: 防御率
-                        widget: list
-                        required: false
-                        fields:
-                          - name: p
-                            label: 選手
-                            widget: string
-                          - name: t
-                            label: 略称
-                            widget: string
-                          - name: v
-                            label: 値
-                            widget: string
-                      - name: 奪三振
-                        widget: list
-                        required: false
-                        fields:
-                          - name: p
-                            label: 選手
-                            widget: string
-                          - name: t
-                            label: 略称
-                            widget: string
-                          - name: v
-                            label: 値
-                            widget: string
-                      - name: セーブ
-                        widget: list
-                        required: false
-                        fields:
-                          - name: p
-                            label: 選手
-                            widget: string
-                          - name: t
-                            label: 略称
-                            widget: string
-                          - name: v
-                            label: 値
-                            widget: string
-      - name: teamStats
-        label: チーム別 選手成績
-        widget: list
-        required: false
-        summary: '{{fields.abbr}}'
-        fields:
-          - name: abbr
-            label: 略称
+          - name: league
+            label: （旧）リーグ欄
             widget: string
-          - name: teamStats
-            label: チーム成績
-            widget: object
             required: false
-            fields:
-              - name: 打率
-                widget: string
-                required: false
-              - name: 本塁打
-                widget: string
-                required: false
-              - name: 得点
-                widget: string
-                required: false
-              - name: 盗塁
-                widget: string
-                required: false
-              - name: 防御率
-                widget: string
-                required: false
-              - name: 失点
-                widget: string
-                required: false
-          - name: batters
-            label: 野手
+            hint: 互換のため残しています。通常は編集不要
+      - name: standings
+        label: 順位表（カンファレンス別）
+        widget: object
+        hint: カンファレンスごとに勝率順で並べてください。表示順がそのまま順位になります
+        fields:
+          - name: East
+            label: イースタン・カンファレンス
             widget: list
-            required: false
+            summary: '{{fields.team}}  {{fields.w}}-{{fields.l}}'
             fields:
-              - name: name
-                label: 選手
-                widget: string
-              - name: pos
-                label: 守備
-                widget: string
-                required: false
-              - name: avg
-                label: 打率
-                widget: string
-                required: false
-              - name: hr
-                label: 本
-                widget: string
-                required: false
-              - name: rbi
-                label: 打点
-                widget: string
-                required: false
-              - name: sb
-                label: 盗
-                widget: string
-                required: false
-              - name: ops
-                label: OPS
-                widget: string
-                required: false
-          - name: pitchers
-            label: 投手
-            widget: list
-            required: false
-            fields:
-              - name: name
-                label: 選手
+              - name: team
+                label: クラブ略称
                 widget: string
               - name: w
                 label: 勝
-                widget: string
-                required: false
+                widget: number
+                value_type: int
+                default: 0
               - name: l
                 label: 敗
+                widget: number
+                value_type: int
+                default: 0
+              - name: gb
+                label: GB
                 widget: string
                 required: false
-              - name: era
-                label: 防御率
+                default: '—'
+              - name: conf
+                label: カンファレンス内成績
                 widget: string
                 required: false
-              - name: g
-                label: 登板
+              - name: div
+                label: ディビジョン内成績
                 widget: string
                 required: false
-              - name: so
-                label: 奪三振
+              - name: home
+                label: ホーム
                 widget: string
                 required: false
-              - name: sv
-                label: S
+              - name: away
+                label: ロード
                 widget: string
                 required: false
+              - name: l10
+                label: 直近10試合
+                widget: string
+                required: false
+              - name: strk
+                label: 連勝連敗（W2 / L3）
+                widget: string
+                required: false
+              - name: diff
+                label: 得失点差（+10.6）
+                widget: string
+                required: false
+              - name: clinch
+                label: クリンチ（z / x / pi）
+                widget: string
+                required: false
+          - name: West
+            label: ウェスタン・カンファレンス
+            widget: list
+            summary: '{{fields.team}}  {{fields.w}}-{{fields.l}}'
+            fields:
+              - name: team
+                label: クラブ略称
+                widget: string
+              - name: w
+                label: 勝
+                widget: number
+                value_type: int
+                default: 0
+              - name: l
+                label: 敗
+                widget: number
+                value_type: int
+                default: 0
+              - name: gb
+                label: GB
+                widget: string
+                required: false
+                default: '—'
+              - name: conf
+                label: カンファレンス内成績
+                widget: string
+                required: false
+              - name: div
+                label: ディビジョン内成績
+                widget: string
+                required: false
+              - name: home
+                label: ホーム
+                widget: string
+                required: false
+              - name: away
+                label: ロード
+                widget: string
+                required: false
+              - name: l10
+                label: 直近10試合
+                widget: string
+                required: false
+              - name: strk
+                label: 連勝連敗（W2 / L3）
+                widget: string
+                required: false
+              - name: diff
+                label: 得失点差（+10.6）
+                widget: string
+                required: false
+              - name: clinch
+                label: クリンチ（z / x / pi）
+                widget: string
+                required: false
+      - name: postseason
+        label: ポストシーズン（サイト側で管理）
+        widget: hidden
+      - name: awards
+        label: 表彰（サイト側で管理）
+        widget: hidden
+      - name: teamStats
+        label: 選手成績（サイト側で管理）
+        widget: hidden
       - name: prospects
-        label: プロスペクト(有望株)
-        widget: list
-        required: false
-        summary: '{{fields.rank}}. {{fields.name}}'
-        fields:
-          - name: rank
-            label: 順位
-            widget: number
-            value_type: int
-          - name: name
-            label: 選手名
-            widget: string
-          - name: team
-            label: 略称
-            widget: string
-          - name: pos
-            label: ポジション
-            widget: string
-            required: false
-          - name: age
-            label: 年齢
-            widget: number
-            required: false
-          - name: eta
-            label: ETA
-            widget: string
-            required: false
-          - name: grade
-            label: 評価
-            widget: string
-            required: false
-          - name: note
-            label: メモ
-            widget: text
-            required: false
+        label: 有望株（サイト側で管理）
+        widget: hidden
