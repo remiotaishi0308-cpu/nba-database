@@ -160,7 +160,7 @@
       "city": "名古屋市",
       "coach": "赤坂郁弥",
       "color": "#597c1d",
-      "logo": "",
+      "logo": "/images/articles/IMG_3140.png",
       "league": "East"
     },
     {
@@ -710,222 +710,222 @@
   "teamStats": [],
   "prospects": [],
   "awards": {
-    "voting": [
+    "postseasonMvp": [
       {
-        "key": "MVP",
-        "label": "最優秀選手 (MVP)",
-        "note": "65試合以上の出場が資格要件",
-        "finalists": []
+        "line": "",
+        "t": "",
+        "p": "",
+        "label": "イースタン・カンファレンス決勝 MVP",
+        "key": "eastFinals"
       },
       {
-        "key": "DPOY",
-        "label": "最優秀守備選手",
+        "line": "",
+        "t": "",
+        "p": "",
+        "label": "ウェスタン・カンファレンス決勝 MVP",
+        "key": "westFinals"
+      },
+      {
+        "big": true,
+        "line": "",
+        "t": "",
+        "p": "",
+        "label": "ファイナル MVP",
+        "key": "finals"
+      }
+    ],
+    "allStar": {
+      "events": [
+        {
+          "winner": {
+            "t": "",
+            "p": ""
+          },
+          "name": "ダンクコンテスト"
+        },
+        {
+          "winner": {
+            "t": "",
+            "p": ""
+          },
+          "name": "3ポイントコンテスト"
+        }
+      ],
+      "mvp": {
+        "t": "",
+        "p": ""
+      },
+      "result": "",
+      "rosters": [
+        {
+          "backcourt": [],
+          "frontcourt": [],
+          "team": "スター"
+        },
+        {
+          "backcourt": [],
+          "frontcourt": [],
+          "team": "ワールド"
+        }
+      ],
+      "note": "ファン投票でフロントコート・バックコートを選出。本戦は「スター」対「ワールド」の2チーム形式。"
+    },
+    "weekly": [],
+    "monthly": [],
+    "statTitles": [
+      {
+        "leaders": [],
+        "note": "58試合以上の出場、または部門の通算基準",
+        "unit": "PPG",
+        "label": "得点王",
+        "key": "ppg"
+      },
+      {
+        "leaders": [],
         "note": "",
-        "finalists": []
+        "unit": "RPG",
+        "label": "リバウンド王",
+        "key": "rpg"
       },
       {
-        "key": "ROY",
-        "label": "最優秀新人",
+        "leaders": [],
         "note": "",
-        "finalists": []
+        "unit": "APG",
+        "label": "アシスト王",
+        "key": "apg"
       },
       {
-        "key": "SIXTH",
-        "label": "シックスマン賞",
+        "leaders": [],
         "note": "",
-        "finalists": []
+        "unit": "SPG",
+        "label": "スティール王",
+        "key": "spg"
       },
       {
-        "key": "MIP",
-        "label": "最優秀躍進選手",
+        "leaders": [],
         "note": "",
-        "finalists": []
+        "unit": "BPG",
+        "label": "ブロック王",
+        "key": "bpg"
       },
       {
-        "key": "CLUTCH",
-        "label": "クラッチ最優秀選手",
-        "note": "",
-        "finalists": []
+        "leaders": [],
+        "note": "成功数の最低基準を満たすこと",
+        "unit": "FG%",
+        "label": "フィールドゴール成功率",
+        "key": "fg"
       },
       {
-        "key": "COY",
-        "label": "最優秀ヘッドコーチ",
-        "note": "",
-        "finalists": []
+        "leaders": [],
+        "note": "成功数の最低基準を満たすこと",
+        "unit": "3P%",
+        "label": "3ポイント成功率",
+        "key": "fg3"
       },
       {
-        "key": "EOY",
-        "label": "最優秀エグゼクティブ",
-        "note": "リーグ25クラブの経営陣による投票",
-        "finalists": []
+        "leaders": [],
+        "note": "成功数の最低基準を満たすこと",
+        "unit": "FT%",
+        "label": "フリースロー成功率",
+        "key": "ft"
       }
     ],
     "allTeams": [
       {
-        "key": "allLeague",
+        "tiers": [
+          {
+            "members": [],
+            "tier": "1st"
+          },
+          {
+            "members": [],
+            "tier": "2nd"
+          },
+          {
+            "members": [],
+            "tier": "3rd"
+          }
+        ],
         "label": "オールBプレミア",
-        "tiers": [
-          {
-            "tier": "1st",
-            "members": []
-          },
-          {
-            "tier": "2nd",
-            "members": []
-          },
-          {
-            "tier": "3rd",
-            "members": []
-          }
-        ]
+        "key": "allLeague"
       },
       {
-        "key": "allDefensive",
+        "tiers": [
+          {
+            "members": [],
+            "tier": "1st"
+          },
+          {
+            "members": [],
+            "tier": "2nd"
+          }
+        ],
         "label": "オールディフェンシブ",
-        "tiers": [
-          {
-            "tier": "1st",
-            "members": []
-          },
-          {
-            "tier": "2nd",
-            "members": []
-          }
-        ]
+        "key": "allDefensive"
       },
       {
-        "key": "allRookie",
+        "tiers": [
+          {
+            "members": [],
+            "tier": "1st"
+          },
+          {
+            "members": [],
+            "tier": "2nd"
+          }
+        ],
         "label": "オールルーキー",
-        "tiers": [
-          {
-            "tier": "1st",
-            "members": []
-          },
-          {
-            "tier": "2nd",
-            "members": []
-          }
-        ]
+        "key": "allRookie"
       }
     ],
-    "statTitles": [
+    "voting": [
       {
-        "key": "ppg",
-        "label": "得点王",
-        "unit": "PPG",
-        "note": "58試合以上の出場、または部門の通算基準",
-        "leaders": []
+        "finalists": [],
+        "note": "65試合以上の出場が資格要件",
+        "label": "最優秀選手 (MVP)",
+        "key": "MVP"
       },
       {
-        "key": "rpg",
-        "label": "リバウンド王",
-        "unit": "RPG",
+        "finalists": [],
         "note": "",
-        "leaders": []
+        "label": "最優秀守備選手",
+        "key": "DPOY"
       },
       {
-        "key": "apg",
-        "label": "アシスト王",
-        "unit": "APG",
+        "finalists": [],
         "note": "",
-        "leaders": []
+        "label": "最優秀新人",
+        "key": "ROY"
       },
       {
-        "key": "spg",
-        "label": "スティール王",
-        "unit": "SPG",
+        "finalists": [],
         "note": "",
-        "leaders": []
+        "label": "シックスマン賞",
+        "key": "SIXTH"
       },
       {
-        "key": "bpg",
-        "label": "ブロック王",
-        "unit": "BPG",
+        "finalists": [],
         "note": "",
-        "leaders": []
+        "label": "最優秀躍進選手",
+        "key": "MIP"
       },
       {
-        "key": "fg",
-        "label": "フィールドゴール成功率",
-        "unit": "FG%",
-        "note": "成功数の最低基準を満たすこと",
-        "leaders": []
+        "finalists": [],
+        "note": "",
+        "label": "クラッチ最優秀選手",
+        "key": "CLUTCH"
       },
       {
-        "key": "fg3",
-        "label": "3ポイント成功率",
-        "unit": "3P%",
-        "note": "成功数の最低基準を満たすこと",
-        "leaders": []
+        "finalists": [],
+        "note": "",
+        "label": "最優秀ヘッドコーチ",
+        "key": "COY"
       },
       {
-        "key": "ft",
-        "label": "フリースロー成功率",
-        "unit": "FT%",
-        "note": "成功数の最低基準を満たすこと",
-        "leaders": []
-      }
-    ],
-    "monthly": [],
-    "weekly": [],
-    "allStar": {
-      "note": "ファン投票でフロントコート・バックコートを選出。本戦は「スター」対「ワールド」の2チーム形式。",
-      "rosters": [
-        {
-          "team": "スター",
-          "frontcourt": [],
-          "backcourt": []
-        },
-        {
-          "team": "ワールド",
-          "frontcourt": [],
-          "backcourt": []
-        }
-      ],
-      "result": "",
-      "mvp": {
-        "p": "",
-        "t": ""
-      },
-      "events": [
-        {
-          "name": "ダンクコンテスト",
-          "winner": {
-            "p": "",
-            "t": ""
-          }
-        },
-        {
-          "name": "3ポイントコンテスト",
-          "winner": {
-            "p": "",
-            "t": ""
-          }
-        }
-      ]
-    },
-    "postseasonMvp": [
-      {
-        "key": "eastFinals",
-        "label": "イースタン・カンファレンス決勝 MVP",
-        "p": "",
-        "t": "",
-        "line": ""
-      },
-      {
-        "key": "westFinals",
-        "label": "ウェスタン・カンファレンス決勝 MVP",
-        "p": "",
-        "t": "",
-        "line": ""
-      },
-      {
-        "key": "finals",
-        "label": "ファイナル MVP",
-        "p": "",
-        "t": "",
-        "line": "",
-        "big": true
+        "finalists": [],
+        "note": "リーグ25クラブの経営陣による投票",
+        "label": "最優秀エグゼクティブ",
+        "key": "EOY"
       }
     ]
   },
