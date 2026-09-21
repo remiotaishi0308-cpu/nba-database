@@ -47,10 +47,14 @@ const teamsInDivision = (confKey, divKey) =>
 let TEAM_BY_KEY = {};
 let TEAM_DATA = {};
 const EMPTY_SEASON = {
-  teams: {}, prospects: {}, teamStats: {},
-  standings: { AL: { East: [], Central: [], West: [] }, NL: { East: [], Central: [], West: [] } },
-  postseason: { AL: {}, NL: {}, worldSeries: {}, gallery: {}, recap: { body: [], moments: [] } },
-  awards: { voting: [], goldGlove: {}, silverSlugger: {}, leaders: {}, postseasonMvp: [] },
+  league: {}, teams: {}, prospects: [], teamStats: {},
+  standings: {},
+  postseason: {
+    conferences: {}, finals: {}, cup: null,
+    gallery: { hero: [], series: [], recap: [] },
+    recap: { headline: "", body: [], moments: [] },
+  },
+  awards: { voting: [], allTeams: [], statTitles: [], monthly: [], weekly: [], allStar: null, postseasonMvp: [] },
 };
 function applyYear(year) {
   DATA = getSeasonData(year) || getSeasonData(MLB_SEASON_YEARS[0]) || { season: year, ...EMPTY_SEASON };
@@ -818,212 +822,270 @@ function ProspectsPage() {
 
 /* ---- AWARDS ---- */
 const MEDALS = ["🥇", "🥈", "🥉"];
-function VotingAward({ award, lg }) {
+
+// 未登録の枠を示す共通表示
+function Pending({ text = "未登録です。CMSのシーズン編集から登録できます。" }) {
+  return <p className="muted" style={{ fontSize: 14, margin: 0, lineHeight: 1.7 }}>{text}</p>;
+}
+
+// 投票アワード（リーグ全体。1〜3位を表彰台で表示）
+function VotingAward({ award }) {
+  const list = award.finalists || [];
   return (
     <div className="award-block">
-      <div style={{ display: "flex", alignItems: "baseline", gap: 10, marginBottom: 10 }}>
-        <span className="award-name">{award.label}</span><span className="muted" style={{ fontSize: 14, letterSpacing: ".12em" }}>{lg}</span>
+      <div style={{ display: "flex", alignItems: "baseline", gap: 10, marginBottom: 10, flexWrap: "wrap" }}>
+        <span className="award-name">{award.label}</span>
+        {award.note ? <span className="muted" style={{ fontSize: 14 }}>{award.note}</span> : null}
       </div>
-      <div className="podium">
-        {award[lg].map((f, i) => (
-          <div key={i} className={"finalist" + (i === 0 ? " first" : "")}>
-            <div className="place"><span className="medal">{MEDALS[i]}</span>{i + 1}位</div>
-            <div className="player">{f.p}</div>
-            <div style={{ marginBottom: 6 }}><Badge abbr={f.t} /> <span className="muted" style={{ fontSize: 14 }}>{team(f.t).name}</span></div>
-            <div className="stats">{f.line}</div>
-            <div className="points-row">
-              <span className="points-val mono">{f.pts}</span><span className="points-label">得票ポイント</span>
-              {f.first ? <span className="points-label" style={{ marginLeft: "auto" }}>1位票 {f.first}</span> : null}
+      {list.length ? (
+        <div className="podium">
+          {list.map((f, i) => (
+            <div key={i} className={"finalist" + (i === 0 ? " first" : "")}>
+              <div className="place"><span className="medal">{MEDALS[i]}</span>{i + 1}位</div>
+              <div className="player">{f.p}</div>
+              {f.t ? (
+                <div style={{ marginBottom: 6 }}>
+                  <Badge abbr={f.t} /> <span className="muted" style={{ fontSize: 14 }}>{team(f.t).name}</span>
+                </div>
+              ) : null}
+              {f.line ? <div className="stats">{f.line}</div> : null}
+              {f.pts != null || f.first != null ? (
+                <div className="points-row">
+                  <span className="points-val mono">{f.pts ?? "—"}</span>
+                  <span className="points-label">得票ポイント</span>
+                  {f.first ? <span className="points-label" style={{ marginLeft: "auto" }}>1位票 {f.first}</span> : null}
+                </div>
+              ) : null}
             </div>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
+      ) : (
+        <div className="card"><div className="card-body"><Pending /></div></div>
+      )}
     </div>
   );
 }
 function VotingTab() {
-  const [lg, setLg] = useState(CONFS()[0].key);
+  const list = (DATA.awards && DATA.awards.voting) || [];
+  if (!list.length) return <div className="card"><div className="card-body"><Pending text="表彰の枠が未定義です。" /></div></div>;
+  return <div>{list.map((a) => <VotingAward key={a.key} award={a} />)}</div>;
+}
+
+// オール◯◯チーム（1st/2nd/3rd）
+function AllTeamsTab() {
+  const groups = (DATA.awards && DATA.awards.allTeams) || [];
+  if (!groups.length) return <div className="card"><div className="card-body"><Pending /></div></div>;
   return (
     <div>
-      <div style={{ display: "flex", justifyContent: "flex-end", marginBottom: 16 }}><LeagueToggle value={lg} onChange={setLg} /></div>
-      {DATA.awards.voting.map((a) => <VotingAward key={a.key} award={a} lg={lg} />)}
-    </div>
-  );
-}
-const FIELD_POS = [
-  { key: "P", x: 50, y: 58, c: "#2fff9a" }, { key: "C", x: 50, y: 90, c: "#2fff9a" },
-  { key: "1B", x: 74, y: 64, c: "#f5c542" }, { key: "2B", x: 62, y: 42, c: "#f5c542" },
-  { key: "3B", x: 26, y: 64, c: "#f5c542" }, { key: "SS", x: 38, y: 42, c: "#f5c542" },
-  { key: "LF", x: 16, y: 22, c: "#38bdf8" }, { key: "CF", x: 50, y: 12, c: "#38bdf8" },
-  { key: "RF", x: 84, y: 22, c: "#38bdf8" }, { key: "DH", x: 90, y: 92, c: "#f472b6" },
-];
-function FieldSvg() {
-  const base = (x, y, k) => <rect key={k} x={x - 1.4} y={y - 1.4} width="2.8" height="2.8" fill="#fff" fillOpacity="0.85" transform={`rotate(45 ${x} ${y})`} />;
-  return (
-    <svg viewBox="0 0 100 100" style={{ position: "absolute", inset: 0, width: "100%", height: "100%" }} aria-hidden>
-      <defs><radialGradient id="jbu2042-grass" cx="50%" cy="60%" r="70%"><stop offset="0%" stopColor="#1f4a2e" /><stop offset="100%" stopColor="#0d2a18" /></radialGradient></defs>
-      <rect width="100" height="100" fill="#0a1410" />
-      <path d="M 50 82 L 8 38 A 60 60 0 0 1 92 38 Z" fill="url(#jbu2042-grass)" />
-      <path d="M 50 82 L 72 60 L 50 38 L 28 60 Z" fill="#73553a" />
-      <path d="M 50 76 L 66 60 L 50 44 L 34 60 Z" fill="#1f4a2e" />
-      <line x1="50" y1="82" x2="8" y2="40" stroke="#fff" strokeOpacity="0.5" strokeWidth="0.3" />
-      <line x1="50" y1="82" x2="92" y2="40" stroke="#fff" strokeOpacity="0.5" strokeWidth="0.3" />
-      {base(50, 82, "h")}{base(72, 60, "1")}{base(50, 38, "2")}{base(28, 60, "3")}
-      <circle cx="50" cy="60" r="3.2" fill="#8a6845" /><circle cx="50" cy="60" r="0.8" fill="#fff" fillOpacity="0.7" />
-    </svg>
-  );
-}
-function FieldDiagram() {
-  const [lg, setLg] = useState(CONFS()[0].key);
-  const [award, setAward] = useState("gg");
-  const map = ((award === "gg" ? DATA.awards.goldGlove : DATA.awards.silverSlugger) || {})[lg] || {};
-  const other = ((award === "gg" ? DATA.awards.silverSlugger : DATA.awards.goldGlove) || {})[lg] || {};
-  // 各ポジションは「単一 {p,t}」でも「配列 [{p,t,line},…]」でも両対応。先頭を受賞者とする。
-  const win = (v) => (Array.isArray(v) ? v[0] : v) || null;
-  return (
-    <div className="card">
-      <div className="card-head" style={{ flexWrap: "wrap" }}>
-        <div>
-          <div className="kicker" style={{ color: lg === "AL" ? "var(--al)" : "var(--nl)" }}>{lg} · Field View</div>
-          <div className="display" style={{ fontWeight: 700, fontSize: 15 }}>{award === "gg" ? "ゴールドグラブ賞" : "シルバースラッガー賞"}</div>
-        </div>
-        <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
-          <LeagueToggle value={lg} onChange={setLg} />
-          <div className="toggle">
-            <button className={award === "gg" ? "on acc" : ""} onClick={() => setAward("gg")}>Gold Glove</button>
-            <button className={award === "ss" ? "on acc" : ""} onClick={() => setAward("ss")}>Silver Slugger</button>
-          </div>
-        </div>
-      </div>
-      <div className="card-body">
-        <div className="field-wrap">
-          <FieldSvg />
-          {FIELD_POS.map((pos) => {
-            const row = win(map[pos.key]);
-            if (!row || !row.p || row.p === "—") return null;
-            const t = team(row.t);
-            const otherRow = win(other[pos.key]);
-            const dbl = otherRow && otherRow.p === row.p;
-            return (
-              <div key={pos.key} className="field-pos" style={{ left: pos.x + "%", top: pos.y + "%" }}>
-                <div className="field-card">
-                  <span className="pos-tag" style={{ background: pos.c }}>{pos.key}</span>
-                  <div className="pos-body" style={{ borderColor: t.color }}>
-                    <Badge abbr={row.t} />
-                    <div style={{ display: "flex", flexDirection: "column", lineHeight: 1.1 }}>
-                      <span className="pos-name">{row.p}</span><span className="pos-team">{t.abbr}</span>
-                    </div>
-                    {dbl ? <span style={{ color: "var(--gold)", fontSize: 14, fontWeight: 700 }} title="攻守両賞">★W</span> : null}
-                  </div>
+      {groups.map((g) => (
+        <div className="award-block" key={g.key}>
+          <div style={{ marginBottom: 10 }}><span className="award-name">{g.label}</span></div>
+          <div className="grid g3">
+            {(g.tiers || []).map((t) => (
+              <div className="card" key={t.tier}>
+                <div className="card-head">
+                  <span className="kicker">{t.tier} TEAM</span>
+                  <span className="muted" style={{ fontSize: 14 }}>{(t.members || []).length} 名</span>
+                </div>
+                <div className="card-body">
+                  {(t.members || []).length ? (
+                    <div className="table-scroll"><table>
+                      <thead><tr><th>選手</th><th>POS</th><th>クラブ</th></tr></thead>
+                      <tbody>
+                        {t.members.map((m, i) => (
+                          <tr key={i}>
+                            <td style={{ fontWeight: 700 }}>{m.p}</td>
+                            <td className="muted">{m.pos || "—"}</td>
+                            <td style={{ whiteSpace: "nowrap" }}>{m.t ? <TeamCell abbr={m.t} /> : <span className="muted">—</span>}</td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table></div>
+                  ) : <Pending />}
                 </div>
               </div>
-            );
-          })}
-        </div>
-        <p className="muted" style={{ fontSize: 14, textAlign: "center", marginTop: 10 }}>
-          <span style={{ color: "var(--gold)", fontWeight: 700 }}>★W</span> は同年に攻守両賞を獲得した選手。
-        </p>
-        <div className="table-scroll" style={{ marginTop: 8 }}>
-          <table>
-            <thead><tr><th>POS</th><th>選手</th><th>チーム</th><th>成績</th></tr></thead>
-            <tbody>
-              {FIELD_POS.map((pos) => {
-                const row = win(map[pos.key]);
-                if (!row || !row.p || row.p === "—") return null;
-                return (
-                  <tr key={pos.key}>
-                    <td className="mono" style={{ color: pos.c, fontWeight: 700 }}>{pos.key}</td>
-                    <td style={{ fontWeight: 600 }}>{row.p}</td>
-                    <td style={{ whiteSpace: "nowrap" }}><Badge abbr={row.t} /> <span className="muted">{team(row.t).abbr}</span></td>
-                    <td className="muted" style={{ fontSize: 14 }}>{row.line || "—"}</td>
-                  </tr>
-                );
-              })}
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div>
-  );
-}
-function FieldingTab() { return <div><FieldDiagram /></div>; }
-function LeaderCard({ title, rows }) {
-  return (
-    <div className="card">
-      <div className="card-head"><span className="kicker">{title}</span></div>
-      <table>
-        <tbody>
-          {rows.map((r, i) => {
-            const p = Array.isArray(r) ? r[0] : r.p;
-            const t = Array.isArray(r) ? r[1] : r.t;
-            const v = Array.isArray(r) ? r[2] : r.v;
-            return (
-              <tr key={i}>
-                <td className="rank-cell">{i + 1}</td>
-                <td><Player name={p} t={t} /></td>
-                <td className="num mono" style={{ fontWeight: 700, color: i === 0 ? "var(--accent)" : "var(--text)" }}>{v}</td>
-              </tr>
-            );
-          })}
-        </tbody>
-      </table>
-    </div>
-  );
-}
-function LeadersTab() {
-  const [lg, setLg] = useState(CONFS()[0].key);
-  const d = (DATA.awards && DATA.awards.leaders && DATA.awards.leaders[lg]) || {};
-  return (
-    <div>
-      <div style={{ display: "flex", justifyContent: "flex-end", marginBottom: 14 }}><LeagueToggle value={lg} onChange={setLg} /></div>
-      <div className="kicker" style={{ marginBottom: 10 }}>Batting · 打撃</div>
-      <div className="grid g2" style={{ marginBottom: 24 }}>{Object.entries(d.batting || {}).map(([k, rows]) => <LeaderCard key={k} title={k} rows={rows} />)}</div>
-      <div className="kicker" style={{ marginBottom: 10 }}>Pitching · 投手</div>
-      <div className="grid g2">{Object.entries(d.pitching || {}).map(([k, rows]) => <LeaderCard key={k} title={k} rows={rows} />)}</div>
-    </div>
-  );
-}
-function PostseasonMvpTab() {
-  const list = (DATA.awards && DATA.awards.postseasonMvp) || [];
-  return (
-    <div>
-      <div className="grid g2" style={{ marginBottom: 16 }}>
-        {list.filter((m) => !m.big).map((m) => (
-          <div key={m.key} className="mvp-hero">
-            <div className="label">{m.label}</div>
-            <div className="player">{m.p}</div>
-            <div style={{ marginBottom: 6 }}><Badge abbr={m.t} /> <span className="muted" style={{ fontSize: 14 }}>{team(m.t).name}</span></div>
-            <div className="line">{m.line}</div>
+            ))}
           </div>
-        ))}
-      </div>
-      {list.filter((m) => m.big).map((m) => (
-        <div key={m.key} className="mvp-hero" style={{ background: "linear-gradient(135deg, rgba(245,197,66,.16), var(--surface))", borderColor: "var(--gold-dim)" }}>
-          <div className="label" style={{ color: "var(--gold)" }}>🏆 {m.label}</div>
-          <div className="player" style={{ fontSize: 38 }}>{m.p}</div>
-          <div style={{ marginBottom: 8 }}><Badge abbr={m.t} /> <span className="muted">{team(m.t).name}</span></div>
-          <div className="line" style={{ fontSize: 14 }}>{m.line}</div>
         </div>
       ))}
     </div>
   );
 }
+
+// スタッツタイトル（1試合平均・成功率）
+function StatTitlesTab() {
+  const list = (DATA.awards && DATA.awards.statTitles) || [];
+  if (!list.length) return <div className="card"><div className="card-body"><Pending /></div></div>;
+  return (
+    <div className="grid g2">
+      {list.map((s) => (
+        <div className="card" key={s.key}>
+          <div className="card-head">
+            <span className="kicker">{s.label}</span>
+            <span className="muted" style={{ fontSize: 14 }}>{s.unit}</span>
+          </div>
+          <div className="card-body">
+            {(s.leaders || []).length ? (
+              <div className="table-scroll"><table>
+                <tbody>
+                  {s.leaders.map((r, i) => (
+                    <tr key={i}>
+                      <td className="rank-cell">{i + 1}</td>
+                      <td><Player name={r.p} t={r.t} /></td>
+                      <td className="num mono" style={{ fontWeight: 700, color: i === 0 ? "var(--accent)" : "var(--text)" }}>{r.v}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table></div>
+            ) : <Pending />}
+            {s.note ? <p className="muted" style={{ fontSize: 14, margin: "12px 0 0", lineHeight: 1.7 }}>{s.note}</p> : null}
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+// 月間・週間表彰（東西各1人）
+function PeriodicTab() {
+  const a = DATA.awards || {};
+  const monthly = a.monthly || [];
+  const weekly = a.weekly || [];
+  const Block = ({ title, rows, cols }) => (
+    <div className="card" style={{ marginBottom: 16 }}>
+      <div className="card-head">
+        <span className="kicker">{title}</span>
+        <span className="muted" style={{ fontSize: 14 }}>{rows.length} 件</span>
+      </div>
+      <div className="card-body">
+        {rows.length ? (
+          <div className="table-scroll"><table>
+            <thead><tr>
+              <th>期間</th><th>カンファレンス</th>
+              {cols.map((c) => <th key={c.key}>{c.label}</th>)}
+            </tr></thead>
+            <tbody>
+              {rows.map((r, i) => (
+                <tr key={i}>
+                  <td className="mono">{r.period || "—"}</td>
+                  <td className="muted">{r.conf || "—"}</td>
+                  {cols.map((c) => (
+                    <td key={c.key}>{r[c.key] && r[c.key].p ? <Player name={r[c.key].p} t={r[c.key].t} /> : <span className="muted">—</span>}</td>
+                  ))}
+                </tr>
+              ))}
+            </tbody>
+          </table></div>
+        ) : <Pending />}
+      </div>
+    </div>
+  );
+  return (
+    <div>
+      <Block title="月間表彰" rows={monthly} cols={[{ key: "mvp", label: "月間MVP" }, { key: "rookie", label: "月間最優秀新人" }]} />
+      <Block title="週間表彰" rows={weekly} cols={[{ key: "mvp", label: "週間MVP" }]} />
+    </div>
+  );
+}
+
+// オールスター（ロスター／本戦／関連イベント）
+function AllStarTab() {
+  const as = (DATA.awards && DATA.awards.allStar) || null;
+  if (!as) return <div className="card"><div className="card-body"><Pending /></div></div>;
+  const Roster = ({ r }) => (
+    <div className="card">
+      <div className="card-head"><span className="kicker">{r.team}</span></div>
+      <div className="card-body">
+        {["frontcourt", "backcourt"].map((k) => {
+          const list = r[k] || [];
+          return (
+            <div key={k} style={{ marginBottom: 12 }}>
+              <div className="round-label">{k === "frontcourt" ? "フロントコート" : "バックコート"}</div>
+              {list.length
+                ? list.map((m, i) => <div key={i} style={{ padding: "4px 0" }}><Player name={m.p} t={m.t} /></div>)
+                : <Pending text="選出は未登録です。" />}
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+  return (
+    <div>
+      {as.note ? <p className="muted" style={{ fontSize: 14, lineHeight: 1.7, margin: "0 0 16px" }}>{as.note}</p> : null}
+      <div className="grid g2">{(as.rosters || []).map((r, i) => <Roster key={i} r={r} />)}</div>
+      <div className="card" style={{ marginTop: 16 }}>
+        <div className="card-head"><span className="kicker">本戦・関連イベント</span></div>
+        <div className="card-body">
+          <div className="series-meta" style={{ padding: 0 }}>
+            {as.result ? <span className="meta-chip">結果 <b>{as.result}</b></span> : null}
+            {as.mvp && as.mvp.p ? <span className="meta-chip mvp">MVP {as.mvp.t ? <Badge abbr={as.mvp.t} /> : null} <b>{as.mvp.p}</b></span> : null}
+            {(as.events || []).map((e, i) => (
+              <span className="meta-chip" key={i}>
+                {e.name} {e.winner && e.winner.p ? <><Badge abbr={e.winner.t} /> <b>{e.winner.p}</b></> : <span className="muted">未登録</span>}
+              </span>
+            ))}
+          </div>
+          {!as.result && !(as.mvp && as.mvp.p) ? <div style={{ marginTop: 10 }}><Pending /></div> : null}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// ポストシーズンMVP（カンファレンス決勝・ファイナル）
+function PostseasonMvpTab() {
+  const list = (DATA.awards && DATA.awards.postseasonMvp) || [];
+  if (!list.length) return <div className="card"><div className="card-body"><Pending /></div></div>;
+  const Card = ({ m, big }) => (
+    <div className="mvp-hero" style={big ? { borderLeftColor: "var(--gold-dim)" } : undefined}>
+      <div className="label" style={big ? { color: "var(--gold)" } : undefined}>{big ? "🏆 " : ""}{m.label}</div>
+      {m.p ? (
+        <>
+          <div className="player" style={big ? { fontSize: 32 } : undefined}>{m.p}</div>
+          {m.t ? <div style={{ marginBottom: 6 }}><Badge abbr={m.t} /> <span className="muted" style={{ fontSize: 14 }}>{team(m.t).name}</span></div> : null}
+          {m.line ? <div className="line">{m.line}</div> : null}
+        </>
+      ) : <div style={{ marginTop: 8 }}><Pending /></div>}
+    </div>
+  );
+  return (
+    <div>
+      <div className="grid g2" style={{ marginBottom: 16 }}>
+        {list.filter((m) => !m.big).map((m) => <Card key={m.key} m={m} />)}
+      </div>
+      {list.filter((m) => m.big).map((m) => <Card key={m.key} m={m} big />)}
+    </div>
+  );
+}
+
 const AWARD_TABS = [
-  { id: "voting", label: "投票系アワード" },
-  { id: "fielding", label: "ゴールドグラブ / シルバースラッガー" },
-  { id: "leaders", label: "リーグリーダー" },
-  { id: "psmvp", label: "ポストシーズンMVP" },
+  { id: "voting",   label: "シーズンアワード" },
+  { id: "allteams", label: "オールチーム" },
+  { id: "stats",    label: "スタッツタイトル" },
+  { id: "periodic", label: "月間・週間" },
+  { id: "allstar",  label: "オールスター" },
+  { id: "psmvp",    label: "ポストシーズンMVP" },
 ];
 function AwardsPage() {
   const [tab, setTab] = useState("voting");
   return (
     <div>
-      <SectionHead kicker="Awards" title="タイトル・表彰一覧"
-        right={<span className="muted" style={{ fontSize: 14, maxWidth: 320, textAlign: "right" }}>MLB The Show フランチャイズ準拠の表彰データ</span>} />
-      <div className="subtabs">{AWARD_TABS.map((t) => <button key={t.id} className={tab === t.id ? "active" : ""} onClick={() => setTab(t.id)}>{t.label}</button>)}</div>
+      <SectionHead
+        kicker="Awards"
+        title="表彰・タイトル"
+        right={<span className="muted" style={{ fontSize: 14, maxWidth: 360, textAlign: "right" }}>Bプレミア レギュレーション準拠。投票アワードはシーズン終了後に決定</span>}
+      />
+      <div className="subtabs">
+        {AWARD_TABS.map((t) => (
+          <button key={t.id} className={tab === t.id ? "active" : ""} onClick={() => setTab(t.id)}>{t.label}</button>
+        ))}
+      </div>
       {tab === "voting" && <VotingTab />}
-      {tab === "fielding" && <FieldingTab />}
-      {tab === "leaders" && <LeadersTab />}
+      {tab === "allteams" && <AllTeamsTab />}
+      {tab === "stats" && <StatTitlesTab />}
+      {tab === "periodic" && <PeriodicTab />}
+      {tab === "allstar" && <AllStarTab />}
       {tab === "psmvp" && <PostseasonMvpTab />}
     </div>
   );

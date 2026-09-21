@@ -765,14 +765,224 @@
     }
   },
   "awards": {
-    "voting": [],
-    "allTeams": {},
-    "leaders": {
-      "East": {},
-      "West": {}
-    },
+    "voting": [
+      {
+        "key": "MVP",
+        "label": "最優秀選手 (MVP)",
+        "note": "65試合以上の出場が資格要件",
+        "finalists": []
+      },
+      {
+        "key": "DPOY",
+        "label": "最優秀守備選手",
+        "note": "",
+        "finalists": []
+      },
+      {
+        "key": "ROY",
+        "label": "最優秀新人",
+        "note": "",
+        "finalists": []
+      },
+      {
+        "key": "SIXTH",
+        "label": "シックスマン賞",
+        "note": "",
+        "finalists": []
+      },
+      {
+        "key": "MIP",
+        "label": "最優秀躍進選手",
+        "note": "",
+        "finalists": []
+      },
+      {
+        "key": "CLUTCH",
+        "label": "クラッチ最優秀選手",
+        "note": "",
+        "finalists": []
+      },
+      {
+        "key": "COY",
+        "label": "最優秀ヘッドコーチ",
+        "note": "",
+        "finalists": []
+      },
+      {
+        "key": "EOY",
+        "label": "最優秀エグゼクティブ",
+        "note": "リーグ25クラブの経営陣による投票",
+        "finalists": []
+      }
+    ],
+    "allTeams": [
+      {
+        "key": "allLeague",
+        "label": "オールBプレミア",
+        "tiers": [
+          {
+            "tier": "1st",
+            "members": []
+          },
+          {
+            "tier": "2nd",
+            "members": []
+          },
+          {
+            "tier": "3rd",
+            "members": []
+          }
+        ]
+      },
+      {
+        "key": "allDefensive",
+        "label": "オールディフェンシブ",
+        "tiers": [
+          {
+            "tier": "1st",
+            "members": []
+          },
+          {
+            "tier": "2nd",
+            "members": []
+          }
+        ]
+      },
+      {
+        "key": "allRookie",
+        "label": "オールルーキー",
+        "tiers": [
+          {
+            "tier": "1st",
+            "members": []
+          },
+          {
+            "tier": "2nd",
+            "members": []
+          }
+        ]
+      }
+    ],
+    "statTitles": [
+      {
+        "key": "ppg",
+        "label": "得点王",
+        "unit": "PPG",
+        "note": "58試合以上の出場、または部門の通算基準",
+        "leaders": []
+      },
+      {
+        "key": "rpg",
+        "label": "リバウンド王",
+        "unit": "RPG",
+        "note": "",
+        "leaders": []
+      },
+      {
+        "key": "apg",
+        "label": "アシスト王",
+        "unit": "APG",
+        "note": "",
+        "leaders": []
+      },
+      {
+        "key": "spg",
+        "label": "スティール王",
+        "unit": "SPG",
+        "note": "",
+        "leaders": []
+      },
+      {
+        "key": "bpg",
+        "label": "ブロック王",
+        "unit": "BPG",
+        "note": "",
+        "leaders": []
+      },
+      {
+        "key": "fg",
+        "label": "フィールドゴール成功率",
+        "unit": "FG%",
+        "note": "成功数の最低基準を満たすこと",
+        "leaders": []
+      },
+      {
+        "key": "fg3",
+        "label": "3ポイント成功率",
+        "unit": "3P%",
+        "note": "成功数の最低基準を満たすこと",
+        "leaders": []
+      },
+      {
+        "key": "ft",
+        "label": "フリースロー成功率",
+        "unit": "FT%",
+        "note": "成功数の最低基準を満たすこと",
+        "leaders": []
+      }
+    ],
     "monthly": [],
-    "postseasonMvp": []
+    "weekly": [],
+    "allStar": {
+      "note": "ファン投票でフロントコート・バックコートを選出。本戦は「スター」対「ワールド」の2チーム形式。",
+      "rosters": [
+        {
+          "team": "スター",
+          "frontcourt": [],
+          "backcourt": []
+        },
+        {
+          "team": "ワールド",
+          "frontcourt": [],
+          "backcourt": []
+        }
+      ],
+      "result": "",
+      "mvp": {
+        "p": "",
+        "t": ""
+      },
+      "events": [
+        {
+          "name": "ダンクコンテスト",
+          "winner": {
+            "p": "",
+            "t": ""
+          }
+        },
+        {
+          "name": "3ポイントコンテスト",
+          "winner": {
+            "p": "",
+            "t": ""
+          }
+        }
+      ]
+    },
+    "postseasonMvp": [
+      {
+        "key": "eastFinals",
+        "label": "イースタン・カンファレンス決勝 MVP",
+        "p": "",
+        "t": "",
+        "line": ""
+      },
+      {
+        "key": "westFinals",
+        "label": "ウェスタン・カンファレンス決勝 MVP",
+        "p": "",
+        "t": "",
+        "line": ""
+      },
+      {
+        "key": "finals",
+        "label": "ファイナル MVP",
+        "p": "",
+        "t": "",
+        "line": "",
+        "big": true
+      }
+    ]
   },
   "teamStats": []
 }
