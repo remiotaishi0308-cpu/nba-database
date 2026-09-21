@@ -142,17 +142,20 @@ function renderArticleBlock(line, i) {
   return <p key={i}>{line}</p>;
 }
 
-function Badge({ abbr }) {
+function Badge({ abbr, size = 22 }) {
+  const [failed, setFailed] = useState(false);
   if (!abbr) return null;
   const t = team(abbr);
-  // ロゴ画像がアップロードされていれば画像、なければ従来の色付きバッジ。
-  if (t.logo) {
+  // ロゴ画像があれば画像。未アップロード/読み込み失敗なら色バッジへフォールバック。
+  if (t.logo && !failed) {
     return (
       <img
         src={t.logo}
         alt={t.abbr}
         className="team-logo"
-        style={{ height: 22, width: 22, objectFit: "contain", borderRadius: 4, verticalAlign: "middle", flex: "none" }}
+        loading="lazy"
+        onError={() => setFailed(true)}
+        style={{ height: size, width: size, objectFit: "contain", borderRadius: 4, verticalAlign: "middle", flex: "none" }}
       />
     );
   }
@@ -1289,9 +1292,7 @@ function TeamDetailPage({ abbr, onBack }) {
 
       <div className="card" style={{ borderColor: t.color, marginBottom: 16 }}>
         <div style={{ display: "flex", alignItems: "center", gap: 14, padding: "16px", flexWrap: "wrap" }}>
-          {t.logo
-            ? <img src={t.logo} alt={t.abbr} style={{ height: 48, width: 48, objectFit: "contain", borderRadius: 8, flex: "none" }} />
-            : <span className="badge" style={{ background: t.color, fontSize: 16, padding: "8px 12px", height: "auto" }}>{t.abbr}</span>}
+          <Badge abbr={abbr} size={48} />
           <div style={{ flex: 1, minWidth: 0 }}>
             <div style={{ fontSize: 24, fontWeight: 700, lineHeight: 1.4 }}>{t.name}</div>
             {meta.length ? (

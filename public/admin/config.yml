@@ -203,6 +203,8 @@ collections:
       - name: teams
         label: クラブ・ロゴ
         widget: list
+        collapsed: true
+        minimize_collapsed: true
         summary: '{{fields.abbr}} {{fields.name}}'
         fields:
           - name: abbr
@@ -250,6 +252,8 @@ collections:
           - name: East
             label: イースタン・カンファレンス
             widget: list
+            collapsed: true
+            minimize_collapsed: true
             summary: '{{fields.team}}  {{fields.w}}-{{fields.l}}'
             fields:
               - name: team
@@ -305,6 +309,8 @@ collections:
           - name: West
             label: ウェスタン・カンファレンス
             widget: list
+            collapsed: true
+            minimize_collapsed: true
             summary: '{{fields.team}}  {{fields.w}}-{{fields.l}}'
             fields:
               - name: team
