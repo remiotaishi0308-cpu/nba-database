@@ -648,3 +648,16 @@
   .jbu2042 .moment { flex-direction: column; gap: 6px; }
   .jbu2042 .moment .mk { min-width: 0; }
 }
+
+/* プレーオフ / プレイインの境界線（順位表内の区切り行） */
+.jbu2042 tbody tr.cut-row td {
+  padding: 8px 12px;
+  background: var(--accent-bg);
+  color: var(--accent);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: 0.02em;
+  border-top: 2px solid var(--accent);
+}
+.jbu2042 tbody tr.cut-row:hover td { background: var(--accent-bg); }

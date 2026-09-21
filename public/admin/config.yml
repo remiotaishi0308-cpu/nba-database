@@ -106,14 +106,23 @@ collections:
           - name: name
             label: チーム名
             widget: string
-          - name: league
+          - name: conference
             label: カンファレンス
             widget: select
             options:
               - East
               - West
-          - name: div
-            label: ディビジョン(任意)
+          - name: division
+            label: ディビジョン
+            hint: Atlantic / Central / Pacific / Midwest など。league.conferences のキーと一致させる
+            widget: string
+            required: false
+          - name: city
+            label: 本拠地
+            widget: string
+            required: false
+          - name: coach
+            label: 監督
             widget: string
             required: false
           - name: color

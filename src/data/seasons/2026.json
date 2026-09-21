@@ -1,908 +1,739 @@
 {
   "season": 2026,
-  "regulationNote": "2026シーズン開幕。25球団・東西2カンファレンス制。チーム数は年度ごとに増加予定。",
+  "league": {
+    "name": "Bプレミア",
+    "gamesPerTeam": 82,
+    "regulationNote": "1試合12分×4クォーター（延長5分）。10月下旬開幕〜4月中旬閉幕。順位はカンファレンスごとの勝率で決定し、同率はNBAのタイブレーク規定に準拠。",
+    "conferences": [
+      {
+        "key": "East",
+        "name": "イースタン・カンファレンス",
+        "label": "Eastern",
+        "divisions": [
+          {
+            "key": "Atlantic",
+            "name": "アトランティック"
+          },
+          {
+            "key": "Central",
+            "name": "セントラル"
+          }
+        ]
+      },
+      {
+        "key": "West",
+        "name": "ウェスタン・カンファレンス",
+        "label": "Western",
+        "divisions": [
+          {
+            "key": "Pacific",
+            "name": "パシフィック"
+          },
+          {
+            "key": "Midwest",
+            "name": "ミッドウエスト"
+          }
+        ]
+      }
+    ],
+    "playoff": {
+      "berths": 8,
+      "directBerths": 6,
+      "playInStart": 7,
+      "playInEnd": 10,
+      "seriesFormat": "7戦4勝制",
+      "homeCourt": "2-2-1-1-1",
+      "rounds": [
+        {
+          "key": "r1",
+          "label": "1回戦"
+        },
+        {
+          "key": "semis",
+          "label": "カンファレンス準決勝"
+        },
+        {
+          "key": "confFinals",
+          "label": "カンファレンス決勝"
+        }
+      ],
+      "note": "1〜6位はプレイオフ本戦へ直接進出、7〜10位はプレイイントーナメント。ホームコートアドバンテージは上位シードが保持（2-2-1-1-1）。"
+    },
+    "clinchMarks": [
+      {
+        "key": "z",
+        "label": "カンファレンス首位確定"
+      },
+      {
+        "key": "x",
+        "label": "プレイオフ出場決定"
+      },
+      {
+        "key": "pi",
+        "label": "プレイイン進出確定"
+      }
+    ]
+  },
   "prospects": [],
   "teams": [
     {
       "abbr": "千葉",
       "name": "千葉ジェフユナイテッド",
+      "city": "千葉市",
+      "coach": "花房小次郎",
       "league": "East",
-      "div": "",
+      "conference": "East",
+      "division": "Atlantic",
       "color": "#ae3f29",
-      "logo": "",
-      "seasonStats": {
-        "avg": "",
-        "slg": "",
-        "obp": "",
-        "fielding": "",
-        "era": ""
-      },
-      "rankings": {
-        "rank": "",
-        "contact": "",
-        "power": "",
-        "pitching": "",
-        "defense": "",
-        "speed": ""
-      }
-    },
-    {
-      "abbr": "横浜",
-      "name": "横浜マリノス",
-      "league": "East",
-      "div": "",
-      "color": "#a95c28",
-      "logo": "",
-      "seasonStats": {
-        "avg": "",
-        "slg": "",
-        "obp": "",
-        "fielding": "",
-        "era": ""
-      },
-      "rankings": {
-        "rank": "",
-        "contact": "",
-        "power": "",
-        "pitching": "",
-        "defense": "",
-        "speed": ""
-      }
+      "logo": ""
     },
     {
       "abbr": "六本木",
       "name": "六本木ヴィヴァン",
+      "city": "六本木",
+      "coach": "松永幸四郎",
       "league": "East",
-      "div": "",
+      "conference": "East",
+      "division": "Atlantic",
       "color": "#916922",
-      "logo": "",
-      "seasonStats": {
-        "avg": "",
-        "slg": "",
-        "obp": "",
-        "fielding": "",
-        "era": ""
-      },
-      "rankings": {
-        "rank": "",
-        "contact": "",
-        "power": "",
-        "pitching": "",
-        "defense": "",
-        "speed": ""
-      }
+      "logo": ""
     },
     {
       "abbr": "京都",
       "name": "京都パープルサンガ",
+      "city": "亀岡市",
+      "coach": "杉原一葉",
       "league": "East",
-      "div": "",
+      "conference": "East",
+      "division": "Atlantic",
       "color": "#7c711d",
-      "logo": "",
-      "seasonStats": {
-        "avg": "",
-        "slg": "",
-        "obp": "",
-        "fielding": "",
-        "era": ""
-      },
-      "rankings": {
-        "rank": "",
-        "contact": "",
-        "power": "",
-        "pitching": "",
-        "defense": "",
-        "speed": ""
-      }
+      "logo": ""
     },
     {
       "abbr": "博多",
       "name": "博多ホークス",
+      "city": "福岡市",
+      "coach": "山田孝",
       "league": "East",
-      "div": "",
+      "conference": "East",
+      "division": "Atlantic",
       "color": "#6c781c",
-      "logo": "",
-      "seasonStats": {
-        "avg": "",
-        "slg": "",
-        "obp": "",
-        "fielding": "",
-        "era": ""
-      },
-      "rankings": {
-        "rank": "",
-        "contact": "",
-        "power": "",
-        "pitching": "",
-        "defense": "",
-        "speed": ""
-      }
-    },
-    {
-      "abbr": "名古屋",
-      "name": "名古屋ドラゴンズ",
-      "league": "East",
-      "div": "",
-      "color": "#597c1d",
-      "logo": "",
-      "seasonStats": {
-        "avg": "",
-        "slg": "",
-        "obp": "",
-        "fielding": "",
-        "era": ""
-      },
-      "rankings": {
-        "rank": "",
-        "contact": "",
-        "power": "",
-        "pitching": "",
-        "defense": "",
-        "speed": ""
-      }
-    },
-    {
-      "abbr": "尼崎",
-      "name": "尼崎ホエールズ",
-      "league": "East",
-      "div": "",
-      "color": "#45801e",
-      "logo": "",
-      "seasonStats": {
-        "avg": "",
-        "slg": "",
-        "obp": "",
-        "fielding": "",
-        "era": ""
-      },
-      "rankings": {
-        "rank": "",
-        "contact": "",
-        "power": "",
-        "pitching": "",
-        "defense": "",
-        "speed": ""
-      }
-    },
-    {
-      "abbr": "阪神",
-      "name": "阪神タイガース",
-      "league": "East",
-      "div": "",
-      "color": "#2d801e",
-      "logo": "",
-      "seasonStats": {
-        "avg": "",
-        "slg": "",
-        "obp": "",
-        "fielding": "",
-        "era": ""
-      },
-      "rankings": {
-        "rank": "",
-        "contact": "",
-        "power": "",
-        "pitching": "",
-        "defense": "",
-        "speed": ""
-      }
+      "logo": ""
     },
     {
       "abbr": "琉球",
       "name": "琉球テイオー",
+      "city": "琉球",
+      "coach": "小倉快",
       "league": "East",
-      "div": "",
+      "conference": "East",
+      "division": "Atlantic",
       "color": "#1e8027",
-      "logo": "",
-      "seasonStats": {
-        "avg": "",
-        "slg": "",
-        "obp": "",
-        "fielding": "",
-        "era": ""
-      },
-      "rankings": {
-        "rank": "",
-        "contact": "",
-        "power": "",
-        "pitching": "",
-        "defense": "",
-        "speed": ""
-      }
-    },
-    {
-      "abbr": "大宮",
-      "name": "大宮キャップス",
-      "league": "East",
-      "div": "",
-      "color": "#1e803e",
-      "logo": "",
-      "seasonStats": {
-        "avg": "",
-        "slg": "",
-        "obp": "",
-        "fielding": "",
-        "era": ""
-      },
-      "rankings": {
-        "rank": "",
-        "contact": "",
-        "power": "",
-        "pitching": "",
-        "defense": "",
-        "speed": ""
-      }
+      "logo": ""
     },
     {
       "abbr": "広島",
       "name": "広島サンフレッチェ",
+      "city": "広島市",
+      "coach": "望月太郎",
       "league": "East",
-      "div": "",
+      "conference": "East",
+      "division": "Atlantic",
       "color": "#1e8056",
-      "logo": "",
-      "seasonStats": {
-        "avg": "",
-        "slg": "",
-        "obp": "",
-        "fielding": "",
-        "era": ""
-      },
-      "rankings": {
-        "rank": "",
-        "contact": "",
-        "power": "",
-        "pitching": "",
-        "defense": "",
-        "speed": ""
-      }
+      "logo": ""
     },
     {
-      "abbr": "川崎",
-      "name": "川崎フロンターレ",
+      "abbr": "横浜",
+      "name": "横浜マリノス",
+      "city": "横浜市",
+      "coach": "守屋大助",
       "league": "East",
-      "div": "",
-      "color": "#1e806d",
-      "logo": "",
-      "seasonStats": {
-        "avg": "",
-        "slg": "",
-        "obp": "",
-        "fielding": "",
-        "era": ""
-      },
-      "rankings": {
-        "rank": "",
-        "contact": "",
-        "power": "",
-        "pitching": "",
-        "defense": "",
-        "speed": ""
-      }
+      "conference": "East",
+      "division": "Central",
+      "color": "#a95c28",
+      "logo": ""
+    },
+    {
+      "abbr": "名古屋",
+      "name": "名古屋ドラゴンズ",
+      "city": "名古屋市",
+      "coach": "赤坂郁弥",
+      "league": "East",
+      "conference": "East",
+      "division": "Central",
+      "color": "#597c1d",
+      "logo": ""
+    },
+    {
+      "abbr": "尼崎",
+      "name": "尼崎ホエールズ",
+      "city": "尼崎",
+      "coach": "佐藤勇気",
+      "league": "East",
+      "conference": "East",
+      "division": "Central",
+      "color": "#45801e",
+      "logo": ""
+    },
+    {
+      "abbr": "阪神",
+      "name": "阪神タイガース",
+      "city": "西宮市",
+      "coach": "桐山海斗",
+      "league": "East",
+      "conference": "East",
+      "division": "Central",
+      "color": "#2d801e",
+      "logo": ""
+    },
+    {
+      "abbr": "大宮",
+      "name": "大宮キャップス",
+      "city": "大宮",
+      "coach": "大谷瑛",
+      "league": "East",
+      "conference": "East",
+      "division": "Central",
+      "color": "#1e803e",
+      "logo": ""
     },
     {
       "abbr": "札幌",
       "name": "札幌ウォリアーズ",
+      "city": "札幌",
+      "coach": "宮崎孝文",
       "league": "East",
-      "div": "",
+      "conference": "East",
+      "division": "Central",
       "color": "#1e7b80",
-      "logo": "",
-      "seasonStats": {
-        "avg": "",
-        "slg": "",
-        "obp": "",
-        "fielding": "",
-        "era": ""
-      },
-      "rankings": {
-        "rank": "",
-        "contact": "",
-        "power": "",
-        "pitching": "",
-        "defense": "",
-        "speed": ""
-      }
+      "logo": ""
     },
     {
-      "abbr": "江戸川",
-      "name": "江戸川スカーレット",
-      "league": "West",
-      "div": "",
-      "color": "#257b9d",
-      "logo": "",
-      "seasonStats": {
-        "avg": "",
-        "slg": "",
-        "obp": "",
-        "fielding": "",
-        "era": ""
-      },
-      "rankings": {
-        "rank": "",
-        "contact": "",
-        "power": "",
-        "pitching": "",
-        "defense": "",
-        "speed": ""
-      }
+      "abbr": "川崎",
+      "name": "川崎フロンターレ",
+      "city": "川崎市",
+      "coach": "吉原誠",
+      "league": "East",
+      "conference": "East",
+      "division": "Central",
+      "color": "#1e806d",
+      "logo": ""
     },
     {
       "abbr": "品川",
       "name": "品川セイウンスカイ",
+      "city": "品川",
+      "coach": "成田楓",
       "league": "West",
-      "div": "",
+      "conference": "West",
+      "division": "Pacific",
       "color": "#2968ae",
-      "logo": "",
-      "seasonStats": {
-        "avg": "",
-        "slg": "",
-        "obp": "",
-        "fielding": "",
-        "era": ""
-      },
-      "rankings": {
-        "rank": "",
-        "contact": "",
-        "power": "",
-        "pitching": "",
-        "defense": "",
-        "speed": ""
-      }
+      "logo": ""
     },
     {
       "abbr": "丸の内",
       "name": "丸の内ユナイテッド",
+      "city": "丸の内",
+      "coach": "松木悠太",
       "league": "West",
-      "div": "",
+      "conference": "West",
+      "division": "Pacific",
       "color": "#2948ae",
-      "logo": "",
-      "seasonStats": {
-        "avg": "",
-        "slg": "",
-        "obp": "",
-        "fielding": "",
-        "era": ""
-      },
-      "rankings": {
-        "rank": "",
-        "contact": "",
-        "power": "",
-        "pitching": "",
-        "defense": "",
-        "speed": ""
-      }
-    },
-    {
-      "abbr": "東京",
-      "name": "東京ジャイアンツ",
-      "league": "West",
-      "div": "",
-      "color": "#2a29ae",
-      "logo": "",
-      "seasonStats": {
-        "avg": "",
-        "slg": "",
-        "obp": "",
-        "fielding": "",
-        "era": ""
-      },
-      "rankings": {
-        "rank": "",
-        "contact": "",
-        "power": "",
-        "pitching": "",
-        "defense": "",
-        "speed": ""
-      }
+      "logo": ""
     },
     {
       "abbr": "東東京",
       "name": "東東京シンエンペラーズ",
+      "city": "東東京",
+      "coach": "秋山省吾",
       "league": "West",
-      "div": "",
+      "conference": "West",
+      "division": "Pacific",
       "color": "#4929ae",
-      "logo": "",
-      "seasonStats": {
-        "avg": "",
-        "slg": "",
-        "obp": "",
-        "fielding": "",
-        "era": ""
-      },
-      "rankings": {
-        "rank": "",
-        "contact": "",
-        "power": "",
-        "pitching": "",
-        "defense": "",
-        "speed": ""
-      }
+      "logo": ""
     },
     {
       "abbr": "渋谷",
       "name": "渋谷フォーエバーヤングス",
+      "city": "渋谷",
+      "coach": "木佐貫信二",
       "league": "West",
-      "div": "",
+      "conference": "West",
+      "division": "Pacific",
       "color": "#6929ae",
-      "logo": "",
-      "seasonStats": {
-        "avg": "",
-        "slg": "",
-        "obp": "",
-        "fielding": "",
-        "era": ""
-      },
-      "rankings": {
-        "rank": "",
-        "contact": "",
-        "power": "",
-        "pitching": "",
-        "defense": "",
-        "speed": ""
-      }
-    },
-    {
-      "abbr": "大阪",
-      "name": "ガンバ大阪",
-      "league": "West",
-      "div": "",
-      "color": "#8929ae",
-      "logo": "",
-      "seasonStats": {
-        "avg": "",
-        "slg": "",
-        "obp": "",
-        "fielding": "",
-        "era": ""
-      },
-      "rankings": {
-        "rank": "",
-        "contact": "",
-        "power": "",
-        "pitching": "",
-        "defense": "",
-        "speed": ""
-      }
+      "logo": ""
     },
     {
       "abbr": "新宿",
       "name": "新宿ミッドガルズ",
+      "city": "新宿",
+      "coach": "堀江祐介",
       "league": "West",
-      "div": "",
+      "conference": "West",
+      "division": "Pacific",
       "color": "#a929ae",
-      "logo": "",
-      "seasonStats": {
-        "avg": "",
-        "slg": "",
-        "obp": "",
-        "fielding": "",
-        "era": ""
-      },
-      "rankings": {
-        "rank": "",
-        "contact": "",
-        "power": "",
-        "pitching": "",
-        "defense": "",
-        "speed": ""
-      }
-    },
-    {
-      "abbr": "浦和",
-      "name": "浦和レッズ",
-      "league": "West",
-      "div": "",
-      "color": "#ae2992",
-      "logo": "",
-      "seasonStats": {
-        "avg": "",
-        "slg": "",
-        "obp": "",
-        "fielding": "",
-        "era": ""
-      },
-      "rankings": {
-        "rank": "",
-        "contact": "",
-        "power": "",
-        "pitching": "",
-        "defense": "",
-        "speed": ""
-      }
-    },
-    {
-      "abbr": "鹿児島",
-      "name": "鹿児島インパルス",
-      "league": "West",
-      "div": "",
-      "color": "#ae2972",
-      "logo": "",
-      "seasonStats": {
-        "avg": "",
-        "slg": "",
-        "obp": "",
-        "fielding": "",
-        "era": ""
-      },
-      "rankings": {
-        "rank": "",
-        "contact": "",
-        "power": "",
-        "pitching": "",
-        "defense": "",
-        "speed": ""
-      }
-    },
-    {
-      "abbr": "長崎",
-      "name": "長崎ヴァレンティア",
-      "league": "West",
-      "div": "",
-      "color": "#ae2952",
-      "logo": "",
-      "seasonStats": {
-        "avg": "",
-        "slg": "",
-        "obp": "",
-        "fielding": "",
-        "era": ""
-      },
-      "rankings": {
-        "rank": "",
-        "contact": "",
-        "power": "",
-        "pitching": "",
-        "defense": "",
-        "speed": ""
-      }
+      "logo": ""
     },
     {
       "abbr": "宇都宮",
       "name": "宇都宮セルティックス",
+      "city": "宇都宮",
+      "coach": "大木誠一",
       "league": "West",
-      "div": "",
+      "conference": "West",
+      "division": "Pacific",
       "color": "#ae2932",
-      "logo": "",
-      "seasonStats": {
-        "avg": "",
-        "slg": "",
-        "obp": "",
-        "fielding": "",
-        "era": ""
-      },
-      "rankings": {
-        "rank": "",
-        "contact": "",
-        "power": "",
-        "pitching": "",
-        "defense": "",
-        "speed": ""
-      }
+      "logo": ""
+    },
+    {
+      "abbr": "江戸川",
+      "name": "江戸川スカーレット",
+      "city": "江戸川",
+      "coach": "上林透",
+      "league": "West",
+      "conference": "West",
+      "division": "Midwest",
+      "color": "#257b9d",
+      "logo": ""
+    },
+    {
+      "abbr": "東京",
+      "name": "東京ジャイアンツ",
+      "city": "文京区",
+      "coach": "萩原朔太郎",
+      "league": "West",
+      "conference": "West",
+      "division": "Midwest",
+      "color": "#2a29ae",
+      "logo": ""
+    },
+    {
+      "abbr": "大阪",
+      "name": "ガンバ大阪",
+      "city": "吹田市",
+      "coach": "栗林良平",
+      "league": "West",
+      "conference": "West",
+      "division": "Midwest",
+      "color": "#8929ae",
+      "logo": ""
+    },
+    {
+      "abbr": "浦和",
+      "name": "浦和レッズ",
+      "city": "さいたま市浦和区",
+      "coach": "稲森敦也",
+      "league": "West",
+      "conference": "West",
+      "division": "Midwest",
+      "color": "#ae2992",
+      "logo": ""
+    },
+    {
+      "abbr": "鹿児島",
+      "name": "鹿児島インパルス",
+      "city": "鹿児島",
+      "coach": "佐々木悠太郎",
+      "league": "West",
+      "conference": "West",
+      "division": "Midwest",
+      "color": "#ae2972",
+      "logo": ""
+    },
+    {
+      "abbr": "長崎",
+      "name": "長崎ヴァレンティア",
+      "city": "長崎",
+      "coach": "早森時夫",
+      "league": "West",
+      "conference": "West",
+      "division": "Midwest",
+      "color": "#ae2952",
+      "logo": ""
     }
   ],
   "standings": {
     "East": [
       {
         "team": "千葉",
-        "w": 0,
-        "l": 0,
+        "w": 46,
+        "l": 16,
         "gb": "—",
         "conf": "",
-        "home": "",
-        "away": "",
+        "div": "",
+        "home": "21-8",
+        "away": "25-8",
         "l10": "",
-        "strk": "",
-        "clinch": ""
+        "strk": "W2",
+        "diff": "+10.6",
+        "clinch": "pi"
       },
       {
         "team": "横浜",
-        "w": 0,
-        "l": 0,
-        "gb": "—",
+        "w": 42,
+        "l": 20,
+        "gb": "4.0",
         "conf": "",
-        "home": "",
-        "away": "",
+        "div": "",
+        "home": "25-7",
+        "away": "17-13",
         "l10": "",
-        "strk": "",
-        "clinch": ""
+        "strk": "W12",
+        "diff": "",
+        "clinch": "pi"
       },
       {
         "team": "六本木",
-        "w": 0,
-        "l": 0,
-        "gb": "—",
+        "w": 39,
+        "l": 24,
+        "gb": "7.5",
         "conf": "",
+        "div": "",
         "home": "",
         "away": "",
         "l10": "",
-        "strk": "",
+        "strk": "L3",
+        "diff": "",
         "clinch": ""
       },
       {
         "team": "京都",
-        "w": 0,
-        "l": 0,
-        "gb": "—",
+        "w": 39,
+        "l": 25,
+        "gb": "8.0",
         "conf": "",
+        "div": "",
         "home": "",
         "away": "",
         "l10": "",
         "strk": "",
+        "diff": "",
         "clinch": ""
       },
       {
         "team": "博多",
-        "w": 0,
-        "l": 0,
-        "gb": "—",
+        "w": 38,
+        "l": 26,
+        "gb": "9.0",
         "conf": "",
+        "div": "",
         "home": "",
         "away": "",
         "l10": "",
         "strk": "",
+        "diff": "",
         "clinch": ""
       },
       {
         "team": "名古屋",
-        "w": 0,
-        "l": 0,
-        "gb": "—",
+        "w": 36,
+        "l": 28,
+        "gb": "11.0",
         "conf": "",
+        "div": "",
         "home": "",
         "away": "",
         "l10": "",
         "strk": "",
+        "diff": "",
         "clinch": ""
       },
       {
         "team": "尼崎",
-        "w": 0,
-        "l": 0,
-        "gb": "—",
+        "w": 33,
+        "l": 30,
+        "gb": "13.5",
         "conf": "",
+        "div": "",
         "home": "",
         "away": "",
         "l10": "",
         "strk": "",
+        "diff": "",
         "clinch": ""
       },
       {
         "team": "阪神",
-        "w": 0,
-        "l": 0,
-        "gb": "—",
+        "w": 33,
+        "l": 31,
+        "gb": "14.0",
         "conf": "",
+        "div": "",
         "home": "",
         "away": "",
         "l10": "",
         "strk": "",
+        "diff": "",
         "clinch": ""
       },
       {
         "team": "琉球",
-        "w": 0,
-        "l": 0,
-        "gb": "—",
+        "w": 28,
+        "l": 34,
+        "gb": "18.0",
         "conf": "",
+        "div": "",
         "home": "",
         "away": "",
         "l10": "",
         "strk": "",
+        "diff": "",
         "clinch": ""
       },
       {
         "team": "大宮",
-        "w": 0,
-        "l": 0,
-        "gb": "—",
+        "w": 29,
+        "l": 36,
+        "gb": "18.5",
         "conf": "",
+        "div": "",
         "home": "",
         "away": "",
         "l10": "",
         "strk": "",
+        "diff": "",
         "clinch": ""
       },
       {
         "team": "広島",
-        "w": 0,
-        "l": 0,
-        "gb": "—",
+        "w": 21,
+        "l": 41,
+        "gb": "25.0",
         "conf": "",
+        "div": "",
         "home": "",
         "away": "",
         "l10": "",
-        "strk": "",
+        "strk": "L4",
+        "diff": "",
         "clinch": ""
       },
       {
         "team": "川崎",
-        "w": 0,
-        "l": 0,
-        "gb": "—",
+        "w": 17,
+        "l": 46,
+        "gb": "29.5",
         "conf": "",
+        "div": "",
         "home": "",
         "away": "",
         "l10": "",
         "strk": "",
+        "diff": "",
         "clinch": ""
       },
       {
         "team": "札幌",
-        "w": 0,
-        "l": 0,
-        "gb": "—",
+        "w": 17,
+        "l": 47,
+        "gb": "30.0",
         "conf": "",
+        "div": "",
         "home": "",
         "away": "",
         "l10": "",
         "strk": "",
+        "diff": "",
         "clinch": ""
       }
     ],
     "West": [
       {
         "team": "江戸川",
-        "w": 0,
-        "l": 0,
+        "w": 42,
+        "l": 20,
         "gb": "—",
         "conf": "",
-        "home": "",
-        "away": "",
+        "div": "",
+        "home": "23-11",
+        "away": "19-9",
         "l10": "",
         "strk": "",
+        "diff": "+10.5",
         "clinch": ""
       },
       {
         "team": "品川",
-        "w": 0,
-        "l": 0,
-        "gb": "—",
+        "w": 40,
+        "l": 23,
+        "gb": "2.5",
         "conf": "",
+        "div": "",
         "home": "",
         "away": "",
         "l10": "",
-        "strk": "",
+        "strk": "W3",
+        "diff": "",
         "clinch": ""
       },
       {
         "team": "丸の内",
-        "w": 0,
-        "l": 0,
-        "gb": "—",
+        "w": 38,
+        "l": 26,
+        "gb": "5.0",
         "conf": "",
+        "div": "",
         "home": "",
         "away": "",
         "l10": "",
-        "strk": "",
+        "strk": "W2",
+        "diff": "",
         "clinch": ""
       },
       {
         "team": "東京",
-        "w": 0,
-        "l": 0,
-        "gb": "—",
+        "w": 36,
+        "l": 26,
+        "gb": "6.0",
         "conf": "",
+        "div": "",
         "home": "",
         "away": "",
         "l10": "",
         "strk": "",
+        "diff": "",
         "clinch": ""
       },
       {
         "team": "東東京",
-        "w": 0,
-        "l": 0,
-        "gb": "—",
+        "w": 32,
+        "l": 31,
+        "gb": "10.5",
         "conf": "",
+        "div": "",
         "home": "",
         "away": "",
         "l10": "",
-        "strk": "",
+        "strk": "W7",
+        "diff": "",
         "clinch": ""
       },
       {
         "team": "渋谷",
-        "w": 0,
-        "l": 0,
-        "gb": "—",
+        "w": 30,
+        "l": 32,
+        "gb": "12.0",
         "conf": "",
+        "div": "",
         "home": "",
         "away": "",
         "l10": "",
         "strk": "",
+        "diff": "",
         "clinch": ""
       },
       {
         "team": "大阪",
-        "w": 0,
-        "l": 0,
-        "gb": "—",
+        "w": 28,
+        "l": 34,
+        "gb": "14.0",
         "conf": "",
+        "div": "",
         "home": "",
         "away": "",
         "l10": "",
-        "strk": "",
+        "strk": "L4",
+        "diff": "",
         "clinch": ""
       },
       {
         "team": "新宿",
-        "w": 0,
-        "l": 0,
-        "gb": "—",
+        "w": 28,
+        "l": 36,
+        "gb": "15.0",
         "conf": "",
+        "div": "",
         "home": "",
         "away": "",
         "l10": "",
         "strk": "",
+        "diff": "",
         "clinch": ""
       },
       {
         "team": "浦和",
-        "w": 0,
-        "l": 0,
-        "gb": "—",
+        "w": 28,
+        "l": 36,
+        "gb": "15.0",
         "conf": "",
+        "div": "",
         "home": "",
         "away": "",
         "l10": "",
         "strk": "",
+        "diff": "",
         "clinch": ""
       },
       {
         "team": "鹿児島",
-        "w": 0,
-        "l": 0,
-        "gb": "—",
+        "w": 27,
+        "l": 36,
+        "gb": "15.5",
         "conf": "",
+        "div": "",
         "home": "",
         "away": "",
         "l10": "",
-        "strk": "",
+        "strk": "W3",
+        "diff": "",
         "clinch": ""
       },
       {
         "team": "長崎",
-        "w": 0,
-        "l": 0,
-        "gb": "—",
+        "w": 24,
+        "l": 40,
+        "gb": "19.0",
         "conf": "",
+        "div": "",
         "home": "",
         "away": "",
         "l10": "",
         "strk": "",
+        "diff": "",
         "clinch": ""
       },
       {
         "team": "宇都宮",
-        "w": 0,
-        "l": 0,
-        "gb": "—",
+        "w": 18,
+        "l": 45,
+        "gb": "24.5",
         "conf": "",
-        "home": "",
-        "away": "",
+        "div": "",
+        "home": "16-17",
+        "away": "2-28",
         "l10": "",
-        "strk": "",
+        "strk": "L4",
+        "diff": "",
         "clinch": ""
       }
     ]
   },
   "postseason": {
-    "East": {
-      "wildCard": [],
-      "division": [],
-      "lcs": {}
+    "conferences": {
+      "East": {
+        "playIn": [],
+        "rounds": {
+          "r1": [],
+          "semis": [],
+          "confFinals": []
+        }
+      },
+      "West": {
+        "playIn": [],
+        "rounds": {
+          "r1": [],
+          "semis": [],
+          "confFinals": []
+        }
+      }
     },
-    "West": {
-      "wildCard": [],
-      "division": [],
-      "lcs": {}
-    },
-    "worldSeries": {
+    "finals": {
       "a": "",
       "b": "",
       "as": 0,
       "bs": 0,
       "champ": "",
-      "format": "",
+      "format": "7戦4勝制",
       "games": [],
       "mvp": {
         "p": "",
@@ -910,6 +741,17 @@
       },
       "clinchNote": "",
       "path": []
+    },
+    "cup": {
+      "name": "NBAカップ",
+      "champ": "江戸川",
+      "runnerUp": "千葉",
+      "finalScore": "92-66",
+      "mvp": {
+        "p": "ビクター・ウェンバニヤマ",
+        "t": ""
+      },
+      "note": "レギュラーシーズンと並行して行うカップ戦。東西のグループステージを経て決勝トーナメントで優勝を争う。初代王者は江戸川スカーレット。"
     },
     "gallery": {
       "hero": [],
@@ -924,18 +766,12 @@
   },
   "awards": {
     "voting": [],
-    "goldGlove": {},
-    "silverSlugger": {},
+    "allTeams": {},
     "leaders": {
-      "East": {
-        "batting": {},
-        "pitching": {}
-      },
-      "West": {
-        "batting": {},
-        "pitching": {}
-      }
+      "East": {},
+      "West": {}
     },
+    "monthly": [],
     "postseasonMvp": []
   },
   "teamStats": []

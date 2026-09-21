@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, Fragment } from "react";
 import { getSeasonData, getArticlesByYear, MLB_SEASON_YEARS, seasonLabel } from "../../lib/dataService";
 import "./season2042.css";
 
@@ -19,8 +19,28 @@ const GRADS = [
   "linear-gradient(135deg,#2a0d3a,#120618)",
   "linear-gradient(135deg,#0d2a3a,#05141c)",
 ];
-const DIVS = ["East", "Central", "West"];
-const DIV_JP = { East: "東地区", Central: "中地区", West: "西地区" };
+// リーグ構成は DATA.league を唯一の出典とする。カンファレンス・ディビジョン・
+// プレーオフ枠・クリンチ記号を増減してもコード修正は不要（データだけで反映）。
+const LEAGUE = () => DATA?.league || {};
+const CONFS = () => {
+  const cs = LEAGUE().conferences;
+  return Array.isArray(cs) && cs.length
+    ? cs
+    : [{ key: "East", name: "イースタン", label: "Eastern", divisions: [] }];
+};
+const PLAYOFF = () => LEAGUE().playoff || {};
+const confRows = (key) => DATA?.standings?.[key] || [];
+// カンファレンス識別色はデータ順に割り当て（3つ目以降も破綻しない）
+const CONF_COLORS = ["var(--al)", "var(--nl)", "var(--accent)", "var(--gold)"];
+const confColor = (key) => {
+  const i = CONFS().findIndex((c) => c.key === key);
+  return CONF_COLORS[(i < 0 ? 0 : i) % CONF_COLORS.length];
+};
+// そのカンファレンス/ディビジョンに属するクラブを順位順で返す
+const teamsInDivision = (confKey, divKey) =>
+  confRows(confKey)
+    .map((r, i) => ({ row: r, rank: i + 1, t: team(r.team) }))
+    .filter((x) => !divKey || x.t.division === divKey);
 
 // 略称(abbr)でもチーム名(name)でも解決できるルックアップ。
 // 順位表などで team 欄に "HOK" でも "北海道" でも入力可。
@@ -164,8 +184,17 @@ function SectionHead({ kicker, title, right }) {
 function LeagueToggle({ value, onChange }) {
   return (
     <div className="toggle">
-      <button className={value === "East" ? "on al" : ""} onClick={() => onChange("East")}>Eastern</button>
-      <button className={value === "West" ? "on nl" : ""} onClick={() => onChange("West")}>Western</button>
+      {CONFS().map((c, i) => (
+        <button
+          key={c.key}
+          className={
+            value === c.key ? (i === 0 ? "on al" : i === 1 ? "on nl" : "on acc") : ""
+          }
+          onClick={() => onChange(c.key)}
+        >
+          {c.label || c.name}
+        </button>
+      ))}
     </div>
   );
 }
@@ -216,31 +245,49 @@ function SubNews({ items, onOpen }) {
   );
 }
 function MiniStandingsBlock({ conf }) {
-  const rows = DATA.standings[conf] || [];
+  const rows = confRows(conf.key);
+  const po = PLAYOFF();
+  const direct = po.directBerths ?? 6;
+  const piEnd = po.playInEnd ?? 10;
   return (
     <div className="card">
-      <div className="card-head"><span className="kicker" style={{ color: conf === "East" ? "var(--al)" : "var(--nl)" }}>{conf === "East" ? "Eastern" : "Western"} Conference</span></div>
-      <table>
-        <thead><tr><th>#</th><th>Team</th><th className="num">W</th><th className="num">L</th><th className="num">GB</th></tr></thead>
+      <div className="card-head">
+        <span className="kicker" style={{ color: confColor(conf.key) }}>
+          {conf.label || conf.name}
+        </span>
+        <span className="muted" style={{ fontSize: 14 }}>{rows.length} クラブ</span>
+      </div>
+      <div className="table-scroll"><table>
+        <thead><tr>
+          <th>#</th><th>CLUB</th>
+          <th className="num">W</th><th className="num">L</th>
+          <th className="num">PCT</th><th className="num">GB</th>
+        </tr></thead>
         <tbody>
-          {rows.slice(0, 8).map((r, idx) => (
-            <tr key={r.team}>
-              <td className="rank-cell">{idx + 1}</td>
-              <td><TeamCell abbr={r.team} /> {r.clinch ? <span className="clinch">◆</span> : null}</td>
-              <td className="num mono">{r.w}</td><td className="num mono">{r.l}</td><td className="num mono muted">{r.gb}</td>
-            </tr>
+          {rows.slice(0, piEnd).map((r, i) => (
+            <Fragment key={r.team}>
+              <tr>
+                <td className="rank-cell">{i + 1}</td>
+                <td style={{ whiteSpace: "nowrap" }}><ClinchTag c={r.clinch} /><TeamCell abbr={r.team} /></td>
+                <td className="num mono">{r.w}</td>
+                <td className="num mono">{r.l}</td>
+                <td className="num mono">{pct(r.w, r.l)}</td>
+                <td className="num mono muted">{sv(r.gb)}</td>
+              </tr>
+              {i + 1 === direct ? <CutRow label={`プレイオフ進出ライン（1〜${direct}位）`} colSpan={6} /> : null}
+            </Fragment>
           ))}
         </tbody>
-      </table>
+      </table></div>
     </div>
   );
 }
 function HomePage({ go, onOpen }) {
   const sorted = sortedArticles();
   // トップは最新5枚をカルーセル表示。LATEST にも同じ最新5枚を一覧。
-  // 6枚目以降は News タブ（記事一覧）のみに表示。
   const featured = sorted.slice(0, 5);
   const subList = sorted.slice(0, 5);
+  const cup = DATA.postseason?.cup;
   return (
     <div>
       <SectionHead kicker={`Season ${seasonLabel(DATA.season)}`} title="トップニュース"
@@ -249,16 +296,25 @@ function HomePage({ go, onOpen }) {
         <NewsSlider items={featured} onOpen={onOpen} /><SubNews items={subList} onOpen={onOpen} />
       </div>
 
-      <SectionHead kicker="Standings" title="順位表" right={<button className="season-pill" onClick={() => go("standings")} style={{ cursor: "pointer" }}>すべて見る →</button>} />
-      <div className="grid g2" style={{ marginBottom: 18 }}>
-        <MiniStandingsBlock conf="East" />
-        <MiniStandingsBlock conf="West" />
+      <SectionHead kicker="Standings" title="順位表"
+        right={<button className="season-pill" onClick={() => go("standings")} style={{ cursor: "pointer" }}>すべて見る →</button>} />
+      <div className="grid g2">
+        {CONFS().map((c) => <MiniStandingsBlock key={c.key} conf={c} />)}
       </div>
 
-      <SectionHead kicker="Postseason" title="プレーオフ" right={<button className="season-pill" onClick={() => go("postseason")} style={{ cursor: "pointer" }}>詳細・総括 →</button>} />
-      <WorldSeriesHero />
-      <div style={{ height: 18 }} />
-      <div className="grid g2"><LeagueBracket lg="East" /><LeagueBracket lg="West" /></div>
+      {cup && cup.champ ? (
+        <>
+          <SectionHead kicker="In-Season Tournament" title={cup.name || "NBAカップ"} />
+          <CupBlock />
+        </>
+      ) : null}
+
+      <SectionHead kicker="Postseason" title="プレーオフ"
+        right={<button className="season-pill" onClick={() => go("postseason")} style={{ cursor: "pointer" }}>詳細・総括 →</button>} />
+      <PlayoffFormatNote />
+      <div className="grid g2">
+        {CONFS().map((c) => <ConferenceBracket key={c.key} conf={c} />)}
+      </div>
     </div>
   );
 }
@@ -267,102 +323,195 @@ function HomePage({ go, onOpen }) {
 function pct(w, l) { const d = w + l; return d ? (w / d).toFixed(3).replace(/^0/, "") : ".000"; }
 // 空欄は「—」表示。
 const sv = (x) => (x === "" || x == null ? "—" : x);
-// クリンチ表示（W=ワイルドカード/X=PS進出/Y=地区優勝/Z=地区&最高勝率）。
-const CLINCH_COLOR = { Z: "var(--gold)", Y: "var(--accent)", X: "var(--al)", W: "var(--gold-dim)" };
+
+// クリンチ記号（z＝カンファレンス首位確定 / x＝プレイオフ出場決定 / pi＝プレイイン進出確定）。
+// 記号と意味は DATA.league.clinchMarks から読むので、追加・変更はデータ側だけで済む。
+const CLINCH_COLOR = { z: "var(--accent)", x: "var(--al)", pi: "var(--gold)" };
 function ClinchTag({ c }) {
   if (!c) return null;
-  return <span className="mono" style={{ color: CLINCH_COLOR[c] || "var(--muted)", fontWeight: 700, marginRight: 6, fontSize: 14 }}>{c}-</span>;
-}
-function StandingsTable({ conf }) {
-  const rows = DATA.standings[conf] || [];
-  const accent = conf === "East" ? "var(--al)" : "var(--nl)";
+  const k = String(c).toLowerCase();
   return (
-    <div className="card" style={{ marginBottom: 14 }}>
+    <span
+      className="mono"
+      style={{ color: CLINCH_COLOR[k] || "var(--muted)", fontWeight: 700, marginRight: 6, fontSize: 14 }}
+      title={(LEAGUE().clinchMarks || []).find((m) => m.key === k)?.label || ""}
+    >
+      {k}
+    </span>
+  );
+}
+function ClinchLegend() {
+  const marks = LEAGUE().clinchMarks || [];
+  if (!marks.length) return null;
+  return (
+    <span className="muted" style={{ fontSize: 14 }}>
+      {marks.map((m, i) => (
+        <span key={m.key} style={{ whiteSpace: "nowrap" }}>
+          {i > 0 ? " ／ " : ""}
+          <b style={{ color: CLINCH_COLOR[m.key] || "var(--muted)" }}>{m.key}</b>＝{m.label}
+        </span>
+      ))}
+    </span>
+  );
+}
+
+// プレーオフ圏／プレイイン圏の境界線
+function CutRow({ label, colSpan }) {
+  return (
+    <tr className="cut-row">
+      <td colSpan={colSpan}>{label}</td>
+    </tr>
+  );
+}
+
+const STANDINGS_COLS = [
+  { key: "w", label: "W" }, { key: "l", label: "L" },
+  { key: "pct", label: "PCT" }, { key: "gb", label: "GB" },
+  { key: "conf", label: "CONF" }, { key: "div", label: "DIV" },
+  { key: "home", label: "HOME" }, { key: "away", label: "AWAY" },
+  { key: "l10", label: "L10" }, { key: "strk", label: "STRK" },
+  { key: "diff", label: "DIFF" },
+];
+
+function StandingsRowCells({ r }) {
+  return (
+    <>
+      <td className="num mono">{r.w}</td>
+      <td className="num mono">{r.l}</td>
+      <td className="num mono">{pct(r.w, r.l)}</td>
+      <td className="num mono muted">{sv(r.gb)}</td>
+      <td className="num mono">{sv(r.conf)}</td>
+      <td className="num mono">{sv(r.div)}</td>
+      <td className="num mono">{sv(r.home)}</td>
+      <td className="num mono">{sv(r.away)}</td>
+      <td className="num mono">{sv(r.l10)}</td>
+      <td className="num mono" style={{ color: r.strk && r.strk[0] === "W" ? "var(--accent)" : "var(--muted)" }}>{sv(r.strk)}</td>
+      <td className="num mono">{sv(r.diff)}</td>
+    </>
+  );
+}
+
+// カンファレンス順位表（勝率順・プレーオフ境界つき）
+function ConferenceStandings({ conf }) {
+  const rows = confRows(conf.key);
+  const po = PLAYOFF();
+  const direct = po.directBerths ?? 6;
+  const piEnd = po.playInEnd ?? 10;
+  const total = STANDINGS_COLS.length + 2;
+  return (
+    <div className="card" style={{ marginBottom: 16 }}>
       <div className="card-head">
-        <span className="kicker" style={{ color: accent }}>{conf === "East" ? "Eastern" : "Western"} Conference</span>
-        <span className="muted" style={{ fontSize: 14 }}>{conf === "East" ? "イースタン" : "ウエスタン"}・カンファレンス</span>
+        <span className="kicker" style={{ color: confColor(conf.key) }}>{conf.label || conf.name}</span>
+        <span className="muted" style={{ fontSize: 14 }}>{conf.name}・{rows.length} クラブ</span>
       </div>
       <div className="table-scroll"><table>
         <thead><tr>
-          <th>#</th><th>TEAM</th>
-          <th className="num">W</th><th className="num">L</th><th className="num">PCT</th><th className="num">GB</th>
-          <th className="num">CONF</th><th className="num">HOME</th><th className="num">AWAY</th><th className="num">L10</th><th className="num">STRK</th>
+          <th>#</th><th>CLUB</th>
+          {STANDINGS_COLS.map((c) => <th key={c.key} className="num">{c.label}</th>)}
         </tr></thead>
         <tbody>
-          {rows.map((r, idx) => (
-            <tr key={r.team}>
-              <td className="rank-cell">{idx + 1}</td>
-              <td style={{ whiteSpace: "nowrap" }}><ClinchTag c={r.clinch} /><TeamCell abbr={r.team} full /></td>
-              <td className="num mono">{r.w}</td><td className="num mono">{r.l}</td>
-              <td className="num mono">{pct(r.w, r.l)}</td><td className="num mono muted">{sv(r.gb)}</td>
-              <td className="num mono">{sv(r.conf)}</td><td className="num mono">{sv(r.home)}</td><td className="num mono">{sv(r.away)}</td>
-              <td className="num mono">{sv(r.l10)}</td>
-              <td className="num mono" style={{ color: r.strk?.[0] === "W" ? "var(--accent)" : "var(--muted)" }}>{sv(r.strk)}</td>
-            </tr>
+          {rows.map((r, i) => (
+            <Fragment key={r.team}>
+              <tr>
+                <td className="rank-cell">{i + 1}</td>
+                <td style={{ whiteSpace: "nowrap" }}><ClinchTag c={r.clinch} /><TeamCell abbr={r.team} full /></td>
+                <StandingsRowCells r={r} />
+              </tr>
+              {i + 1 === direct ? <CutRow label={`プレイオフ本戦 進出ライン（1〜${direct}位）`} colSpan={total} /> : null}
+              {i + 1 === piEnd && rows.length > piEnd ? <CutRow label={`プレイイン圏（${po.playInStart ?? direct + 1}〜${piEnd}位）ここまで`} colSpan={total} /> : null}
+            </Fragment>
           ))}
         </tbody>
       </table></div>
     </div>
   );
 }
+
+// ディビジョン別の表示（順位はカンファレンス内順位をそのまま表示）
+function DivisionStandings({ conf }) {
+  const divs = conf.divisions && conf.divisions.length ? conf.divisions : [{ key: null, name: conf.name }];
+  return (
+    <div style={{ marginBottom: 16 }}>
+      <div className="kicker" style={{ color: confColor(conf.key), margin: "8px 0 10px" }}>
+        {conf.label || conf.name}
+      </div>
+      <div className="grid g2">
+        {divs.map((d) => {
+          const list = teamsInDivision(conf.key, d.key);
+          return (
+            <div className="card" key={d.key || "all"}>
+              <div className="card-head">
+                <span className="kicker" style={{ color: confColor(conf.key) }}>{d.name}・ディビジョン</span>
+                <span className="muted" style={{ fontSize: 14 }}>{list.length} クラブ</span>
+              </div>
+              <div className="table-scroll"><table>
+                <thead><tr>
+                  <th>#</th><th>CLUB</th>
+                  <th className="num">W</th><th className="num">L</th>
+                  <th className="num">PCT</th><th className="num">GB</th>
+                </tr></thead>
+                <tbody>
+                  {list.map(({ row, rank }) => (
+                    <tr key={row.team}>
+                      <td className="rank-cell" title="カンファレンス内順位">{rank}</td>
+                      <td style={{ whiteSpace: "nowrap" }}><ClinchTag c={row.clinch} /><TeamCell abbr={row.team} full /></td>
+                      <td className="num mono">{row.w}</td>
+                      <td className="num mono">{row.l}</td>
+                      <td className="num mono">{pct(row.w, row.l)}</td>
+                      <td className="num mono muted">{sv(row.gb)}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table></div>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
+
 function StandingsPage() {
+  const [view, setView] = useState("conf");
+  const po = PLAYOFF();
   return (
     <div>
-      <SectionHead kicker="Standings" title="順位表"
-        right={<span className="muted" style={{ fontSize: 14 }}>Y=カンファレンス1位 ／ X=プレーオフ進出 ／ W=Play-In圏</span>} />
-      <StandingsTable conf="East" />
-      <StandingsTable conf="West" />
+      <SectionHead
+        kicker="Standings"
+        title="順位表"
+        right={
+          <div className="toggle">
+            <button className={view === "conf" ? "on acc" : ""} onClick={() => setView("conf")}>カンファレンス</button>
+            <button className={view === "div" ? "on acc" : ""} onClick={() => setView("div")}>ディビジョン</button>
+          </div>
+        }
+      />
+      <p className="muted" style={{ fontSize: 14, margin: "0 0 16px", lineHeight: 1.7 }}>
+        順位はカンファレンスごとの勝率で決定。同率はNBAのタイブレーク規定（直接対決→ディビジョン優勝→カンファレンス内成績…）に準拠します。
+        <br />
+        <ClinchLegend />
+      </p>
+      {view === "conf"
+        ? CONFS().map((c) => <ConferenceStandings key={c.key} conf={c} />)
+        : CONFS().map((c) => <DivisionStandings key={c.key} conf={c} />)}
+      {po.note ? <p className="muted" style={{ fontSize: 14, lineHeight: 1.7 }}>{po.note}</p> : null}
     </div>
   );
 }
 
 /* ---- POSTSEASON ---- */
 function Matchup({ s }) {
-  const aw = s.as > s.bs, bw = s.bs > s.as;
+  const st = s || {};
+  const aw = st.as > st.bs, bw = st.bs > st.as;
   return (
     <div className="matchup">
       <div className={"mu-team" + (aw ? " win" : "")}>
-        {s.sa ? <span className="mu-seed">#{s.sa}</span> : null}
-        <Badge abbr={s.a} /><span className="mu-name">{team(s.a).name}</span><span className="mu-score mono">{s.as}</span>
+        {st.sa ? <span className="mu-seed">#{st.sa}</span> : null}
+        <Badge abbr={st.a} /><span className="mu-name">{team(st.a).name}</span><span className="mu-score mono">{st.as}</span>
       </div>
       <div className={"mu-team" + (bw ? " win" : "")}>
-        {s.sb ? <span className="mu-seed">#{s.sb}</span> : null}
-        <Badge abbr={s.b} /><span className="mu-name">{team(s.b).name}</span><span className="mu-score mono">{s.bs}</span>
-      </div>
-    </div>
-  );
-}
-function LeagueBracket({ lg }) {
-  const ps = DATA.postseason[lg] || { wildCard: [], division: [], lcs: {} };
-  const accent = lg === "East" ? "var(--al)" : "var(--nl)";
-  return (
-    <div className="card">
-      <div className="card-head"><span className="kicker" style={{ color: accent }}>{lg === "East" ? "Eastern Conference" : "Western Conference"}</span></div>
-      <div className="card-body">
-        <div className="bracket">
-          <div className="round"><div className="round-label">First Round</div>{(ps.wildCard || []).map((m, i) => <Matchup key={i} s={m} />)}</div>
-          <div className="round"><div className="round-label">Conf Semifinals</div>{(ps.division || []).map((m, i) => <Matchup key={i} s={m} />)}</div>
-          <div className="round"><div className="round-label">Conf Finals</div><Matchup s={ps.lcs || {}} /></div>
-        </div>
-      </div>
-    </div>
-  );
-}
-function WorldSeriesHero() {
-  const ws = DATA.postseason.worldSeries;
-  const champ = team(ws.champ);
-  return (
-    <div className="ws-champion" style={{ borderColor: champ.color }}>
-      <div className="ws-tag">{seasonLabel(DATA.season)} Finals</div>
-      <div className="ws-trophy">🏆</div>
-      <div className="ws-headline">Champion</div>
-      <div className="ws-champ-name">{champ.name}</div>
-      <div className="ws-result">
-        <TeamCell abbr={ws.a} /><span className="vs-score" style={{ color: "var(--gold)" }}>{ws.as} — {ws.bs}</span><TeamCell abbr={ws.b} />
-      </div>
-      <div className="ws-mvp"><span className="lbl">WS MVP</span><Badge abbr={ws.mvp.t} /><b>{ws.mvp.p}</b></div>
-      <div className="ws-path">
-        {ws.path.map((p, i) => <span key={i} className="step">{p.r} <b>vs {team(p.op).abbr}</b> {p.res}</span>)}
+        {st.sb ? <span className="mu-seed">#{st.sb}</span> : null}
+        <Badge abbr={st.b} /><span className="mu-name">{team(st.b).name}</span><span className="mu-score mono">{st.bs}</span>
       </div>
     </div>
   );
@@ -370,8 +519,7 @@ function WorldSeriesHero() {
 function GameLog({ s }) {
   return (
     <div className="gamelog">
-      {(s.games || []).map((g, i) => {
-        // games は {a,b}（CMS編集用）。旧形式 [a,b] にも後方互換。
+      {((s && s.games) || []).map((g, i) => {
         const a = Array.isArray(g) ? g[0] : g.a;
         const b = Array.isArray(g) ? g[1] : g.b;
         const aw = a > b;
@@ -390,77 +538,203 @@ function GameLog({ s }) {
   );
 }
 function SeriesCard({ s, round, major, compact }) {
-  const aw = s.as > s.bs;
+  const st = s || {};
+  const aw = st.as > st.bs;
   return (
     <div className={"series-card" + (major ? " major" : "")}>
       <div className="series-head">
-        <span className="series-round" style={{ color: major ? "var(--gold)" : "var(--accent)" }}>{round}</span>
-        <span className="series-format">{s.format}</span>
+        <span className="series-round">{round}</span>
+        <span className="series-format">{st.format || PLAYOFF().seriesFormat || ""}</span>
       </div>
       <div className="series-line">
-        <span className={"series-team" + (aw ? " winner" : "")}><Badge abbr={s.a} /><span className="nm">{team(s.a).name}</span></span>
-        <span className="series-vs">{s.as} <span className="muted">–</span> {s.bs}</span>
-        <span className={"series-team" + (!aw ? " winner" : "")}><Badge abbr={s.b} /><span className="nm">{team(s.b).name}</span></span>
+        <span className={"series-team" + (aw ? " winner" : "")}>
+          {st.sa ? <span className="mu-seed">#{st.sa}</span> : null}
+          <Badge abbr={st.a} /><span className="nm">{team(st.a).name}</span>
+        </span>
+        <span className="series-vs">{st.as} <span className="muted">–</span> {st.bs}</span>
+        <span className={"series-team" + (!aw ? " winner" : "")}>
+          {st.sb ? <span className="mu-seed">#{st.sb}</span> : null}
+          <Badge abbr={st.b} /><span className="nm">{team(st.b).name}</span>
+        </span>
       </div>
-      {/* compact（WC/DS）は GAMEスコア・注目選手を省略 */}
-      {!compact && <GameLog s={s} />}
+      {!compact && <GameLog s={st} />}
       <div className="series-meta">
-        {!compact && (s.mvp ? <span className="meta-chip mvp">シリーズMVP <Badge abbr={s.mvp.t} /> <b>{s.mvp.p}</b></span>
-          : s.standout ? <span className="meta-chip">注目選手 <Badge abbr={s.standout.t} /> <b>{s.standout.p}</b></span> : null)}
-        <span className="meta-chip">勝者 <Badge abbr={aw ? s.a : s.b} /></span>
+        {!compact && (st.mvp ? <span className="meta-chip mvp">シリーズMVP <Badge abbr={st.mvp.t} /> <b>{st.mvp.p}</b></span>
+          : st.standout ? <span className="meta-chip">注目選手 <Badge abbr={st.standout.t} /> <b>{st.standout.p}</b></span> : null)}
+        {st.a || st.b ? <span className="meta-chip">勝者 <Badge abbr={aw ? st.a : st.b} /></span> : null}
       </div>
-      {s.note ? <div className="series-note">{s.note}</div> : null}
+      {st.note ? <div className="series-note">{st.note}</div> : null}
     </div>
   );
 }
-function LeagueSeriesDetail({ lg }) {
-  const ps = DATA.postseason[lg] || { wildCard: [], division: [], lcs: {} };
-  const lcsLabel = lg === "East" ? "East Finals" : "West Finals";
-  const accent = lg === "East" ? "var(--al)" : "var(--nl)";
+
+// プレーオフ方式の説明（レギュレーションの数値をそのまま表示）
+function PlayoffFormatNote() {
+  const po = PLAYOFF();
+  const rounds = po.rounds || [];
   return (
-    <div>
-      <div className="kicker" style={{ color: accent, margin: "8px 0 12px" }}>{lg === "East" ? "Eastern Conference" : "Western Conference"}</div>
-      <SeriesCard s={ps.lcs || {}} round={lcsLabel} major />
-      <div className="grid g2">
-        {(ps.division || []).map((m, i) => <SeriesCard key={"d" + i} s={m} round="Conf Semifinals" compact />)}
-      </div>
-      <div className="grid g2">
-        {(ps.wildCard || []).map((m, i) => <SeriesCard key={"w" + i} s={m} round="First Round" compact />)}
-      </div>
-    </div>
+    <p className="muted" style={{ fontSize: 14, lineHeight: 1.7, margin: "0 0 16px" }}>
+      各カンファレンス{po.berths ?? 8}クラブ・計{(po.berths ?? 8) * CONFS().length}クラブが出場。
+      1〜{po.directBerths ?? 6}位は本戦へ直接進出、{po.playInStart ?? 7}〜{po.playInEnd ?? 10}位はプレイイントーナメント。
+      {rounds.length ? "本戦は " + rounds.map((r) => r.label).join(" → ") + " → ファイナル（すべて" + (po.seriesFormat || "7戦4勝制") + "）。" : ""}
+      {po.homeCourt ? "ホームコートアドバンテージは上位シードが保持（" + po.homeCourt + "）。" : ""}
+    </p>
   );
 }
-function PostseasonRecap() {
-  const r = DATA.postseason.recap;
+
+// プレイイントーナメント（すべて1試合制）
+function PlayInBlock({ conf }) {
+  const po = PLAYOFF();
+  const s = po.playInStart ?? 7;
+  const e = po.playInEnd ?? 10;
+  const games = (DATA.postseason && DATA.postseason.conferences && DATA.postseason.conferences[conf.key] && DATA.postseason.conferences[conf.key].playIn) || [];
+  const steps = [
+    { label: "第1ラウンドA（" + s + "位 対 " + (s + 1) + "位）", hint: "勝者が第" + s + "シード" },
+    { label: "第1ラウンドB（" + (e - 1) + "位 対 " + e + "位）", hint: "敗者は敗退" },
+    { label: "第2ラウンド（Aの敗者 対 Bの勝者）", hint: "勝者が第" + (s + 1) + "シード" },
+  ];
   return (
-    <div className="recap">
-      <h3>{r.headline}</h3>
-      {r.body.map((p, i) => <p key={i}>{p}</p>)}
-      <div style={{ marginTop: 8 }}>
-        <div className="kicker" style={{ marginBottom: 4 }}>Key Moments</div>
-        {r.moments.map((m, i) => (
-          <div className="moment" key={i}>
-            <span className="mk">{m.k}</span>
-            <div><div className="mt">{m.t}</div><div className="mb">{m.b}</div></div>
+    <div className="card" style={{ marginBottom: 16 }}>
+      <div className="card-head">
+        <span className="kicker" style={{ color: confColor(conf.key) }}>{conf.label || conf.name} · Play-In</span>
+        <span className="muted" style={{ fontSize: 14 }}>1試合制／上位クラブの本拠地開催</span>
+      </div>
+      <div className="card-body">
+        {steps.map((st, i) => (
+          <div key={i} style={{ marginBottom: i < steps.length - 1 ? 16 : 0 }}>
+            <div className="round-label">{st.label} — {st.hint}</div>
+            {games[i] ? <Matchup s={games[i]} /> : <div className="muted" style={{ fontSize: 14 }}>結果は未登録です。</div>}
           </div>
         ))}
       </div>
     </div>
   );
 }
+
+// カンファレンス・ブラケット（ラウンド構成は DATA.league.playoff.rounds から）
+function ConferenceBracket({ conf }) {
+  const rounds = PLAYOFF().rounds || [];
+  const psc = (DATA.postseason && DATA.postseason.conferences) || {};
+  const data = (psc[conf.key] && psc[conf.key].rounds) || {};
+  return (
+    <div className="card">
+      <div className="card-head">
+        <span className="kicker" style={{ color: confColor(conf.key) }}>{conf.label || conf.name}</span>
+      </div>
+      <div className="card-body">
+        <div className="bracket">
+          {rounds.map((r) => {
+            const list = data[r.key] || [];
+            return (
+              <div className="round" key={r.key}>
+                <div className="round-label">{r.label}</div>
+                {list.length
+                  ? list.map((m, i) => <Matchup key={i} s={m} />)
+                  : <div className="muted" style={{ fontSize: 14 }}>未登録</div>}
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// ファイナル（カンファレンス王者同士）
+function FinalsHero() {
+  const f = (DATA.postseason && DATA.postseason.finals) || {};
+  if (!f.champ) {
+    return (
+      <div className="card"><div className="card-body">
+        <div className="kicker">Finals</div>
+        <p className="muted" style={{ fontSize: 16, margin: "8px 0 0" }}>ファイナルの結果は未登録です。</p>
+      </div></div>
+    );
+  }
+  const champ = team(f.champ);
+  return (
+    <div className="ws-champion">
+      <div className="ws-tag">{seasonLabel(DATA.season)} Bプレミア ファイナル</div>
+      <div className="ws-trophy">🏆</div>
+      <div className="ws-headline">Champion</div>
+      <div className="ws-champ-name">{champ.name}</div>
+      <div className="ws-result">
+        <TeamCell abbr={f.a} /><span className="vs-score">{f.as} — {f.bs}</span><TeamCell abbr={f.b} />
+      </div>
+      {f.mvp && f.mvp.p ? (
+        <div className="ws-mvp"><span className="lbl">Finals MVP</span><Badge abbr={f.mvp.t} /><b>{f.mvp.p}</b></div>
+      ) : null}
+      {(f.path || []).length ? (
+        <div className="ws-path">
+          {f.path.map((p, i) => <span key={i} className="step">{p.r} <b>vs {team(p.op).abbr}</b> {p.res}</span>)}
+        </div>
+      ) : null}
+    </div>
+  );
+}
+
+// NBAカップ（インシーズン・トーナメント）
+function CupBlock() {
+  const c = (DATA.postseason && DATA.postseason.cup) || null;
+  if (!c) return null;
+  return (
+    <div className="card">
+      <div className="card-head">
+        <span className="kicker">{c.name || "NBAカップ"}</span>
+        <span className="muted" style={{ fontSize: 14 }}>インシーズン・トーナメント</span>
+      </div>
+      <div className="card-body">
+        {c.champ ? (
+          <div className="series-line" style={{ padding: 0, marginBottom: 12 }}>
+            <span className="series-team winner"><Badge abbr={c.champ} /><span className="nm">{team(c.champ).name}</span></span>
+            <span className="series-vs">{c.finalScore || ""}</span>
+            {c.runnerUp ? <span className="series-team"><Badge abbr={c.runnerUp} /><span className="nm">{team(c.runnerUp).name}</span></span> : null}
+          </div>
+        ) : null}
+        <div className="series-meta" style={{ padding: 0 }}>
+          {c.champ ? <span className="meta-chip">優勝 <Badge abbr={c.champ} /> <b>{team(c.champ).name}</b></span> : null}
+          {c.mvp && c.mvp.p ? <span className="meta-chip mvp">大会MVP {c.mvp.t ? <Badge abbr={c.mvp.t} /> : null} <b>{c.mvp.p}</b></span> : null}
+        </div>
+        {c.note ? <div className="series-note" style={{ padding: "12px 0 0" }}>{c.note}</div> : null}
+      </div>
+    </div>
+  );
+}
+
+function PostseasonRecap() {
+  const r = (DATA.postseason && DATA.postseason.recap) || { headline: "", body: [], moments: [] };
+  if (!r.headline && !(r.body || []).length) {
+    return <div className="card"><div className="card-body"><p className="muted" style={{ fontSize: 16, margin: 0 }}>総括は未登録です。</p></div></div>;
+  }
+  return (
+    <div className="recap">
+      <h3>{r.headline}</h3>
+      {(r.body || []).map((p, i) => <p key={i}>{p}</p>)}
+      {(r.moments || []).length ? (
+        <div style={{ marginTop: 8 }}>
+          <div className="kicker" style={{ marginBottom: 4 }}>Key Moments</div>
+          {r.moments.map((m, i) => (
+            <div className="moment" key={i}>
+              <span className="mk">{m.k}</span>
+              <div><div className="mt">{m.t}</div><div className="mb">{m.b}</div></div>
+            </div>
+          ))}
+        </div>
+      ) : null}
+    </div>
+  );
+}
 function PhotoStrip({ group, min = 180, ratio = "4/3" }) {
-  // 管理画面(CMSギャラリー)でアップした写真を、枚数自由に全部表示。
-  // 各要素は {url, caption} または 旧形式の文字列パスの両対応。
-  const photos = (DATA.postseason.gallery && DATA.postseason.gallery[group]) || [];
+  const photos = (DATA.postseason && DATA.postseason.gallery && DATA.postseason.gallery[group]) || [];
   const norm = photos
     .map((p) => (typeof p === "string" ? { url: p } : p))
     .filter((p) => p && p.url);
   if (norm.length === 0) return null;
   return (
-    <div className="gallery-grid" style={{ gridTemplateColumns: `repeat(auto-fit, minmax(${min}px, 1fr))` }}>
+    <div className="gallery-grid" style={{ gridTemplateColumns: "repeat(auto-fit, minmax(" + min + "px, 1fr))" }}>
       {norm.map((p, i) => (
         <a key={i} className="photo-slot" style={{ aspectRatio: ratio }} href={p.url} target="_blank" rel="noreferrer">
-          <img src={p.url} alt={p.caption || `${group} photo ${i + 1}`} loading="lazy" />
+          <img src={p.url} alt={p.caption || group} loading="lazy" />
           {p.caption ? <div className="photo-cap">{p.caption}</div> : null}
         </a>
       ))}
@@ -468,26 +742,45 @@ function PhotoStrip({ group, min = 180, ratio = "4/3" }) {
   );
 }
 function PostseasonPage() {
-  const ws = DATA.postseason.worldSeries;
+  const rounds = PLAYOFF().rounds || [];
+  const psc = (DATA.postseason && DATA.postseason.conferences) || {};
   return (
     <div>
       <SectionHead kicker="Postseason" title="ポストシーズン" />
-      <WorldSeriesHero />
+      <PlayoffFormatNote />
+      <FinalsHero />
 
-      {/* ファイナル対戦詳細を最上部（写真枠の上）に配置 */}
-      <div className="kicker" style={{ color: "var(--gold)", margin: "16px 0 12px" }}>Finals 対戦詳細</div>
-      <SeriesCard s={ws} round="Finals" major />
-      {ws.clinchNote ? <div className="series-note" style={{ marginTop: -6, marginBottom: 18, paddingLeft: 0 }}>🏆 {ws.clinchNote}</div> : null}
+      <SectionHead kicker="In-Season Tournament" title="NBAカップ" />
+      <CupBlock />
+
+      <SectionHead kicker="Play-In" title="プレイイントーナメント" />
+      <div className="grid g2">{CONFS().map((c) => <PlayInBlock key={c.key} conf={c} />)}</div>
+
+      <SectionHead kicker="Bracket" title="プレーオフ・ブラケット" />
+      <div className="grid g2">{CONFS().map((c) => <ConferenceBracket key={c.key} conf={c} />)}</div>
 
       <div className="kicker" style={{ margin: "18px 0 10px" }}>Highlights</div>
       <PhotoStrip group="hero" min={300} ratio="16/9" />
 
-      <SectionHead kicker="Bracket" title="プレーオフ・ブラケット" />
-      <div className="grid g2"><LeagueBracket lg="East" /><LeagueBracket lg="West" /></div>
-
       <SectionHead kicker="Series Detail" title="対戦カード詳細" />
-      <LeagueSeriesDetail lg="East" />
-      <LeagueSeriesDetail lg="West" />
+      {CONFS().map((c) => {
+        const data = (psc[c.key] && psc[c.key].rounds) || {};
+        const any = rounds.some((r) => (data[r.key] || []).length);
+        return (
+          <div key={c.key}>
+            <div className="kicker" style={{ color: confColor(c.key), margin: "8px 0 12px" }}>{c.label || c.name}</div>
+            {any
+              ? rounds.slice().reverse().map((r) => (
+                  <div key={r.key} className="grid g2">
+                    {(data[r.key] || []).map((m, i) => (
+                      <SeriesCard key={r.key + i} s={m} round={r.label} major={r.key === "confFinals"} />
+                    ))}
+                  </div>
+                ))
+              : <p className="muted" style={{ fontSize: 14 }}>対戦結果は未登録です。</p>}
+          </div>
+        );
+      })}
 
       <div className="kicker" style={{ margin: "6px 0 10px" }}>Series Photos</div>
       <PhotoStrip group="series" min={170} ratio="4/3" />
@@ -549,7 +842,7 @@ function VotingAward({ award, lg }) {
   );
 }
 function VotingTab() {
-  const [lg, setLg] = useState("AL");
+  const [lg, setLg] = useState(CONFS()[0].key);
   return (
     <div>
       <div style={{ display: "flex", justifyContent: "flex-end", marginBottom: 16 }}><LeagueToggle value={lg} onChange={setLg} /></div>
@@ -581,7 +874,7 @@ function FieldSvg() {
   );
 }
 function FieldDiagram() {
-  const [lg, setLg] = useState("AL");
+  const [lg, setLg] = useState(CONFS()[0].key);
   const [award, setAward] = useState("gg");
   const map = ((award === "gg" ? DATA.awards.goldGlove : DATA.awards.silverSlugger) || {})[lg] || {};
   const other = ((award === "gg" ? DATA.awards.silverSlugger : DATA.awards.goldGlove) || {})[lg] || {};
@@ -678,20 +971,20 @@ function LeaderCard({ title, rows }) {
   );
 }
 function LeadersTab() {
-  const [lg, setLg] = useState("AL");
-  const d = DATA.awards.leaders[lg];
+  const [lg, setLg] = useState(CONFS()[0].key);
+  const d = (DATA.awards && DATA.awards.leaders && DATA.awards.leaders[lg]) || {};
   return (
     <div>
       <div style={{ display: "flex", justifyContent: "flex-end", marginBottom: 14 }}><LeagueToggle value={lg} onChange={setLg} /></div>
       <div className="kicker" style={{ marginBottom: 10 }}>Batting · 打撃</div>
-      <div className="grid g2" style={{ marginBottom: 24 }}>{Object.entries(d.batting).map(([k, rows]) => <LeaderCard key={k} title={k} rows={rows} />)}</div>
+      <div className="grid g2" style={{ marginBottom: 24 }}>{Object.entries(d.batting || {}).map(([k, rows]) => <LeaderCard key={k} title={k} rows={rows} />)}</div>
       <div className="kicker" style={{ marginBottom: 10 }}>Pitching · 投手</div>
-      <div className="grid g2">{Object.entries(d.pitching).map(([k, rows]) => <LeaderCard key={k} title={k} rows={rows} />)}</div>
+      <div className="grid g2">{Object.entries(d.pitching || {}).map(([k, rows]) => <LeaderCard key={k} title={k} rows={rows} />)}</div>
     </div>
   );
 }
 function PostseasonMvpTab() {
-  const list = DATA.awards.postseasonMvp;
+  const list = (DATA.awards && DATA.awards.postseasonMvp) || [];
   return (
     <div>
       <div className="grid g2" style={{ marginBottom: 16 }}>
@@ -811,13 +1104,13 @@ function NewsPage({ articleId, setArticleId }) {
   );
 }
 
-/* ---- TEAMS（球団一覧 / 球団詳細） ---- */
-// abbr から順位表の行（勝敗・地区・順位）を引く。
+/* ---- TEAMS（クラブ一覧 / クラブ詳細） ---- */
+// abbr からカンファレンス順位表の行を引く（カンファレンス構成はデータ由来）。
 function findStanding(abbr) {
-  for (const conf of ["East", "West"]) {
-    const rows = DATA.standings[conf] || [];
+  for (const c of CONFS()) {
+    const rows = confRows(c.key);
     const idx = rows.findIndex((r) => team(r.team).abbr === team(abbr).abbr);
-    if (idx >= 0) return { ...rows[idx], conf, rank: idx + 1 };
+    if (idx >= 0) return { ...rows[idx], conf: c, rank: idx + 1 };
   }
   return null;
 }
@@ -829,42 +1122,50 @@ function TeamRow({ abbr, onOpen }) {
     <div
       onClick={() => onOpen(abbr)}
       style={{
-        display: "flex", alignItems: "center", gap: 10, padding: "9px 12px",
+        display: "flex", alignItems: "center", gap: 10, padding: "10px 14px",
         cursor: "pointer", borderTop: "1px solid rgba(0,0,0,.08)",
       }}
     >
+      {s ? <span className="rank-cell mono" style={{ width: 28 }}>{s.rank}</span> : null}
       <Badge abbr={abbr} />
-      <span style={{ fontWeight: 600, flex: 1, minWidth: 0 }}>{t.name}</span>
-      {s && <span className="mono muted" style={{ fontSize: 14 }}>{s.w}-{s.l}</span>}
+      <span style={{ fontWeight: 700, flex: 1, minWidth: 0 }}>{t.name}</span>
+      {s ? <span className="mono muted" style={{ fontSize: 14 }}>{s.w}-{s.l}</span> : null}
     </div>
   );
 }
 
 function TeamsPage({ onOpen }) {
+  const total = CONFS().reduce((a, c) => a + confRows(c.key).length, 0);
   return (
     <div>
-      <SectionHead kicker="Teams" title="球団一覧"
-        right={<span className="muted" style={{ fontSize: 14 }}>球団をクリックで詳細</span>} />
-      <div className="grid g2">
-        {["East", "West"].map((conf) => {
-          const rows = DATA.standings[conf] || [];
-          return (
-            <div className="card" key={conf}>
-              <div className="card-head">
-                <span className="kicker" style={{ color: conf === "East" ? "var(--al)" : "var(--nl)" }}>
-                  {conf === "East" ? "Eastern" : "Western"} Conference
-                </span>
-                <span className="muted" style={{ fontSize: 14 }}>{rows.length} teams</span>
-              </div>
-              <div style={{ padding: "2px 0 6px" }}>
-                {rows.map((r) => (
-                  <TeamRow key={r.team} abbr={r.team} onOpen={onOpen} />
-                ))}
-              </div>
+      <SectionHead kicker="Teams" title="クラブ一覧"
+        right={<span className="muted" style={{ fontSize: 14 }}>{total} クラブ／クラブをクリックで詳細</span>} />
+      {CONFS().map((c) => {
+        const divs = c.divisions && c.divisions.length ? c.divisions : [{ key: null, name: c.name }];
+        return (
+          <div key={c.key}>
+            <div className="kicker" style={{ color: confColor(c.key), margin: "16px 0 10px" }}>
+              {c.name}（{confRows(c.key).length} クラブ）
             </div>
-          );
-        })}
-      </div>
+            <div className="grid g2">
+              {divs.map((d) => {
+                const list = teamsInDivision(c.key, d.key);
+                return (
+                  <div className="card" key={d.key || "all"}>
+                    <div className="card-head">
+                      <span className="kicker" style={{ color: confColor(c.key) }}>{d.name}・ディビジョン</span>
+                      <span className="muted" style={{ fontSize: 14 }}>{list.length} クラブ</span>
+                    </div>
+                    <div style={{ padding: "2px 0 6px" }}>
+                      {list.map(({ row }) => <TeamRow key={row.team} abbr={row.team} onOpen={onOpen} />)}
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        );
+      })}
     </div>
   );
 }
@@ -882,11 +1183,7 @@ const ROSTER_COLS = [
 
 function StatTable({ rows, cols, empty }) {
   if (!rows || rows.length === 0) {
-    return (
-      <div className="muted" style={{ fontSize: 14, padding: "14px 4px" }}>
-        {empty}
-      </div>
-    );
+    return <div className="muted" style={{ fontSize: 16, padding: "14px 4px" }}>{empty}</div>;
   }
   return (
     <div className="table-scroll"><table>
@@ -899,7 +1196,7 @@ function StatTable({ rows, cols, empty }) {
       <tbody>
         {rows.map((p, i) => (
           <tr key={p.name || i}>
-            <td style={{ fontWeight: 600 }}>{p.name || "—"}</td>
+            <td style={{ fontWeight: 700 }}>{p.name || "—"}</td>
             {cols.map((c) => <td key={c.key} className="num mono">{p[c.key] || "—"}</td>)}
           </tr>
         ))}
@@ -912,85 +1209,45 @@ function TeamDetailPage({ abbr, onBack }) {
   const t = team(abbr);
   const s = findStanding(abbr);
   const data = TEAM_DATA[abbr] || {};
-  const ts = data.teamStats || {};
-  const tsEntries = Object.entries(ts).filter(([, v]) => v !== "" && v != null);
-  const editHint = "src/data/jbu2042Teams.json に追記すると表示されます";
-  // チーム詳細上部の SEASON STATISTICS / TEAM RANKINGS（CMSのチームデータから）。
-  const ss = t.seasonStats || {};
-  const ssItems = [["打率", ss.avg], ["長打率", ss.slg], ["出塁率", ss.obp], ["守備率", ss.fielding], ["防御率", ss.era]].filter(([, v]) => v);
-  const rk = t.rankings || {};
-  const rkItems = [["総合", rk.rank], ["ミート", rk.contact], ["パワー", rk.power], ["投球", rk.pitching], ["守備", rk.defense], ["走塁", rk.speed]].filter(([, v]) => v);
+  const divName = (() => {
+    const c = CONFS().find((x) => x.key === t.conference) || (s && s.conf);
+    const d = c && (c.divisions || []).find((x) => x.key === t.division);
+    return d ? d.name : t.division || "";
+  })();
+  const meta = [
+    s && s.conf ? s.conf.name : "",
+    divName ? divName + "・ディビジョン" : "",
+    t.city ? "本拠地 " + t.city : "",
+    t.coach ? "監督 " + t.coach : "",
+  ].filter(Boolean);
 
   return (
     <div>
-      <button className="back-btn" onClick={onBack}>← 球団一覧へ</button>
+      <button className="back-btn" onClick={onBack}>← クラブ一覧へ</button>
 
       <div className="card" style={{ borderColor: t.color, marginBottom: 16 }}>
-        <div style={{ display: "flex", alignItems: "center", gap: 14, padding: "14px 16px", flexWrap: "wrap" }}>
+        <div style={{ display: "flex", alignItems: "center", gap: 14, padding: "16px", flexWrap: "wrap" }}>
           {t.logo
-            ? <img src={t.logo} alt={t.abbr} style={{ height: 44, width: 44, objectFit: "contain", borderRadius: 8, flex: "none" }} />
-            : <span className="badge" style={{ background: t.color, fontSize: 15, padding: "6px 10px" }}>{t.abbr}</span>}
+            ? <img src={t.logo} alt={t.abbr} style={{ height: 48, width: 48, objectFit: "contain", borderRadius: 8, flex: "none" }} />
+            : <span className="badge" style={{ background: t.color, fontSize: 16, padding: "8px 12px", height: "auto" }}>{t.abbr}</span>}
           <div style={{ flex: 1, minWidth: 0 }}>
-            <div className="font-display" style={{ fontSize: 22, fontWeight: 700 }}>{t.name}</div>
-            {s && (
-              <div className="muted" style={{ fontSize: 14, marginTop: 2 }}>
-                {s.conf === "East" ? "イースタン" : "ウエスタン"}・カンファレンス　|　{s.rank}位　|　{s.w}勝{s.l}敗（{pct(s.w, s.l)}）　|　{sv(s.gb)} GB　|　{sv(s.strk)}
+            <div style={{ fontSize: 24, fontWeight: 700, lineHeight: 1.4 }}>{t.name}</div>
+            {meta.length ? (
+              <div className="muted" style={{ fontSize: 14, marginTop: 4, lineHeight: 1.7 }}>{meta.join("　|　")}</div>
+            ) : null}
+            {s ? (
+              <div style={{ fontSize: 16, marginTop: 6 }}>
+                <b>カンファレンス{s.rank}位</b>　{s.w}勝{s.l}敗（{pct(s.w, s.l)}）　GB {sv(s.gb)}　{sv(s.strk)}
+                {s.clinch ? <span style={{ marginLeft: 8 }}><ClinchTag c={s.clinch} /></span> : null}
               </div>
-            )}
+            ) : null}
           </div>
         </div>
       </div>
 
-      {(ssItems.length > 0 || rkItems.length > 0) && (
-        <div className="card" style={{ marginBottom: 16 }}>
-          {ssItems.length > 0 && (
-            <div style={{ padding: "14px 16px", borderBottom: rkItems.length ? "1px solid rgba(0,0,0,.08)" : "none" }}>
-              <div className="kicker" style={{ marginBottom: 10 }}>Season Statistics</div>
-              <div style={{ display: "flex", flexWrap: "wrap", gap: 22 }}>
-                {ssItems.map(([k, v]) => (
-                  <div key={k}>
-                    <div className="mono" style={{ fontSize: 20, fontWeight: 700 }}>{v}</div>
-                    <div className="muted" style={{ fontSize: 14 }}>{k}</div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
-          {rkItems.length > 0 && (
-            <div style={{ padding: "14px 16px" }}>
-              <div className="kicker" style={{ marginBottom: 10 }}>Team Rankings</div>
-              <div style={{ display: "flex", flexWrap: "wrap", gap: 22 }}>
-                {rkItems.map(([k, v]) => (
-                  <div key={k}>
-                    <div className="mono" style={{ fontSize: 20, fontWeight: 700, color: "var(--accent)" }}>{v}<span style={{ fontSize: 14, fontWeight: 600 }}>位</span></div>
-                    <div className="muted" style={{ fontSize: 14 }}>{k}</div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
-        </div>
-      )}
-
-      {tsEntries.length > 0 && (
-        <>
-          <SectionHead kicker="Team Stats" title="チーム成績" />
-          <div className="card" style={{ marginBottom: 16 }}>
-            <div style={{ display: "flex", flexWrap: "wrap", gap: 0 }}>
-              {tsEntries.map(([k, v]) => (
-                <div key={k} style={{ flex: "1 1 33%", padding: "12px 14px", borderTop: "1px solid rgba(0,0,0,.08)" }}>
-                  <div className="muted" style={{ fontSize: 14 }}>{k}</div>
-                  <div className="mono" style={{ fontSize: 18, fontWeight: 700 }}>{v}</div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </>
-      )}
-
       <SectionHead kicker="Roster" title="選手（ロースター）" />
       <div className="card">
-        <StatTable rows={data.batters} cols={ROSTER_COLS} empty={`選手データは準備中です（${editHint}）`} />
+        <StatTable rows={data.batters} cols={ROSTER_COLS} empty="選手データは準備中です（CMSのシーズン編集から登録できます）" />
       </div>
     </div>
   );
