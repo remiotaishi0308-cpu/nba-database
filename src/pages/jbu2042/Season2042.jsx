@@ -826,6 +826,23 @@ function ProspectsPage() {
 /* ---- AWARDS ---- */
 const MEDALS = ["🥇", "🥈", "🥉"];
 
+// 個人成績の指標表示。列と並び順は league.statKeys の定義に従う（増やせば自動で増える）
+const STAT_KEYS = () => (LEAGUE().statKeys || []);
+function StatLine({ stats }) {
+  const keys = STAT_KEYS().filter((k) => stats && stats[k.key] != null && stats[k.key] !== "");
+  if (!keys.length) return null;
+  return (
+    <div className="statline">
+      {keys.map((k) => (
+        <span className="statline-item" key={k.key} title={k.hint || k.label}>
+          <span className="statline-label">{k.label}</span>
+          <span className="statline-val mono">{stats[k.key]}</span>
+        </span>
+      ))}
+    </div>
+  );
+}
+
 // 未登録の枠を示す共通表示
 function Pending({ text = "未登録です。CMSのシーズン編集から登録できます。" }) {
   return <p className="muted" style={{ fontSize: 14, margin: 0, lineHeight: 1.7 }}>{text}</p>;
@@ -852,6 +869,7 @@ function VotingAward({ award }) {
                 </div>
               ) : null}
               {f.line ? <div className="stats">{f.line}</div> : null}
+              <StatLine stats={f.stats} />
               {f.pts != null || f.first != null ? (
                 <div className="points-row">
                   <span className="points-val mono">{f.pts ?? "—"}</span>
@@ -893,13 +911,14 @@ function AllTeamsTab() {
                 <div className="card-body">
                   {(t.members || []).length ? (
                     <div className="table-scroll"><table>
-                      <thead><tr><th>選手</th><th>POS</th><th>クラブ</th></tr></thead>
+                      <thead><tr><th>選手</th><th>POS</th><th>クラブ</th><th>成績</th></tr></thead>
                       <tbody>
                         {t.members.map((m, i) => (
                           <tr key={i}>
                             <td style={{ fontWeight: 700 }}>{m.p}</td>
                             <td className="muted">{m.pos || "—"}</td>
                             <td style={{ whiteSpace: "nowrap" }}>{m.t ? <TeamCell abbr={m.t} /> : <span className="muted">—</span>}</td>
+                            <td><StatLine stats={m.stats} /></td>
                           </tr>
                         ))}
                       </tbody>
@@ -936,6 +955,7 @@ function StatTitlesTab() {
                       <td className="rank-cell">{i + 1}</td>
                       <td><Player name={r.p} t={r.t} /></td>
                       <td className="num mono" style={{ fontWeight: 700, color: i === 0 ? "var(--accent)" : "var(--text)" }}>{r.v}</td>
+                      <td><StatLine stats={r.stats} /></td>
                     </tr>
                   ))}
                 </tbody>
@@ -1048,6 +1068,7 @@ function PostseasonMvpTab() {
           <div className="player" style={big ? { fontSize: 32 } : undefined}>{m.p}</div>
           {m.t ? <div style={{ marginBottom: 6 }}><Badge abbr={m.t} /> <span className="muted" style={{ fontSize: 14 }}>{team(m.t).name}</span></div> : null}
           {m.line ? <div className="line">{m.line}</div> : null}
+          <StatLine stats={m.stats} />
         </>
       ) : <div style={{ marginTop: 8 }}><Pending /></div>}
     </div>
@@ -1165,6 +1186,85 @@ function NewsPage({ articleId, setArticleId }) {
       <div className="article-grid">
         {sorted.map((a) => <ArticleCard key={a.id} a={a} onOpen={setArticleId} />)}
       </div>
+    </div>
+  );
+}
+
+/* ---- DRAFT ---- */
+function DraftPickTable({ picks, title, note }) {
+  return (
+    <div className="card" style={{ marginBottom: 16 }}>
+      <div className="card-head">
+        <span className="kicker">{title}</span>
+        <span className="muted" style={{ fontSize: 14 }}>{picks.length} 件</span>
+      </div>
+      <div className="card-body">
+        {picks.length ? (
+          <div className="table-scroll"><table>
+            <thead><tr>
+              <th className="num">巡</th>
+              <th className="num">指名</th>
+              <th className="num">全体</th>
+              <th>クラブ</th>
+              <th>選手</th>
+              <th>POS</th>
+              <th>出身</th>
+            </tr></thead>
+            <tbody>
+              {picks.map((pk, i) => (
+                <tr key={i}>
+                  <td className="num mono">{pk.round == null ? "—" : pk.round}</td>
+                  <td className="num mono">{pk.pick == null ? "—" : pk.pick}</td>
+                  <td className="num mono" style={{ fontWeight: 700 }}>{pk.overall == null ? "—" : pk.overall}</td>
+                  <td style={{ whiteSpace: "nowrap" }}>{pk.team ? <TeamCell abbr={pk.team} /> : <span className="muted">—</span>}</td>
+                  <td style={{ fontWeight: 700 }}>{pk.p || "—"}</td>
+                  <td className="muted">{pk.pos || "—"}</td>
+                  <td className="muted">{pk.from || "—"}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table></div>
+        ) : <Pending />}
+        {note ? <p className="muted" style={{ fontSize: 14, margin: "12px 0 0", lineHeight: 1.7 }}>{note}</p> : null}
+      </div>
+    </div>
+  );
+}
+function DraftPage() {
+  const dr = DATA.draft || {};
+  const lottery = dr.lottery || [];
+  const exp = dr.expansion || {};
+  return (
+    <div>
+      <SectionHead
+        kicker="Draft"
+        title={dr.name || "ドラフト"}
+        right={<span className="muted" style={{ fontSize: 14 }}>巡・指名順・全体順位・クラブ</span>}
+      />
+      {dr.note ? <p className="muted" style={{ fontSize: 14, lineHeight: 1.7, margin: "0 0 16px" }}>{dr.note}</p> : null}
+
+      {lottery.length ? (
+        <div className="card" style={{ marginBottom: 16 }}>
+          <div className="card-head">
+            <span className="kicker">Lottery · 指名順抽選</span>
+            <span className="muted" style={{ fontSize: 14 }}>{lottery.length} クラブ</span>
+          </div>
+          <div className="card-body">
+            <div className="series-meta" style={{ padding: 0 }}>
+              {lottery.map((x, i) => (
+                <span className="meta-chip" key={i}>
+                  <b>{x.order == null ? i + 1 : x.order}</b> {x.team ? <TeamCell abbr={x.team} /> : <span className="muted">—</span>}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+      ) : null}
+
+      <DraftPickTable picks={dr.picks || []} title="新人ドラフト 指名結果" />
+
+      <SectionHead kicker="Expansion Draft" title={exp.name || "拡張ドラフト"} />
+      <DraftPickTable picks={exp.picks || []} title="拡張ドラフト 指名結果" note={exp.note} />
     </div>
   );
 }
@@ -1329,6 +1429,7 @@ const TABS = [
   { id: "standings", label: "Standings" },
   { id: "postseason", label: "Postseason" },
   { id: "awards", label: "Awards" },
+  { id: "draft", label: "Draft" },
 ];
 export default function Season2042({ year }) {
   applyYear(year); // 選択年のデータを適用（描画前）
@@ -1351,6 +1452,7 @@ export default function Season2042({ year }) {
       {page === "postseason" && <PostseasonPage />}
       {page === "prospects" && <ProspectsPage />}
       {page === "awards" && <AwardsPage />}
+      {page === "draft" && <DraftPage />}
     </div>
   );
 }

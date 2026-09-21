@@ -72,6 +72,58 @@
         "key": "pi",
         "label": "プレイイン進出確定"
       }
+    ],
+    "statKeys": [
+      {
+        "key": "gp",
+        "label": "GP",
+        "hint": "出場試合数"
+      },
+      {
+        "key": "mpg",
+        "label": "MPG",
+        "hint": "平均出場時間"
+      },
+      {
+        "key": "ppg",
+        "label": "PPG",
+        "hint": "平均得点"
+      },
+      {
+        "key": "rpg",
+        "label": "RPG",
+        "hint": "平均リバウンド"
+      },
+      {
+        "key": "apg",
+        "label": "APG",
+        "hint": "平均アシスト"
+      },
+      {
+        "key": "spg",
+        "label": "SPG",
+        "hint": "平均スティール"
+      },
+      {
+        "key": "bpg",
+        "label": "BPG",
+        "hint": "平均ブロック"
+      },
+      {
+        "key": "fg",
+        "label": "FG%",
+        "hint": "フィールドゴール成功率"
+      },
+      {
+        "key": "fg3",
+        "label": "3P%",
+        "hint": "3ポイント成功率"
+      },
+      {
+        "key": "ft",
+        "label": "FT%",
+        "hint": "フリースロー成功率"
+      }
     ]
   },
   "teams": [
@@ -927,7 +979,8 @@
         "line": "",
         "big": true
       }
-    ]
+    ],
+    "statsNote": "finalists / leaders / members の各要素は stats:{ppg,rpg,apg,...} を持てます。指標の一覧と並び順は league.statKeys で定義。"
   },
   "postseason": {
     "conferences": {
@@ -983,6 +1036,17 @@
       "headline": "",
       "body": [],
       "moments": []
+    }
+  },
+  "draft": {
+    "name": "",
+    "note": "プレイオフ本戦に進めなかったクラブ（プレイイン敗退を含む）がロッタリー対象。候補は日本人選手が中心。",
+    "lottery": [],
+    "picks": [],
+    "expansion": {
+      "name": "",
+      "note": "新規参入クラブのための拡張ドラフト。既存クラブは一定人数を保護する。",
+      "picks": []
     }
   }
 }

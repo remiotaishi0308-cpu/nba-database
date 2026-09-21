@@ -372,6 +372,76 @@ collections:
       - name: teamStats
         label: 選手成績（サイト側で管理）
         widget: hidden
+      - name: draft
+        label: ドラフト
+        widget: object
+        collapsed: true
+        fields:
+          - name: name
+            label: 名称
+            widget: string
+            required: false
+          - name: note
+            label: 注記
+            widget: text
+            required: false
+          - name: lottery
+            label: 指名順抽選
+            widget: list
+            required: false
+            collapsed: true
+            summary: "{{fields.order}} {{fields.team}}"
+            fields:
+              - name: order
+                label: 指名順
+                widget: number
+                value_type: int
+              - name: team
+                label: クラブ略称
+                widget: string
+          - name: picks
+            label: 指名結果
+            widget: list
+            required: false
+            collapsed: true
+            minimize_collapsed: true
+            summary: "全体{{fields.overall}} {{fields.team}} {{fields.p}}"
+            fields:
+              - name: round
+                label: 巡
+                widget: number
+                value_type: int
+              - name: pick
+                label: その巡での指名順
+                widget: number
+                value_type: int
+                required: false
+              - name: overall
+                label: 全体順位
+                widget: number
+                value_type: int
+                required: false
+              - name: team
+                label: 指名クラブ（略称）
+                widget: string
+              - name: p
+                label: 選手名
+                widget: string
+              - name: pos
+                label: ポジション
+                widget: string
+                required: false
+              - name: from
+                label: 出身
+                widget: string
+                required: false
+              - name: note
+                label: 備考
+                widget: string
+                required: false
+          - name: expansion
+            label: 拡張ドラフト（サイト側で管理）
+            widget: hidden
       - name: prospects
         label: 有望株（サイト側で管理）
         widget: hidden
