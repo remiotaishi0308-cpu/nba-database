@@ -43,6 +43,7 @@
       "playInEnd": 10,
       "seriesFormat": "7戦4勝制",
       "homeCourt": "2-2-1-1-1",
+      "note": "1〜6位はプレイオフ本戦へ直接進出、7〜10位はプレイイントーナメント。ホームコートアドバンテージは上位シードが保持（2-2-1-1-1）。",
       "rounds": [
         {
           "key": "r1",
@@ -56,8 +57,7 @@
           "key": "confFinals",
           "label": "カンファレンス決勝"
         }
-      ],
-      "note": "1〜6位はプレイオフ本戦へ直接進出、7〜10位はプレイイントーナメント。ホームコートアドバンテージは上位シードが保持（2-2-1-1-1）。"
+      ]
     },
     "clinchMarks": [
       {
@@ -74,282 +74,281 @@
       }
     ]
   },
-  "prospects": [],
   "teams": [
     {
       "abbr": "千葉",
       "name": "千葉ジェフユナイテッド",
-      "city": "千葉市",
-      "coach": "花房小次郎",
-      "league": "East",
       "conference": "East",
       "division": "Atlantic",
+      "city": "千葉市",
+      "coach": "花房小次郎",
       "color": "#ae3f29",
-      "logo": ""
+      "logo": "/images/articles/IMG_3143.png",
+      "league": "East"
     },
     {
       "abbr": "六本木",
       "name": "六本木ヴィヴァン",
-      "city": "六本木",
-      "coach": "松永幸四郎",
-      "league": "East",
       "conference": "East",
       "division": "Atlantic",
+      "city": "六本木",
+      "coach": "松永幸四郎",
       "color": "#916922",
-      "logo": ""
+      "logo": "/images/articles/2B3A593C-2619-4E0D-92FF-858D6F33E423.png",
+      "league": "East"
     },
     {
       "abbr": "京都",
       "name": "京都パープルサンガ",
-      "city": "亀岡市",
-      "coach": "杉原一葉",
-      "league": "East",
       "conference": "East",
       "division": "Atlantic",
+      "city": "亀岡市",
+      "coach": "杉原一葉",
       "color": "#7c711d",
-      "logo": ""
+      "logo": "/images/articles/IMG_3138.png",
+      "league": "East"
     },
     {
       "abbr": "博多",
       "name": "博多ホークス",
-      "city": "福岡市",
-      "coach": "山田孝",
-      "league": "East",
       "conference": "East",
       "division": "Atlantic",
+      "city": "福岡市",
+      "coach": "山田孝",
       "color": "#6c781c",
-      "logo": ""
+      "logo": "/images/articles/IMG_3156.png",
+      "league": "East"
     },
     {
       "abbr": "琉球",
       "name": "琉球テイオー",
-      "city": "琉球",
-      "coach": "小倉快",
-      "league": "East",
       "conference": "East",
       "division": "Atlantic",
+      "city": "琉球",
+      "coach": "小倉快",
       "color": "#1e8027",
-      "logo": ""
+      "logo": "",
+      "league": "East"
     },
     {
       "abbr": "広島",
       "name": "広島サンフレッチェ",
-      "city": "広島市",
-      "coach": "望月太郎",
-      "league": "East",
       "conference": "East",
       "division": "Atlantic",
+      "city": "広島市",
+      "coach": "望月太郎",
       "color": "#1e8056",
-      "logo": ""
+      "logo": "",
+      "league": "East"
     },
     {
       "abbr": "横浜",
       "name": "横浜マリノス",
-      "city": "横浜市",
-      "coach": "守屋大助",
-      "league": "East",
       "conference": "East",
       "division": "Central",
+      "city": "横浜市",
+      "coach": "守屋大助",
       "color": "#a95c28",
-      "logo": ""
+      "logo": "",
+      "league": "East"
     },
     {
       "abbr": "名古屋",
       "name": "名古屋ドラゴンズ",
-      "city": "名古屋市",
-      "coach": "赤坂郁弥",
-      "league": "East",
       "conference": "East",
       "division": "Central",
+      "city": "名古屋市",
+      "coach": "赤坂郁弥",
       "color": "#597c1d",
-      "logo": ""
+      "logo": "",
+      "league": "East"
     },
     {
       "abbr": "尼崎",
       "name": "尼崎ホエールズ",
-      "city": "尼崎",
-      "coach": "佐藤勇気",
-      "league": "East",
       "conference": "East",
       "division": "Central",
+      "city": "尼崎",
+      "coach": "佐藤勇気",
       "color": "#45801e",
-      "logo": ""
+      "logo": "",
+      "league": "East"
     },
     {
       "abbr": "阪神",
       "name": "阪神タイガース",
-      "city": "西宮市",
-      "coach": "桐山海斗",
-      "league": "East",
       "conference": "East",
       "division": "Central",
+      "city": "西宮市",
+      "coach": "桐山海斗",
       "color": "#2d801e",
-      "logo": ""
+      "logo": "",
+      "league": "East"
     },
     {
       "abbr": "大宮",
       "name": "大宮キャップス",
-      "city": "大宮",
-      "coach": "大谷瑛",
-      "league": "East",
       "conference": "East",
       "division": "Central",
+      "city": "大宮",
+      "coach": "大谷瑛",
       "color": "#1e803e",
-      "logo": ""
+      "logo": "",
+      "league": "East"
     },
     {
       "abbr": "札幌",
       "name": "札幌ウォリアーズ",
-      "city": "札幌",
-      "coach": "宮崎孝文",
-      "league": "East",
       "conference": "East",
       "division": "Central",
+      "city": "札幌",
+      "coach": "宮崎孝文",
       "color": "#1e7b80",
-      "logo": ""
+      "logo": "",
+      "league": "East"
     },
     {
       "abbr": "川崎",
       "name": "川崎フロンターレ",
-      "city": "川崎市",
-      "coach": "吉原誠",
-      "league": "East",
       "conference": "East",
       "division": "Central",
+      "city": "川崎市",
+      "coach": "吉原誠",
       "color": "#1e806d",
-      "logo": ""
+      "logo": "",
+      "league": "East"
     },
     {
       "abbr": "品川",
       "name": "品川セイウンスカイ",
-      "city": "品川",
-      "coach": "成田楓",
-      "league": "West",
       "conference": "West",
       "division": "Pacific",
+      "city": "品川",
+      "coach": "成田楓",
       "color": "#2968ae",
-      "logo": ""
+      "logo": "",
+      "league": "West"
     },
     {
       "abbr": "丸の内",
       "name": "丸の内ユナイテッド",
-      "city": "丸の内",
-      "coach": "松木悠太",
-      "league": "West",
       "conference": "West",
       "division": "Pacific",
+      "city": "丸の内",
+      "coach": "松木悠太",
       "color": "#2948ae",
-      "logo": ""
+      "logo": "",
+      "league": "West"
     },
     {
       "abbr": "東東京",
       "name": "東東京シンエンペラーズ",
-      "city": "東東京",
-      "coach": "秋山省吾",
-      "league": "West",
       "conference": "West",
       "division": "Pacific",
+      "city": "東東京",
+      "coach": "秋山省吾",
       "color": "#4929ae",
-      "logo": ""
+      "logo": "",
+      "league": "West"
     },
     {
       "abbr": "渋谷",
       "name": "渋谷フォーエバーヤングス",
-      "city": "渋谷",
-      "coach": "木佐貫信二",
-      "league": "West",
       "conference": "West",
       "division": "Pacific",
+      "city": "渋谷",
+      "coach": "木佐貫信二",
       "color": "#6929ae",
-      "logo": ""
+      "logo": "",
+      "league": "West"
     },
     {
       "abbr": "新宿",
       "name": "新宿ミッドガルズ",
-      "city": "新宿",
-      "coach": "堀江祐介",
-      "league": "West",
       "conference": "West",
       "division": "Pacific",
+      "city": "新宿",
+      "coach": "堀江祐介",
       "color": "#a929ae",
-      "logo": ""
+      "logo": "",
+      "league": "West"
     },
     {
       "abbr": "宇都宮",
       "name": "宇都宮セルティックス",
-      "city": "宇都宮",
-      "coach": "大木誠一",
-      "league": "West",
       "conference": "West",
       "division": "Pacific",
+      "city": "宇都宮",
+      "coach": "大木誠一",
       "color": "#ae2932",
-      "logo": ""
+      "logo": "",
+      "league": "West"
     },
     {
       "abbr": "江戸川",
       "name": "江戸川スカーレット",
-      "city": "江戸川",
-      "coach": "上林透",
-      "league": "West",
       "conference": "West",
       "division": "Midwest",
+      "city": "江戸川",
+      "coach": "上林透",
       "color": "#257b9d",
-      "logo": ""
+      "logo": "",
+      "league": "West"
     },
     {
       "abbr": "東京",
       "name": "東京ジャイアンツ",
-      "city": "文京区",
-      "coach": "萩原朔太郎",
-      "league": "West",
       "conference": "West",
       "division": "Midwest",
+      "city": "文京区",
+      "coach": "萩原朔太郎",
       "color": "#2a29ae",
-      "logo": ""
+      "logo": "",
+      "league": "West"
     },
     {
       "abbr": "大阪",
       "name": "ガンバ大阪",
-      "city": "吹田市",
-      "coach": "栗林良平",
-      "league": "West",
       "conference": "West",
       "division": "Midwest",
+      "city": "吹田市",
+      "coach": "栗林良平",
       "color": "#8929ae",
-      "logo": ""
+      "logo": "",
+      "league": "West"
     },
     {
       "abbr": "浦和",
       "name": "浦和レッズ",
-      "city": "さいたま市浦和区",
-      "coach": "稲森敦也",
-      "league": "West",
       "conference": "West",
       "division": "Midwest",
+      "city": "さいたま市浦和区",
+      "coach": "稲森敦也",
       "color": "#ae2992",
-      "logo": ""
+      "logo": "",
+      "league": "West"
     },
     {
       "abbr": "鹿児島",
       "name": "鹿児島インパルス",
-      "city": "鹿児島",
-      "coach": "佐々木悠太郎",
-      "league": "West",
       "conference": "West",
       "division": "Midwest",
+      "city": "鹿児島",
+      "coach": "佐々木悠太郎",
       "color": "#ae2972",
-      "logo": ""
+      "logo": "",
+      "league": "West"
     },
     {
       "abbr": "長崎",
       "name": "長崎ヴァレンティア",
-      "city": "長崎",
-      "coach": "早森時夫",
-      "league": "West",
       "conference": "West",
       "division": "Midwest",
+      "city": "長崎",
+      "coach": "早森時夫",
       "color": "#ae2952",
-      "logo": ""
+      "logo": "",
+      "league": "West"
     }
   ],
   "standings": {
@@ -708,6 +707,228 @@
       }
     ]
   },
+  "teamStats": [],
+  "prospects": [],
+  "awards": {
+    "postseasonMvp": [
+      {
+        "line": "",
+        "t": "",
+        "p": "",
+        "label": "イースタン・カンファレンス決勝 MVP",
+        "key": "eastFinals"
+      },
+      {
+        "line": "",
+        "t": "",
+        "p": "",
+        "label": "ウェスタン・カンファレンス決勝 MVP",
+        "key": "westFinals"
+      },
+      {
+        "big": true,
+        "line": "",
+        "t": "",
+        "p": "",
+        "label": "ファイナル MVP",
+        "key": "finals"
+      }
+    ],
+    "allStar": {
+      "events": [
+        {
+          "winner": {
+            "t": "",
+            "p": ""
+          },
+          "name": "ダンクコンテスト"
+        },
+        {
+          "winner": {
+            "t": "",
+            "p": ""
+          },
+          "name": "3ポイントコンテスト"
+        }
+      ],
+      "mvp": {
+        "t": "",
+        "p": ""
+      },
+      "result": "",
+      "rosters": [
+        {
+          "backcourt": [],
+          "frontcourt": [],
+          "team": "スター"
+        },
+        {
+          "backcourt": [],
+          "frontcourt": [],
+          "team": "ワールド"
+        }
+      ],
+      "note": "ファン投票でフロントコート・バックコートを選出。本戦は「スター」対「ワールド」の2チーム形式。"
+    },
+    "weekly": [],
+    "monthly": [],
+    "statTitles": [
+      {
+        "leaders": [],
+        "note": "58試合以上の出場、または部門の通算基準",
+        "unit": "PPG",
+        "label": "得点王",
+        "key": "ppg"
+      },
+      {
+        "leaders": [],
+        "note": "",
+        "unit": "RPG",
+        "label": "リバウンド王",
+        "key": "rpg"
+      },
+      {
+        "leaders": [],
+        "note": "",
+        "unit": "APG",
+        "label": "アシスト王",
+        "key": "apg"
+      },
+      {
+        "leaders": [],
+        "note": "",
+        "unit": "SPG",
+        "label": "スティール王",
+        "key": "spg"
+      },
+      {
+        "leaders": [],
+        "note": "",
+        "unit": "BPG",
+        "label": "ブロック王",
+        "key": "bpg"
+      },
+      {
+        "leaders": [],
+        "note": "成功数の最低基準を満たすこと",
+        "unit": "FG%",
+        "label": "フィールドゴール成功率",
+        "key": "fg"
+      },
+      {
+        "leaders": [],
+        "note": "成功数の最低基準を満たすこと",
+        "unit": "3P%",
+        "label": "3ポイント成功率",
+        "key": "fg3"
+      },
+      {
+        "leaders": [],
+        "note": "成功数の最低基準を満たすこと",
+        "unit": "FT%",
+        "label": "フリースロー成功率",
+        "key": "ft"
+      }
+    ],
+    "allTeams": [
+      {
+        "tiers": [
+          {
+            "members": [],
+            "tier": "1st"
+          },
+          {
+            "members": [],
+            "tier": "2nd"
+          },
+          {
+            "members": [],
+            "tier": "3rd"
+          }
+        ],
+        "label": "オールBプレミア",
+        "key": "allLeague"
+      },
+      {
+        "tiers": [
+          {
+            "members": [],
+            "tier": "1st"
+          },
+          {
+            "members": [],
+            "tier": "2nd"
+          }
+        ],
+        "label": "オールディフェンシブ",
+        "key": "allDefensive"
+      },
+      {
+        "tiers": [
+          {
+            "members": [],
+            "tier": "1st"
+          },
+          {
+            "members": [],
+            "tier": "2nd"
+          }
+        ],
+        "label": "オールルーキー",
+        "key": "allRookie"
+      }
+    ],
+    "voting": [
+      {
+        "finalists": [],
+        "note": "65試合以上の出場が資格要件",
+        "label": "最優秀選手 (MVP)",
+        "key": "MVP"
+      },
+      {
+        "finalists": [],
+        "note": "",
+        "label": "最優秀守備選手",
+        "key": "DPOY"
+      },
+      {
+        "finalists": [],
+        "note": "",
+        "label": "最優秀新人",
+        "key": "ROY"
+      },
+      {
+        "finalists": [],
+        "note": "",
+        "label": "シックスマン賞",
+        "key": "SIXTH"
+      },
+      {
+        "finalists": [],
+        "note": "",
+        "label": "最優秀躍進選手",
+        "key": "MIP"
+      },
+      {
+        "finalists": [],
+        "note": "",
+        "label": "クラッチ最優秀選手",
+        "key": "CLUTCH"
+      },
+      {
+        "finalists": [],
+        "note": "",
+        "label": "最優秀ヘッドコーチ",
+        "key": "COY"
+      },
+      {
+        "finalists": [],
+        "note": "リーグ25クラブの経営陣による投票",
+        "label": "最優秀エグゼクティブ",
+        "key": "EOY"
+      }
+    ]
+  },
   "postseason": {
     "conferences": {
       "East": {
@@ -763,226 +984,5 @@
       "body": [],
       "moments": []
     }
-  },
-  "awards": {
-    "voting": [
-      {
-        "key": "MVP",
-        "label": "最優秀選手 (MVP)",
-        "note": "65試合以上の出場が資格要件",
-        "finalists": []
-      },
-      {
-        "key": "DPOY",
-        "label": "最優秀守備選手",
-        "note": "",
-        "finalists": []
-      },
-      {
-        "key": "ROY",
-        "label": "最優秀新人",
-        "note": "",
-        "finalists": []
-      },
-      {
-        "key": "SIXTH",
-        "label": "シックスマン賞",
-        "note": "",
-        "finalists": []
-      },
-      {
-        "key": "MIP",
-        "label": "最優秀躍進選手",
-        "note": "",
-        "finalists": []
-      },
-      {
-        "key": "CLUTCH",
-        "label": "クラッチ最優秀選手",
-        "note": "",
-        "finalists": []
-      },
-      {
-        "key": "COY",
-        "label": "最優秀ヘッドコーチ",
-        "note": "",
-        "finalists": []
-      },
-      {
-        "key": "EOY",
-        "label": "最優秀エグゼクティブ",
-        "note": "リーグ25クラブの経営陣による投票",
-        "finalists": []
-      }
-    ],
-    "allTeams": [
-      {
-        "key": "allLeague",
-        "label": "オールBプレミア",
-        "tiers": [
-          {
-            "tier": "1st",
-            "members": []
-          },
-          {
-            "tier": "2nd",
-            "members": []
-          },
-          {
-            "tier": "3rd",
-            "members": []
-          }
-        ]
-      },
-      {
-        "key": "allDefensive",
-        "label": "オールディフェンシブ",
-        "tiers": [
-          {
-            "tier": "1st",
-            "members": []
-          },
-          {
-            "tier": "2nd",
-            "members": []
-          }
-        ]
-      },
-      {
-        "key": "allRookie",
-        "label": "オールルーキー",
-        "tiers": [
-          {
-            "tier": "1st",
-            "members": []
-          },
-          {
-            "tier": "2nd",
-            "members": []
-          }
-        ]
-      }
-    ],
-    "statTitles": [
-      {
-        "key": "ppg",
-        "label": "得点王",
-        "unit": "PPG",
-        "note": "58試合以上の出場、または部門の通算基準",
-        "leaders": []
-      },
-      {
-        "key": "rpg",
-        "label": "リバウンド王",
-        "unit": "RPG",
-        "note": "",
-        "leaders": []
-      },
-      {
-        "key": "apg",
-        "label": "アシスト王",
-        "unit": "APG",
-        "note": "",
-        "leaders": []
-      },
-      {
-        "key": "spg",
-        "label": "スティール王",
-        "unit": "SPG",
-        "note": "",
-        "leaders": []
-      },
-      {
-        "key": "bpg",
-        "label": "ブロック王",
-        "unit": "BPG",
-        "note": "",
-        "leaders": []
-      },
-      {
-        "key": "fg",
-        "label": "フィールドゴール成功率",
-        "unit": "FG%",
-        "note": "成功数の最低基準を満たすこと",
-        "leaders": []
-      },
-      {
-        "key": "fg3",
-        "label": "3ポイント成功率",
-        "unit": "3P%",
-        "note": "成功数の最低基準を満たすこと",
-        "leaders": []
-      },
-      {
-        "key": "ft",
-        "label": "フリースロー成功率",
-        "unit": "FT%",
-        "note": "成功数の最低基準を満たすこと",
-        "leaders": []
-      }
-    ],
-    "monthly": [],
-    "weekly": [],
-    "allStar": {
-      "note": "ファン投票でフロントコート・バックコートを選出。本戦は「スター」対「ワールド」の2チーム形式。",
-      "rosters": [
-        {
-          "team": "スター",
-          "frontcourt": [],
-          "backcourt": []
-        },
-        {
-          "team": "ワールド",
-          "frontcourt": [],
-          "backcourt": []
-        }
-      ],
-      "result": "",
-      "mvp": {
-        "p": "",
-        "t": ""
-      },
-      "events": [
-        {
-          "name": "ダンクコンテスト",
-          "winner": {
-            "p": "",
-            "t": ""
-          }
-        },
-        {
-          "name": "3ポイントコンテスト",
-          "winner": {
-            "p": "",
-            "t": ""
-          }
-        }
-      ]
-    },
-    "postseasonMvp": [
-      {
-        "key": "eastFinals",
-        "label": "イースタン・カンファレンス決勝 MVP",
-        "p": "",
-        "t": "",
-        "line": ""
-      },
-      {
-        "key": "westFinals",
-        "label": "ウェスタン・カンファレンス決勝 MVP",
-        "p": "",
-        "t": "",
-        "line": ""
-      },
-      {
-        "key": "finals",
-        "label": "ファイナル MVP",
-        "p": "",
-        "t": "",
-        "line": "",
-        "big": true
-      }
-    ]
-  },
-  "teamStats": []
+  }
 }
