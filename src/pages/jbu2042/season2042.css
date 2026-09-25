@@ -690,3 +690,30 @@
   font-weight: 700;
   color: var(--text);
 }
+
+/* 成績表（並び替え・絞り込み） */
+.jbu2042 th.sortable { cursor: pointer; user-select: none; white-space: nowrap; }
+.jbu2042 th.sortable:hover { color: var(--accent); background: var(--accent-bg); }
+.jbu2042 .stats-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+.jbu2042 .stats-select {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+}
+.jbu2042 .stats-select select {
+  font-family: inherit;
+  font-size: 16px;
+  padding: 10px 12px;
+  min-height: 44px;
+  border: 1px solid var(--border-strong, #767680);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  color: var(--text);
+}

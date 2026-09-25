@@ -442,6 +442,15 @@ collections:
           - name: expansion
             label: 拡張ドラフト（サイト側で管理）
             widget: hidden
+      - name: playerSeasonStats
+        label: 選手成績（サイト側で管理）
+        widget: hidden
+      - name: teamSeasonStats
+        label: クラブ成績（サイト側で管理）
+        widget: hidden
+      - name: leagueLeaders
+        label: リーグリーダー（サイト側で管理）
+        widget: hidden
       - name: prospects
         label: 有望株（サイト側で管理）
         widget: hidden

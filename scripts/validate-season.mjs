@@ -64,6 +64,13 @@ for (const file of files) {
     if (t.division && divKeys.size && !divKeys.has(t.division)) err(file, `${t.abbr}: division="${t.division}" は league に存在しません`);
   });
   const ref = (who, v) => { if (v && !abbrs.has(v)) err(file, `${who}: クラブ "${v}" が teams にありません`); };
+  // ドラフトには参入予定クラブ（league.incomingTeams）が登場しうるため別扱いにする
+  const incoming = new Set(((L.incomingTeams) || []).map((t) => t.abbr).filter(Boolean));
+  const refDraft = (who, val) => {
+    if (val && !abbrs.has(val) && !incoming.has(val)) {
+      err(file, `${who}: クラブ "${val}" が teams / league.incomingTeams にありません`);
+    }
+  };
 
   const st = d.standings || {};
   confKeys.forEach((ck) => {
@@ -181,11 +188,11 @@ for (const file of files) {
 
   const dr = d.draft;
   if (dr) {
-    (dr.lottery || []).forEach((x, i) => ref(`draft.lottery[${i}]`, x.team));
+    (dr.lottery || []).forEach((x, i) => refDraft(`draft.lottery[${i}]`, x.team));
     const seenOverall = new Map();
     (dr.picks || []).forEach((pk, i) => {
       const who = `draft.picks[${i}]`;
-      ref(who, pk.team);
+      refDraft(who, pk.team);
       if (!pk.p) err(file, `${who}: 選手名 p が空です`);
       ["round", "pick", "overall"].forEach((k) => {
         if (pk[k] != null && typeof pk[k] !== "number") err(file, `${who}: ${k} が数値でありません`);
@@ -195,7 +202,7 @@ for (const file of files) {
         seenOverall.set(pk.overall, who);
       }
     });
-    ((dr.expansion && dr.expansion.picks) || []).forEach((pk, i) => ref(`draft.expansion.picks[${i}]`, pk.team));
+    ((dr.expansion && dr.expansion.picks) || []).forEach((pk, i) => refDraft(`draft.expansion.picks[${i}]`, pk.team));
   }
 
   const nTeams = teams.length;

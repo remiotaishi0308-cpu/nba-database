@@ -208,3 +208,68 @@ npm run validate:season
 2. `standings` は**勝率順に並べる**（並び順＝順位）
 3. 未確定の項目は**空配列 `[]` / 空文字 `""` のまま**にする（`null` でも可）。空でもレイアウトは崩れません
 4. 変更後は `npm run validate:season` を実行し、エラーがないことを確認する
+
+---
+
+## playerSeasonStats（選手成績）
+
+`league.playerStatKeys` で定義した列がそのまま表になります（Stats タブ → 選手成績）。
+列見出しをタップすると並び替わります。
+
+```json
+"playerSeasonStats": [
+  { "p": "選手名", "t": "川崎", "pos": "SG", "rookie": false,
+    "stats": { "gp": 82, "gs": 82, "mpg": 35.2, "ppg": 25.6, "rpg": 6.4, "apg": 3.0,
+               "spg": 1.0, "bpg": 0.7, "tov": 2.5, "pf": 2.6,
+               "fgm": 9.6, "fga": 18.9, "fg": 51.0,
+               "fg3m": 2.5, "fg3a": 7.4, "fg3": 34.3,
+               "ftm": 0, "fta": 0, "ft": 80.3, "pm": 0 } }
+]
+```
+
+- `rookie: true` の選手は「ルーキーのみ」で絞り込めます。
+- `stats` のキーは `league.playerStatKeys` の `key` と揃えてください（未定義キーは表に出ません）。
+
+## teamSeasonStats（クラブ成績）
+
+列は `league.teamStatKeys` の定義に従います（Stats タブ → クラブ成績）。
+
+```json
+"teamSeasonStats": [
+  { "team": "千葉", "leagueRank": 1, "gp": 82, "w": 61, "l": 21,
+    "stats": { "ppg": 109.7, "papg": 99.3, "diff": 10.4, "fg": 48.6, "rpg": 50.6 } }
+]
+```
+
+## leagueLeaders（リーグリーダー）
+
+部門ごとの上位を表示します（Stats タブ → リーグリーダー）。
+`groups` を増やせばセクションが増えます（例：レギュラーシーズン／ポストシーズン）。
+
+```json
+"leagueLeaders": {
+  "note": "...",
+  "groups": [
+    { "key": "regular", "label": "レギュラーシーズン",
+      "categories": [
+        { "key": "ppg", "label": "得点", "unit": "PPG", "note": "",
+          "rows": [ { "rank": 1, "p": "選手名", "t": "川崎", "v": 25.6 } ] }
+      ] }
+  ]
+}
+```
+
+## league.incomingTeams（参入予定クラブ）
+
+まだ `teams` に居ないクラブ（翌シーズン参入など）をドラフトで参照する場合に宣言します。
+宣言しておくと、ドラフト表でクラブ名とバッジが正しく表示され、検証でもエラーになりません。
+
+```json
+"league": {
+  "incomingTeams": [
+    { "abbr": "鹿島", "name": "鹿島アントラーズ", "color": "#8a2b1f",
+      "joinsSeason": 2027, "note": "2027-28シーズンより参入" }
+  ],
+  "expansionNote": "2027-28シーズンから25クラブ→28クラブへ拡張。"
+}
+```

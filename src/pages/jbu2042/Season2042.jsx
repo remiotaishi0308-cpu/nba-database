@@ -63,6 +63,11 @@ function applyYear(year) {
     TEAM_BY_KEY[abbr] = t;
     if (t?.name) TEAM_BY_KEY[t.name] = t;
   }
+  // 参入予定クラブ（league.incomingTeams）もドラフト等で参照されるため解決対象に含める
+  for (const t of (DATA.league && DATA.league.incomingTeams) || []) {
+    if (t && t.abbr && !TEAM_BY_KEY[t.abbr]) TEAM_BY_KEY[t.abbr] = t;
+    if (t && t.name && !TEAM_BY_KEY[t.name]) TEAM_BY_KEY[t.name] = t;
+  }
   TEAM_DATA = DATA.teamStats || {};
 }
 const team = (key) => {
@@ -1190,6 +1195,195 @@ function NewsPage({ articleId, setArticleId }) {
   );
 }
 
+/* ---- STATS（選手成績 / クラブ成績 / リーグリーダー） ---- */
+const PLAYER_STAT_KEYS = () => (LEAGUE().playerStatKeys || LEAGUE().statKeys || []);
+const TEAM_STAT_KEYS = () => (LEAGUE().teamStatKeys || []);
+
+// 列ヘッダをクリックして並び替えできる成績表
+function SortableStatTable({ rows, cols, nameCol, defaultSort, extraCols }) {
+  const [sortKey, setSortKey] = useState(defaultSort || (cols[0] && cols[0].key));
+  const [desc, setDesc] = useState(true);
+  const val = (r, k) => {
+    if (r.stats && r.stats[k] != null) return r.stats[k];
+    if (r[k] != null) return r[k];
+    return null;
+  };
+  const sorted = [...rows].sort((a, b) => {
+    const x = val(a, sortKey), y = val(b, sortKey);
+    if (x == null && y == null) return 0;
+    if (x == null) return 1;
+    if (y == null) return -1;
+    const nx = typeof x === "number" ? x : parseFloat(x);
+    const ny = typeof y === "number" ? y : parseFloat(y);
+    if (!isNaN(nx) && !isNaN(ny)) return desc ? ny - nx : nx - ny;
+    return desc ? String(y).localeCompare(String(x)) : String(x).localeCompare(String(y));
+  });
+  const click = (k) => {
+    if (k === sortKey) setDesc((v) => !v);
+    else { setSortKey(k); setDesc(true); }
+  };
+  const arrow = (k) => (k === sortKey ? (desc ? " ▾" : " ▴") : "");
+  return (
+    <div className="table-scroll"><table>
+      <thead><tr>
+        <th className="num">#</th>
+        <th>{nameCol || "選手"}</th>
+        {(extraCols || []).map((c) => <th key={c.key}>{c.label}</th>)}
+        {cols.map((c) => (
+          <th key={c.key} className="num sortable" title={c.hint || c.label} onClick={() => click(c.key)}>
+            {c.label}{arrow(c.key)}
+          </th>
+        ))}
+      </tr></thead>
+      <tbody>
+        {sorted.map((r, i) => (
+          <tr key={(r.p || r.team) + i}>
+            <td className="rank-cell">{i + 1}</td>
+            <td style={{ whiteSpace: "nowrap" }}>
+              {r.p ? <Player name={r.p} t={r.t} /> : <TeamCell abbr={r.team} full />}
+            </td>
+            {(extraCols || []).map((c) => <td key={c.key} className="muted">{r[c.key] == null || r[c.key] === "" ? "—" : String(r[c.key])}</td>)}
+            {cols.map((c) => {
+              const v = val(r, c.key);
+              return <td key={c.key} className="num mono">{v == null || v === "" ? "—" : v}</td>;
+            })}
+          </tr>
+        ))}
+      </tbody>
+    </table></div>
+  );
+}
+
+// 選手成績（ルーキー絞り込み・クラブ絞り込み付き）
+function PlayerStatsTab() {
+  const all = DATA.playerSeasonStats || [];
+  const [rookieOnly, setRookieOnly] = useState(false);
+  const [teamFilter, setTeamFilter] = useState("");
+  if (!all.length) return <div className="card"><div className="card-body"><Pending /></div></div>;
+  const teamsWith = [...new Set(all.map((r) => r.t).filter(Boolean))];
+  const rows = all
+    .filter((r) => (rookieOnly ? r.rookie : true))
+    .filter((r) => (teamFilter ? r.t === teamFilter : true));
+  return (
+    <div>
+      <div className="stats-controls">
+        <div className="toggle">
+          <button className={!rookieOnly ? "on acc" : ""} onClick={() => setRookieOnly(false)}>全選手</button>
+          <button className={rookieOnly ? "on acc" : ""} onClick={() => setRookieOnly(true)}>ルーキーのみ</button>
+        </div>
+        <label className="stats-select">
+          <span className="muted">クラブ</span>
+          <select value={teamFilter} onChange={(e) => setTeamFilter(e.target.value)}>
+            <option value="">すべて</option>
+            {teamsWith.map((a) => <option key={a} value={a}>{team(a).name}</option>)}
+          </select>
+        </label>
+        <span className="muted" style={{ fontSize: 14 }}>{rows.length} 名 · 列見出しをタップで並び替え</span>
+      </div>
+      <div className="card">
+        <SortableStatTable
+          rows={rows}
+          cols={PLAYER_STAT_KEYS()}
+          nameCol="選手"
+          defaultSort="ppg"
+          extraCols={[{ key: "pos", label: "POS" }]}
+        />
+      </div>
+    </div>
+  );
+}
+
+// クラブ成績
+function TeamStatsTab() {
+  const rows = DATA.teamSeasonStats || [];
+  if (!rows.length) return <div className="card"><div className="card-body"><Pending /></div></div>;
+  return (
+    <div>
+      <p className="muted" style={{ fontSize: 14, margin: "0 0 12px" }}>列見出しをタップで並び替えできます。</p>
+      <div className="card">
+        <SortableStatTable
+          rows={rows}
+          cols={TEAM_STAT_KEYS()}
+          nameCol="クラブ"
+          defaultSort="ppg"
+          extraCols={[{ key: "gp", label: "GP" }, { key: "w", label: "W" }, { key: "l", label: "L" }]}
+        />
+      </div>
+    </div>
+  );
+}
+
+// リーグリーダー（部門別の上位）
+function LeagueLeadersTab() {
+  const ll = DATA.leagueLeaders;
+  const groups = (ll && ll.groups) || [];
+  if (!groups.length) return <div className="card"><div className="card-body"><Pending /></div></div>;
+  return (
+    <div>
+      {ll.note ? <p className="muted" style={{ fontSize: 14, lineHeight: 1.7, margin: "0 0 16px" }}>{ll.note}</p> : null}
+      {groups.map((g) => (
+        <div key={g.key} style={{ marginBottom: 24 }}>
+          <div className="kicker" style={{ margin: "8px 0 12px" }}>{g.label}</div>
+          <div className="grid g2">
+            {(g.categories || []).map((c) => (
+              <div className="card" key={c.key}>
+                <div className="card-head">
+                  <span className="kicker">{c.label}</span>
+                  <span className="muted" style={{ fontSize: 14 }}>{c.unit || ""}</span>
+                </div>
+                <div className="card-body">
+                  {(c.rows || []).length ? (
+                    <div className="table-scroll"><table>
+                      <tbody>
+                        {c.rows.map((r, i) => (
+                          <tr key={i}>
+                            <td className="rank-cell">{r.rank == null ? i + 1 : r.rank}</td>
+                            <td><Player name={r.p} t={r.t} /></td>
+                            <td className="num mono" style={{ fontWeight: 700, color: i === 0 ? "var(--accent)" : "var(--text)" }}>{r.v}</td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table></div>
+                  ) : <Pending />}
+                  {c.note ? <p className="muted" style={{ fontSize: 14, margin: "12px 0 0" }}>{c.note}</p> : null}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+const STATS_TABS = [
+  { id: "players", label: "選手成績" },
+  { id: "teams", label: "クラブ成績" },
+  { id: "leaders", label: "リーグリーダー" },
+];
+function StatsPage() {
+  const [tab, setTab] = useState("players");
+  const np = (DATA.playerSeasonStats || []).length;
+  const nt = (DATA.teamSeasonStats || []).length;
+  return (
+    <div>
+      <SectionHead
+        kicker="Stats"
+        title="成績"
+        right={<span className="muted" style={{ fontSize: 14 }}>選手 {np} 名 / クラブ {nt}</span>}
+      />
+      <div className="subtabs">
+        {STATS_TABS.map((t) => (
+          <button key={t.id} className={tab === t.id ? "active" : ""} onClick={() => setTab(t.id)}>{t.label}</button>
+        ))}
+      </div>
+      {tab === "players" && <PlayerStatsTab />}
+      {tab === "teams" && <TeamStatsTab />}
+      {tab === "leaders" && <LeagueLeadersTab />}
+    </div>
+  );
+}
+
 /* ---- DRAFT ---- */
 function DraftPickTable({ picks, title, note }) {
   return (
@@ -1428,6 +1622,7 @@ const TABS = [
   { id: "teams", label: "Teams" },
   { id: "standings", label: "Standings" },
   { id: "postseason", label: "Postseason" },
+  { id: "stats", label: "Stats" },
   { id: "awards", label: "Awards" },
   { id: "draft", label: "Draft" },
 ];
@@ -1451,6 +1646,7 @@ export default function Season2042({ year }) {
       {page === "standings" && <StandingsPage />}
       {page === "postseason" && <PostseasonPage />}
       {page === "prospects" && <ProspectsPage />}
+      {page === "stats" && <StatsPage />}
       {page === "awards" && <AwardsPage />}
       {page === "draft" && <DraftPage />}
     </div>
