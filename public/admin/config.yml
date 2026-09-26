@@ -90,7 +90,7 @@ collections:
         label: シーズン開始年
         widget: number
         value_type: int
-        hint: ファイル名になります（2026.json）。2026-27シーズンなら 2026
+        hint: ファイル名になります（2027.json）。2027-28シーズンなら 2027。複製した場合は保存前に必ずこの年を変更してください（同じ年だと既存ファイルと衝突して保存できません）
       - name: league
         label: リーグ構成
         widget: object

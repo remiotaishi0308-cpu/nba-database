@@ -14,8 +14,9 @@ export default function YearSelector({ years, current, onChange }) {
   }, []);
 
   const idx = years.indexOf(current);
-  const prev = idx > 0 ? years[idx - 1] : null;
-  const next = idx < years.length - 1 ? years[idx + 1] : null;
+  // years は新しい順（降順）。‹ = 1つ古い年度 / › = 1つ新しい年度 に対応させる。
+  const prev = idx >= 0 && idx < years.length - 1 ? years[idx + 1] : null;
+  const next = idx > 0 ? years[idx - 1] : null;
 
   return (
     <div className="flex items-center gap-3">
@@ -47,7 +48,7 @@ export default function YearSelector({ years, current, onChange }) {
         </button>
         {open && (
           <div className="absolute left-0 top-full mt-1 z-20 bg-jbu-surface border border-jbu-border rounded-md shadow-lg max-h-72 overflow-auto min-w-[140px]">
-            {years.slice().reverse().map((y) => (
+            {years.map((y) => (
               <button
                 key={y}
                 type="button"
