@@ -1273,6 +1273,9 @@ function PlayerStatsTab() {
     .filter((r) => (teamFilter ? r.t === teamFilter : true));
   return (
     <div>
+      {DATA.playerStatsNote ? (
+        <p className="muted" style={{ fontSize: 14, lineHeight: 1.7, margin: "0 0 12px" }}>{DATA.playerStatsNote}</p>
+      ) : null}
       <div className="stats-controls">
         <div className="toggle">
           <button className={!rookieOnly ? "on acc" : ""} onClick={() => setRookieOnly(false)}>全選手</button>
