@@ -534,14 +534,21 @@ function GameLog({ s }) {
       {((s && s.games) || []).map((g, i) => {
         const a = Array.isArray(g) ? g[0] : g.a;
         const b = Array.isArray(g) ? g[1] : g.b;
-        const aw = a > b;
+        const noScore = a == null || b == null;
+        const aw = !noScore && a > b;
         return (
-          <div key={i} className="game-pill">
+          <div key={i} className="game-pill" title={g && g.note ? g.note : undefined}>
             <span className="gnum">GAME {i + 1}</span>
             <span className="gsc">
-              <span style={{ color: aw ? "var(--accent)" : "var(--muted)" }}>{a}</span>
-              <span className="muted"> – </span>
-              <span style={{ color: !aw ? "var(--accent)" : "var(--muted)" }}>{b}</span>
+              {noScore ? (
+                <span className="muted">スコア未取得</span>
+              ) : (
+                <>
+                  <span style={{ color: aw ? "var(--accent)" : "var(--muted)" }}>{a}</span>
+                  <span className="muted"> – </span>
+                  <span style={{ color: !aw ? "var(--accent)" : "var(--muted)" }}>{b}</span>
+                </>
+              )}
             </span>
           </div>
         );

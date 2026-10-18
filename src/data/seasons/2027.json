@@ -349,53 +349,20 @@
       "conference": "East",
       "division": "Atlantic",
       "city": "千葉市",
-      "coach": "花房小次郎",
+      "coach": "司馬健一",
       "color": "#ae3f29",
       "logo": "/images/articles/IMG_3143.png",
-      "league": "East"
-    },
-    {
-      "abbr": "六本木",
-      "name": "六本木ヴィヴァン",
-      "conference": "East",
-      "division": "Atlantic",
-      "city": "六本木",
-      "coach": "松永幸四郎",
-      "color": "#916922",
-      "logo": "/images/articles/2B3A593C-2619-4E0D-92FF-858D6F33E423.png",
-      "league": "East"
-    },
-    {
-      "abbr": "京都",
-      "name": "京都パープルサンガ",
-      "conference": "East",
-      "division": "Atlantic",
-      "city": "亀岡市",
-      "coach": "杉原一葉",
-      "color": "#7c711d",
-      "logo": "/images/articles/IMG_3138.png",
       "league": "East"
     },
     {
       "abbr": "博多",
       "name": "博多ホークス",
       "conference": "East",
-      "division": "Atlantic",
+      "division": "Central",
       "city": "福岡市",
       "coach": "山田孝",
       "color": "#6c781c",
       "logo": "/images/articles/IMG_3156.png",
-      "league": "East"
-    },
-    {
-      "abbr": "琉球",
-      "name": "琉球テイオー",
-      "conference": "East",
-      "division": "Atlantic",
-      "city": "琉球",
-      "coach": "小倉快",
-      "color": "#1e8027",
-      "logo": "/images/articles/999814BF-63BE-4D2F-8EC3-FB5B5F979CD8.png",
       "league": "East"
     },
     {
@@ -410,69 +377,25 @@
       "league": "East"
     },
     {
-      "abbr": "横浜",
-      "name": "横浜マリノス",
+      "abbr": "京都",
+      "name": "京都パープルサンガ",
       "conference": "East",
-      "division": "Central",
-      "city": "横浜市",
-      "coach": "守屋大助",
-      "color": "#a95c28",
-      "logo": "/images/articles/IMG_3150.png",
+      "division": "Atlantic",
+      "city": "亀岡市",
+      "coach": "杉原一葉",
+      "color": "#7c711d",
+      "logo": "/images/articles/IMG_3138.png",
       "league": "East"
     },
     {
-      "abbr": "名古屋",
-      "name": "名古屋ドラゴンズ",
+      "abbr": "六本木",
+      "name": "六本木ヴィヴァン",
       "conference": "East",
-      "division": "Central",
-      "city": "名古屋市",
-      "coach": "赤坂郁弥",
-      "color": "#597c1d",
-      "logo": "/images/articles/IMG_3140.png",
-      "league": "East"
-    },
-    {
-      "abbr": "尼崎",
-      "name": "尼崎ホエールズ",
-      "conference": "East",
-      "division": "Central",
-      "city": "尼崎",
-      "coach": "佐藤勇気",
-      "color": "#45801e",
-      "logo": "/images/articles/23993A5B-3CEE-4C91-93BF-457AD09D1C58.png",
-      "league": "East"
-    },
-    {
-      "abbr": "阪神",
-      "name": "阪神タイガース",
-      "conference": "East",
-      "division": "Central",
-      "city": "西宮市",
-      "coach": "桐山海斗",
-      "color": "#2d801e",
-      "logo": "/images/articles/IMG_3141.png",
-      "league": "East"
-    },
-    {
-      "abbr": "大宮",
-      "name": "大宮キャップス",
-      "conference": "East",
-      "division": "Central",
-      "city": "大宮",
-      "coach": "大谷瑛",
-      "color": "#1e803e",
-      "logo": "/images/articles/C46FA9D5-C4EA-44DE-9668-9442F7C66C2D.png",
-      "league": "East"
-    },
-    {
-      "abbr": "札幌",
-      "name": "札幌ウォリアーズ",
-      "conference": "East",
-      "division": "Central",
-      "city": "札幌",
-      "coach": "宮崎孝文",
-      "color": "#1e7b80",
-      "logo": "/images/articles/9B978FC8-2768-4FD8-A8C2-5E3B31561299.png",
+      "division": "Atlantic",
+      "city": "六本木",
+      "coach": "松永幸四郎",
+      "color": "#916922",
+      "logo": "/images/articles/2B3A593C-2619-4E0D-92FF-858D6F33E423.png",
       "league": "East"
     },
     {
@@ -487,70 +410,93 @@
       "league": "East"
     },
     {
-      "abbr": "品川",
-      "name": "品川セイウンスカイ",
-      "conference": "West",
-      "division": "Pacific",
-      "city": "品川",
-      "coach": "成田楓",
-      "color": "#2968ae",
-      "logo": "/images/articles/IMG_2751.png",
-      "league": "West"
+      "abbr": "尼崎",
+      "name": "尼崎ホエールズ",
+      "conference": "East",
+      "division": "Central",
+      "city": "尼崎",
+      "coach": "森脇信吾",
+      "color": "#45801e",
+      "logo": "/images/articles/23993A5B-3CEE-4C91-93BF-457AD09D1C58.png",
+      "league": "East"
     },
     {
-      "abbr": "丸の内",
-      "name": "丸の内ユナイテッド",
-      "conference": "West",
-      "division": "Pacific",
-      "city": "丸の内",
-      "coach": "松木悠太",
-      "color": "#2948ae",
-      "logo": "/images/articles/3C9E227D-CE49-445C-B840-704149E55AAB.png",
-      "league": "West"
+      "abbr": "阪神",
+      "name": "阪神タイガース",
+      "conference": "East",
+      "division": "Central",
+      "city": "西宮市",
+      "coach": "蘭堂一真",
+      "color": "#2d801e",
+      "logo": "/images/articles/IMG_3141.png",
+      "league": "East"
     },
     {
-      "abbr": "東東京",
-      "name": "東東京シンエンペラーズ",
-      "conference": "West",
-      "division": "Pacific",
-      "city": "東東京",
-      "coach": "秋山省吾",
-      "color": "#4929ae",
-      "logo": "/images/articles/IMG_2749.png",
-      "league": "West"
-    },
-    {
-      "abbr": "渋谷",
-      "name": "渋谷フォーエバーヤングス",
-      "conference": "West",
-      "division": "Pacific",
-      "city": "渋谷",
-      "coach": "木佐貫信二",
-      "color": "#6929ae",
-      "logo": "/images/articles/IMG_3153.png",
-      "league": "West"
+      "abbr": "大宮",
+      "name": "大宮キャップス",
+      "conference": "East",
+      "division": "Central",
+      "city": "大宮",
+      "coach": "長嶺剛",
+      "color": "#1e803e",
+      "logo": "/images/articles/C46FA9D5-C4EA-44DE-9668-9442F7C66C2D.png",
+      "league": "East"
     },
     {
       "abbr": "新宿",
       "name": "新宿ミッドガルズ",
-      "conference": "West",
-      "division": "Pacific",
+      "conference": "East",
+      "division": "Atlantic",
       "city": "新宿",
       "coach": "堀江祐介",
       "color": "#a929ae",
       "logo": "/images/articles/716F0164-1DFB-4848-B756-AA879F28BE74.png",
-      "league": "West"
+      "league": "East"
     },
     {
-      "abbr": "宇都宮",
-      "name": "宇都宮セルティックス",
-      "conference": "West",
-      "division": "Pacific",
-      "city": "宇都宮",
-      "coach": "大木誠一",
-      "color": "#ae2932",
-      "logo": "/images/articles/7BCA4758-8AAC-4E3A-AAE0-9C8D831C5EB9.png",
-      "league": "West"
+      "abbr": "琉球",
+      "name": "琉球テイオー",
+      "conference": "East",
+      "division": "Atlantic",
+      "city": "琉球",
+      "coach": "小倉快",
+      "color": "#1e8027",
+      "logo": "/images/articles/999814BF-63BE-4D2F-8EC3-FB5B5F979CD8.png",
+      "league": "East"
+    },
+    {
+      "abbr": "札幌",
+      "name": "札幌ウォリアーズ",
+      "conference": "East",
+      "division": "Central",
+      "city": "札幌",
+      "coach": "宮崎孝文",
+      "color": "#1e7b80",
+      "logo": "/images/articles/9B978FC8-2768-4FD8-A8C2-5E3B31561299.png",
+      "league": "East"
+    },
+    {
+      "abbr": "鹿島",
+      "name": "鹿島アントラーズ",
+      "conference": "East",
+      "division": "Atlantic",
+      "city": "",
+      "coach": "花房小次郎",
+      "color": "#8a2b1f",
+      "logo": "/images/articles/IMG_3136.png",
+      "league": "East",
+      "coachNote": "開幕時は岩城健吾。12月13日に辞任し、花房小次郎が後任"
+    },
+    {
+      "abbr": "秋田",
+      "name": "秋田プログノーシス",
+      "conference": "East",
+      "division": "Central",
+      "city": "",
+      "coach": "高砂浩平",
+      "color": "#1f5a8a",
+      "logo": "/images/articles/IMG_3339.png",
+      "league": "East"
     },
     {
       "abbr": "江戸川",
@@ -561,6 +507,17 @@
       "coach": "上林透",
       "color": "#257b9d",
       "logo": "/images/articles/5AF5CFD9-B216-4310-B666-3250C4660054.png",
+      "league": "West"
+    },
+    {
+      "abbr": "大阪",
+      "name": "ガンバ大阪",
+      "conference": "West",
+      "division": "Pacific",
+      "city": "吹田市",
+      "coach": "栗林良平",
+      "color": "#8929ae",
+      "logo": "/images/articles/IMG_3135.png",
       "league": "West"
     },
     {
@@ -575,14 +532,25 @@
       "league": "West"
     },
     {
-      "abbr": "大阪",
-      "name": "ガンバ大阪",
+      "abbr": "丸の内",
+      "name": "丸の内ユナイテッド",
       "conference": "West",
-      "division": "Midwest",
-      "city": "吹田市",
-      "coach": "栗林良平",
-      "color": "#8929ae",
-      "logo": "/images/articles/IMG_3135.png",
+      "division": "Pacific",
+      "city": "丸の内",
+      "coach": "松木悠太",
+      "color": "#2948ae",
+      "logo": "/images/articles/3C9E227D-CE49-445C-B840-704149E55AAB.png",
+      "league": "West"
+    },
+    {
+      "abbr": "渋谷",
+      "name": "渋谷フォーエバーヤングス",
+      "conference": "West",
+      "division": "Pacific",
+      "city": "渋谷",
+      "coach": "木佐貫信二",
+      "color": "#6929ae",
+      "logo": "/images/articles/IMG_3153.png",
       "league": "West"
     },
     {
@@ -597,6 +565,28 @@
       "league": "West"
     },
     {
+      "abbr": "長崎",
+      "name": "長崎ヴァレンティア",
+      "conference": "West",
+      "division": "Midwest",
+      "city": "長崎",
+      "coach": "鮫島聡",
+      "color": "#ae2952",
+      "logo": "/images/articles/EFC78FF6-9604-456C-9553-0ED6F5B83C95.png",
+      "league": "West"
+    },
+    {
+      "abbr": "横浜",
+      "name": "横浜マリノス",
+      "conference": "West",
+      "division": "Midwest",
+      "city": "横浜市",
+      "coach": "守屋大助",
+      "color": "#a95c28",
+      "logo": "/images/articles/IMG_3150.png",
+      "league": "West"
+    },
+    {
       "abbr": "鹿児島",
       "name": "鹿児島インパルス",
       "conference": "West",
@@ -608,47 +598,58 @@
       "league": "West"
     },
     {
-      "abbr": "長崎",
-      "name": "長崎ヴァレンティア",
+      "abbr": "東東京",
+      "name": "東東京シンエンペラーズ",
       "conference": "West",
-      "division": "Midwest",
-      "city": "長崎",
-      "coach": "早森時夫",
-      "color": "#ae2952",
-      "logo": "/images/articles/EFC78FF6-9604-456C-9553-0ED6F5B83C95.png",
+      "division": "Pacific",
+      "city": "東東京",
+      "coach": "秋山省吾",
+      "color": "#4929ae",
+      "logo": "/images/articles/IMG_2749.png",
       "league": "West"
     },
     {
-      "abbr": "鹿島",
-      "name": "鹿島アントラーズ",
-      "conference": "East",
-      "division": "Atlantic",
-      "city": "",
-      "coach": "",
-      "color": "#8a2b1f",
-      "logo": "/images/articles/IMG_3136.png",
-      "league": "East"
-    },
-    {
-      "abbr": "秋田",
-      "name": "秋田プログノーシス",
+      "abbr": "品川",
+      "name": "品川セイウンスカイ",
       "conference": "West",
       "division": "Pacific",
-      "city": "",
-      "coach": "",
-      "color": "#1f5a8a",
-      "logo": "/images/articles/IMG_3339.png",
+      "city": "品川",
+      "coach": "成田楓",
+      "color": "#2968ae",
+      "logo": "/images/articles/IMG_2751.png",
       "league": "West"
     },
     {
       "abbr": "C大阪",
       "name": "セレッソ大阪",
       "conference": "West",
-      "division": "Midwest",
+      "division": "Pacific",
       "city": "",
-      "coach": "",
+      "coach": "北条隆之",
       "color": "#8a1f5a",
       "logo": "/images/articles/IMG_3139.png",
+      "league": "West"
+    },
+    {
+      "abbr": "宇都宮",
+      "name": "宇都宮セルティックス",
+      "conference": "West",
+      "division": "Pacific",
+      "city": "宇都宮",
+      "coach": "野々村隆",
+      "color": "#ae2932",
+      "logo": "/images/articles/7BCA4758-8AAC-4E3A-AAE0-9C8D831C5EB9.png",
+      "league": "West"
+    },
+    {
+      "abbr": "名古屋",
+      "name": "名古屋ドラゴンズ",
+      "conference": "West",
+      "division": "Midwest",
+      "city": "名古屋市",
+      "coach": "羽生田匠",
+      "color": "#597c1d",
+      "logo": "/images/articles/IMG_3140.png",
       "league": "West"
     }
   ],
@@ -656,510 +657,2738 @@
     "East": [
       {
         "team": "千葉",
-        "w": 0,
-        "l": 0,
+        "w": 59,
+        "l": 23,
         "gb": "—",
         "conf": "",
         "div": "",
-        "home": "",
-        "away": "",
+        "home": "32-9",
+        "away": "27-14",
         "l10": "",
         "strk": "",
-        "diff": "",
-        "clinch": ""
-      },
-      {
-        "team": "六本木",
-        "w": 0,
-        "l": 0,
-        "gb": "0.0",
-        "conf": "",
-        "div": "",
-        "home": "",
-        "away": "",
-        "l10": "",
-        "strk": "",
-        "diff": "",
-        "clinch": ""
-      },
-      {
-        "team": "京都",
-        "w": 0,
-        "l": 0,
-        "gb": "0.0",
-        "conf": "",
-        "div": "",
-        "home": "",
-        "away": "",
-        "l10": "",
-        "strk": "",
-        "diff": "",
-        "clinch": ""
+        "diff": "+9.0",
+        "clinch": "z"
       },
       {
         "team": "博多",
-        "w": 0,
-        "l": 0,
-        "gb": "0.0",
+        "w": 57,
+        "l": 25,
+        "gb": "2.0",
         "conf": "",
         "div": "",
         "home": "",
         "away": "",
         "l10": "",
         "strk": "",
-        "diff": "",
-        "clinch": ""
-      },
-      {
-        "team": "琉球",
-        "w": 0,
-        "l": 0,
-        "gb": "0.0",
-        "conf": "",
-        "div": "",
-        "home": "",
-        "away": "",
-        "l10": "",
-        "strk": "",
-        "diff": "",
-        "clinch": ""
+        "diff": "+7.5",
+        "clinch": "x"
       },
       {
         "team": "広島",
-        "w": 0,
-        "l": 0,
-        "gb": "0.0",
+        "w": 52,
+        "l": 30,
+        "gb": "7.0",
         "conf": "",
         "div": "",
         "home": "",
         "away": "",
         "l10": "",
         "strk": "",
-        "diff": "",
-        "clinch": ""
+        "diff": "+7.4",
+        "clinch": "x"
       },
       {
-        "team": "横浜",
-        "w": 0,
-        "l": 0,
-        "gb": "0.0",
+        "team": "京都",
+        "w": 51,
+        "l": 31,
+        "gb": "8.0",
         "conf": "",
         "div": "",
         "home": "",
         "away": "",
         "l10": "",
         "strk": "",
-        "diff": "",
-        "clinch": ""
+        "diff": "+7.3",
+        "clinch": "x"
       },
       {
-        "team": "名古屋",
-        "w": 0,
-        "l": 0,
-        "gb": "0.0",
+        "team": "六本木",
+        "w": 42,
+        "l": 40,
+        "gb": "17.0",
         "conf": "",
         "div": "",
         "home": "",
         "away": "",
         "l10": "",
         "strk": "",
-        "diff": "",
-        "clinch": ""
+        "diff": "-0.6",
+        "clinch": "x"
+      },
+      {
+        "team": "川崎",
+        "w": 41,
+        "l": 41,
+        "gb": "18.0",
+        "conf": "",
+        "div": "",
+        "home": "",
+        "away": "",
+        "l10": "",
+        "strk": "",
+        "diff": "-0.6",
+        "clinch": "x"
       },
       {
         "team": "尼崎",
-        "w": 0,
-        "l": 0,
-        "gb": "0.0",
+        "w": 37,
+        "l": 45,
+        "gb": "22.0",
         "conf": "",
         "div": "",
         "home": "",
         "away": "",
         "l10": "",
         "strk": "",
-        "diff": "",
-        "clinch": ""
+        "diff": "-4.0",
+        "clinch": "pi"
       },
       {
         "team": "阪神",
-        "w": 0,
-        "l": 0,
-        "gb": "0.0",
+        "w": 33,
+        "l": 49,
+        "gb": "26.0",
         "conf": "",
         "div": "",
         "home": "",
         "away": "",
         "l10": "",
         "strk": "",
-        "diff": "",
-        "clinch": ""
+        "diff": "-3.2",
+        "clinch": "pi"
       },
       {
         "team": "大宮",
-        "w": 0,
-        "l": 0,
-        "gb": "0.0",
+        "w": 30,
+        "l": 52,
+        "gb": "29.0",
         "conf": "",
         "div": "",
         "home": "",
         "away": "",
         "l10": "",
         "strk": "",
-        "diff": "",
+        "diff": "-9.6",
+        "clinch": "pi"
+      },
+      {
+        "team": "新宿",
+        "w": 29,
+        "l": 53,
+        "gb": "30.0",
+        "conf": "",
+        "div": "",
+        "home": "",
+        "away": "",
+        "l10": "",
+        "strk": "",
+        "diff": "-5.1",
+        "clinch": "pi"
+      },
+      {
+        "team": "琉球",
+        "w": 29,
+        "l": 53,
+        "gb": "30.0",
+        "conf": "",
+        "div": "",
+        "home": "",
+        "away": "",
+        "l10": "",
+        "strk": "",
+        "diff": "-4.4",
         "clinch": ""
       },
       {
         "team": "札幌",
-        "w": 0,
-        "l": 0,
-        "gb": "0.0",
+        "w": 26,
+        "l": 56,
+        "gb": "33.0",
         "conf": "",
         "div": "",
         "home": "",
         "away": "",
         "l10": "",
         "strk": "",
-        "diff": "",
-        "clinch": ""
-      },
-      {
-        "team": "川崎",
-        "w": 0,
-        "l": 0,
-        "gb": "0.0",
-        "conf": "",
-        "div": "",
-        "home": "",
-        "away": "",
-        "l10": "",
-        "strk": "",
-        "diff": "",
+        "diff": "-10.8",
         "clinch": ""
       },
       {
         "team": "鹿島",
-        "w": 0,
-        "l": 0,
-        "gb": "0.0",
+        "w": 19,
+        "l": 63,
+        "gb": "40.0",
         "conf": "",
         "div": "",
         "home": "",
         "away": "",
         "l10": "",
         "strk": "",
-        "diff": "",
+        "diff": "-12.4",
+        "clinch": ""
+      },
+      {
+        "team": "秋田",
+        "w": 17,
+        "l": 65,
+        "gb": "42.0",
+        "conf": "",
+        "div": "",
+        "home": "",
+        "away": "",
+        "l10": "",
+        "strk": "",
+        "diff": "-11.7",
         "clinch": ""
       }
     ],
     "West": [
       {
-        "team": "品川",
-        "w": 0,
-        "l": 0,
+        "team": "江戸川",
+        "w": 67,
+        "l": 15,
         "gb": "—",
         "conf": "",
         "div": "",
-        "home": "",
-        "away": "",
+        "home": "36-5",
+        "away": "31-10",
         "l10": "",
         "strk": "",
-        "diff": "",
-        "clinch": ""
-      },
-      {
-        "team": "丸の内",
-        "w": 0,
-        "l": 0,
-        "gb": "0.0",
-        "conf": "",
-        "div": "",
-        "home": "",
-        "away": "",
-        "l10": "",
-        "strk": "",
-        "diff": "",
-        "clinch": ""
-      },
-      {
-        "team": "東東京",
-        "w": 0,
-        "l": 0,
-        "gb": "0.0",
-        "conf": "",
-        "div": "",
-        "home": "",
-        "away": "",
-        "l10": "",
-        "strk": "",
-        "diff": "",
-        "clinch": ""
-      },
-      {
-        "team": "渋谷",
-        "w": 0,
-        "l": 0,
-        "gb": "0.0",
-        "conf": "",
-        "div": "",
-        "home": "",
-        "away": "",
-        "l10": "",
-        "strk": "",
-        "diff": "",
-        "clinch": ""
-      },
-      {
-        "team": "新宿",
-        "w": 0,
-        "l": 0,
-        "gb": "0.0",
-        "conf": "",
-        "div": "",
-        "home": "",
-        "away": "",
-        "l10": "",
-        "strk": "",
-        "diff": "",
-        "clinch": ""
-      },
-      {
-        "team": "宇都宮",
-        "w": 0,
-        "l": 0,
-        "gb": "0.0",
-        "conf": "",
-        "div": "",
-        "home": "",
-        "away": "",
-        "l10": "",
-        "strk": "",
-        "diff": "",
-        "clinch": ""
-      },
-      {
-        "team": "江戸川",
-        "w": 0,
-        "l": 0,
-        "gb": "0.0",
-        "conf": "",
-        "div": "",
-        "home": "",
-        "away": "",
-        "l10": "",
-        "strk": "",
-        "diff": "",
-        "clinch": ""
-      },
-      {
-        "team": "東京",
-        "w": 0,
-        "l": 0,
-        "gb": "0.0",
-        "conf": "",
-        "div": "",
-        "home": "",
-        "away": "",
-        "l10": "",
-        "strk": "",
-        "diff": "",
-        "clinch": ""
+        "diff": "+15.6",
+        "clinch": "z"
       },
       {
         "team": "大阪",
-        "w": 0,
-        "l": 0,
-        "gb": "0.0",
+        "w": 60,
+        "l": 22,
+        "gb": "7.0",
         "conf": "",
         "div": "",
         "home": "",
         "away": "",
         "l10": "",
         "strk": "",
-        "diff": "",
-        "clinch": ""
+        "diff": "+4.6",
+        "clinch": "x"
+      },
+      {
+        "team": "東京",
+        "w": 58,
+        "l": 24,
+        "gb": "9.0",
+        "conf": "",
+        "div": "",
+        "home": "27-14",
+        "away": "31-10",
+        "l10": "",
+        "strk": "",
+        "diff": "+11.3",
+        "clinch": "x"
+      },
+      {
+        "team": "丸の内",
+        "w": 57,
+        "l": 25,
+        "gb": "10.0",
+        "conf": "",
+        "div": "",
+        "home": "",
+        "away": "",
+        "l10": "",
+        "strk": "",
+        "diff": "+10.6",
+        "clinch": "x"
+      },
+      {
+        "team": "渋谷",
+        "w": 50,
+        "l": 32,
+        "gb": "17.0",
+        "conf": "",
+        "div": "",
+        "home": "",
+        "away": "",
+        "l10": "",
+        "strk": "",
+        "diff": "+4.5",
+        "clinch": "x"
       },
       {
         "team": "浦和",
-        "w": 0,
-        "l": 0,
-        "gb": "0.0",
+        "w": 48,
+        "l": 34,
+        "gb": "19.0",
         "conf": "",
         "div": "",
         "home": "",
         "away": "",
         "l10": "",
         "strk": "",
-        "diff": "",
-        "clinch": ""
-      },
-      {
-        "team": "鹿児島",
-        "w": 0,
-        "l": 0,
-        "gb": "0.0",
-        "conf": "",
-        "div": "",
-        "home": "",
-        "away": "",
-        "l10": "",
-        "strk": "",
-        "diff": "",
-        "clinch": ""
+        "diff": "+3.5",
+        "clinch": "x"
       },
       {
         "team": "長崎",
-        "w": 0,
-        "l": 0,
-        "gb": "0.0",
+        "w": 48,
+        "l": 34,
+        "gb": "19.0",
         "conf": "",
         "div": "",
         "home": "",
         "away": "",
         "l10": "",
         "strk": "",
-        "diff": "",
-        "clinch": ""
+        "diff": "+4.2",
+        "clinch": "pi"
       },
       {
-        "team": "秋田",
-        "w": 0,
-        "l": 0,
-        "gb": "0.0",
+        "team": "横浜",
+        "w": 47,
+        "l": 35,
+        "gb": "20.0",
         "conf": "",
         "div": "",
         "home": "",
         "away": "",
         "l10": "",
         "strk": "",
-        "diff": "",
+        "diff": "+4.0",
+        "clinch": "pi"
+      },
+      {
+        "team": "鹿児島",
+        "w": 41,
+        "l": 41,
+        "gb": "26.0",
+        "conf": "",
+        "div": "",
+        "home": "",
+        "away": "",
+        "l10": "",
+        "strk": "",
+        "diff": "-1.7",
+        "clinch": "pi"
+      },
+      {
+        "team": "東東京",
+        "w": 40,
+        "l": 42,
+        "gb": "27.0",
+        "conf": "",
+        "div": "",
+        "home": "",
+        "away": "",
+        "l10": "",
+        "strk": "",
+        "diff": "-1.1",
+        "clinch": "pi"
+      },
+      {
+        "team": "品川",
+        "w": 36,
+        "l": 46,
+        "gb": "31.0",
+        "conf": "",
+        "div": "",
+        "home": "",
+        "away": "",
+        "l10": "",
+        "strk": "",
+        "diff": "-1.1",
         "clinch": ""
       },
       {
         "team": "C大阪",
-        "w": 0,
-        "l": 0,
-        "gb": "0.0",
+        "w": 29,
+        "l": 53,
+        "gb": "38.0",
         "conf": "",
         "div": "",
         "home": "",
         "away": "",
         "l10": "",
         "strk": "",
-        "diff": "",
+        "diff": "-5.9",
+        "clinch": ""
+      },
+      {
+        "team": "宇都宮",
+        "w": 25,
+        "l": 57,
+        "gb": "42.0",
+        "conf": "",
+        "div": "",
+        "home": "",
+        "away": "",
+        "l10": "",
+        "strk": "",
+        "diff": "-6.6",
+        "clinch": ""
+      },
+      {
+        "team": "名古屋",
+        "w": 20,
+        "l": 62,
+        "gb": "47.0",
+        "conf": "",
+        "div": "",
+        "home": "",
+        "away": "",
+        "l10": "",
+        "strk": "",
+        "diff": "-10.6",
         "clinch": ""
       }
     ]
   },
   "teamStats": [],
   "draft": {
-    "name": "",
-    "note": "プレイオフ本戦に進めなかったクラブ（プレイイン敗退を含む）がロッタリー対象。候補は日本人選手が中心。",
-    "lottery": [],
-    "picks": [],
+    "name": "2028 新人ドラフト",
+    "note": "抽選対象は14クラブ（プレーオフ1回戦に進んだ阪神・長崎を含む）。当選確率は6.5%／9.7%／3.2%の3段階で、確率9.7%の品川が1位指名権を獲得。リーグ最下位の秋田は9位。1巡目の日本人は18人で「スラムダンク世代」と呼ばれる。",
+    "lottery": [
+      {
+        "order": 1,
+        "team": "品川",
+        "odds": 9.7
+      },
+      {
+        "order": 2,
+        "team": "鹿島",
+        "odds": 6.5
+      },
+      {
+        "order": 3,
+        "team": "琉球",
+        "odds": 9.7
+      },
+      {
+        "order": 4,
+        "team": "新宿",
+        "odds": 6.5
+      },
+      {
+        "order": 5,
+        "team": "長崎",
+        "odds": 3.2
+      },
+      {
+        "order": 6,
+        "team": "札幌",
+        "odds": 9.7
+      },
+      {
+        "order": 7,
+        "team": "東東京",
+        "odds": 6.5
+      },
+      {
+        "order": 8,
+        "team": "C大阪",
+        "odds": 9.7
+      },
+      {
+        "order": 9,
+        "team": "秋田",
+        "odds": 6.5
+      },
+      {
+        "order": 10,
+        "team": "名古屋",
+        "odds": 6.5
+      },
+      {
+        "order": 11,
+        "team": "大宮",
+        "odds": 6.5
+      },
+      {
+        "order": 12,
+        "team": "宇都宮",
+        "odds": 9.7
+      },
+      {
+        "order": 13,
+        "team": "鹿児島",
+        "odds": 6.5
+      },
+      {
+        "order": 14,
+        "team": "阪神",
+        "odds": 3.2
+      }
+    ],
+    "picks": [
+      {
+        "round": 1,
+        "pick": 1,
+        "overall": 1,
+        "team": "品川",
+        "p": "流川楓",
+        "pos": "SG",
+        "ovr": 86,
+        "age": 19,
+        "from": "クロアチア",
+        "note": "総合86は世代最高。「フィールドの貴公子」"
+      },
+      {
+        "round": 1,
+        "pick": 2,
+        "overall": 2,
+        "team": "鹿島",
+        "p": "赤木剛憲",
+        "pos": "C",
+        "ovr": 80,
+        "age": 20,
+        "from": "ザビエル大",
+        "note": ""
+      },
+      {
+        "round": 1,
+        "pick": 3,
+        "overall": 3,
+        "team": "琉球",
+        "p": "三井寿",
+        "pos": "SF",
+        "ovr": 78,
+        "age": 19,
+        "from": "アイダホ州立大",
+        "note": ""
+      },
+      {
+        "round": 1,
+        "pick": 4,
+        "overall": 4,
+        "team": "新宿",
+        "p": "土岡武彦",
+        "pos": "C",
+        "ovr": 77,
+        "age": 19,
+        "from": "日本",
+        "note": "モック1巡目予想外からのサプライズ指名"
+      },
+      {
+        "round": 1,
+        "pick": 5,
+        "overall": 5,
+        "team": "長崎",
+        "p": "ブラッドリー・ビール",
+        "pos": "SG",
+        "ovr": 77,
+        "age": 19,
+        "from": "フロリダ大",
+        "note": "抽選確率3.2%から5位"
+      },
+      {
+        "round": 1,
+        "pick": 6,
+        "overall": 6,
+        "team": "札幌",
+        "p": "カワイ・レナード",
+        "pos": "SF",
+        "ovr": 82,
+        "age": 19,
+        "from": "サンディエゴ州立大",
+        "note": "総合82。モック3〜5位予想から6位へ"
+      },
+      {
+        "round": 1,
+        "pick": 7,
+        "overall": 7,
+        "team": "東東京",
+        "p": "ジュルー・ホリデー",
+        "pos": "PG",
+        "ovr": 75,
+        "age": 18,
+        "from": "UCLA",
+        "note": ""
+      },
+      {
+        "round": 1,
+        "pick": 8,
+        "overall": 8,
+        "team": "C大阪",
+        "p": "二条時也",
+        "pos": "PG",
+        "ovr": 74,
+        "age": 23,
+        "from": "ミズーリ州立大",
+        "note": ""
+      },
+      {
+        "round": 1,
+        "pick": 9,
+        "overall": 9,
+        "team": "秋田",
+        "p": "大野ミカエル瞬",
+        "pos": "SF",
+        "ovr": 75,
+        "age": 20,
+        "from": "日本",
+        "note": ""
+      },
+      {
+        "round": 1,
+        "pick": 10,
+        "overall": 10,
+        "team": "名古屋",
+        "p": "木暮公延",
+        "pos": "PG",
+        "ovr": 73,
+        "age": 20,
+        "from": "モンテネグロ",
+        "note": ""
+      },
+      {
+        "round": 1,
+        "pick": 11,
+        "overall": 11,
+        "team": "大宮",
+        "p": "ジョーイ・グラハム",
+        "pos": "SF",
+        "ovr": 74,
+        "age": 23,
+        "from": "オクラホマ州立大",
+        "note": ""
+      },
+      {
+        "round": 1,
+        "pick": 12,
+        "overall": 12,
+        "team": "宇都宮",
+        "p": "ケニー・ウォーカー",
+        "pos": "PF",
+        "ovr": 78,
+        "age": 21,
+        "from": "ケンタッキー大",
+        "note": ""
+      },
+      {
+        "round": 1,
+        "pick": 13,
+        "overall": 13,
+        "team": "鹿児島",
+        "p": "金城健介",
+        "pos": "PF",
+        "ovr": 77,
+        "age": 19,
+        "from": "日本",
+        "note": ""
+      },
+      {
+        "round": 1,
+        "pick": 14,
+        "overall": 14,
+        "team": "阪神",
+        "p": "プリモシュ・ブレゼツ",
+        "pos": "C",
+        "ovr": 73,
+        "age": 20,
+        "from": "スロベニア",
+        "note": ""
+      },
+      {
+        "round": 1,
+        "pick": 15,
+        "overall": 15,
+        "team": "尼崎",
+        "p": "デリック・フェイバーズ",
+        "pos": "PF",
+        "ovr": 77,
+        "age": 19,
+        "from": "ジョージア工科大",
+        "note": ""
+      },
+      {
+        "round": 1,
+        "pick": 16,
+        "overall": 16,
+        "team": "川崎",
+        "p": "亀田俊一",
+        "pos": "PG",
+        "ovr": 73,
+        "age": 20,
+        "from": "プリンストン大",
+        "note": ""
+      },
+      {
+        "round": 1,
+        "pick": 17,
+        "overall": 17,
+        "team": "六本木",
+        "p": "桜木花道",
+        "pos": "SF",
+        "ovr": 72,
+        "age": 19,
+        "from": "イェール大",
+        "note": ""
+      },
+      {
+        "round": 1,
+        "pick": 18,
+        "overall": 18,
+        "team": "横浜",
+        "p": "横峯武蔵",
+        "pos": "PF",
+        "ovr": 72,
+        "age": 20,
+        "from": "プリンストン大",
+        "note": ""
+      },
+      {
+        "round": 1,
+        "pick": 19,
+        "overall": 19,
+        "team": "浦和",
+        "p": "藤木光司",
+        "pos": "SG",
+        "ovr": 74,
+        "age": 18,
+        "from": "ウェイクフォレスト大",
+        "note": ""
+      },
+      {
+        "round": 1,
+        "pick": 20,
+        "overall": 20,
+        "team": "渋谷",
+        "p": "星野勝也",
+        "pos": "C",
+        "ovr": 72,
+        "age": 21,
+        "from": "マーサー大",
+        "note": ""
+      },
+      {
+        "round": 1,
+        "pick": 21,
+        "overall": 21,
+        "team": "京都",
+        "p": "井上ジャクソン",
+        "pos": "SG",
+        "ovr": 72,
+        "age": 21,
+        "from": "オクラホマ大",
+        "note": ""
+      },
+      {
+        "round": 1,
+        "pick": 22,
+        "overall": 22,
+        "team": "広島",
+        "p": "江川潤之介",
+        "pos": "PF",
+        "ovr": 72,
+        "age": 21,
+        "from": "マーケット大",
+        "note": ""
+      },
+      {
+        "round": 1,
+        "pick": 23,
+        "overall": 23,
+        "team": "博多",
+        "p": "ジェイク・ツァカリディス",
+        "pos": "C",
+        "ovr": 73,
+        "age": 21,
+        "from": "",
+        "note": ""
+      },
+      {
+        "round": 1,
+        "pick": 24,
+        "overall": 24,
+        "team": "丸の内",
+        "p": "吉松央次郎",
+        "pos": "PG",
+        "ovr": 74,
+        "age": 22,
+        "from": "MIT",
+        "note": ""
+      },
+      {
+        "round": 1,
+        "pick": 25,
+        "overall": 25,
+        "team": "東京",
+        "p": "月野武",
+        "pos": "SG",
+        "ovr": 71,
+        "age": 22,
+        "from": "カリフォルニア州立大ベーカーズフィールド校",
+        "note": ""
+      },
+      {
+        "round": 1,
+        "pick": 26,
+        "overall": 26,
+        "team": "千葉",
+        "p": "ジョナサン・ハーディ",
+        "pos": "SG",
+        "ovr": 72,
+        "age": 22,
+        "from": "オレゴン大",
+        "note": ""
+      },
+      {
+        "round": 1,
+        "pick": 27,
+        "overall": 27,
+        "team": "大阪",
+        "p": "森山孝二",
+        "pos": "PG",
+        "ovr": 70,
+        "age": 22,
+        "from": "ノースカロライナ州立大",
+        "note": ""
+      },
+      {
+        "round": 1,
+        "pick": 28,
+        "overall": 28,
+        "team": "江戸川",
+        "p": "ハウイー・スタークス",
+        "pos": "PF",
+        "ovr": 73,
+        "age": 22,
+        "from": "ウィスコンシン大",
+        "note": ""
+      },
+      {
+        "round": 2,
+        "pick": 1,
+        "overall": 29,
+        "team": "阪神",
+        "p": "エフティミオス・レンツィアス",
+        "pos": "C",
+        "ovr": 71,
+        "age": 20,
+        "from": "ギリシャ",
+        "note": ""
+      },
+      {
+        "round": 2,
+        "pick": 2,
+        "overall": 30,
+        "team": "鹿児島",
+        "p": "角田聡",
+        "pos": "PF",
+        "ovr": 72,
+        "age": 22,
+        "from": "",
+        "note": ""
+      },
+      {
+        "round": 2,
+        "pick": 3,
+        "overall": 31,
+        "team": "宇都宮",
+        "p": "金田宗一郎",
+        "pos": "SG",
+        "ovr": 73,
+        "age": 21,
+        "from": "UCLA",
+        "note": ""
+      },
+      {
+        "round": 2,
+        "pick": 4,
+        "overall": 32,
+        "team": "大宮",
+        "p": "青山元気",
+        "pos": "PG",
+        "ovr": 70,
+        "age": 21,
+        "from": "ウィーリング・ジェズイット大",
+        "note": ""
+      },
+      {
+        "round": 2,
+        "pick": 5,
+        "overall": 33,
+        "team": "名古屋",
+        "p": "田尻望",
+        "pos": "SG",
+        "ovr": 70,
+        "age": 20,
+        "from": "フレズノ州立大",
+        "note": ""
+      },
+      {
+        "round": 2,
+        "pick": 6,
+        "overall": 34,
+        "team": "秋田",
+        "p": "水戸直樹",
+        "pos": "SG",
+        "ovr": 71,
+        "age": 22,
+        "from": "ケンタッキー大",
+        "note": ""
+      },
+      {
+        "round": 2,
+        "pick": 7,
+        "overall": 35,
+        "team": "C大阪",
+        "p": "高橋純",
+        "pos": "PF",
+        "ovr": 73,
+        "age": 19,
+        "from": "日本",
+        "note": "海外であと2年プレー予定"
+      },
+      {
+        "round": 2,
+        "pick": 8,
+        "overall": 36,
+        "team": "東東京",
+        "p": "森洋次郎",
+        "pos": "PG",
+        "ovr": 71,
+        "age": 21,
+        "from": "デポール大",
+        "note": ""
+      },
+      {
+        "round": 2,
+        "pick": 9,
+        "overall": 37,
+        "team": "札幌",
+        "p": "二宮亮",
+        "pos": "PF",
+        "ovr": 69,
+        "age": 19,
+        "from": "オーバーン大",
+        "note": ""
+      },
+      {
+        "round": 2,
+        "pick": 10,
+        "overall": 38,
+        "team": "長崎",
+        "p": "コビー・ブラウン",
+        "pos": "C",
+        "ovr": 71,
+        "age": 20,
+        "from": "マイアミ大",
+        "note": ""
+      },
+      {
+        "round": 2,
+        "pick": 11,
+        "overall": 39,
+        "team": "新宿",
+        "p": "堂前明義",
+        "pos": "PG",
+        "ovr": 70,
+        "age": 23,
+        "from": "テンプル大",
+        "note": ""
+      },
+      {
+        "round": 2,
+        "pick": 12,
+        "overall": 40,
+        "team": "琉球",
+        "p": "富岡ドナルド",
+        "pos": "C",
+        "ovr": 71,
+        "age": 23,
+        "from": "コナーズ州立大",
+        "note": ""
+      },
+      {
+        "round": 2,
+        "pick": 13,
+        "overall": 41,
+        "team": "鹿島",
+        "p": "ザック・カー",
+        "pos": "PF",
+        "ovr": 72,
+        "age": 23,
+        "from": "",
+        "note": ""
+      },
+      {
+        "round": 2,
+        "pick": 14,
+        "overall": 42,
+        "team": "品川",
+        "p": "ヘンリ・スヴェンソン",
+        "pos": "PF",
+        "ovr": 68,
+        "age": 23,
+        "from": "スウェーデン",
+        "note": "海外であと1年プレー予定"
+      },
+      {
+        "round": 2,
+        "pick": 15,
+        "overall": 43,
+        "team": "尼崎",
+        "p": "苗田薫",
+        "pos": "C",
+        "ovr": 70,
+        "age": 21,
+        "from": "ポーランド",
+        "note": ""
+      },
+      {
+        "round": 2,
+        "pick": 16,
+        "overall": 44,
+        "team": "川崎",
+        "p": "藤倉幸成",
+        "pos": "PG",
+        "ovr": 72,
+        "age": 22,
+        "from": "コロンビア大",
+        "note": ""
+      },
+      {
+        "round": 2,
+        "pick": 17,
+        "overall": 45,
+        "team": "六本木",
+        "p": "ネゲル・ナイト",
+        "pos": "PG",
+        "ovr": 72,
+        "age": 23,
+        "from": "デイトン大",
+        "note": ""
+      },
+      {
+        "round": 2,
+        "pick": 18,
+        "overall": 46,
+        "team": "横浜",
+        "p": "ドンテ・グリフィス",
+        "pos": "PG",
+        "ovr": 71,
+        "age": 22,
+        "from": "クレイトン大",
+        "note": ""
+      },
+      {
+        "round": 2,
+        "pick": 19,
+        "overall": 47,
+        "team": "浦和",
+        "p": "桐山祐介",
+        "pos": "PG",
+        "ovr": 69,
+        "age": 21,
+        "from": "ノースカロライナ州立大",
+        "note": ""
+      },
+      {
+        "round": 2,
+        "pick": 20,
+        "overall": 48,
+        "team": "渋谷",
+        "p": "原田基",
+        "pos": "SG",
+        "ovr": 68,
+        "age": 20,
+        "from": "オークランド大",
+        "note": ""
+      },
+      {
+        "round": 2,
+        "pick": 21,
+        "overall": 49,
+        "team": "京都",
+        "p": "レジー・スレーター",
+        "pos": "SF",
+        "ovr": 71,
+        "age": 21,
+        "from": "",
+        "note": ""
+      },
+      {
+        "round": 2,
+        "pick": 22,
+        "overall": 50,
+        "team": "広島",
+        "p": "ユーリ・クルソフ",
+        "pos": "PF",
+        "ovr": 70,
+        "age": 22,
+        "from": "",
+        "note": "海外であと2年プレー予定"
+      },
+      {
+        "round": 2,
+        "pick": 23,
+        "overall": 51,
+        "team": "博多",
+        "p": "アンダーソン・リトル",
+        "pos": "SG",
+        "ovr": 71,
+        "age": 22,
+        "from": "テュレーン大",
+        "note": ""
+      },
+      {
+        "round": 2,
+        "pick": 24,
+        "overall": 52,
+        "team": "丸の内",
+        "p": "長倉風雅",
+        "pos": "PG",
+        "ovr": 67,
+        "age": 22,
+        "from": "クレムソン大",
+        "note": ""
+      },
+      {
+        "round": 2,
+        "pick": 25,
+        "overall": 53,
+        "team": "東京",
+        "p": "古川正晴",
+        "pos": "PG",
+        "ovr": 70,
+        "age": 19,
+        "from": "ネブラスカ大",
+        "note": ""
+      },
+      {
+        "round": 2,
+        "pick": 26,
+        "overall": 54,
+        "team": "千葉",
+        "p": "ランドール・エイドリアン",
+        "pos": "SG",
+        "ovr": 72,
+        "age": 23,
+        "from": "セントジョセフ大",
+        "note": ""
+      },
+      {
+        "round": 2,
+        "pick": 27,
+        "overall": 55,
+        "team": "大阪",
+        "p": "ジョーイ・テレル",
+        "pos": "PF",
+        "ovr": 66,
+        "age": 22,
+        "from": "",
+        "note": ""
+      },
+      {
+        "round": 2,
+        "pick": 28,
+        "overall": 56,
+        "team": "江戸川",
+        "p": "黒田紀宏",
+        "pos": "SG",
+        "ovr": 69,
+        "age": 20,
+        "from": "ロヨラ大メリーランド校",
+        "note": ""
+      }
+    ],
     "expansion": {
-      "picks": [],
+      "name": "",
       "note": "",
-      "name": ""
+      "picks": []
     }
   },
   "playerSeasonStats": [],
-  "teamSeasonStats": [],
+  "teamSeasonStats": [
+    {
+      "team": "江戸川",
+      "leagueRank": 1,
+      "gp": 82,
+      "w": 67,
+      "l": 15,
+      "stats": {
+        "ppg": 110.6,
+        "papg": 95.0,
+        "diff": 15.6,
+        "fgm": 40.6,
+        "fga": 84.4,
+        "fg": 48.1,
+        "fg3m": 10.1,
+        "fg3a": 29.8,
+        "fg3": 34.1,
+        "ftm": 19.2,
+        "fta": 23.2,
+        "ft": 82.7,
+        "orpg": 13.9,
+        "oreb": 30.5,
+        "drpg": 38.1,
+        "dreb": 76.0,
+        "rpg": 52.0,
+        "apg": 24.4,
+        "spg": 7.5
+      }
+    },
+    {
+      "team": "大阪",
+      "leagueRank": 2,
+      "gp": 82,
+      "w": 60,
+      "l": 22,
+      "stats": {
+        "ppg": 104.8,
+        "papg": 100.3,
+        "diff": 4.6,
+        "fgm": 39.1,
+        "fga": 82.9,
+        "fg": 47.2,
+        "fg3m": 10.4,
+        "fg3a": 28.3,
+        "fg3": 36.8,
+        "ftm": 16.2,
+        "fta": 20.2,
+        "ft": 80.1,
+        "orpg": 11.4,
+        "oreb": 25.1,
+        "drpg": 35.6,
+        "dreb": 76.0,
+        "rpg": 46.9,
+        "apg": 21.8,
+        "spg": 8.3
+      }
+    },
+    {
+      "team": "千葉",
+      "leagueRank": 3,
+      "gp": 82,
+      "w": 59,
+      "l": 23,
+      "stats": {
+        "ppg": 110.8,
+        "papg": 101.8,
+        "diff": 9.0,
+        "fgm": 41.8,
+        "fga": 85.8,
+        "fg": 48.7,
+        "fg3m": 10.9,
+        "fg3a": 30.9,
+        "fg3": 35.1,
+        "ftm": 16.4,
+        "fta": 21.3,
+        "ft": 77.1,
+        "orpg": 14.1,
+        "oreb": 30.6,
+        "drpg": 36.4,
+        "dreb": 75.5,
+        "rpg": 50.5,
+        "apg": 25.4,
+        "spg": 8.1
+      }
+    },
+    {
+      "team": "東京",
+      "leagueRank": 4,
+      "gp": 82,
+      "w": 58,
+      "l": 24,
+      "stats": {
+        "ppg": 108.6,
+        "papg": 97.3,
+        "diff": 11.3,
+        "fgm": 39.4,
+        "fga": 83.2,
+        "fg": 47.4,
+        "fg3m": 11.6,
+        "fg3a": 32.7,
+        "fg3": 35.6,
+        "ftm": 18.2,
+        "fta": 23.2,
+        "ft": 78.4,
+        "orpg": 12.7,
+        "oreb": 27.6,
+        "drpg": 37.1,
+        "dreb": 77.2,
+        "rpg": 49.8,
+        "apg": 22.0,
+        "spg": 7.2
+      }
+    },
+    {
+      "team": "博多",
+      "leagueRank": 5,
+      "gp": 82,
+      "w": 57,
+      "l": 25,
+      "stats": {
+        "ppg": 108.5,
+        "papg": 101.1,
+        "diff": 7.5,
+        "fgm": 40.1,
+        "fga": 84.1,
+        "fg": 47.7,
+        "fg3m": 10.6,
+        "fg3a": 33.4,
+        "fg3": 31.8,
+        "ftm": 17.7,
+        "fta": 21.7,
+        "ft": 81.4,
+        "orpg": 12.2,
+        "oreb": 26.9,
+        "drpg": 37.0,
+        "dreb": 75.1,
+        "rpg": 49.3,
+        "apg": 21.6,
+        "spg": 7.5
+      }
+    },
+    {
+      "team": "丸の内",
+      "leagueRank": 6,
+      "gp": 82,
+      "w": 57,
+      "l": 25,
+      "stats": {
+        "ppg": 105.9,
+        "papg": 95.2,
+        "diff": 10.6,
+        "fgm": 39.9,
+        "fga": 85.0,
+        "fg": 47.0,
+        "fg3m": 10.0,
+        "fg3a": 29.8,
+        "fg3": 33.4,
+        "ftm": 16.1,
+        "fta": 20.8,
+        "ft": 77.1,
+        "orpg": 15.2,
+        "oreb": 32.3,
+        "drpg": 36.3,
+        "dreb": 78.0,
+        "rpg": 51.5,
+        "apg": 22.3,
+        "spg": 7.8
+      }
+    },
+    {
+      "team": "広島",
+      "leagueRank": 7,
+      "gp": 82,
+      "w": 52,
+      "l": 30,
+      "stats": {
+        "ppg": 118.6,
+        "papg": 111.2,
+        "diff": 7.4,
+        "fgm": 43.5,
+        "fga": 88.0,
+        "fg": 49.5,
+        "fg3m": 12.2,
+        "fg3a": 33.6,
+        "fg3": 36.2,
+        "ftm": 19.4,
+        "fta": 23.7,
+        "ft": 81.8,
+        "orpg": 13.0,
+        "oreb": 27.8,
+        "drpg": 36.9,
+        "dreb": 73.3,
+        "rpg": 49.8,
+        "apg": 26.4,
+        "spg": 6.9
+      }
+    },
+    {
+      "team": "京都",
+      "leagueRank": 8,
+      "gp": 82,
+      "w": 51,
+      "l": 31,
+      "stats": {
+        "ppg": 107.0,
+        "papg": 99.6,
+        "diff": 7.3,
+        "fgm": 39.3,
+        "fga": 85.1,
+        "fg": 46.2,
+        "fg3m": 12.4,
+        "fg3a": 34.2,
+        "fg3": 36.1,
+        "ftm": 16.1,
+        "fta": 21.0,
+        "ft": 76.6,
+        "orpg": 12.2,
+        "oreb": 25.5,
+        "drpg": 37.8,
+        "dreb": 77.3,
+        "rpg": 50.0,
+        "apg": 23.5,
+        "spg": 7.6
+      }
+    },
+    {
+      "team": "渋谷",
+      "leagueRank": 9,
+      "gp": 82,
+      "w": 50,
+      "l": 32,
+      "stats": {
+        "ppg": 111.2,
+        "papg": 106.7,
+        "diff": 4.5,
+        "fgm": 40.0,
+        "fga": 86.1,
+        "fg": 46.4,
+        "fg3m": 12.8,
+        "fg3a": 37.5,
+        "fg3": 34.2,
+        "ftm": 18.5,
+        "fta": 22.3,
+        "ft": 82.8,
+        "orpg": 11.4,
+        "oreb": 23.8,
+        "drpg": 38.1,
+        "dreb": 77.1,
+        "rpg": 49.5,
+        "apg": 22.2,
+        "spg": 6.5
+      }
+    },
+    {
+      "team": "浦和",
+      "leagueRank": 10,
+      "gp": 82,
+      "w": 48,
+      "l": 34,
+      "stats": {
+        "ppg": 112.1,
+        "papg": 108.6,
+        "diff": 3.5,
+        "fgm": 43.0,
+        "fga": 85.7,
+        "fg": 50.2,
+        "fg3m": 7.9,
+        "fg3a": 21.9,
+        "fg3": 36.2,
+        "ftm": 18.1,
+        "fta": 24.0,
+        "ft": 75.5,
+        "orpg": 13.0,
+        "oreb": 28.6,
+        "drpg": 37.4,
+        "dreb": 74.1,
+        "rpg": 50.4,
+        "apg": 27.2,
+        "spg": 6.6
+      }
+    },
+    {
+      "team": "長崎",
+      "leagueRank": 11,
+      "gp": 82,
+      "w": 48,
+      "l": 34,
+      "stats": {
+        "ppg": 107.6,
+        "papg": 103.5,
+        "diff": 4.2,
+        "fgm": 39.4,
+        "fga": 86.5,
+        "fg": 45.5,
+        "fg3m": 10.6,
+        "fg3a": 32.4,
+        "fg3": 32.9,
+        "ftm": 18.3,
+        "fta": 23.4,
+        "ft": 78.2,
+        "orpg": 14.1,
+        "oreb": 28.6,
+        "drpg": 36.9,
+        "dreb": 76.7,
+        "rpg": 51.0,
+        "apg": 22.0,
+        "spg": 7.6
+      }
+    },
+    {
+      "team": "横浜",
+      "leagueRank": 12,
+      "gp": 82,
+      "w": 47,
+      "l": 35,
+      "stats": {
+        "ppg": 112.6,
+        "papg": 108.5,
+        "diff": 4.0,
+        "fgm": 41.5,
+        "fga": 87.8,
+        "fg": 47.3,
+        "fg3m": 13.9,
+        "fg3a": 38.4,
+        "fg3": 36.3,
+        "ftm": 15.6,
+        "fta": 19.4,
+        "ft": 80.5,
+        "orpg": 12.5,
+        "oreb": 26.4,
+        "drpg": 34.6,
+        "dreb": 74.4,
+        "rpg": 47.2,
+        "apg": 20.7,
+        "spg": 8.4
+      }
+    },
+    {
+      "team": "六本木",
+      "leagueRank": 13,
+      "gp": 82,
+      "w": 42,
+      "l": 40,
+      "stats": {
+        "ppg": 100.8,
+        "papg": 101.5,
+        "diff": -0.6,
+        "fgm": 37.8,
+        "fga": 86.4,
+        "fg": 43.7,
+        "fg3m": 10.3,
+        "fg3a": 33.2,
+        "fg3": 31.0,
+        "ftm": 14.9,
+        "fta": 20.1,
+        "ft": 74.4,
+        "orpg": 13.0,
+        "oreb": 25.5,
+        "drpg": 35.5,
+        "dreb": 70.4,
+        "rpg": 48.5,
+        "apg": 20.0,
+        "spg": 8.5
+      }
+    },
+    {
+      "team": "川崎",
+      "leagueRank": 14,
+      "gp": 82,
+      "w": 41,
+      "l": 41,
+      "stats": {
+        "ppg": 108.3,
+        "papg": 108.9,
+        "diff": -0.6,
+        "fgm": 39.2,
+        "fga": 87.1,
+        "fg": 45.0,
+        "fg3m": 9.9,
+        "fg3a": 31.3,
+        "fg3": 31.7,
+        "ftm": 20.0,
+        "fta": 25.1,
+        "ft": 79.4,
+        "orpg": 14.5,
+        "oreb": 29.1,
+        "drpg": 36.4,
+        "dreb": 74.2,
+        "rpg": 50.9,
+        "apg": 23.8,
+        "spg": 6.5
+      }
+    },
+    {
+      "team": "鹿児島",
+      "leagueRank": 15,
+      "gp": 82,
+      "w": 41,
+      "l": 41,
+      "stats": {
+        "ppg": 107.2,
+        "papg": 109.0,
+        "diff": -1.7,
+        "fgm": 40.4,
+        "fga": 83.9,
+        "fg": 48.1,
+        "fg3m": 9.9,
+        "fg3a": 28.4,
+        "fg3": 34.9,
+        "ftm": 16.6,
+        "fta": 22.0,
+        "ft": 75.7,
+        "orpg": 9.5,
+        "oreb": 20.8,
+        "drpg": 36.3,
+        "dreb": 72.8,
+        "rpg": 45.8,
+        "apg": 22.7,
+        "spg": 7.4
+      }
+    },
+    {
+      "team": "東東京",
+      "leagueRank": 16,
+      "gp": 82,
+      "w": 40,
+      "l": 42,
+      "stats": {
+        "ppg": 106.6,
+        "papg": 107.7,
+        "diff": -1.1,
+        "fgm": 40.5,
+        "fga": 85.3,
+        "fg": 47.5,
+        "fg3m": 9.3,
+        "fg3a": 28.9,
+        "fg3": 32.1,
+        "ftm": 16.2,
+        "fta": 20.6,
+        "ft": 78.4,
+        "orpg": 13.7,
+        "oreb": 29.3,
+        "drpg": 33.9,
+        "dreb": 72.8,
+        "rpg": 47.6,
+        "apg": 20.9,
+        "spg": 7.4
+      }
+    },
+    {
+      "team": "尼崎",
+      "leagueRank": 17,
+      "gp": 82,
+      "w": 37,
+      "l": 45,
+      "stats": {
+        "ppg": 102.4,
+        "papg": 106.4,
+        "diff": -4.0,
+        "fgm": 37.1,
+        "fga": 84.0,
+        "fg": 44.2,
+        "fg3m": 11.4,
+        "fg3a": 31.7,
+        "fg3": 36.1,
+        "ftm": 16.7,
+        "fta": 20.9,
+        "ft": 80.1,
+        "orpg": 11.7,
+        "oreb": 24.1,
+        "drpg": 35.8,
+        "dreb": 72.8,
+        "rpg": 47.5,
+        "apg": 22.4,
+        "spg": 7.0
+      }
+    },
+    {
+      "team": "品川",
+      "leagueRank": 18,
+      "gp": 82,
+      "w": 36,
+      "l": 46,
+      "stats": {
+        "ppg": 101.6,
+        "papg": 102.7,
+        "diff": -1.1,
+        "fgm": 37.8,
+        "fga": 86.9,
+        "fg": 43.5,
+        "fg3m": 9.1,
+        "fg3a": 31.7,
+        "fg3": 28.7,
+        "ftm": 17.0,
+        "fta": 23.3,
+        "ft": 72.6,
+        "orpg": 17.4,
+        "oreb": 33.5,
+        "drpg": 35.2,
+        "dreb": 73.8,
+        "rpg": 52.6,
+        "apg": 19.3,
+        "spg": 8.6
+      }
+    },
+    {
+      "team": "阪神",
+      "leagueRank": 19,
+      "gp": 82,
+      "w": 33,
+      "l": 49,
+      "stats": {
+        "ppg": 100.4,
+        "papg": 103.6,
+        "diff": -3.2,
+        "fgm": 37.6,
+        "fga": 84.8,
+        "fg": 44.4,
+        "fg3m": 10.5,
+        "fg3a": 32.9,
+        "fg3": 31.9,
+        "ftm": 14.7,
+        "fta": 20.5,
+        "ft": 71.7,
+        "orpg": 13.4,
+        "oreb": 27.0,
+        "drpg": 34.3,
+        "dreb": 72.4,
+        "rpg": 47.6,
+        "apg": 19.9,
+        "spg": 8.0
+      }
+    },
+    {
+      "team": "大宮",
+      "leagueRank": 20,
+      "gp": 82,
+      "w": 30,
+      "l": 52,
+      "stats": {
+        "ppg": 100.5,
+        "papg": 110.1,
+        "diff": -9.6,
+        "fgm": 38.4,
+        "fga": 84.1,
+        "fg": 45.6,
+        "fg3m": 8.1,
+        "fg3a": 24.6,
+        "fg3": 32.8,
+        "ftm": 15.8,
+        "fta": 20.4,
+        "ft": 77.1,
+        "orpg": 11.7,
+        "oreb": 24.4,
+        "drpg": 33.7,
+        "dreb": 71.7,
+        "rpg": 45.4,
+        "apg": 24.8,
+        "spg": 7.1
+      }
+    },
+    {
+      "team": "琉球",
+      "leagueRank": 21,
+      "gp": 82,
+      "w": 29,
+      "l": 53,
+      "stats": {
+        "ppg": 107.6,
+        "papg": 112.0,
+        "diff": -4.4,
+        "fgm": 37.8,
+        "fga": 84.9,
+        "fg": 44.5,
+        "fg3m": 12.4,
+        "fg3a": 36.8,
+        "fg3": 33.7,
+        "ftm": 19.6,
+        "fta": 26.0,
+        "ft": 75.6,
+        "orpg": 12.5,
+        "oreb": 24.9,
+        "drpg": 34.8,
+        "dreb": 71.0,
+        "rpg": 47.3,
+        "apg": 20.6,
+        "spg": 7.8
+      }
+    },
+    {
+      "team": "新宿",
+      "leagueRank": 22,
+      "gp": 82,
+      "w": 29,
+      "l": 53,
+      "stats": {
+        "ppg": 106.3,
+        "papg": 111.4,
+        "diff": -5.1,
+        "fgm": 38.8,
+        "fga": 87.0,
+        "fg": 44.6,
+        "fg3m": 12.0,
+        "fg3a": 34.8,
+        "fg3": 34.5,
+        "ftm": 16.8,
+        "fta": 20.8,
+        "ft": 80.6,
+        "orpg": 12.3,
+        "oreb": 24.5,
+        "drpg": 35.2,
+        "dreb": 72.0,
+        "rpg": 47.5,
+        "apg": 21.3,
+        "spg": 8.4
+      }
+    },
+    {
+      "team": "C大阪",
+      "leagueRank": 23,
+      "gp": 82,
+      "w": 29,
+      "l": 53,
+      "stats": {
+        "ppg": 95.2,
+        "papg": 101.1,
+        "diff": -5.9,
+        "fgm": 35.8,
+        "fga": 84.0,
+        "fg": 42.6,
+        "fg3m": 6.9,
+        "fg3a": 24.4,
+        "fg3": 28.4,
+        "ftm": 16.6,
+        "fta": 21.9,
+        "ft": 76.1,
+        "orpg": 14.6,
+        "oreb": 28.9,
+        "drpg": 35.2,
+        "dreb": 77.1,
+        "rpg": 49.8,
+        "apg": 19.8,
+        "spg": 7.6
+      }
+    },
+    {
+      "team": "札幌",
+      "leagueRank": 24,
+      "gp": 82,
+      "w": 26,
+      "l": 56,
+      "stats": {
+        "ppg": 98.9,
+        "papg": 109.6,
+        "diff": -10.8,
+        "fgm": 36.6,
+        "fga": 83.0,
+        "fg": 44.1,
+        "fg3m": 10.2,
+        "fg3a": 30.0,
+        "fg3": 34.1,
+        "ftm": 15.4,
+        "fta": 19.8,
+        "ft": 77.8,
+        "orpg": 9.9,
+        "oreb": 20.4,
+        "drpg": 33.5,
+        "dreb": 72.3,
+        "rpg": 43.4,
+        "apg": 21.5,
+        "spg": 7.8
+      }
+    },
+    {
+      "team": "宇都宮",
+      "leagueRank": 25,
+      "gp": 82,
+      "w": 25,
+      "l": 57,
+      "stats": {
+        "ppg": 101.5,
+        "papg": 108.1,
+        "diff": -6.6,
+        "fgm": 37.4,
+        "fga": 81.8,
+        "fg": 45.8,
+        "fg3m": 11.1,
+        "fg3a": 31.5,
+        "fg3": 35.2,
+        "ftm": 15.6,
+        "fta": 19.9,
+        "ft": 78.6,
+        "orpg": 8.8,
+        "oreb": 19.1,
+        "drpg": 33.9,
+        "dreb": 67.3,
+        "rpg": 42.7,
+        "apg": 22.9,
+        "spg": 7.2
+      }
+    },
+    {
+      "team": "名古屋",
+      "leagueRank": 26,
+      "gp": 82,
+      "w": 20,
+      "l": 62,
+      "stats": {
+        "ppg": 100.6,
+        "papg": 111.3,
+        "diff": -10.6,
+        "fgm": 37.2,
+        "fga": 84.3,
+        "fg": 44.1,
+        "fg3m": 10.2,
+        "fg3a": 31.0,
+        "fg3": 32.9,
+        "ftm": 16.0,
+        "fta": 21.3,
+        "ft": 75.0,
+        "orpg": 11.1,
+        "oreb": 22.5,
+        "drpg": 33.3,
+        "dreb": 69.3,
+        "rpg": 44.4,
+        "apg": 19.9,
+        "spg": 6.9
+      }
+    },
+    {
+      "team": "鹿島",
+      "leagueRank": 27,
+      "gp": 82,
+      "w": 19,
+      "l": 63,
+      "stats": {
+        "ppg": 99.6,
+        "papg": 112.0,
+        "diff": -12.4,
+        "fgm": 35.7,
+        "fga": 87.7,
+        "fg": 40.7,
+        "fg3m": 11.7,
+        "fg3a": 38.4,
+        "fg3": 30.5,
+        "ftm": 16.5,
+        "fta": 21.8,
+        "ft": 75.8,
+        "orpg": 13.0,
+        "oreb": 23.9,
+        "drpg": 35.0,
+        "dreb": 71.8,
+        "rpg": 48.0,
+        "apg": 19.4,
+        "spg": 7.5
+      }
+    },
+    {
+      "team": "秋田",
+      "leagueRank": 28,
+      "gp": 82,
+      "w": 17,
+      "l": 65,
+      "stats": {
+        "ppg": 93.4,
+        "papg": 105.1,
+        "diff": -11.7,
+        "fgm": 34.4,
+        "fga": 84.2,
+        "fg": 40.9,
+        "fg3m": 10.5,
+        "fg3a": 32.5,
+        "fg3": 32.3,
+        "ftm": 14.1,
+        "fta": 19.7,
+        "ft": 71.5,
+        "orpg": 13.2,
+        "oreb": 25.4,
+        "drpg": 32.5,
+        "dreb": 70.9,
+        "rpg": 45.7,
+        "apg": 16.6,
+        "spg": 7.6
+      }
+    }
+  ],
   "prospects": [],
   "awards": {
     "statsNote": "finalists / leaders / members の各要素は stats:{ppg,rpg,apg,...} を持てます。指標の一覧と並び順は league.statKeys で定義。",
     "postseasonMvp": [
       {
-        "line": "",
-        "t": "",
-        "p": "",
+        "line": "7試合で毎試合17得点以上。第6戦FG14本中13本",
+        "t": "博多",
+        "p": "クーパー・フラッグ",
         "label": "イースタン・カンファレンス決勝 MVP",
-        "key": "eastFinals"
+        "key": "eastFinals",
+        "stats": {
+          "gp": 7,
+          "ppg": 29.4,
+          "rpg": 5.0,
+          "apg": 4.1,
+          "spg": 2.0,
+          "bpg": 1.1,
+          "fg": 66.4,
+          "fg3": 43.5,
+          "ft": 82.4
+        }
       },
       {
-        "line": "",
-        "t": "",
-        "p": "",
+        "line": "ウェンバニヤマ不在の江戸川で攻撃を牽引。第5戦34得点",
+        "t": "江戸川",
+        "p": "キヨンテ・ジョージ",
         "label": "ウェスタン・カンファレンス決勝 MVP",
-        "key": "westFinals"
+        "key": "westFinals",
+        "stats": {
+          "gp": 5,
+          "ppg": 27.4,
+          "rpg": 4.0,
+          "apg": 7.2,
+          "fg": 56.1,
+          "fg3": 47.6,
+          "ft": 100.0
+        }
       },
       {
         "big": true,
-        "line": "",
-        "t": "",
-        "p": "",
+        "line": "2年連続受賞。第5戦FG21本中17本の39得点",
+        "t": "江戸川",
+        "p": "ビクター・ウェンバニヤマ",
         "label": "ファイナル MVP",
-        "key": "finals"
+        "key": "finals",
+        "stats": {
+          "gp": 4,
+          "ppg": 28.0,
+          "rpg": 8.8,
+          "apg": 2.8,
+          "spg": 1.0,
+          "bpg": 3.0,
+          "fg": 76.2,
+          "fg3": 50.0,
+          "ft": 90.9
+        }
       }
     ],
     "allStar": {
-      "events": [
-        {
-          "winner": {
-            "t": "",
-            "p": ""
-          },
-          "name": "ダンクコンテスト"
-        },
-        {
-          "winner": {
-            "t": "",
-            "p": ""
-          },
-          "name": "3ポイントコンテスト"
-        }
-      ],
-      "mvp": {
-        "t": "",
-        "p": ""
-      },
+      "note": "本戦は8人ずつの3チーム対抗戦。日本人は比江島慎、岸本龍一（チームスター）、山田拓朗（チームUSA）。ファン投票最多はアデトクンボの268万0984票。ライジングスターズはチームワールドが91-82で勝利し、MVPは国木田。本戦の結果・MVPとコンテストの勝者は未登録。",
       "result": "",
+      "mvp": {
+        "p": "",
+        "t": ""
+      },
       "rosters": [
         {
-          "backcourt": [],
-          "frontcourt": [],
-          "team": "スター"
+          "team": "チームUSA",
+          "frontcourt": [
+            {
+              "p": "ザイオン・ウィリアムソン",
+              "t": "東東京",
+              "pos": "PF"
+            },
+            {
+              "p": "クーパー・フラッグ",
+              "t": "博多",
+              "pos": "SF"
+            },
+            {
+              "p": "エバン・モブリー",
+              "t": "浦和",
+              "pos": "PF"
+            },
+            {
+              "p": "ジェイデン・マクダニエルズ",
+              "t": "琉球",
+              "pos": "SF"
+            }
+          ],
+          "backcourt": [
+            {
+              "p": "アンソニー・エドワーズ",
+              "t": "鹿児島",
+              "pos": "SG"
+            },
+            {
+              "p": "山田拓朗",
+              "t": "広島",
+              "pos": "SG"
+            },
+            {
+              "p": "ジェイレン・ブランソン",
+              "t": "長崎",
+              "pos": "PG"
+            },
+            {
+              "p": "アメン・トンプソン",
+              "t": "六本木",
+              "pos": "SG"
+            }
+          ]
         },
         {
-          "backcourt": [],
-          "frontcourt": [],
-          "team": "ワールド"
+          "team": "チームスター",
+          "frontcourt": [
+            {
+              "p": "パスカル・シアカム",
+              "t": "宇都宮",
+              "pos": "PF"
+            },
+            {
+              "p": "岸本龍一",
+              "t": "名古屋",
+              "pos": "SF"
+            },
+            {
+              "p": "比江島慎",
+              "t": "東京",
+              "pos": "PF"
+            },
+            {
+              "p": "スコッティ・バーンズ",
+              "t": "千葉",
+              "pos": "PF"
+            }
+          ],
+          "backcourt": [
+            {
+              "p": "ステフィン・カリー",
+              "t": "千葉",
+              "pos": "PG"
+            },
+            {
+              "p": "ドノバン・ミッチェル",
+              "t": "横浜",
+              "pos": "SG"
+            },
+            {
+              "p": "ケイド・カニンガム",
+              "t": "琉球",
+              "pos": "PG"
+            },
+            {
+              "p": "ラメロ・ボール",
+              "t": "尼崎",
+              "pos": "PG"
+            }
+          ]
+        },
+        {
+          "team": "チームワールド",
+          "frontcourt": [
+            {
+              "p": "ニコラ・ヨキッチ",
+              "t": "C大阪",
+              "pos": "C"
+            },
+            {
+              "p": "カール＝アンソニー・タウンズ",
+              "t": "渋谷",
+              "pos": "C"
+            },
+            {
+              "p": "ヤニス・アデトクンボ",
+              "t": "浦和",
+              "pos": "PF"
+            },
+            {
+              "p": "ビクター・ウェンバニヤマ",
+              "t": "江戸川",
+              "pos": "C"
+            }
+          ],
+          "backcourt": [
+            {
+              "p": "ジョシュ・ギディー",
+              "t": "鹿島",
+              "pos": "PG"
+            },
+            {
+              "p": "VJ・エッジコム",
+              "t": "大阪",
+              "pos": "SG"
+            },
+            {
+              "p": "RJ・バレット",
+              "t": "鹿児島",
+              "pos": "SG"
+            },
+            {
+              "p": "ルカ・ドンチッチ",
+              "t": "京都",
+              "pos": "PG"
+            }
+          ]
         }
       ],
-      "note": "ファン投票でフロントコート・バックコートを選出。本戦は「スター」対「ワールド」の2チーム形式。比江島慎はスター、ニコラ・ヨキッチはワールドに選出。本戦の結果とMVPは未登録。ダンクコンテストは赤嶺徹（渋谷）が優勝。"
+      "events": [
+        {
+          "name": "ダンクコンテスト",
+          "winner": {
+            "p": "",
+            "t": ""
+          },
+          "entrants": "ジェイス・リチャードソン（名古屋）、VJ・エッジコム（ガンバ）、エイサ・ニューウェル（浦和）、カーター・ブライアント（長崎）"
+        },
+        {
+          "name": "3ポイントコンテスト",
+          "winner": {
+            "p": "",
+            "t": ""
+          },
+          "entrants": "ジャマール・マレー（渋谷）、アンソニー・エドワーズ（鹿児島）、ドノバン・ミッチェル（横浜）、ジュリアン・シャンパニー（新宿）、ケイド・カニンガム（琉球）、ラメロ・ボール（尼崎）"
+        }
+      ]
     },
-    "weekly": [],
-    "monthly": [],
+    "weekly": [
+      {
+        "period": "2027-10-18",
+        "conf": "East",
+        "mvp": {
+          "p": "ケイド・カニンガム",
+          "t": "琉球"
+        }
+      },
+      {
+        "period": "2027-10-18",
+        "conf": "West",
+        "mvp": {
+          "p": "ニコラ・ヨキッチ",
+          "t": "C大阪"
+        }
+      },
+      {
+        "period": "2027-10-25",
+        "conf": "East",
+        "mvp": {
+          "p": "ルカ・ドンチッチ",
+          "t": "京都"
+        }
+      },
+      {
+        "period": "2027-10-25",
+        "conf": "West",
+        "mvp": {
+          "p": "ジェイソン・テイタム",
+          "t": "名古屋"
+        }
+      },
+      {
+        "period": "2027-11-01",
+        "conf": "East",
+        "mvp": {
+          "p": "アメン・トンプソン",
+          "t": "六本木"
+        }
+      },
+      {
+        "period": "2027-11-01",
+        "conf": "West",
+        "mvp": {
+          "p": "ビクター・ウェンバニヤマ",
+          "t": "江戸川"
+        }
+      },
+      {
+        "period": "2027-11-22",
+        "conf": "East",
+        "mvp": {
+          "p": "ケイド・カニンガム",
+          "t": "琉球"
+        }
+      },
+      {
+        "period": "2027-11-22",
+        "conf": "West",
+        "mvp": {
+          "p": "ジャマール・マレー",
+          "t": "渋谷"
+        }
+      },
+      {
+        "period": "2027-11-29",
+        "conf": "East",
+        "mvp": {
+          "p": "ルカ・ドンチッチ",
+          "t": "京都"
+        }
+      },
+      {
+        "period": "2027-11-29",
+        "conf": "West",
+        "mvp": {
+          "p": "アンソニー・エドワーズ",
+          "t": "鹿児島"
+        }
+      },
+      {
+        "period": "2027-12-06",
+        "conf": "East",
+        "mvp": {
+          "p": "ディラン・ハーパー",
+          "t": "千葉"
+        }
+      },
+      {
+        "period": "2027-12-06",
+        "conf": "West",
+        "mvp": {
+          "p": "オースティン・リーブス",
+          "t": "東京"
+        }
+      },
+      {
+        "period": "2027-12-13",
+        "conf": "East",
+        "mvp": {
+          "p": "アメン・トンプソン",
+          "t": "六本木"
+        }
+      },
+      {
+        "period": "2027-12-13",
+        "conf": "West",
+        "mvp": {
+          "p": "カール＝アンソニー・タウンズ",
+          "t": "渋谷"
+        }
+      },
+      {
+        "period": "2027-12-20",
+        "conf": "East",
+        "mvp": {
+          "p": "ジェイレン・ブラウン",
+          "t": "川崎"
+        }
+      },
+      {
+        "period": "2027-12-20",
+        "conf": "West",
+        "mvp": {
+          "p": "ヤニス・アデトクンボ",
+          "t": "浦和"
+        }
+      },
+      {
+        "period": "2028-01-10",
+        "conf": "East",
+        "mvp": {
+          "p": "ジョシュ・ギディー",
+          "t": "鹿島"
+        }
+      },
+      {
+        "period": "2028-01-24",
+        "conf": "West",
+        "mvp": {
+          "p": "ビクター・ウェンバニヤマ",
+          "t": "江戸川"
+        }
+      },
+      {
+        "period": "2028-01-31",
+        "conf": "East",
+        "mvp": {
+          "p": "ジョシュ・ギディー",
+          "t": "鹿島"
+        }
+      },
+      {
+        "period": "2028-02-21",
+        "conf": "West",
+        "mvp": {
+          "p": "比江島慎",
+          "t": "東京"
+        }
+      },
+      {
+        "period": "2028-02-28",
+        "conf": "West",
+        "mvp": {
+          "p": "比江島慎",
+          "t": "東京"
+        }
+      },
+      {
+        "period": "2028-03-06",
+        "conf": "East",
+        "mvp": {
+          "p": "ラメロ・ボール",
+          "t": "尼崎"
+        }
+      },
+      {
+        "period": "2028-03-06",
+        "conf": "West",
+        "mvp": {
+          "p": "ニコラ・ヨキッチ",
+          "t": "C大阪"
+        }
+      },
+      {
+        "period": "2028-03-13",
+        "conf": "East",
+        "mvp": {
+          "p": "スコッティ・バーンズ",
+          "t": "千葉"
+        }
+      },
+      {
+        "period": "2028-03-13",
+        "conf": "West",
+        "mvp": {
+          "p": "ビクター・ウェンバニヤマ",
+          "t": "江戸川"
+        }
+      },
+      {
+        "period": "2028-03-20",
+        "conf": "East",
+        "mvp": {
+          "p": "ケイド・カニンガム",
+          "t": "琉球"
+        }
+      },
+      {
+        "period": "2028-03-20",
+        "conf": "West",
+        "mvp": {
+          "p": "ビクター・ウェンバニヤマ",
+          "t": "江戸川"
+        }
+      },
+      {
+        "period": "2028-03-27",
+        "conf": "East",
+        "mvp": {
+          "p": "クーパー・フラッグ",
+          "t": "博多"
+        }
+      },
+      {
+        "period": "2028-03-27",
+        "conf": "West",
+        "mvp": {
+          "p": "キヨンテ・ジョージ",
+          "t": "江戸川"
+        }
+      },
+      {
+        "period": "2028-04-03",
+        "conf": "East",
+        "mvp": {
+          "p": "ルカ・ドンチッチ",
+          "t": "京都"
+        }
+      },
+      {
+        "period": "2028-04-03",
+        "conf": "West",
+        "mvp": {
+          "p": "ビクター・ウェンバニヤマ",
+          "t": "江戸川"
+        }
+      }
+    ],
+    "monthly": [
+      {
+        "period": "2027-11",
+        "conf": "East",
+        "mvp": {
+          "p": "アメン・トンプソン",
+          "t": "六本木"
+        },
+        "rookie": {
+          "p": "プー・リチャードソン",
+          "t": "大宮"
+        }
+      },
+      {
+        "period": "2027-11",
+        "conf": "West",
+        "mvp": {
+          "p": "ビクター・ウェンバニヤマ",
+          "t": "江戸川"
+        },
+        "rookie": {
+          "p": "馬場武蔵",
+          "t": "品川"
+        }
+      },
+      {
+        "period": "2027-12",
+        "conf": "East",
+        "mvp": {
+          "p": "タイリース・マクシー",
+          "t": "新宿"
+        },
+        "rookie": {
+          "p": "郡司辰真",
+          "t": "札幌"
+        }
+      },
+      {
+        "period": "2027-12",
+        "conf": "West",
+        "mvp": {
+          "p": "比江島慎",
+          "t": "東京"
+        },
+        "rookie": {
+          "p": "成宮涼",
+          "t": "長崎"
+        }
+      },
+      {
+        "period": "2028-01",
+        "conf": "East",
+        "mvp": {
+          "p": "ケイド・カニンガム",
+          "t": "琉球"
+        },
+        "rookie": {
+          "p": "大岩仁",
+          "t": "尼崎"
+        }
+      },
+      {
+        "period": "2028-01",
+        "conf": "West",
+        "mvp": {
+          "p": "ビクター・ウェンバニヤマ",
+          "t": "江戸川"
+        },
+        "rookie": {
+          "p": "松林恭介",
+          "t": "東東京"
+        }
+      },
+      {
+        "period": "2028-02",
+        "conf": "East",
+        "mvp": {
+          "p": "ジョシュ・ギディー",
+          "t": "鹿島"
+        },
+        "rookie": {
+          "p": "郡司辰真",
+          "t": "札幌"
+        }
+      },
+      {
+        "period": "2028-02",
+        "conf": "West",
+        "mvp": {
+          "p": "ニコラ・ヨキッチ",
+          "t": "C大阪"
+        },
+        "rookie": {
+          "p": "馬場武蔵",
+          "t": "品川"
+        }
+      },
+      {
+        "period": "2028-03",
+        "conf": "East",
+        "mvp": {
+          "p": "ルカ・ドンチッチ",
+          "t": "京都"
+        },
+        "rookie": {
+          "p": "",
+          "t": ""
+        }
+      },
+      {
+        "period": "2028-03",
+        "conf": "West",
+        "mvp": {
+          "p": "ビクター・ウェンバニヤマ",
+          "t": "江戸川"
+        },
+        "rookie": {
+          "p": "",
+          "t": ""
+        }
+      }
+    ],
     "statTitles": [
       {
-        "leaders": [],
+        "leaders": [
+          {
+            "p": "タイリース・マクシー",
+            "t": "新宿",
+            "v": "27.1",
+            "stats": {
+              "gp": 62,
+              "mpg": 37.1,
+              "ppg": 27.1,
+              "rpg": 3.7,
+              "apg": 5.4,
+              "spg": 1.7,
+              "fg": 48.5
+            }
+          },
+          {
+            "p": "ケイド・カニンガム",
+            "t": "琉球",
+            "v": "25.6",
+            "stats": {
+              "gp": 82,
+              "mpg": 34.1,
+              "ppg": 25.6,
+              "rpg": 5.7,
+              "apg": 6.8,
+              "fg": 50.4
+            }
+          },
+          {
+            "p": "アンソニー・エドワーズ",
+            "t": "鹿児島",
+            "v": "25.6",
+            "stats": {
+              "gp": 82,
+              "mpg": 33.3,
+              "ppg": 25.6,
+              "rpg": 4.8,
+              "apg": 3.3,
+              "fg": 52.3
+            }
+          }
+        ],
         "note": "58試合以上の出場、または部門の通算基準",
         "unit": "PPG",
         "label": "得点王",
         "key": "ppg"
       },
       {
-        "leaders": [],
+        "leaders": [
+          {
+            "p": "ビクター・ウェンバニヤマ",
+            "t": "江戸川",
+            "v": "13.2",
+            "stats": {
+              "gp": 64,
+              "ppg": 24.4,
+              "rpg": 13.2
+            }
+          },
+          {
+            "p": "ジェイレン・デューレン",
+            "t": "広島",
+            "v": "12.8",
+            "stats": {
+              "gp": 73,
+              "ppg": 16.8,
+              "rpg": 12.8,
+              "fg": 64.5
+            }
+          },
+          {
+            "p": "今村啓太",
+            "t": "名古屋",
+            "v": "11.3",
+            "stats": {
+              "gp": 73,
+              "ppg": 11.4,
+              "rpg": 11.3,
+              "bpg": 2.0
+            }
+          }
+        ],
         "note": "",
         "unit": "RPG",
         "label": "リバウンド王",
         "key": "rpg"
       },
       {
-        "leaders": [],
+        "leaders": [
+          {
+            "p": "タイリース・ハリバートン",
+            "t": "宇都宮",
+            "v": "8.4",
+            "stats": {
+              "gp": 66,
+              "ppg": 20.5,
+              "apg": 8.4
+            }
+          },
+          {
+            "p": "ケイド・カニンガム",
+            "t": "琉球",
+            "v": "6.8",
+            "stats": {
+              "gp": 82,
+              "ppg": 25.6,
+              "apg": 6.8
+            }
+          },
+          {
+            "p": "ラメロ・ボール",
+            "t": "尼崎",
+            "v": "6.8",
+            "stats": {
+              "gp": 80,
+              "ppg": 21.4,
+              "apg": 6.8
+            }
+          }
+        ],
         "note": "",
         "unit": "APG",
         "label": "アシスト王",
         "key": "apg"
       },
       {
-        "leaders": [],
+        "leaders": [
+          {
+            "p": "オーサー・トンプソン",
+            "t": "品川",
+            "v": "2.2",
+            "stats": {
+              "gp": 81,
+              "ppg": 13.2,
+              "rpg": 7.8,
+              "spg": 2.2
+            }
+          },
+          {
+            "p": "アメン・トンプソン",
+            "t": "六本木",
+            "v": "1.9",
+            "stats": {
+              "gp": 82,
+              "ppg": 20.6,
+              "spg": 1.9
+            }
+          },
+          {
+            "p": "ジェイレン・サッグス",
+            "t": "横浜",
+            "v": "1.9",
+            "stats": {
+              "gp": 61,
+              "ppg": 13.7,
+              "spg": 1.9
+            }
+          }
+        ],
         "note": "",
         "unit": "SPG",
         "label": "スティール王",
         "key": "spg"
       },
       {
-        "leaders": [],
+        "leaders": [
+          {
+            "p": "ビクター・ウェンバニヤマ",
+            "t": "江戸川",
+            "v": "3.1",
+            "stats": {
+              "gp": 64,
+              "bpg": 3.1
+            }
+          },
+          {
+            "p": "ケイレブ・ウィルソン",
+            "t": "長崎",
+            "v": "2.1",
+            "stats": {
+              "gp": 75,
+              "bpg": 2.1
+            }
+          },
+          {
+            "p": "デレック・ライブリー2世",
+            "t": "C大阪",
+            "v": "2.1",
+            "stats": {
+              "gp": 60,
+              "bpg": 2.1
+            }
+          }
+        ],
         "note": "",
         "unit": "BPG",
         "label": "ブロック王",
@@ -1167,13 +3396,38 @@
       },
       {
         "leaders": [],
-        "note": "成功数の最低基準を満たすこと",
+        "note": "成功数の最低基準を満たすこと（FG%のリーダー画面が未取得のため未登録）",
         "unit": "FG%",
         "label": "フィールドゴール成功率",
         "key": "fg"
       },
       {
-        "leaders": [],
+        "leaders": [
+          {
+            "p": "ジュリアン・シャンパニー",
+            "t": "新宿",
+            "v": "43.2",
+            "stats": {
+              "fg3": 43.2
+            }
+          },
+          {
+            "p": "ジェイデン・マクダニエルズ",
+            "t": "琉球",
+            "v": "42.6",
+            "stats": {
+              "fg3": 42.6
+            }
+          },
+          {
+            "p": "コリン・セクストン",
+            "t": "宇都宮",
+            "v": "42.6",
+            "stats": {
+              "fg3": 42.6
+            }
+          }
+        ],
         "note": "成功数の最低基準を満たすこと",
         "unit": "3P%",
         "label": "3ポイント成功率",
@@ -1191,15 +3445,93 @@
       {
         "tiers": [
           {
-            "members": [],
+            "members": [
+              {
+                "p": "ケイド・カニンガム",
+                "pos": "G",
+                "t": "琉球"
+              },
+              {
+                "p": "ルカ・ドンチッチ",
+                "pos": "G",
+                "t": "京都"
+              },
+              {
+                "p": "比江島慎",
+                "pos": "F",
+                "t": "東京"
+              },
+              {
+                "p": "アメン・トンプソン",
+                "pos": "G",
+                "t": "六本木"
+              },
+              {
+                "p": "カール＝アンソニー・タウンズ",
+                "pos": "C",
+                "t": "渋谷"
+              }
+            ],
             "tier": "1st"
           },
           {
-            "members": [],
+            "members": [
+              {
+                "p": "ラメロ・ボール",
+                "pos": "G",
+                "t": "尼崎"
+              },
+              {
+                "p": "スコッティ・バーンズ",
+                "pos": "F",
+                "t": "千葉"
+              },
+              {
+                "p": "アンソニー・エドワーズ",
+                "pos": "G",
+                "t": "鹿児島"
+              },
+              {
+                "p": "タイリース・ハリバートン",
+                "pos": "G",
+                "t": "宇都宮"
+              },
+              {
+                "p": "山田拓朗",
+                "pos": "G",
+                "t": "広島"
+              }
+            ],
             "tier": "2nd"
           },
           {
-            "members": [],
+            "members": [
+              {
+                "p": "ヤニス・アデトクンボ",
+                "pos": "F",
+                "t": "浦和"
+              },
+              {
+                "p": "ジェイレン・ブラウン",
+                "pos": "G",
+                "t": "川崎"
+              },
+              {
+                "p": "クーパー・フラッグ",
+                "pos": "F",
+                "t": "博多"
+              },
+              {
+                "p": "ブランドン・ミラー",
+                "pos": "G",
+                "t": "新宿"
+              },
+              {
+                "p": "ジャレース・ウォーカー",
+                "pos": "F",
+                "t": "鹿島"
+              }
+            ],
             "tier": "3rd"
           }
         ],
@@ -1209,11 +3541,63 @@
       {
         "tiers": [
           {
-            "members": [],
+            "members": [
+              {
+                "p": "スコッティ・バーンズ",
+                "pos": "",
+                "t": "千葉"
+              },
+              {
+                "p": "ダイソン・ダニエルズ",
+                "pos": "",
+                "t": "新宿"
+              },
+              {
+                "p": "アメン・トンプソン",
+                "pos": "",
+                "t": "六本木"
+              },
+              {
+                "p": "オーサー・トンプソン",
+                "pos": "",
+                "t": "品川"
+              },
+              {
+                "p": "ケイレブ・ウィルソン",
+                "pos": "",
+                "t": "長崎"
+              }
+            ],
             "tier": "1st"
           },
           {
-            "members": [],
+            "members": [
+              {
+                "p": "ヤニス・アデトクンボ",
+                "pos": "",
+                "t": "浦和"
+              },
+              {
+                "p": "ニコラス・クラクストン",
+                "pos": "",
+                "t": "品川"
+              },
+              {
+                "p": "今村啓太",
+                "pos": "",
+                "t": "名古屋"
+              },
+              {
+                "p": "ジャレン・ジャクソンJr.",
+                "pos": "",
+                "t": "博多"
+              },
+              {
+                "p": "エバン・モブリー",
+                "pos": "",
+                "t": "浦和"
+              }
+            ],
             "tier": "2nd"
           }
         ],
@@ -1223,11 +3607,63 @@
       {
         "tiers": [
           {
-            "members": [],
+            "members": [
+              {
+                "p": "馬場武蔵",
+                "pos": "",
+                "t": "品川"
+              },
+              {
+                "p": "郡司辰真",
+                "pos": "",
+                "t": "札幌"
+              },
+              {
+                "p": "成宮涼",
+                "pos": "",
+                "t": "長崎"
+              },
+              {
+                "p": "プー・リチャードソン",
+                "pos": "",
+                "t": "大宮"
+              },
+              {
+                "p": "アレクサンドル・サール",
+                "pos": "",
+                "t": "琉球"
+              }
+            ],
             "tier": "1st"
           },
           {
-            "members": [],
+            "members": [
+              {
+                "p": "松林恭介",
+                "pos": "",
+                "t": "東東京"
+              },
+              {
+                "p": "大岩仁",
+                "pos": "",
+                "t": "尼崎"
+              },
+              {
+                "p": "マーク・プライス",
+                "pos": "",
+                "t": "川崎"
+              },
+              {
+                "p": "ザック・ランドルフ",
+                "pos": "",
+                "t": "C大阪"
+              },
+              {
+                "p": "富永篤",
+                "pos": "",
+                "t": "鹿島"
+              }
+            ],
             "tier": "2nd"
           }
         ],
@@ -1237,99 +3673,928 @@
     ],
     "voting": [
       {
-        "finalists": [],
+        "finalists": [
+          {
+            "p": "比江島慎",
+            "t": "東京",
+            "line": "日本人初のMVP。チームを58勝24敗の西3位に導く",
+            "stats": {
+              "gp": 82,
+              "mpg": 35.1,
+              "ppg": 24.4,
+              "rpg": 9.4,
+              "apg": 5.0,
+              "fg": 50.4,
+              "fg3": 37.0,
+              "ft": 79.3
+            }
+          }
+        ],
         "note": "65試合以上の出場が資格要件",
         "label": "最優秀選手 (MVP)",
         "key": "MVP"
       },
       {
-        "finalists": [],
+        "finalists": [
+          {
+            "p": "オーサー・トンプソン",
+            "t": "品川",
+            "line": "スティール王（2.2）",
+            "stats": {
+              "gp": 81,
+              "ppg": 13.2,
+              "rpg": 7.8,
+              "spg": 2.2,
+              "bpg": 1.1
+            }
+          }
+        ],
         "note": "",
         "label": "最優秀守備選手",
         "key": "DPOY"
       },
       {
-        "finalists": [],
+        "finalists": [
+          {
+            "p": "郡司辰真",
+            "t": "札幌",
+            "line": "2027年ドラフト全体1位。日本人初の新人王",
+            "stats": {
+              "ppg": 13.5,
+              "rpg": 5.0,
+              "apg": 2.6,
+              "fg": 45.6,
+              "fg3": 38.6
+            }
+          }
+        ],
         "note": "",
         "label": "最優秀新人",
         "key": "ROY"
       },
       {
-        "finalists": [],
+        "finalists": [
+          {
+            "p": "ナズ・リード",
+            "t": "東京",
+            "line": "控えから14.7得点6.8リバウンド",
+            "stats": {
+              "ppg": 14.7,
+              "rpg": 6.8,
+              "bpg": 1.3,
+              "fg": 48.8
+            }
+          }
+        ],
         "note": "",
         "label": "シックスマン賞",
         "key": "SIXTH"
       },
       {
-        "finalists": [],
+        "finalists": [
+          {
+            "p": "ジャレース・ウォーカー",
+            "t": "鹿島",
+            "line": "オールBプレミア3rdにも選出",
+            "stats": {
+              "gp": 82,
+              "ppg": 18.4,
+              "rpg": 7.4,
+              "apg": 2.8,
+              "spg": 1.4,
+              "bpg": 1.2
+            }
+          }
+        ],
         "note": "",
         "label": "最優秀躍進選手",
         "key": "MIP"
       },
       {
-        "finalists": [],
+        "finalists": [
+          {
+            "p": "アンソニー・エドワーズ",
+            "t": "鹿児島",
+            "line": "オールBプレミア2nd",
+            "stats": {
+              "gp": 82,
+              "mpg": 33.3,
+              "ppg": 25.6,
+              "rpg": 4.8,
+              "apg": 3.3,
+              "fg": 52.3,
+              "fg3": 41.7,
+              "ft": 80.0
+            }
+          }
+        ],
         "note": "",
         "label": "クラッチ最優秀選手",
         "key": "CLUTCH"
       },
       {
-        "finalists": [],
+        "finalists": [
+          {
+            "p": "上林透",
+            "t": "江戸川",
+            "line": "67勝15敗。リーグ最少失点95.0、得失点差+15.6"
+          }
+        ],
         "note": "",
         "label": "最優秀ヘッドコーチ",
         "key": "COY"
       },
       {
-        "finalists": [],
-        "note": "リーグ25クラブの経営陣による投票",
+        "finalists": [
+          {
+            "p": "チャールズ・D・コールドウェル",
+            "t": "江戸川",
+            "line": "江戸川が監督・エグゼクティブの2部門を独占"
+          }
+        ],
+        "note": "リーグ28クラブの経営陣による投票",
         "label": "最優秀エグゼクティブ",
         "key": "EOY"
       }
-    ]
+    ],
+    "periodicNote": "週間MVPは判明分のみ。3月6日以降の5週は記録上の順番から週を割り当てた。3月の月間最優秀新人は未登録。"
   },
   "postseason": {
     "conferences": {
       "East": {
-        "playIn": [],
+        "playIn": [
+          {
+            "a": "尼崎",
+            "b": "阪神",
+            "sa": 7,
+            "sb": 8,
+            "as": 135,
+            "bs": 134,
+            "format": "1試合制",
+            "games": [
+              {
+                "a": 135,
+                "b": 134
+              }
+            ],
+            "mvp": {
+              "p": "",
+              "t": ""
+            },
+            "note": "延長の末、尼崎が第7シード。大岩仁6ブロック。"
+          },
+          {
+            "a": "大宮",
+            "b": "新宿",
+            "sa": 9,
+            "sb": 10,
+            "as": 98,
+            "bs": 117,
+            "format": "1試合制",
+            "games": [
+              {
+                "a": 98,
+                "b": 117
+              }
+            ],
+            "mvp": {
+              "p": "",
+              "t": ""
+            },
+            "note": "新宿が勝利、大宮は敗退。マクシー32得点。"
+          },
+          {
+            "a": "阪神",
+            "b": "新宿",
+            "sa": 8,
+            "sb": 10,
+            "as": 125,
+            "bs": 114,
+            "format": "1試合制",
+            "games": [
+              {
+                "a": 125,
+                "b": 114
+              }
+            ],
+            "mvp": {
+              "p": "",
+              "t": ""
+            },
+            "note": "第8シード決定戦。阪神はフォックス、ドスンム、ブリッジズの3人で74得点。"
+          }
+        ],
         "rounds": {
-          "r1": [],
-          "semis": [],
-          "confFinals": []
+          "r1": [
+            {
+              "a": "千葉",
+              "b": "阪神",
+              "sa": 1,
+              "sb": 8,
+              "as": 4,
+              "bs": 2,
+              "format": "7戦4勝制",
+              "games": [
+                {
+                  "a": 118,
+                  "b": 95
+                },
+                {
+                  "a": 131,
+                  "b": 127
+                },
+                {
+                  "a": 110,
+                  "b": 101
+                },
+                {
+                  "a": 105,
+                  "b": 114
+                },
+                {
+                  "a": 108,
+                  "b": 125
+                },
+                {
+                  "a": 123,
+                  "b": 101
+                }
+              ],
+              "mvp": {
+                "p": "",
+                "t": ""
+              },
+              "note": "第6戦でカリーがFG28本中22本、3P9本の56得点。",
+              "standout": {
+                "p": "ステフィン・カリー",
+                "t": "千葉"
+              }
+            },
+            {
+              "a": "博多",
+              "b": "尼崎",
+              "sa": 2,
+              "sb": 7,
+              "as": 4,
+              "bs": 2,
+              "format": "7戦4勝制",
+              "games": [
+                {
+                  "a": 124,
+                  "b": 98
+                },
+                {
+                  "a": 115,
+                  "b": 111
+                },
+                {
+                  "a": 119,
+                  "b": 122
+                },
+                {
+                  "a": 113,
+                  "b": 123
+                },
+                {
+                  "a": 107,
+                  "b": 104
+                },
+                {
+                  "a": 122,
+                  "b": 112
+                }
+              ],
+              "mvp": {
+                "p": "",
+                "t": ""
+              },
+              "note": "第6戦でフラッグが34得点10アシスト。"
+            },
+            {
+              "a": "広島",
+              "b": "川崎",
+              "sa": 3,
+              "sb": 6,
+              "as": 2,
+              "bs": 4,
+              "format": "7戦4勝制",
+              "games": [
+                {
+                  "a": 128,
+                  "b": 102
+                },
+                {
+                  "a": 109,
+                  "b": 115
+                },
+                {
+                  "a": 107,
+                  "b": 119
+                },
+                {
+                  "a": 122,
+                  "b": 105
+                },
+                {
+                  "a": 101,
+                  "b": 115
+                },
+                {
+                  "a": 95,
+                  "b": 109
+                }
+              ],
+              "mvp": {
+                "p": "",
+                "t": ""
+              },
+              "note": "第6シード川崎が下克上。"
+            },
+            {
+              "a": "京都",
+              "b": "六本木",
+              "sa": 4,
+              "sb": 5,
+              "as": 4,
+              "bs": 1,
+              "format": "7戦4勝制",
+              "games": [
+                {
+                  "a": 116,
+                  "b": 91
+                },
+                {
+                  "a": 113,
+                  "b": 99
+                },
+                {
+                  "a": 111,
+                  "b": 96
+                },
+                {
+                  "a": 112,
+                  "b": 115
+                },
+                {
+                  "a": 136,
+                  "b": 96
+                }
+              ],
+              "mvp": {
+                "p": "",
+                "t": ""
+              },
+              "note": "ドンチッチが第3戦でトリプルダブル。"
+            }
+          ],
+          "semis": [
+            {
+              "a": "千葉",
+              "b": "京都",
+              "sa": 1,
+              "sb": 4,
+              "as": 4,
+              "bs": 1,
+              "format": "7戦4勝制",
+              "games": [
+                {
+                  "a": 129,
+                  "b": 130
+                },
+                {
+                  "a": 126,
+                  "b": 115
+                },
+                {
+                  "a": 133,
+                  "b": 112
+                },
+                {
+                  "a": 128,
+                  "b": 121
+                },
+                {
+                  "a": 106,
+                  "b": 98
+                }
+              ],
+              "mvp": {
+                "p": "",
+                "t": ""
+              },
+              "note": "京都はプレーオフ期間中にマクシーを獲得。マクシーは第1戦50得点、第4戦55得点。"
+            },
+            {
+              "a": "博多",
+              "b": "川崎",
+              "sa": 2,
+              "sb": 6,
+              "as": 4,
+              "bs": 2,
+              "format": "7戦4勝制",
+              "games": [
+                {
+                  "a": 114,
+                  "b": 112
+                },
+                {
+                  "a": 116,
+                  "b": 104
+                },
+                {
+                  "a": 99,
+                  "b": 107
+                },
+                {
+                  "a": 120,
+                  "b": 115
+                },
+                {
+                  "a": 105,
+                  "b": 128
+                },
+                {
+                  "a": 120,
+                  "b": 107
+                }
+              ],
+              "mvp": {
+                "p": "",
+                "t": ""
+              },
+              "note": "第4戦は延長。第6戦でフラッグ35得点。"
+            }
+          ],
+          "confFinals": [
+            {
+              "a": "千葉",
+              "b": "博多",
+              "sa": 1,
+              "sb": 2,
+              "as": 3,
+              "bs": 4,
+              "format": "7戦4勝制",
+              "games": [
+                {
+                  "a": 114,
+                  "b": 103
+                },
+                {
+                  "a": 108,
+                  "b": 117
+                },
+                {
+                  "a": 115,
+                  "b": 113
+                },
+                {
+                  "a": 104,
+                  "b": 115
+                },
+                {
+                  "a": 132,
+                  "b": 99
+                },
+                {
+                  "a": 101,
+                  "b": 116
+                },
+                {
+                  "a": 122,
+                  "b": 129
+                }
+              ],
+              "mvp": {
+                "p": "クーパー・フラッグ",
+                "t": "博多"
+              },
+              "note": "第3戦はハーパーのブザービーター。博多が2勝3敗から連勝し初のファイナル進出。第7戦はフリースロー45本中38本。"
+            }
+          ]
         }
       },
       "West": {
-        "playIn": [],
+        "playIn": [
+          {
+            "a": "長崎",
+            "b": "横浜",
+            "sa": 7,
+            "sb": 8,
+            "as": 104,
+            "bs": 120,
+            "format": "1試合制",
+            "games": [
+              {
+                "a": 104,
+                "b": 120
+              }
+            ],
+            "mvp": {
+              "p": "",
+              "t": ""
+            },
+            "note": "8位の横浜が勝利し第7シード。マルカネン27得点。"
+          },
+          {
+            "a": "鹿児島",
+            "b": "東東京",
+            "sa": 9,
+            "sb": 10,
+            "as": 113,
+            "bs": 116,
+            "format": "1試合制",
+            "games": [
+              {
+                "a": 113,
+                "b": 116
+              }
+            ],
+            "mvp": {
+              "p": "",
+              "t": ""
+            },
+            "note": "東東京が勝利、鹿児島は敗退。エドワーズ35得点も及ばず。"
+          },
+          {
+            "a": "長崎",
+            "b": "東東京",
+            "sa": 7,
+            "sb": 10,
+            "as": 116,
+            "bs": 114,
+            "format": "1試合制",
+            "games": [
+              {
+                "a": 116,
+                "b": 114
+              }
+            ],
+            "mvp": {
+              "p": "",
+              "t": ""
+            },
+            "note": "第8シード決定戦。長崎が2点差で逃げ切り、ケイレブ・ウィルソン7ブロック。"
+          }
+        ],
         "rounds": {
-          "r1": [],
-          "semis": [],
-          "confFinals": []
+          "r1": [
+            {
+              "a": "江戸川",
+              "b": "長崎",
+              "sa": 1,
+              "sb": 8,
+              "as": 4,
+              "bs": 1,
+              "format": "7戦4勝制",
+              "games": [
+                {
+                  "a": 144,
+                  "b": 119
+                },
+                {
+                  "a": 133,
+                  "b": 115
+                },
+                {
+                  "a": 89,
+                  "b": 119
+                },
+                {
+                  "a": 119,
+                  "b": 84
+                },
+                {
+                  "a": 114,
+                  "b": 92
+                }
+              ],
+              "mvp": {
+                "p": "",
+                "t": ""
+              },
+              "note": "第5戦でウェンバニヤマがFG13本中12本の40得点14リバウンド。"
+            },
+            {
+              "a": "大阪",
+              "b": "横浜",
+              "sa": 2,
+              "sb": 7,
+              "as": 1,
+              "bs": 4,
+              "format": "7戦4勝制",
+              "games": [
+                {
+                  "a": 116,
+                  "b": 130
+                },
+                {
+                  "a": 93,
+                  "b": 102
+                },
+                {
+                  "a": 108,
+                  "b": 116
+                },
+                {
+                  "a": 119,
+                  "b": 104
+                },
+                {
+                  "a": 98,
+                  "b": 108
+                }
+              ],
+              "mvp": {
+                "p": "",
+                "t": ""
+              },
+              "note": "第7シード横浜が第2シードを撃破。第1戦でミッチェルが48得点、3P9本。"
+            },
+            {
+              "a": "東京",
+              "b": "浦和",
+              "sa": 3,
+              "sb": 6,
+              "as": 2,
+              "bs": 4,
+              "format": "7戦4勝制",
+              "games": [
+                {
+                  "a": 97,
+                  "b": 92
+                },
+                {
+                  "a": 105,
+                  "b": 128
+                },
+                {
+                  "a": 113,
+                  "b": 100
+                },
+                {
+                  "a": 133,
+                  "b": 135
+                },
+                {
+                  "a": 123,
+                  "b": 129
+                },
+                {
+                  "a": 109,
+                  "b": 116
+                }
+              ],
+              "mvp": {
+                "p": "",
+                "t": ""
+              },
+              "note": "アデトクンボとアデバヨを欠く浦和が逆転突破。第6戦でモブリーが20得点20リバウンド8ブロック。MVP比江島の東京は1回戦敗退。"
+            },
+            {
+              "a": "丸の内",
+              "b": "渋谷",
+              "sa": 4,
+              "sb": 5,
+              "as": 4,
+              "bs": 1,
+              "format": "7戦4勝制",
+              "games": [
+                {
+                  "a": 93,
+                  "b": 109
+                },
+                {
+                  "a": 121,
+                  "b": 109
+                },
+                {
+                  "a": 141,
+                  "b": 108
+                },
+                {
+                  "a": 141,
+                  "b": 92
+                },
+                {
+                  "a": 108,
+                  "b": 106
+                }
+              ],
+              "mvp": {
+                "p": "",
+                "t": ""
+              },
+              "note": "第3戦・第4戦で2試合連続141得点。"
+            }
+          ],
+          "semis": [
+            {
+              "a": "江戸川",
+              "b": "丸の内",
+              "sa": 1,
+              "sb": 4,
+              "as": 4,
+              "bs": 3,
+              "format": "7戦4勝制",
+              "games": [
+                {
+                  "a": 115,
+                  "b": 96
+                },
+                {
+                  "a": 83,
+                  "b": 93
+                },
+                {
+                  "a": 124,
+                  "b": 94
+                },
+                {
+                  "a": 103,
+                  "b": 95
+                },
+                {
+                  "a": 100,
+                  "b": 106
+                },
+                {
+                  "a": 115,
+                  "b": 131
+                },
+                {
+                  "a": 114,
+                  "b": 102
+                }
+              ],
+              "mvp": {
+                "p": "",
+                "t": ""
+              },
+              "note": "第4戦後にウェンバニヤマが腰背部の肉離れで離脱。第7戦はギャフォードがFG10本中9本の20得点。"
+            },
+            {
+              "a": "浦和",
+              "b": "横浜",
+              "sa": 6,
+              "sb": 7,
+              "as": 1,
+              "bs": 4,
+              "format": "7戦4勝制",
+              "games": [
+                {
+                  "a": 114,
+                  "b": 115
+                },
+                {
+                  "a": 108,
+                  "b": 127
+                },
+                {
+                  "a": 110,
+                  "b": 127
+                },
+                {
+                  "a": 128,
+                  "b": 124
+                },
+                {
+                  "a": 120,
+                  "b": 147
+                }
+              ],
+              "mvp": {
+                "p": "",
+                "t": ""
+              },
+              "note": "第7シード横浜が4勝1敗。プレーオフ期間中の移籍は即時反映。"
+            }
+          ],
+          "confFinals": [
+            {
+              "a": "江戸川",
+              "b": "横浜",
+              "sa": 1,
+              "sb": 7,
+              "as": 4,
+              "bs": 1,
+              "format": "7戦4勝制",
+              "games": [
+                {
+                  "a": 120,
+                  "b": 92
+                },
+                {
+                  "a": 125,
+                  "b": 102
+                },
+                {
+                  "a": 110,
+                  "b": 97
+                },
+                {
+                  "a": 125,
+                  "b": 135
+                },
+                {
+                  "a": 100,
+                  "b": 93
+                }
+              ],
+              "mvp": {
+                "p": "キヨンテ・ジョージ",
+                "t": "江戸川"
+              },
+              "note": "ウェンバニヤマ不在で4勝1敗。第5戦でキヨンテ・ジョージ34得点。"
+            }
+          ]
         }
       }
     },
     "finals": {
-      "a": "",
-      "b": "",
-      "as": 0,
-      "bs": 0,
-      "champ": "",
+      "a": "江戸川",
+      "b": "博多",
+      "sa": 1,
+      "sb": 2,
+      "as": 4,
+      "bs": 1,
       "format": "7戦4勝制",
-      "games": [],
+      "games": [
+        {
+          "a": 127,
+          "b": 101
+        },
+        {
+          "a": 129,
+          "b": 125
+        },
+        {
+          "a": null,
+          "b": null,
+          "note": "博多の勝利（本拠地）。スコア未取得"
+        },
+        {
+          "a": 123,
+          "b": 90
+        },
+        {
+          "a": 122,
+          "b": 117
+        }
+      ],
       "mvp": {
-        "p": "",
-        "t": ""
+        "p": "ビクター・ウェンバニヤマ",
+        "t": "江戸川"
       },
-      "clinchNote": "",
-      "path": []
+      "note": "",
+      "champ": "江戸川",
+      "clinchNote": "第5戦、江戸川が本拠地で122-117。ウェンバニヤマ39得点、イングラム37得点。2年連続優勝。",
+      "path": [
+        {
+          "r": "1回戦",
+          "op": "長崎",
+          "res": "4-1"
+        },
+        {
+          "r": "カンファレンス準決勝",
+          "op": "丸の内",
+          "res": "4-3"
+        },
+        {
+          "r": "カンファレンス決勝",
+          "op": "横浜",
+          "res": "4-1"
+        },
+        {
+          "r": "ファイナル",
+          "op": "博多",
+          "res": "4-1"
+        }
+      ]
     },
     "cup": {
-      "name": "NBAカップ",
-      "champ": "",
-      "runnerUp": "",
-      "finalScore": "",
+      "name": "Bプレミアカップ",
+      "champ": "千葉",
+      "runnerUp": "渋谷",
+      "finalScore": "129-109",
       "mvp": {
-        "p": "",
-        "t": ""
+        "p": "スコッティ・バーンズ",
+        "t": "千葉"
       },
-      "note": "レギュラーシーズンと並行して行うカップ戦。東西のグループステージを経て決勝トーナメントで優勝を争う。"
+      "note": "レギュラーシーズンと並行して行うカップ戦。千葉が決勝で渋谷を129-109で下し初優勝。前半12点差を第3クォーター41得点で逆転し、カリーが3P17本中11本の41得点。大会MVPはバーンズ。",
+      "groups": [
+        {
+          "name": "イーストA",
+          "winner": "千葉",
+          "record": "12-1",
+          "diff": "+170"
+        },
+        {
+          "name": "ウェストA",
+          "winner": "渋谷",
+          "record": "11-2",
+          "diff": "+93"
+        }
+      ]
     },
     "gallery": {
       "hero": [],
@@ -1337,13 +4602,610 @@
       "recap": []
     },
     "recap": {
-      "headline": "",
-      "body": [],
-      "moments": []
+      "headline": "江戸川スカーレットが連覇　ウェンバニヤマ2年連続ファイナルMVP",
+      "body": [
+        "江戸川はレギュラーシーズン67勝15敗でリーグ1位。プレーオフは1回戦で長崎に4勝1敗、準決勝で丸の内に4勝3敗、西カンファレンス決勝で横浜に4勝1敗、ファイナルで博多に4勝1敗。ポストシーズン16勝6敗。",
+        "ウェンバニヤマは準決勝第4戦後に腰背部の肉離れで離脱したが、ファイナル第2戦で復帰。ファイナル4試合で平均28.0得点8.8リバウンド3.0ブロック、FG76.2%で2年連続のファイナルMVP。",
+        "東は第2シード博多が千葉を第7戦で破り初のファイナル進出。クーパー・フラッグが東カンファレンス決勝MVP。西の第7シード横浜はプレーインから第2シードのガンバ、第6シードの浦和を破りカンファレンス決勝へ。",
+        "レギュラーシーズンMVPは比江島慎（東京）で日本人初。プレーオフ期間中の移籍が即時反映され、マクシー（京都）、テイタム（阪神）、アヌノビー（渋谷）が移籍した。"
+      ],
+      "moments": [
+        {
+          "k": "4/12",
+          "t": "プレーイン開幕",
+          "b": "尼崎が延長の末135-134で阪神を下す。"
+        },
+        {
+          "k": "R1",
+          "t": "カリー56得点",
+          "b": "1回戦第6戦、FG28本中22本、3P9本で阪神を退ける。"
+        },
+        {
+          "k": "R1",
+          "t": "第7シード横浜がガンバを撃破",
+          "b": "第1戦でミッチェルが48得点、3P9本。"
+        },
+        {
+          "k": "準決勝",
+          "t": "マクシー50得点・55得点",
+          "b": "京都加入直後に千葉相手に記録も、1勝4敗で敗退。"
+        },
+        {
+          "k": "準決勝",
+          "t": "江戸川、第7戦を制す",
+          "b": "ウェンバニヤマ不在で丸の内に4勝3敗。"
+        },
+        {
+          "k": "東決勝",
+          "t": "博多が第7戦で千葉を撃破",
+          "b": "129-122、フリースロー45本中38本。"
+        },
+        {
+          "k": "ファイナル",
+          "t": "江戸川が連覇",
+          "b": "第5戦122-117。ウェンバニヤマ39得点、イングラム37得点。"
+        }
+      ]
     }
   },
   "leagueLeaders": {
-    "note": "",
-    "groups": []
+    "note": "MyNBAリーグリーダー画面（1試合平均）の上位10人を収録。所属が確認できない選手はクラブ未記載。",
+    "groups": [
+      {
+        "key": "regular",
+        "label": "レギュラーシーズン",
+        "categories": [
+          {
+            "key": "ppg",
+            "label": "得点",
+            "unit": "PPG",
+            "sortKey": "ppg",
+            "note": "",
+            "rows": [
+              {
+                "rank": 1,
+                "p": "タイリース・マクシー",
+                "v": 27.1,
+                "t": "新宿"
+              },
+              {
+                "rank": 2,
+                "p": "ケイド・カニンガム",
+                "v": 25.6,
+                "t": "琉球"
+              },
+              {
+                "rank": 3,
+                "p": "アンソニー・エドワーズ",
+                "v": 25.6,
+                "t": "鹿児島"
+              },
+              {
+                "rank": 4,
+                "p": "ジェイレン・ブラウン",
+                "v": 24.7,
+                "t": "川崎"
+              },
+              {
+                "rank": 5,
+                "p": "比江島慎",
+                "v": 24.4,
+                "t": "東京"
+              },
+              {
+                "rank": 6,
+                "p": "ビクター・ウェンバニヤマ",
+                "v": 24.4,
+                "t": "江戸川"
+              },
+              {
+                "rank": 7,
+                "p": "ジェイレン・ブランソン",
+                "v": 23.5,
+                "t": "長崎"
+              },
+              {
+                "rank": 8,
+                "p": "ルカ・ドンチッチ",
+                "v": 22.7,
+                "t": "京都"
+              },
+              {
+                "rank": 9,
+                "p": "山田拓朗",
+                "v": 22.6,
+                "t": "広島"
+              },
+              {
+                "rank": 10,
+                "p": "ジャマール・マレー",
+                "v": 22.5,
+                "t": "渋谷"
+              }
+            ]
+          },
+          {
+            "key": "rpg",
+            "label": "リバウンド",
+            "unit": "RPG",
+            "sortKey": "rpg",
+            "note": "",
+            "rows": [
+              {
+                "rank": 1,
+                "p": "ビクター・ウェンバニヤマ",
+                "v": 13.2,
+                "t": "江戸川"
+              },
+              {
+                "rank": 2,
+                "p": "ジェイレン・デューレン",
+                "v": 12.8,
+                "t": "広島"
+              },
+              {
+                "rank": 3,
+                "p": "今村啓太",
+                "v": 11.3,
+                "t": "名古屋"
+              },
+              {
+                "rank": 4,
+                "p": "カール＝アンソニー・タウンズ",
+                "v": 11.1,
+                "t": "渋谷"
+              },
+              {
+                "rank": 5,
+                "p": "ジャレット・アレン",
+                "v": 10.9,
+                "t": "長崎"
+              },
+              {
+                "rank": 6,
+                "p": "アンドレ・ドラモンド",
+                "v": 10.2,
+                "t": "東東京"
+              },
+              {
+                "rank": 7,
+                "p": "イビツァ・ズバッツ",
+                "v": 10.1,
+                "t": "横浜"
+              },
+              {
+                "rank": 8,
+                "p": "デレク・クイーン",
+                "v": 9.9,
+                "t": "川崎"
+              },
+              {
+                "rank": 9,
+                "p": "ヤニス・アデトクンボ",
+                "v": 9.8,
+                "t": "浦和"
+              },
+              {
+                "rank": 10,
+                "p": "マーク・ウィリアムズ",
+                "v": 9.7,
+                "t": "博多"
+              }
+            ]
+          },
+          {
+            "key": "apg",
+            "label": "アシスト",
+            "unit": "APG",
+            "sortKey": "apg",
+            "note": "",
+            "rows": [
+              {
+                "rank": 1,
+                "p": "タイリース・ハリバートン",
+                "v": 8.4,
+                "t": "宇都宮"
+              },
+              {
+                "rank": 2,
+                "p": "ケイド・カニンガム",
+                "v": 6.8,
+                "t": "琉球"
+              },
+              {
+                "rank": 3,
+                "p": "ラメロ・ボール",
+                "v": 6.8,
+                "t": "尼崎"
+              },
+              {
+                "rank": 4,
+                "p": "ルカ・ドンチッチ",
+                "v": 6.6,
+                "t": "京都"
+              },
+              {
+                "rank": 5,
+                "p": "キヨンテ・ジョージ",
+                "v": 6.3,
+                "t": "江戸川"
+              },
+              {
+                "rank": 6,
+                "p": "山田拓朗",
+                "v": 6.3,
+                "t": "広島"
+              },
+              {
+                "rank": 7,
+                "p": "ジェレマイア・フィアーズ",
+                "v": 5.9,
+                "t": "博多"
+              },
+              {
+                "rank": 8,
+                "p": "ディラン・ハーパー",
+                "v": 5.8,
+                "t": "千葉"
+              },
+              {
+                "rank": 9,
+                "p": "ダリル・アキュフJr.",
+                "v": 5.7
+              },
+              {
+                "rank": 10,
+                "p": "ジョシュ・ギディー",
+                "v": 5.6,
+                "t": "鹿島"
+              }
+            ]
+          },
+          {
+            "key": "spg",
+            "label": "スティール",
+            "unit": "SPG",
+            "sortKey": "spg",
+            "note": "",
+            "rows": [
+              {
+                "rank": 1,
+                "p": "オーサー・トンプソン",
+                "v": 2.2,
+                "t": "品川"
+              },
+              {
+                "rank": 2,
+                "p": "アメン・トンプソン",
+                "v": 1.9,
+                "t": "六本木"
+              },
+              {
+                "rank": 3,
+                "p": "ジェイレン・サッグス",
+                "v": 1.9,
+                "t": "横浜"
+              },
+              {
+                "rank": 4,
+                "p": "ダイソン・ダニエルズ",
+                "v": 1.9,
+                "t": "新宿"
+              },
+              {
+                "rank": 5,
+                "p": "タイリース・マクシー",
+                "v": 1.7,
+                "t": "新宿"
+              },
+              {
+                "rank": 6,
+                "p": "ビクター・ウェンバニヤマ",
+                "v": 1.6,
+                "t": "江戸川"
+              },
+              {
+                "rank": 7,
+                "p": "ジョーダン・グッドウィン",
+                "v": 1.6
+              },
+              {
+                "rank": 8,
+                "p": "OG・アヌノビー",
+                "v": 1.6,
+                "t": "丸の内"
+              },
+              {
+                "rank": 9,
+                "p": "ケイレブ・ウィルソン",
+                "v": 1.5,
+                "t": "長崎"
+              },
+              {
+                "rank": 10,
+                "p": "タイリース・ハリバートン",
+                "v": 1.5,
+                "t": "宇都宮"
+              }
+            ]
+          },
+          {
+            "key": "bpg",
+            "label": "ブロック",
+            "unit": "BPG",
+            "sortKey": "bpg",
+            "note": "",
+            "rows": [
+              {
+                "rank": 1,
+                "p": "ビクター・ウェンバニヤマ",
+                "v": 3.1,
+                "t": "江戸川"
+              },
+              {
+                "rank": 2,
+                "p": "ケイレブ・ウィルソン",
+                "v": 2.1,
+                "t": "長崎"
+              },
+              {
+                "rank": 3,
+                "p": "デレック・ライブリー2世",
+                "v": 2.1,
+                "t": "C大阪"
+              },
+              {
+                "rank": 4,
+                "p": "今村啓太",
+                "v": 2.0,
+                "t": "名古屋"
+              },
+              {
+                "rank": 5,
+                "p": "エバン・モブリー",
+                "v": 1.9,
+                "t": "浦和"
+              },
+              {
+                "rank": 6,
+                "p": "ニコラス・クラクストン",
+                "v": 1.9,
+                "t": "品川"
+              },
+              {
+                "rank": 7,
+                "p": "カマン・マルアック",
+                "v": 1.9,
+                "t": "東京"
+              },
+              {
+                "rank": 8,
+                "p": "ジャレン・ジャクソンJr.",
+                "v": 1.8,
+                "t": "博多"
+              },
+              {
+                "rank": 9,
+                "p": "オニエカ・オコング",
+                "v": 1.8,
+                "t": "大宮"
+              },
+              {
+                "rank": 10,
+                "p": "アレクサンドル・サール",
+                "v": 1.8,
+                "t": "琉球"
+              }
+            ]
+          },
+          {
+            "key": "fg3",
+            "label": "3ポイント成功率",
+            "unit": "3P%",
+            "sortKey": "fg3",
+            "note": "",
+            "rows": [
+              {
+                "rank": 1,
+                "p": "ジュリアン・シャンパニー",
+                "v": 43.2,
+                "t": "新宿"
+              },
+              {
+                "rank": 2,
+                "p": "ジェイデン・マクダニエルズ",
+                "v": 42.6,
+                "t": "琉球"
+              },
+              {
+                "rank": 3,
+                "p": "コリン・セクストン",
+                "v": 42.6,
+                "t": "宇都宮"
+              },
+              {
+                "rank": 4,
+                "p": "タイリース・ハリバートン",
+                "v": 42.4,
+                "t": "宇都宮"
+              },
+              {
+                "rank": 5,
+                "p": "マリク・モンク",
+                "v": 42.1,
+                "t": "広島"
+              },
+              {
+                "rank": 6,
+                "p": "ジェイレン・ブランソン",
+                "v": 41.9,
+                "t": "長崎"
+              },
+              {
+                "rank": 7,
+                "p": "ラメロ・ボール",
+                "v": 41.9,
+                "t": "尼崎"
+              },
+              {
+                "rank": 8,
+                "p": "マイケル・ポーターJr.",
+                "v": 41.9,
+                "t": "大阪"
+              },
+              {
+                "rank": 9,
+                "p": "アンソニー・エドワーズ",
+                "v": 41.7,
+                "t": "鹿児島"
+              },
+              {
+                "rank": 10,
+                "p": "岸本龍一",
+                "v": 41.1,
+                "t": "名古屋"
+              }
+            ]
+          },
+          {
+            "key": "fg3m",
+            "label": "3ポイント成功数",
+            "unit": "3PM",
+            "sortKey": "fg3m",
+            "note": "",
+            "rows": [
+              {
+                "rank": 1,
+                "p": "タイリース・マクシー",
+                "v": 3.5,
+                "t": "新宿"
+              },
+              {
+                "rank": 2,
+                "p": "ステフィン・カリー",
+                "v": 3.4,
+                "t": "千葉"
+              },
+              {
+                "rank": 3,
+                "p": "ラメロ・ボール",
+                "v": 3.3,
+                "t": "尼崎"
+              },
+              {
+                "rank": 4,
+                "p": "ルカ・ドンチッチ",
+                "v": 3.0,
+                "t": "京都"
+              },
+              {
+                "rank": 5,
+                "p": "タイリース・ハリバートン",
+                "v": 2.9,
+                "t": "宇都宮"
+              },
+              {
+                "rank": 6,
+                "p": "ドノバン・ミッチェル",
+                "v": 2.9,
+                "t": "横浜"
+              },
+              {
+                "rank": 7,
+                "p": "アンソニー・エドワーズ",
+                "v": 2.9,
+                "t": "鹿児島"
+              },
+              {
+                "rank": 8,
+                "p": "ジェイレン・グリーン",
+                "v": 2.8,
+                "t": "横浜"
+              },
+              {
+                "rank": 9,
+                "p": "トレイ・マーフィー3世",
+                "v": 2.8
+              },
+              {
+                "rank": 10,
+                "p": "ジャマール・マレー",
+                "v": 2.8,
+                "t": "渋谷"
+              }
+            ]
+          },
+          {
+            "key": "ftm",
+            "label": "フリースロー成功数",
+            "unit": "FTM",
+            "sortKey": "ftm",
+            "note": "",
+            "rows": [
+              {
+                "rank": 1,
+                "p": "比江島慎",
+                "v": 5.7,
+                "t": "東京"
+              },
+              {
+                "rank": 2,
+                "p": "ケイド・カニンガム",
+                "v": 5.3,
+                "t": "琉球"
+              },
+              {
+                "rank": 3,
+                "p": "ジェイレン・ブランソン",
+                "v": 5.2,
+                "t": "長崎"
+              },
+              {
+                "rank": 4,
+                "p": "ビクター・ウェンバニヤマ",
+                "v": 5.1,
+                "t": "江戸川"
+              },
+              {
+                "rank": 5,
+                "p": "山田拓朗",
+                "v": 5.0,
+                "t": "広島"
+              },
+              {
+                "rank": 6,
+                "p": "フランツ・ワグナー",
+                "v": 4.7,
+                "t": "川崎"
+              },
+              {
+                "rank": 7,
+                "p": "アンソニー・エドワーズ",
+                "v": 4.7,
+                "t": "鹿児島"
+              },
+              {
+                "rank": 8,
+                "p": "ジョシュ・ギディー",
+                "v": 4.6,
+                "t": "鹿島"
+              },
+              {
+                "rank": 9,
+                "p": "クーパー・フラッグ",
+                "v": 4.5,
+                "t": "博多"
+              },
+              {
+                "rank": 10,
+                "p": "ジェイレン・ブラウン",
+                "v": 4.3,
+                "t": "川崎"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   }
 }
