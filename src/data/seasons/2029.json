@@ -580,7 +580,7 @@
       "city": "",
       "coach": "宇津木誠司",
       "color": "#2948ae",
-      "logo": "",
+      "logo": "/images/articles/IMG_3134.png",
       "league": "West"
     },
     {
@@ -1116,245 +1116,245 @@
     "lottery": [],
     "picks": [],
     "expansion": {
-      "picks": [],
+      "name": "",
       "note": "",
-      "name": ""
+      "picks": []
     }
   },
   "playerSeasonStats": [],
   "teamSeasonStats": [],
   "prospects": [],
   "awards": {
-    "periodicNote": "",
-    "statsNote": "",
-    "postseasonMvp": [
+    "voting": [
       {
-        "stats": {},
-        "line": "",
-        "t": "",
-        "p": "",
-        "label": "イースタン・カンファレンス決勝 MVP",
-        "key": "eastFinals"
-      },
-      {
-        "stats": {},
-        "line": "",
-        "t": "",
-        "p": "",
-        "label": "ウェスタン・カンファレンス決勝 MVP",
-        "key": "westFinals"
-      },
-      {
-        "big": true,
-        "stats": {},
-        "line": "",
-        "t": "",
-        "p": "",
-        "label": "ファイナル MVP",
-        "key": "finals"
-      }
-    ],
-    "allStar": {
-      "events": [
-        {
-          "entrants": [],
-          "winner": {
-            "t": "",
-            "p": ""
-          },
-          "name": "ダンクコンテスト"
-        },
-        {
-          "entrants": [],
-          "winner": {
-            "t": "",
-            "p": ""
-          },
-          "name": "3ポイントコンテスト"
-        }
-      ],
-      "mvp": {
-        "t": "",
-        "p": ""
-      },
-      "result": "",
-      "rosters": [
-        {
-          "backcourt": [],
-          "frontcourt": [],
-          "team": "チームUSA"
-        },
-        {
-          "backcourt": [],
-          "frontcourt": [],
-          "team": "チームスター"
-        },
-        {
-          "backcourt": [],
-          "frontcourt": [],
-          "team": "チームワールド"
-        }
-      ],
-      "note": ""
-    },
-    "weekly": [],
-    "monthly": [],
-    "statTitles": [
-      {
-        "leaders": [],
+        "key": "MVP",
+        "label": "最優秀選手 (MVP)",
         "note": "",
-        "unit": "PPG",
-        "label": "得点王",
-        "key": "ppg"
+        "finalists": []
       },
       {
-        "leaders": [],
+        "key": "DPOY",
+        "label": "最優秀守備選手",
         "note": "",
-        "unit": "RPG",
-        "label": "リバウンド王",
-        "key": "rpg"
+        "finalists": []
       },
       {
-        "leaders": [],
+        "key": "ROY",
+        "label": "最優秀新人",
         "note": "",
-        "unit": "APG",
-        "label": "アシスト王",
-        "key": "apg"
+        "finalists": []
       },
       {
-        "leaders": [],
+        "key": "SIXTH",
+        "label": "シックスマン賞",
         "note": "",
-        "unit": "SPG",
-        "label": "スティール王",
-        "key": "spg"
+        "finalists": []
       },
       {
-        "leaders": [],
+        "key": "MIP",
+        "label": "最優秀躍進選手",
         "note": "",
-        "unit": "BPG",
-        "label": "ブロック王",
-        "key": "bpg"
+        "finalists": []
       },
       {
-        "leaders": [],
+        "key": "CLUTCH",
+        "label": "クラッチ最優秀選手",
         "note": "",
-        "unit": "FG%",
-        "label": "フィールドゴール成功率",
-        "key": "fg"
+        "finalists": []
       },
       {
-        "leaders": [],
+        "key": "COY",
+        "label": "最優秀ヘッドコーチ",
         "note": "",
-        "unit": "3P%",
-        "label": "3ポイント成功率",
-        "key": "fg3"
+        "finalists": []
       },
       {
-        "leaders": [],
+        "key": "EOY",
+        "label": "最優秀エグゼクティブ",
         "note": "",
-        "unit": "FT%",
-        "label": "フリースロー成功率",
-        "key": "ft"
+        "finalists": []
       }
     ],
     "allTeams": [
       {
-        "tiers": [
-          {
-            "members": [],
-            "tier": "1st"
-          },
-          {
-            "members": [],
-            "tier": "2nd"
-          },
-          {
-            "members": [],
-            "tier": "3rd"
-          }
-        ],
+        "key": "allLeague",
         "label": "オールBプレミア",
-        "key": "allLeague"
-      },
-      {
         "tiers": [
           {
-            "members": [],
-            "tier": "1st"
+            "tier": "1st",
+            "members": []
           },
           {
-            "members": [],
-            "tier": "2nd"
+            "tier": "2nd",
+            "members": []
+          },
+          {
+            "tier": "3rd",
+            "members": []
           }
-        ],
+        ]
+      },
+      {
+        "key": "allDefensive",
         "label": "オールディフェンシブ",
-        "key": "allDefensive"
-      },
-      {
         "tiers": [
           {
-            "members": [],
-            "tier": "1st"
+            "tier": "1st",
+            "members": []
           },
           {
-            "members": [],
-            "tier": "2nd"
+            "tier": "2nd",
+            "members": []
           }
-        ],
+        ]
+      },
+      {
+        "key": "allRookie",
         "label": "オールルーキー",
-        "key": "allRookie"
+        "tiers": [
+          {
+            "tier": "1st",
+            "members": []
+          },
+          {
+            "tier": "2nd",
+            "members": []
+          }
+        ]
       }
     ],
-    "voting": [
+    "statTitles": [
       {
-        "finalists": [],
+        "key": "ppg",
+        "label": "得点王",
+        "unit": "PPG",
         "note": "",
-        "label": "最優秀選手 (MVP)",
-        "key": "MVP"
+        "leaders": []
       },
       {
-        "finalists": [],
+        "key": "rpg",
+        "label": "リバウンド王",
+        "unit": "RPG",
         "note": "",
-        "label": "最優秀守備選手",
-        "key": "DPOY"
+        "leaders": []
       },
       {
-        "finalists": [],
+        "key": "apg",
+        "label": "アシスト王",
+        "unit": "APG",
         "note": "",
-        "label": "最優秀新人",
-        "key": "ROY"
+        "leaders": []
       },
       {
-        "finalists": [],
+        "key": "spg",
+        "label": "スティール王",
+        "unit": "SPG",
         "note": "",
-        "label": "シックスマン賞",
-        "key": "SIXTH"
+        "leaders": []
       },
       {
-        "finalists": [],
+        "key": "bpg",
+        "label": "ブロック王",
+        "unit": "BPG",
         "note": "",
-        "label": "最優秀躍進選手",
-        "key": "MIP"
+        "leaders": []
       },
       {
-        "finalists": [],
+        "key": "fg",
+        "label": "フィールドゴール成功率",
+        "unit": "FG%",
         "note": "",
-        "label": "クラッチ最優秀選手",
-        "key": "CLUTCH"
+        "leaders": []
       },
       {
-        "finalists": [],
+        "key": "fg3",
+        "label": "3ポイント成功率",
+        "unit": "3P%",
         "note": "",
-        "label": "最優秀ヘッドコーチ",
-        "key": "COY"
+        "leaders": []
       },
       {
-        "finalists": [],
+        "key": "ft",
+        "label": "フリースロー成功率",
+        "unit": "FT%",
         "note": "",
-        "label": "最優秀エグゼクティブ",
-        "key": "EOY"
+        "leaders": []
       }
-    ]
+    ],
+    "monthly": [],
+    "weekly": [],
+    "allStar": {
+      "note": "",
+      "rosters": [
+        {
+          "team": "チームUSA",
+          "frontcourt": [],
+          "backcourt": []
+        },
+        {
+          "team": "チームスター",
+          "frontcourt": [],
+          "backcourt": []
+        },
+        {
+          "team": "チームワールド",
+          "frontcourt": [],
+          "backcourt": []
+        }
+      ],
+      "result": "",
+      "mvp": {
+        "p": "",
+        "t": ""
+      },
+      "events": [
+        {
+          "name": "ダンクコンテスト",
+          "winner": {
+            "p": "",
+            "t": ""
+          },
+          "entrants": []
+        },
+        {
+          "name": "3ポイントコンテスト",
+          "winner": {
+            "p": "",
+            "t": ""
+          },
+          "entrants": []
+        }
+      ]
+    },
+    "postseasonMvp": [
+      {
+        "key": "eastFinals",
+        "label": "イースタン・カンファレンス決勝 MVP",
+        "p": "",
+        "t": "",
+        "line": "",
+        "stats": {}
+      },
+      {
+        "key": "westFinals",
+        "label": "ウェスタン・カンファレンス決勝 MVP",
+        "p": "",
+        "t": "",
+        "line": "",
+        "stats": {}
+      },
+      {
+        "key": "finals",
+        "label": "ファイナル MVP",
+        "p": "",
+        "t": "",
+        "line": "",
+        "stats": {},
+        "big": true
+      }
+    ],
+    "statsNote": "",
+    "periodicNote": ""
   },
   "postseason": {
     "conferences": {
